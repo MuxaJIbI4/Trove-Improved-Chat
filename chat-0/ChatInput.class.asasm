@@ -433,6 +433,17 @@ L25:
       getlocal2
       setproperty         QName(PackageNamespace(""), "textColor")
 
+      ; changing channel 4 color
+      getlocal2
+      pushint             7424986
+      ifne                L57
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "defaultChannelTextField")
+      pushint             16750807
+      setproperty         QName(PackageNamespace(""), "textColor")
+
+L57:
       debugline           110
       returnvoid
      end ; code
