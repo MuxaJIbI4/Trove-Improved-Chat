@@ -36,9 +36,9 @@ class
   trait slot QName(PackageNamespace(""), "scrollbar") type QName(PackageNamespace("fl.controls"), "UIScrollBar") end
   trait slot QName(PackageNamespace(""), "inputBackground") type QName(PackageNamespace("flash.display"), "MovieClip") end
   trait slot QName(PackageNamespace(""), "chatSize_large") type QName(PackageNamespace(""), "Number") value Integer(370) end
-  trait slot QName(PackageNamespace(""), "chatSize_small") type QName(PackageNamespace(""), "Number") value Integer(218) end
+  trait slot QName(PackageNamespace(""), "chatSize_small") type QName(PackageNamespace(""), "Number") value Integer(370) end
   trait slot QName(PackageNamespace(""), "raisedPos") type QName(PackageNamespace(""), "int") value Integer(0) end
-  trait slot QName(PackageNamespace(""), "defaultPos") type QName(PackageNamespace(""), "int") value Integer(180) end
+  trait slot QName(PackageNamespace(""), "defaultPos") type QName(PackageNamespace(""), "int") value Integer(0) end
   trait getter QName(PackageNamespace(""), "x") flag OVERRIDE
    method
     name "Chat/x/get"

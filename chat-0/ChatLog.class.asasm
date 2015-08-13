@@ -1004,9 +1004,12 @@ L42:
       getlocal1
       iffalse             L53
 
+      ; chat is active
       debugline           182
       getlocal0
       getproperty         QName(PackageNamespace(""), "container")
+
+      ; increasing active chat height
       pushshort           180
       setproperty         QName(PackageNamespace(""), "y")
 
@@ -1019,12 +1022,11 @@ L42:
 
       jump                L59
 
-L53:
+L53: ; chat is inactive
       debugline           187
       getlocal0
       getproperty         QName(PackageNamespace(""), "container")
-      getlocal0
-      getproperty         QName(PackageNamespace(""), "inputHeight")
+      pushshort           180
       setproperty         QName(PackageNamespace(""), "y")
 
 L59:
