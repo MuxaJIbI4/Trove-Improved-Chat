@@ -58,6 +58,20 @@ class
      getlocal0
      constructsuper      0
 
+     ; changing ChatLog position
+     getlocal0
+     pushshort           -16
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal0
+     pushshort           0
+     setproperty         QName(PackageNamespace(""), "y")
+
+     ; changing ChatLog dimensions
+     ;getlocal0
+     ;pushshort           600
+     ;setproperty         QName(PackageNamespace(""), "width")
+
      debugline           64
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
@@ -969,6 +983,7 @@ L42:
       getproperty         QName(PackageNamespace(""), "BGShader")
       getlocal2
       setproperty         QName(PackageNamespace(""), "height")
+
       debugline           174
       getlocal0
       getproperty         QName(PrivateNamespace("ChatLog"), "vScrollbar")
@@ -1010,7 +1025,7 @@ L42:
       getproperty         QName(PackageNamespace(""), "container")
 
       ; increasing active chat height
-      pushshort           180
+      pushshort           480
       setproperty         QName(PackageNamespace(""), "y")
 
       debugline           183
@@ -1026,7 +1041,7 @@ L53: ; chat is inactive
       debugline           187
       getlocal0
       getproperty         QName(PackageNamespace(""), "container")
-      pushshort           180
+      pushshort           480
       setproperty         QName(PackageNamespace(""), "y")
 
 L59:

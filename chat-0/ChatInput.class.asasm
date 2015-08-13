@@ -31,6 +31,15 @@ class
      constructprop       QName(PackageNamespace("com.kiwi.Styles"), "KiwiTextfield"), 5
      initproperty        QName(PrivateNamespace("ChatInput"), "_style")
 
+     ; changing ChatInput position
+     getlocal0
+     pushshort           -16
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal0
+     pushshort           470
+     setproperty         QName(PackageNamespace(""), "y")
+
      debugline           29
      getlocal0
      constructsuper      0
