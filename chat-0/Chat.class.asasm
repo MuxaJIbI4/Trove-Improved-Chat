@@ -35,10 +35,12 @@ class
   trait slot QName(PackageNamespace(""), "chatInput") type QName(PackageNamespace(""), "ChatInput") end
   trait slot QName(PackageNamespace(""), "scrollbar") type QName(PackageNamespace("fl.controls"), "UIScrollBar") end
   trait slot QName(PackageNamespace(""), "inputBackground") type QName(PackageNamespace("flash.display"), "MovieClip") end
-  trait slot QName(PackageNamespace(""), "chatSize_large") type QName(PackageNamespace(""), "Number") value Integer(370) end
-  trait slot QName(PackageNamespace(""), "chatSize_small") type QName(PackageNamespace(""), "Number") value Integer(218) end
-  trait slot QName(PackageNamespace(""), "raisedPos") type QName(PackageNamespace(""), "int") value Integer(0) end
-  trait slot QName(PackageNamespace(""), "defaultPos") type QName(PackageNamespace(""), "int") value Integer(180) end
+  ; increasing active chat height
+  trait slot QName(PackageNamespace(""), "chatSize_large") type QName(PackageNamespace(""), "Number") value Integer(670) end
+  trait slot QName(PackageNamespace(""), "chatSize_small") type QName(PackageNamespace(""), "Number") value Integer(670) end
+  ; increasing active chat height
+  trait slot QName(PackageNamespace(""), "raisedPos") type QName(PackageNamespace(""), "int") value Integer(-200) end
+  trait slot QName(PackageNamespace(""), "defaultPos") type QName(PackageNamespace(""), "int") value Integer(-200) end ; was 180
   trait getter QName(PackageNamespace(""), "x") flag OVERRIDE
    method
     name "Chat/x/get"
@@ -173,6 +175,12 @@ class
       getproperty         QName(PackageNamespace(""), "scrollbar")
       callpropvoid        QName(PackageNamespace(""), "setScrollbar"), 1
 
+      ; change scrollbar position
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scrollbar")
+      pushshort           410
+      setproperty         QName(PackageNamespace(""), "x")
+
       debugline           42
       getlex              QName(PackageNamespace(""), "IggyFunctions")
       getproperty         QName(PackageNamespace(""), "inIggy")
@@ -244,9 +252,11 @@ L35:
       debug               1, "newPos", 2, 55
       debug               1, "setPos", 3, 56
       debugline           58
+
+      ; input backgriun is always hidden
       getlocal0
       getproperty         QName(PackageNamespace(""), "inputBackground")
-      getlocal1
+      pushfalse
       setproperty         QName(PackageNamespace(""), "visible")
 
       debugline           59

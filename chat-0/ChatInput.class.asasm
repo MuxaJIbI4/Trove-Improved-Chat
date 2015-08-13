@@ -31,6 +31,15 @@ class
      constructprop       QName(PackageNamespace("com.kiwi.Styles"), "KiwiTextfield"), 5
      initproperty        QName(PrivateNamespace("ChatInput"), "_style")
 
+     ; changing ChatInput position
+     getlocal0
+     pushshort           -16
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal0
+     pushshort           470
+     setproperty         QName(PackageNamespace(""), "y")
+
      debugline           29
      getlocal0
      constructsuper      0
@@ -433,6 +442,17 @@ L25:
       getlocal2
       setproperty         QName(PackageNamespace(""), "textColor")
 
+      ; changing channel 4 color
+      getlocal2
+      pushint             7424986
+      ifne                L57
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "defaultChannelTextField")
+      pushint             16750807
+      setproperty         QName(PackageNamespace(""), "textColor")
+
+L57:
       debugline           110
       returnvoid
      end ; code

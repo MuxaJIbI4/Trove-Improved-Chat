@@ -22,7 +22,7 @@ class
      debugline           23
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
-     pushshort           15000
+     pushint             3600000
      pushbyte            1
      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
      initproperty        QName(PrivateNamespace("ChatLog"), "_timeout")
@@ -58,6 +58,20 @@ class
      getlocal0
      constructsuper      0
 
+     ; changing ChatLog position
+     getlocal0
+     pushshort           -16
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal0
+     pushshort           0
+     setproperty         QName(PackageNamespace(""), "y")
+
+     ; changing ChatLog dimensions
+     ;getlocal0
+     ;pushshort           600
+     ;setproperty         QName(PackageNamespace(""), "width")
+
      debugline           64
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
@@ -67,19 +81,38 @@ class
      debugline           65
      getlocal0
      getlocal0
+     ; BGSHader width
      getproperty         QName(PackageNamespace(""), "width")
      getlocal0
+
+     ; BGSHader height
      getproperty         QName(PackageNamespace(""), "height")
      getlocal0
      getproperty         QName(PackageNamespace(""), "inputHeight")
      add
-     pushbyte            0
-     dup
-     dup
-     pushbyte            0
-     dup
-     pushint             728620
-     pushint             728620
+    
+     ; BGSHader top left curve radius
+     pushbyte            2
+
+     ; BGSHader top right curve radius
+     pushbyte            2
+
+     ; BGSHader bottom left curve radius
+     pushbyte            2
+
+     ; BGSHader bottom right curve radius
+     pushbyte            2
+
+     ; BGSHader has border 
+     pushbyte            1
+     
+     ; BGSHader border color
+     pushint             16777215 ; white
+
+     ; BGSHader background color
+     pushint             1842204    ; 1C1C1C
+
+     ; BGSHader ?trans
      pushbyte            1
      callproperty        QName(PackageInternalNs(""), "drawRoundRect"), 10
      coerce_a
@@ -94,7 +127,9 @@ class
      debugline           67
      getlocal0
      getproperty         QName(PackageNamespace(""), "BGShader")
-     pushdouble          0.6
+
+     ; inactive chat window transparency
+     pushdouble          0.7
      setproperty         QName(PackageNamespace(""), "alpha")
 
      debugline           68
@@ -115,7 +150,9 @@ class
     end ; code
    end ; body
   end ; method
-  trait const QName(PackageInternalNs(""), "MaxMessages") type QName(PackageNamespace(""), "Number") value Integer(100) end
+
+  ; number of messages in chat
+  trait const QName(PackageInternalNs(""), "MaxMessages") type QName(PackageNamespace(""), "Number") value Integer(500) end
   trait const QName(PackageInternalNs(""), "ScrollScale") type QName(PackageNamespace(""), "Number") value Integer(3) end
   trait slot QName(PrivateNamespace("ChatLog"), "vScrollbar") type QName(PackageNamespace("fl.controls"), "UIScrollBar") end
   trait slot QName(PrivateNamespace("ChatLog"), "_timeout") type QName(PackageNamespace("flash.utils"), "Timer") end
@@ -603,7 +640,8 @@ L24:
       debugline           119
       getlocal0
       getproperty         QName(PackageNamespace(""), "background")
-      pushtrue
+      ; hide background
+      pushfalse
       setproperty         QName(PackageNamespace(""), "visible")
 
       debugline           120
@@ -615,7 +653,8 @@ L24:
       debugline           121
       getlocal0
       getproperty         QName(PackageNamespace(""), "BGShader")
-      pushfalse
+      ; BGShader is always visible
+      pushtrue
       setproperty         QName(PackageNamespace(""), "visible")
 
       debugline           122
@@ -747,6 +786,7 @@ L47:
       pushbyte            0
       ifeq                L61
 
+      ; removig alternating message backgrounds
       debugline           142
       getlocal            8
       callpropvoid        QName(PackageNamespace(""), "addBG"), 0
@@ -938,6 +978,12 @@ L42:
       getlocal2
       setproperty         QName(PackageNamespace(""), "height")
 
+      ; BGShader height is changed with active chat
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BGShader")
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "height")
+
       debugline           174
       getlocal0
       getproperty         QName(PrivateNamespace("ChatLog"), "vScrollbar")
@@ -973,10 +1019,13 @@ L42:
       getlocal1
       iffalse             L53
 
+      ; chat is active
       debugline           182
       getlocal0
       getproperty         QName(PackageNamespace(""), "container")
-      pushshort           180
+
+      ; increasing active chat height
+      pushshort           480
       setproperty         QName(PackageNamespace(""), "y")
 
       debugline           183
@@ -988,12 +1037,11 @@ L42:
 
       jump                L59
 
-L53:
+L53: ; chat is inactive
       debugline           187
       getlocal0
       getproperty         QName(PackageNamespace(""), "container")
-      getlocal0
-      getproperty         QName(PackageNamespace(""), "inputHeight")
+      pushshort           480
       setproperty         QName(PackageNamespace(""), "y")
 
 L59:

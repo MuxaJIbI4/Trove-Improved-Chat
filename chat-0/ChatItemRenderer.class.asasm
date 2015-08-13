@@ -343,6 +343,35 @@ L38:
       setlocal2
 
 L54:
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatItemRenderer"), "_color")
+      pushint             7424986
+      ifne                L78
+
+      getlocal0
+      pushint             16750807
+      setproperty         QName(PrivateNamespace("ChatItemRenderer"), "_color")
+
+      getlocal1
+      getproperty         Multiname("author", [PrivateNamespace("ChatItemRenderer"), PackageNamespace(""), PrivateNamespace("ChatItemRenderer.as$2"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ChatItemRenderer"), StaticProtectedNs("ChatItemRenderer"), StaticProtectedNs("com.kiwi.Templates:KiwiButton"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_s
+      setlocal2
+
+      debugline           96
+      getlocal1
+      getproperty         Multiname("author", [PrivateNamespace("ChatItemRenderer"), PackageNamespace(""), PrivateNamespace("ChatItemRenderer.as$2"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ChatItemRenderer"), StaticProtectedNs("ChatItemRenderer"), StaticProtectedNs("com.kiwi.Templates:KiwiButton"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("length", [PrivateNamespace("ChatItemRenderer"), PackageNamespace(""), PrivateNamespace("ChatItemRenderer.as$2"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ChatItemRenderer"), StaticProtectedNs("ChatItemRenderer"), StaticProtectedNs("com.kiwi.Templates:KiwiButton"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushbyte            0
+      ifngt               L78
+
+      pushstring          "<font color=\"#D18FDE\">"
+      getlocal1
+      getproperty         Multiname("author", [PrivateNamespace("ChatItemRenderer"), PackageNamespace(""), PrivateNamespace("ChatItemRenderer.as$2"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ChatItemRenderer"), StaticProtectedNs("ChatItemRenderer"), StaticProtectedNs("com.kiwi.Templates:KiwiButton"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      add
+      pushstring          "</font>"
+      add
+      setlocal2
+L78:
       debugline           101
       getlocal0
       getproperty         QName(PackageNamespace(""), "msgTextField")
@@ -655,7 +684,8 @@ L65:
      debug               1, "msg", 2, 52
      debug               1, "line", 3, 53
      debug               1, "allText", 4, 54
-     pushstring          ""
+     ; starting tag for font size
+     pushstring          "<font size=\"14\">"
      debugline           53
      coerce_s
      setlocal            4
@@ -676,7 +706,8 @@ L65:
      pushstring          "["
      getlocal1
      add
-     pushstring          "]"
+     ; - after channel
+     pushstring          " -"
      add
      add
      coerce_s
@@ -690,7 +721,8 @@ L32:
 
      debugline           61
      getlocal            4
-     pushstring          "["
+     ; before author
+     pushstring          " "
      getlocal2
      add
      pushstring          "]: "
@@ -703,6 +735,9 @@ L46:
      debugline           63
      getlocal            4
      getlocal3
+     add
+     ; end tag for font size
+     pushstring          "</font>"
      add
      coerce_s
      setlocal            4
