@@ -22,7 +22,7 @@ class
      debugline           23
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
-     pushshort           15000
+     pushint             3600000
      pushbyte            1
      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
      initproperty        QName(PrivateNamespace("ChatLog"), "_timeout")
