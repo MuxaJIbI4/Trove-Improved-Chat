@@ -1,0 +1,121 @@
+class
+ refid "_kiwi.Constraints:ConstrainedElement"
+ instance QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_kiwi.Constraints:ConstrainedElement")
+  iinit
+   name "_kiwi.Constraints:ConstrainedElement/ConstrainedElement"
+   refid "_kiwi.Constraints:ConstrainedElement/instance/init"
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 2
+    localcount 9
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;ConstrainedElement.as"
+     debugline           23
+     getlocal0
+     pushscope
+
+     debug               1, "clip", 0, 23
+     debug               1, "edges", 1, 23
+     debug               1, "left", 2, 23
+     debug               1, "top", 3, 23
+     debug               1, "right", 4, 23
+     debug               1, "bottom", 5, 23
+     debug               1, "scaleX", 6, 23
+     debug               1, "scaleY", 7, 23
+     debugline           26
+     getlocal0
+     constructsuper      0
+
+     debugline           27
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "clip")
+
+     debugline           28
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "edges")
+
+     debugline           29
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "left")
+
+     debugline           30
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "top")
+
+     debugline           31
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace(""), "right")
+
+     debugline           32
+     getlocal0
+     getlocal            6
+     initproperty        QName(PackageNamespace(""), "bottom")
+
+     debugline           33
+     getlocal0
+     getlocal            7
+     initproperty        QName(PackageNamespace(""), "scaleX")
+
+     debugline           34
+     getlocal0
+     getlocal            8
+     initproperty        QName(PackageNamespace(""), "scaleY")
+
+     debugline           35
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "clip") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait slot QName(PackageNamespace(""), "edges") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "left") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "top") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "right") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "bottom") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "scaleX") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "scaleY") type QName(PackageNamespace(""), "Number") end
+ end ; instance
+ cinit
+  name ""
+  refid "_kiwi.Constraints:ConstrainedElement/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

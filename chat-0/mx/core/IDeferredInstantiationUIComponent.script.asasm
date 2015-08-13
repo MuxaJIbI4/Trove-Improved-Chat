@@ -1,0 +1,29 @@
+script ; 86
+ sinit
+  name ""
+  refid "mx.core:IDeferredInstantiationUIComponent/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IDeferredInstantiationUIComponent.as"
+    debugline           24
+    findpropstrict      Multiname("IDeferredInstantiationUIComponent", [PackageNamespace("mx.core")])
+    pushnull
+    newclass            "mx.core:IDeferredInstantiationUIComponent"
+    initproperty        QName(PackageNamespace("mx.core"), "IDeferredInstantiationUIComponent")
+
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "IDeferredInstantiationUIComponent")
+  #include "IDeferredInstantiationUIComponent.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,42 @@
+class
+ refid "mx.managers:IToolTipManagerClient"
+ instance QName(PackageNamespace("mx.managers"), "IToolTipManagerClient")
+  implements Multiname("IFlexDisplayObject", [PackageNamespace("mx.core")])
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.managers:IToolTipManagerClient/IToolTipManagerClient"
+   refid "mx.managers:IToolTipManagerClient/instance/init"
+  end ; method
+  trait getter QName(Namespace("mx.managers:IToolTipManagerClient"), "toolTip")
+   method
+    name "mx.managers:IToolTipManagerClient/mx.managers:IToolTipManagerClient:toolTip/get"
+    refid "mx.managers:IToolTipManagerClient/instance/mx.managers:IToolTipManagerClient:toolTip/getter"
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.managers:IToolTipManagerClient"), "toolTip")
+   method
+    name "mx.managers:IToolTipManagerClient/mx.managers:IToolTipManagerClient:toolTip/set"
+    refid "mx.managers:IToolTipManagerClient/instance/mx.managers:IToolTipManagerClient:toolTip/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/managers;IToolTipManagerClient.as"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.managers:IToolTipManagerClient/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 5
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

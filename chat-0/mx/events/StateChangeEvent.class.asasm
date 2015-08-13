@@ -1,0 +1,136 @@
+class
+ refid "mx.events:StateChangeEvent"
+ instance QName(PackageNamespace("mx.events"), "StateChangeEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.events:StateChangeEvent")
+  iinit
+   name "mx.events:StateChangeEvent/StateChangeEvent"
+   refid "mx.events:StateChangeEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional False()
+   optional False()
+   optional Null()
+   optional Null()
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;StateChangeEvent.as"
+     debugline           136
+     getlocal0
+     pushscope
+
+     debug               1, "type", 0, 136
+     debug               1, "bubbles", 1, 136
+     debug               1, "cancelable", 2, 136
+     debug               1, "oldState", 3, 136
+     debug               1, "newState", 4, 136
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;StateChangeEvent.as"
+     debugline           141
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     debugline           143
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "oldState")
+
+     debugline           144
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace(""), "newState")
+
+     debugline           145
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "newState") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "oldState") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    name "mx.events:StateChangeEvent/clone"
+    refid "mx.events:StateChangeEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;StateChangeEvent.as"
+      debugline           190
+      getlocal0
+      pushscope
+
+      debugline           192
+      findpropstrict      QName(PackageNamespace("mx.events"), "StateChangeEvent")
+      debugline           192
+      getlex              QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace(""), "bubbles")
+      getlex              QName(PackageNamespace(""), "cancelable")
+      debugline           193
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "oldState")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "newState")
+      constructprop       QName(PackageNamespace("mx.events"), "StateChangeEvent"), 5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.events:StateChangeEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 18
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "CURRENT_STATE_CHANGE", 1, 72
+    findproperty        QName(PackageNamespace(""), "CURRENT_STATE_CHANGE")
+    pushstring          "currentStateChange"
+    initproperty        QName(PackageNamespace(""), "CURRENT_STATE_CHANGE")
+
+    debug               1, "CURRENT_STATE_CHANGING", 2, 107
+    findproperty        QName(PackageNamespace(""), "CURRENT_STATE_CHANGING")
+    pushstring          "currentStateChanging"
+    initproperty        QName(PackageNamespace(""), "CURRENT_STATE_CHANGING")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PackageNamespace(""), "CURRENT_STATE_CHANGE") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("currentStateChange") end
+ trait const QName(PackageNamespace(""), "CURRENT_STATE_CHANGING") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("currentStateChanging") end
+end ; class

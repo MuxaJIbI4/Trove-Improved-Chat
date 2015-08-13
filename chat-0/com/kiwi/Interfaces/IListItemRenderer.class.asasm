@@ -1,0 +1,113 @@
+class
+ refid "com.kiwi.Interfaces:IListItemRenderer"
+ instance QName(PackageNamespace("com.kiwi.Interfaces"), "IListItemRenderer")
+  implements Multiname("IKiwiComponent", [PackageNamespace("com.kiwi.Interfaces")])
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "com.kiwi.Interfaces:IListItemRenderer/IListItemRenderer"
+   refid "com.kiwi.Interfaces:IListItemRenderer/instance/init"
+  end ; method
+  trait getter QName(Namespace("com.kiwi.Interfaces:IListItemRenderer"), "index")
+   method
+    name "com.kiwi.Interfaces:IListItemRenderer/com.kiwi.Interfaces:IListItemRenderer:index/get"
+    refid "com.kiwi.Interfaces:IListItemRenderer/instance/com.kiwi.Interfaces:IListItemRenderer:index/getter"
+    returns QName(PackageNamespace(""), "uint")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("com.kiwi.Interfaces:IListItemRenderer"), "index")
+   method
+    name "com.kiwi.Interfaces:IListItemRenderer/com.kiwi.Interfaces:IListItemRenderer:index/set"
+    refid "com.kiwi.Interfaces:IListItemRenderer/instance/com.kiwi.Interfaces:IListItemRenderer:index/setter"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IListItemRenderer.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("com.kiwi.Interfaces:IListItemRenderer"), "owner")
+   method
+    name "com.kiwi.Interfaces:IListItemRenderer/com.kiwi.Interfaces:IListItemRenderer:owner/get"
+    refid "com.kiwi.Interfaces:IListItemRenderer/instance/com.kiwi.Interfaces:IListItemRenderer:owner/getter"
+    returns QName(PackageNamespace("com.kiwi.Core"), "KiwiComponent")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("com.kiwi.Interfaces:IListItemRenderer"), "owner")
+   method
+    name "com.kiwi.Interfaces:IListItemRenderer/com.kiwi.Interfaces:IListItemRenderer:owner/set"
+    refid "com.kiwi.Interfaces:IListItemRenderer/instance/com.kiwi.Interfaces:IListItemRenderer:owner/setter"
+    param QName(PackageNamespace("com.kiwi.Core"), "KiwiComponent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IListItemRenderer.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("com.kiwi.Interfaces:IListItemRenderer"), "selectable")
+   method
+    name "com.kiwi.Interfaces:IListItemRenderer/com.kiwi.Interfaces:IListItemRenderer:selectable/get"
+    refid "com.kiwi.Interfaces:IListItemRenderer/instance/com.kiwi.Interfaces:IListItemRenderer:selectable/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("com.kiwi.Interfaces:IListItemRenderer"), "selectable")
+   method
+    name "com.kiwi.Interfaces:IListItemRenderer/com.kiwi.Interfaces:IListItemRenderer:selectable/set"
+    refid "com.kiwi.Interfaces:IListItemRenderer/instance/com.kiwi.Interfaces:IListItemRenderer:selectable/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IListItemRenderer.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("com.kiwi.Interfaces:IListItemRenderer"), "selected")
+   method
+    name "com.kiwi.Interfaces:IListItemRenderer/com.kiwi.Interfaces:IListItemRenderer:selected/get"
+    refid "com.kiwi.Interfaces:IListItemRenderer/instance/com.kiwi.Interfaces:IListItemRenderer:selected/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("com.kiwi.Interfaces:IListItemRenderer"), "selected")
+   method
+    name "com.kiwi.Interfaces:IListItemRenderer/com.kiwi.Interfaces:IListItemRenderer:selected/set"
+    refid "com.kiwi.Interfaces:IListItemRenderer/instance/com.kiwi.Interfaces:IListItemRenderer:selected/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IListItemRenderer.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.kiwi.Interfaces:IListItemRenderer"), "setListData")
+   method
+    name "com.kiwi.Interfaces:IListItemRenderer/com.kiwi.Interfaces:IListItemRenderer:setListData"
+    refid "com.kiwi.Interfaces:IListItemRenderer/instance/com.kiwi.Interfaces:IListItemRenderer:setListData"
+    param QName(PackageNamespace("com.kiwi.Data"), "ListItemData")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IListItemRenderer.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.kiwi.Interfaces:IListItemRenderer"), "setData")
+   method
+    name "com.kiwi.Interfaces:IListItemRenderer/com.kiwi.Interfaces:IListItemRenderer:setData"
+    refid "com.kiwi.Interfaces:IListItemRenderer/instance/com.kiwi.Interfaces:IListItemRenderer:setData"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IListItemRenderer.as"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "com.kiwi.Interfaces:IListItemRenderer/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 5
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

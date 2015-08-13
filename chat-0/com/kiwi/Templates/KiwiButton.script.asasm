@@ -1,0 +1,62 @@
+script ; 115
+ sinit
+  name ""
+  refid "com.kiwi.Templates:KiwiButton/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Templates;KiwiButton.as"
+    debugline           24
+    findpropstrict      Multiname("KiwiButton", [PackageNamespace("com.kiwi.Templates")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "MovieClip")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.kiwi.Core"), "KiwiComponent")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.kiwi.Core"), "KiwiComponent")
+    newclass            "com.kiwi.Templates:KiwiButton"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.kiwi.Templates"), "KiwiButton")
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Templates;KiwiButton.as"
+    debugline           1
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.kiwi.Templates"), "KiwiButton")
+  #include "KiwiButton.class.asasm"
+ end ; trait
+end ; script

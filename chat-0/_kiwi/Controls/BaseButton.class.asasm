@@ -1,0 +1,1494 @@
+class
+ refid "_kiwi.Controls:BaseButton"
+ instance QName(PackageNamespace("_kiwi.Controls"), "BaseButton")
+  extends QName(PackageNamespace("_kiwi.Core"), "UIComponent")
+  implements Multiname("IFocusManagerComponent", [PackageNamespace("_kiwi.Interfaces")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_kiwi.Controls:BaseButton")
+  iinit
+   name "_kiwi.Controls:BaseButton/BaseButton"
+   refid "_kiwi.Controls:BaseButton/instance/init"
+   flag NEED_ACTIVATION
+   body
+    maxstack 22
+    localcount 2
+    initscopedepth 12
+    maxscopedepth 14
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+     debugline           119
+     getlocal0
+     pushscope
+
+     newactivation
+     dup
+     setlocal1
+
+     pushscope
+
+     debug               1, "BaseButton$1", 0, 119
+     debugline           32
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.filters"), "ColorMatrixFilter")
+     pushdouble          0.4
+     pushdouble          0.4
+     pushdouble          0.4
+     pushdouble          0
+     pushdouble          0
+     pushdouble          0.4
+     pushdouble          0.4
+     pushdouble          0.4
+     pushdouble          0
+     pushdouble          0
+     pushdouble          0.4
+     pushdouble          0.4
+     pushdouble          0.4
+     pushdouble          0
+     pushdouble          0
+     pushdouble          0
+     pushdouble          0
+     pushdouble          0
+     pushbyte            1
+     pushdouble          0
+     newarray            20
+     constructprop       QName(PackageNamespace("flash.filters"), "ColorMatrixFilter"), 1
+     initproperty        QName(PackageNamespace(""), "GhostedFilter")
+
+     debugline           121
+     getlocal0
+     constructsuper      0
+
+     debugline           123
+     findproperty        QName(PackageNamespace(""), "buttonMode")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "buttonMode")
+
+     debugline           124
+     findproperty        QName(PackageNamespace(""), "mouseChildren")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "mouseChildren")
+
+     debugline           125
+     findproperty        QName(PackageNamespace(""), "useHandCursor")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "useHandCursor")
+
+     debugline           127
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "ROLL_OUT")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "handleMouseEvent")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     debugline           128
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "handleMouseEvent")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     debugline           129
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_UP")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "handleMouseEvent")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     debugline           130
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "ROLL_OVER")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "handleMouseEvent")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     debugline           132
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "MOUSE_LEAVE")
+     newfunction         "_kiwi.Controls:BaseButton/instance/init/inline_method"
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+     debugline           133
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_toggle") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_unlockedState") type QName(PackageNamespace(""), "String") value Utf8("up") end
+  trait slot QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "_ghosted") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_selected") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_checked") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_data") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_clickSoundEvent") type QName(PackageNamespace(""), "String") value Utf8("Play_ui_button_select") end
+  trait const QName(PackageNamespace(""), "GhostedFilter") type QName(PackageNamespace("flash.filters"), "ColorMatrixFilter") end
+  trait slot QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "_mouseStateLocked") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait getter QName(PackageNamespace(""), "clickSoundEvent")
+   method
+    name "_kiwi.Controls:BaseButton/clickSoundEvent/get"
+    refid "_kiwi.Controls:BaseButton/instance/clickSoundEvent/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           54
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_clickSoundEvent")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "clickSoundEvent")
+   method
+    name "_kiwi.Controls:BaseButton/clickSoundEvent/set"
+    refid "_kiwi.Controls:BaseButton/instance/clickSoundEvent/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "KB_RELEASE"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           55
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 55
+      debugline           57
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_clickSoundEvent")
+
+      debugline           58
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "toggle")
+   method
+    name "_kiwi.Controls:BaseButton/toggle/get"
+    refid "_kiwi.Controls:BaseButton/instance/toggle/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           61
+      getlocal0
+      pushscope
+
+      debugline           63
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_toggle")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "ghosted")
+   method
+    name "_kiwi.Controls:BaseButton/ghosted/get"
+    refid "_kiwi.Controls:BaseButton/instance/ghosted/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           67
+      getlocal0
+      pushscope
+
+      debugline           69
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "_ghosted")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "ghosted")
+   method
+    name "_kiwi.Controls:BaseButton/ghosted/set"
+    refid "_kiwi.Controls:BaseButton/instance/ghosted/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "KB_RELEASE"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           72
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 72
+      debugline           74
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "_ghosted")
+      getlocal1
+      ifeq                L29
+
+      debugline           76
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "_ghosted")
+
+      debugline           77
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "_ghosted")
+      iffalse             L25
+
+      debugline           79
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "GhostedFilter")
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      jump                L29
+
+L25:
+      debugline           83
+      getlocal0
+      newarray            0
+      setproperty         QName(PackageNamespace(""), "filters")
+
+L29:
+      debugline           87
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      debugline           88
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "toggle")
+   method
+    name "_kiwi.Controls:BaseButton/toggle/set"
+    refid "_kiwi.Controls:BaseButton/instance/toggle/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "KB_RELEASE"
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           91
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 91
+      debugline           93
+      getlocal1
+      not
+      dup
+      iffalse             L14
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "checked")
+      convert_b
+L14:
+      iffalse             L19
+
+      debugline           95
+      getlocal0
+      pushfalse
+      initproperty        QName(PackageNamespace(""), "checked")
+
+L19:
+      debugline           98
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_toggle")
+
+      debugline           100
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_toggle")
+      iffalse             L38
+
+      debugline           102
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "toggleSelected")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      jump                L46
+
+L38:
+      debugline           106
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "toggleSelected")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+L46:
+      debugline           109
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      debugline           110
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "toggleSelected")
+   method
+    name "_kiwi.Controls:BaseButton/protected:toggleSelected"
+    refid "_kiwi.Controls:BaseButton/instance/_kiwi.Controls:BaseButton:toggleSelected"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "KB_RELEASE"
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           112
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 112
+      debugline           114
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "checked")
+      not
+      initproperty        QName(PackageNamespace(""), "checked")
+
+      debugline           115
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      pushtrue
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           116
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    name "_kiwi.Controls:BaseButton/enabled/get"
+    refid "_kiwi.Controls:BaseButton/instance/enabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           136
+      getlocal0
+      pushscope
+
+      debugline           138
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "enabled")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    name "_kiwi.Controls:BaseButton/enabled/set"
+    refid "_kiwi.Controls:BaseButton/instance/enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "KB_RELEASE"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           141
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 141
+      debug               1, "state", 1, 146
+      debugline           143
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "enabled")
+
+      debugline           144
+      findproperty        QName(PackageNamespace(""), "mouseEnabled")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "mouseEnabled")
+
+      pushstring          ""
+      debugline           146
+      coerce_s
+      setlocal2
+
+      debugline           147
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "enabled")
+      iffalse             L41
+
+      debugline           149
+      getlex              QName(ProtectedNamespace("_kiwi.Core:UIComponent"), "_isFocused")
+      convert_b
+      dup
+      iftrue              L30
+
+      pop
+      getlex              QName(ProtectedNamespace("_kiwi.Core:UIComponent"), "_displayFocus")
+      convert_b
+L30:
+      iffalse             L35
+
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+      getproperty         QName(PackageNamespace(""), "OVER")
+      coerce_s
+      jump                L38
+
+L35:
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+      getproperty         QName(PackageNamespace(""), "UP")
+      coerce_s
+L38:
+      coerce_s
+      setlocal2
+
+      jump                L46
+
+L41:
+      debugline           153
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+      getproperty         QName(PackageNamespace(""), "DISABLED")
+      coerce_s
+      setlocal2
+
+L46:
+      debugline           155
+      getlocal0
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "setState"), 1
+
+      debugline           156
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "checked")
+   method
+    name "_kiwi.Controls:BaseButton/checked/get"
+    refid "_kiwi.Controls:BaseButton/instance/checked/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           158
+      getlocal0
+      pushscope
+
+      debugline           160
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_checked")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "checked")
+   method
+    name "_kiwi.Controls:BaseButton/checked/set"
+    refid "_kiwi.Controls:BaseButton/instance/checked/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "KB_RELEASE"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           163
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 163
+      debugline           165
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_checked")
+      getlocal1
+      ifeq                L36
+
+      debugline           167
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_checked")
+
+      debugline           169
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "enabled")
+      iffalse             L31
+
+      debugline           171
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_checked")
+      iffalse             L27
+
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+      getproperty         QName(PackageNamespace(""), "SELECTING")
+      coerce_s
+      jump                L30
+
+L27:
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+      getproperty         QName(PackageNamespace(""), "OUT")
+      coerce_s
+L30:
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "setState"), 1
+
+L31:
+      debugline           174
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+L36:
+      debugline           176
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selected")
+   method
+    name "_kiwi.Controls:BaseButton/selected/get"
+    refid "_kiwi.Controls:BaseButton/instance/selected/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           178
+      getlocal0
+      pushscope
+
+      debugline           180
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_selected")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selected")
+   method
+    name "_kiwi.Controls:BaseButton/selected/set"
+    refid "_kiwi.Controls:BaseButton/instance/selected/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "KB_RELEASE"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           183
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 183
+      debugline           185
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_selected")
+
+      debugline           186
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "data")
+   method
+    name "_kiwi.Controls:BaseButton/data/get"
+    refid "_kiwi.Controls:BaseButton/instance/data/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           189
+      getlocal0
+      pushscope
+
+      debugline           191
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_data")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "data")
+   method
+    name "_kiwi.Controls:BaseButton/data/set"
+    refid "_kiwi.Controls:BaseButton/instance/data/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "KB_RELEASE"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           194
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 194
+      debugline           196
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_data")
+
+      debugline           197
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "mouseStateLocked")
+   method
+    name "_kiwi.Controls:BaseButton/mouseStateLocked/set"
+    refid "_kiwi.Controls:BaseButton/instance/mouseStateLocked/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "KB_RELEASE"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           199
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 199
+      debugline           201
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "_mouseStateLocked")
+
+      debugline           202
+      getlocal1
+      iftrue              L18
+
+      debugline           204
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_unlockedState")
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "setState"), 1
+
+      jump                L22
+
+L18:
+      debugline           208
+      getlocal0
+      getlex              QName(ProtectedNamespace("_kiwi.Core:UIComponent"), "_state")
+      initproperty        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_unlockedState")
+
+L22:
+      debugline           210
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "setState") flag OVERRIDE
+   method
+    name "_kiwi.Controls:BaseButton/protected:setState"
+    refid "_kiwi.Controls:BaseButton/instance/_kiwi.Controls:BaseButton:setState"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "KB_RELEASE"
+    body
+     maxstack 3
+     localcount 10
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           212
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      pushnull
+      coerce_s
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      pushnull
+      coerce_s
+      setlocal            7
+
+      pushbyte            0
+      convert_u
+      setlocal            8
+
+      pushbyte            0
+      convert_u
+      setlocal            9
+
+      debug               1, "state", 0, 212
+      debugline           214
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "_mouseStateLocked")
+      iffalse             L39
+
+      debugline           216
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_unlockedState")
+
+      debugline           217
+      returnvoid
+
+L39:
+      debugline           220
+      getlex              QName(ProtectedNamespace("_kiwi.Core:UIComponent"), "_state")
+      getlocal1
+      ifeq                L159
+
+      debug               1, "prefixes", 1, 224
+      debug               1, "states", 2, 225
+      debugline           222
+      findproperty        QName(ProtectedNamespace("_kiwi.Core:UIComponent"), "_state")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("_kiwi.Core:UIComponent"), "_state")
+
+      debugline           224
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_checked")
+      iffalse             L56
+
+      getlex              QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "selectedStates")
+      coerce              QName(PackageNamespace(""), "Array")
+      jump                L58
+
+L56:
+      getlex              QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "defaultStates")
+      coerce              QName(PackageNamespace(""), "Array")
+L58:
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      debugline           225
+      getlex              QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "stateMap")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Controls:BaseButton"), PackageNamespace(""), ProtectedNamespace("_kiwi.Controls:BaseButton"), PrivateNamespace("BaseButton.as$167"), PackageNamespace("_kiwi.Controls"), PackageInternalNs("_kiwi.Controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Controls:BaseButton"), StaticProtectedNs("_kiwi.Core:UIComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      debugline           227
+      getlocal3
+      convert_b
+      dup
+      iffalse             L75
+
+      pop
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_b
+L75:
+      iffalse             L159
+
+      debug               1, "length", 3, 229
+      debug               1, "prefix", 4, 230
+      debug               1, "stateLength", 5, 231
+      debug               1, "entryLabel", 6, 232
+      debug               1, "i", 7, 234
+      debugline           229
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_u
+      setlocal            4
+
+      pushstring          ""
+      debugline           230
+      coerce_s
+      setlocal            5
+
+      debugline           231
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_u
+      setlocal            6
+
+      pushstring          ""
+      debugline           232
+      coerce_s
+      setlocal            7
+
+      debugline           234
+      pushbyte            0
+      convert_u
+      setlocal            8
+
+      jump                L156
+
+L104:
+      label
+      debug               1, "j", 8, 237
+      debugline           236
+      getlocal2
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Controls:BaseButton"), PackageNamespace(""), ProtectedNamespace("_kiwi.Controls:BaseButton"), PrivateNamespace("BaseButton.as$167"), PackageNamespace("_kiwi.Controls"), PackageInternalNs("_kiwi.Controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Controls:BaseButton"), StaticProtectedNs("_kiwi.Core:UIComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_s
+      setlocal            5
+
+      debugline           237
+      pushbyte            0
+      convert_u
+      setlocal            9
+
+      jump                L148
+
+L117:
+      label
+      debugline           239
+      getlocal            5
+      getlocal3
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Controls:BaseButton"), PackageNamespace(""), ProtectedNamespace("_kiwi.Controls:BaseButton"), PrivateNamespace("BaseButton.as$167"), PackageNamespace("_kiwi.Controls"), PackageInternalNs("_kiwi.Controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Controls:BaseButton"), StaticProtectedNs("_kiwi.Core:UIComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      add
+      coerce_s
+      setlocal            7
+
+      debugline           240
+      getlex              QName(ProtectedNamespace("_kiwi.Core:UIComponent"), "_labels")
+      getlocal            7
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            255
+      ifeq                L143
+
+      debugline           242
+      findproperty        QName(ProtectedNamespace("_kiwi.Core:UIComponent"), "_newFrame")
+      getlocal            7
+      initproperty        QName(ProtectedNamespace("_kiwi.Core:UIComponent"), "_newFrame")
+
+      debugline           243
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      debugline           244
+      jump                L151
+
+L143:
+      debugline           237
+      getlocal            9
+      increment
+      convert_u
+      setlocal            9
+
+L148:
+      getlocal            9
+      getlocal            6
+      iflt                L117
+
+L151:
+      debugline           234
+      getlocal            8
+      increment
+      convert_u
+      setlocal            8
+
+L156:
+      getlocal            8
+      getlocal            4
+      iflt                L104
+
+L159:
+      debugline           250
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "handleMouseEvent")
+   method
+    name "_kiwi.Controls:BaseButton/protected:handleMouseEvent"
+    refid "_kiwi.Controls:BaseButton/instance/_kiwi.Controls:BaseButton:handleMouseEvent"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "KB_RELEASE"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           252
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 252
+      jump                L75
+
+L6:
+      label
+      debugline           257
+      getlocal0
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+      getproperty         QName(PackageNamespace(""), "DOWN")
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "setState"), 1
+
+      debugline           258
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "startPress"), 0
+
+      debugline           259
+      jump                L117
+
+L17:
+      label
+      debugline           261
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "toggle")
+      not
+      dup
+      iftrue              L28
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "checked")
+      not
+L28:
+      iffalse             L34
+
+      debugline           263
+      getlocal0
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+      getproperty         QName(PackageNamespace(""), "OVER")
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "setState"), 1
+
+L34:
+      debugline           265
+      jump                L117
+
+L36:
+      label
+      debugline           267
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "toggle")
+      iftrue              L46
+
+      debugline           269
+      getlocal0
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+      getproperty         QName(PackageNamespace(""), "UP")
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "setState"), 1
+
+L46:
+      debugline           271
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "endPress"), 0
+
+      debugline           272
+      jump                L117
+
+L51:
+      label
+      debugline           274
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "toggle")
+      not
+      dup
+      iftrue              L62
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "checked")
+      not
+L62:
+      iffalse             L68
+
+      debugline           276
+      getlocal0
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+      getproperty         QName(PackageNamespace(""), "OUT")
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "setState"), 1
+
+L68:
+      debugline           278
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "endPress"), 0
+
+      debugline           279
+      jump                L117
+
+L73:
+      label
+      jump                L117
+
+L75:
+      debugline           254
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "type")
+      setlocal2
+
+      debugline           256
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      getlocal2
+      ifstrictne          L86
+
+      pushbyte            0
+      jump                L115
+
+L86:
+      debugline           260
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OVER")
+      getlocal2
+      ifstrictne          L93
+
+      pushbyte            1
+      jump                L115
+
+L93:
+      debugline           266
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_UP")
+      getlocal2
+      ifstrictne          L100
+
+      pushbyte            2
+      jump                L115
+
+L100:
+      debugline           273
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OUT")
+      getlocal2
+      ifstrictne          L107
+
+      pushbyte            3
+      jump                L115
+
+L107:
+      jump                L114
+
+      ; 0x24
+      ; 0x04
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L114:
+      pushbyte            4
+L115:
+      kill                2
+      lookupswitch        L73, [L6, L17, L36, L51, L73]
+
+L117:
+      debugline           281
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "startPress")
+   method
+    name "_kiwi.Controls:BaseButton/protected:startPress"
+    refid "_kiwi.Controls:BaseButton/instance/_kiwi.Controls:BaseButton:startPress"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           283
+      getlocal0
+      pushscope
+
+      debugline           285
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      pushstring          "POST_SOUND_EVENT"
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "_clickSoundEvent")
+      callpropvoid        QName(PackageNamespace(""), "call"), 2
+
+      debugline           286
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getproperty         QName(PackageNamespace(""), "BUTTON_DOWN")
+      pushtrue
+      constructprop       QName(PackageNamespace("fl.events"), "ComponentEvent"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           287
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "endPress")
+   method
+    name "_kiwi.Controls:BaseButton/protected:endPress"
+    refid "_kiwi.Controls:BaseButton/instance/_kiwi.Controls:BaseButton:endPress"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           289
+      getlocal0
+      pushscope
+
+      debugline           291
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "handleKeyDown") flag OVERRIDE
+   method
+    name "_kiwi.Controls:BaseButton/protected:handleKeyDown"
+    refid "_kiwi.Controls:BaseButton/instance/_kiwi.Controls:BaseButton:handleKeyDown"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "KB_RELEASE"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           293
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 293
+      debugline           295
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("_kiwi.Core:UIComponent"), "handleKeyDown"), 1
+      debugline           296
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "enabled")
+      iffalse             L27
+
+      debugline           298
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "SPACE")
+      ifne                L27
+
+      debugline           300
+      getlocal0
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+      getproperty         QName(PackageNamespace(""), "KB_DOWN")
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "setState"), 1
+
+      debugline           302
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "startPress"), 0
+
+L27:
+      debugline           305
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "handleKeyUp") flag OVERRIDE
+   method
+    name "_kiwi.Controls:BaseButton/protected:handleKeyUp"
+    refid "_kiwi.Controls:BaseButton/instance/_kiwi.Controls:BaseButton:handleKeyUp"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "KB_RELEASE"
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+      debugline           307
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 307
+      debugline           309
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("_kiwi.Core:UIComponent"), "handleKeyUp"), 1
+      debugline           310
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "enabled")
+      iffalse             L43
+
+      debugline           312
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "SPACE")
+      equals
+      dup
+      iftrue              L27
+
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "ENTER")
+      equals
+L27:
+      iffalse             L43
+
+      debugline           314
+      getlocal0
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+      getproperty         QName(PackageNamespace(""), "KB_RELEASE")
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "setState"), 1
+
+      debugline           316
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "endPress"), 0
+
+      debugline           317
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "MouseEvent")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      constructprop       QName(PackageNamespace("flash.events"), "MouseEvent"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L43:
+      debugline           320
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "_kiwi.Controls:BaseButton/class/init"
+  body
+   maxstack 19
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "defaultStates", 0, 36
+    findproperty        QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "defaultStates")
+    findpropstrict      QName(PackageNamespace(""), "Array")
+    pushstring          ""
+    constructprop       QName(PackageNamespace(""), "Array"), 1
+    setproperty         QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "defaultStates")
+
+    debug               1, "selectedStates", 1, 37
+    findproperty        QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "selectedStates")
+    findpropstrict      QName(PackageNamespace(""), "Array")
+    pushstring          "selected_"
+    pushstring          ""
+    constructprop       QName(PackageNamespace(""), "Array"), 2
+    setproperty         QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "selectedStates")
+
+    debug               1, "stateMap", 2, 39
+    findproperty        QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "stateMap")
+    pushstring          "up"
+    findpropstrict      QName(PackageNamespace(""), "Array")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "UP")
+    constructprop       QName(PackageNamespace(""), "Array"), 1
+    pushstring          "over"
+    findpropstrict      QName(PackageNamespace(""), "Array")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "OVER")
+    constructprop       QName(PackageNamespace(""), "Array"), 1
+    pushstring          "down"
+    findpropstrict      QName(PackageNamespace(""), "Array")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "DOWN")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "KB_DOWN")
+    constructprop       QName(PackageNamespace(""), "Array"), 2
+    pushstring          "release"
+    findpropstrict      QName(PackageNamespace(""), "Array")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "RELEASE")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "OVER")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "KB_RELEASE")
+    constructprop       QName(PackageNamespace(""), "Array"), 3
+    pushstring          "out"
+    findpropstrict      QName(PackageNamespace(""), "Array")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "OUT")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "UP")
+    constructprop       QName(PackageNamespace(""), "Array"), 2
+    pushstring          "disabled"
+    findpropstrict      QName(PackageNamespace(""), "Array")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "DISABLED")
+    constructprop       QName(PackageNamespace(""), "Array"), 1
+    pushstring          "selecting"
+    findpropstrict      QName(PackageNamespace(""), "Array")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "SELECTING")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "DOWN")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "KB_SELECTING")
+    constructprop       QName(PackageNamespace(""), "Array"), 3
+    pushstring          "toggle"
+    findpropstrict      QName(PackageNamespace(""), "Array")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "TOGGLE")
+    getlex              QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+    getproperty         QName(PackageNamespace(""), "UP")
+    constructprop       QName(PackageNamespace(""), "Array"), 2
+    newobject           8
+    setproperty         QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "stateMap")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "defaultStates") slotid 1 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "selectedStates") slotid 2 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace("_kiwi.Controls:BaseButton"), "stateMap") slotid 3 type QName(PackageNamespace(""), "Object") end
+end ; class

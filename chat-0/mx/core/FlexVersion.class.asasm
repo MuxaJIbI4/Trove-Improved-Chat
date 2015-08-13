@@ -1,0 +1,530 @@
+class
+ refid "mx.core:FlexVersion"
+ instance QName(PackageNamespace("mx.core"), "FlexVersion")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.core:FlexVersion")
+  iinit
+   name "mx.core:FlexVersion/FlexVersion"
+   refid "mx.core:FlexVersion/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;FlexVersion.as"
+     debugline           327
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:FlexVersion/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 20
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "CURRENT_VERSION", 1, 51
+    findproperty        QName(PackageNamespace(""), "CURRENT_VERSION")
+    pushint             67108864
+    initproperty        QName(PackageNamespace(""), "CURRENT_VERSION")
+
+    debug               1, "VERSION_4_0", 2, 65
+    findproperty        QName(PackageNamespace(""), "VERSION_4_0")
+    pushint             67108864
+    initproperty        QName(PackageNamespace(""), "VERSION_4_0")
+
+    debug               1, "VERSION_3_0", 3, 79
+    findproperty        QName(PackageNamespace(""), "VERSION_3_0")
+    pushint             50331648
+    initproperty        QName(PackageNamespace(""), "VERSION_3_0")
+
+    debug               1, "VERSION_2_0_1", 4, 93
+    findproperty        QName(PackageNamespace(""), "VERSION_2_0_1")
+    pushint             33554433
+    initproperty        QName(PackageNamespace(""), "VERSION_2_0_1")
+
+    debug               1, "VERSION_2_0", 5, 107
+    findproperty        QName(PackageNamespace(""), "VERSION_2_0")
+    pushint             33554432
+    initproperty        QName(PackageNamespace(""), "VERSION_2_0")
+
+    debug               1, "VERSION_ALREADY_SET", 6, 119
+    findproperty        QName(PackageNamespace(""), "VERSION_ALREADY_SET")
+    pushstring          "versionAlreadySet"
+    initproperty        QName(PackageNamespace(""), "VERSION_ALREADY_SET")
+
+    debug               1, "VERSION_ALREADY_READ", 7, 132
+    findproperty        QName(PackageNamespace(""), "VERSION_ALREADY_READ")
+    pushstring          "versionAlreadyRead"
+    initproperty        QName(PackageNamespace(""), "VERSION_ALREADY_READ")
+
+    debug               1, "_compatibilityErrorFunction", 8, 149
+    debug               1, "_compatibilityVersion", 9, 189
+    findproperty        QName(PrivateNamespace("mx.core:FlexVersion"), "_compatibilityVersion")
+    getlex              QName(PackageNamespace(""), "CURRENT_VERSION")
+    setproperty         QName(PrivateNamespace("mx.core:FlexVersion"), "_compatibilityVersion")
+
+    debug               1, "compatibilityVersionChanged", 10, 194
+    findproperty        QName(PrivateNamespace("mx.core:FlexVersion"), "compatibilityVersionChanged")
+    pushfalse
+    setproperty         QName(PrivateNamespace("mx.core:FlexVersion"), "compatibilityVersionChanged")
+
+    debug               1, "compatibilityVersionRead", 11, 199
+    findproperty        QName(PrivateNamespace("mx.core:FlexVersion"), "compatibilityVersionRead")
+    pushfalse
+    setproperty         QName(PrivateNamespace("mx.core:FlexVersion"), "compatibilityVersionRead")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PackageNamespace(""), "CURRENT_VERSION") slotid 2 type QName(PackageNamespace(""), "uint") value Integer(67108864) end
+ trait const QName(PackageNamespace(""), "VERSION_4_0") slotid 3 type QName(PackageNamespace(""), "uint") value Integer(67108864) end
+ trait const QName(PackageNamespace(""), "VERSION_3_0") slotid 4 type QName(PackageNamespace(""), "uint") value Integer(50331648) end
+ trait const QName(PackageNamespace(""), "VERSION_2_0_1") slotid 5 type QName(PackageNamespace(""), "uint") value Integer(33554433) end
+ trait const QName(PackageNamespace(""), "VERSION_2_0") slotid 6 type QName(PackageNamespace(""), "uint") value Integer(33554432) end
+ trait const QName(PackageNamespace(""), "VERSION_ALREADY_SET") slotid 7 type QName(PackageNamespace(""), "String") value Utf8("versionAlreadySet") end
+ trait const QName(PackageNamespace(""), "VERSION_ALREADY_READ") slotid 8 type QName(PackageNamespace(""), "String") value Utf8("versionAlreadyRead") end
+ trait slot QName(PrivateNamespace("mx.core:FlexVersion"), "_compatibilityErrorFunction") slotid 9 type QName(PackageNamespace(""), "Function") end
+ trait getter QName(PackageNamespace(""), "compatibilityErrorFunction") flag FINAL dispid 3
+  method
+   name "mx.core:FlexVersion/compatibilityErrorFunction/get"
+   refid "mx.core:FlexVersion/class/compatibilityErrorFunction/getter"
+   returns QName(PackageNamespace(""), "Function")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;FlexVersion.as"
+     debugline           168
+     getlocal0
+     pushscope
+
+     debugline           170
+     getlex              QName(PrivateNamespace("mx.core:FlexVersion"), "_compatibilityErrorFunction")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait setter QName(PackageNamespace(""), "compatibilityErrorFunction") flag FINAL dispid 4
+  method
+   name "mx.core:FlexVersion/compatibilityErrorFunction/set"
+   refid "mx.core:FlexVersion/class/compatibilityErrorFunction/setter"
+   param QName(PackageNamespace(""), "Function")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_PARAM_NAMES
+   paramname "versionAlreadyRead"
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;FlexVersion.as"
+     debugline           176
+     getlocal0
+     pushscope
+
+     debug               1, "value", 0, 176
+     debugline           178
+     findproperty        QName(PrivateNamespace("mx.core:FlexVersion"), "_compatibilityErrorFunction")
+     getlocal1
+     setproperty         QName(PrivateNamespace("mx.core:FlexVersion"), "_compatibilityErrorFunction")
+
+     debugline           179
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PrivateNamespace("mx.core:FlexVersion"), "_compatibilityVersion") slotid 10 type QName(PackageNamespace(""), "uint") value Integer(67108864) end
+ trait slot QName(PrivateNamespace("mx.core:FlexVersion"), "compatibilityVersionChanged") slotid 11 type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PrivateNamespace("mx.core:FlexVersion"), "compatibilityVersionRead") slotid 12 type QName(PackageNamespace(""), "Boolean") value False() end
+ trait getter QName(PackageNamespace(""), "compatibilityVersion") flag FINAL dispid 5
+  method
+   name "mx.core:FlexVersion/compatibilityVersion/get"
+   refid "mx.core:FlexVersion/class/compatibilityVersion/getter"
+   returns QName(PackageNamespace(""), "uint")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;FlexVersion.as"
+     debugline           219
+     getlocal0
+     pushscope
+
+     debugline           221
+     findproperty        QName(PrivateNamespace("mx.core:FlexVersion"), "compatibilityVersionRead")
+     pushtrue
+     setproperty         QName(PrivateNamespace("mx.core:FlexVersion"), "compatibilityVersionRead")
+
+     debugline           223
+     getlex              QName(PrivateNamespace("mx.core:FlexVersion"), "_compatibilityVersion")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait setter QName(PackageNamespace(""), "compatibilityVersion") flag FINAL dispid 6
+  method
+   name "mx.core:FlexVersion/compatibilityVersion/set"
+   refid "mx.core:FlexVersion/class/compatibilityVersion/setter"
+   param QName(PackageNamespace(""), "uint")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_PARAM_NAMES
+   paramname "versionAlreadyRead"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;FlexVersion.as"
+     debugline           229
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal2
+
+     debug               1, "value", 0, 229
+     debug               1, "s", 1, 234
+     debugline           231
+     getlocal1
+     getlex              QName(PrivateNamespace("mx.core:FlexVersion"), "_compatibilityVersion")
+     ifne                L15
+
+     debugline           232
+     returnvoid
+
+L15:
+     debugline           236
+     getlex              QName(PrivateNamespace("mx.core:FlexVersion"), "compatibilityVersionChanged")
+     iffalse             L41
+
+     debugline           238
+     getlex              QName(PackageNamespace(""), "compatibilityErrorFunction")
+     pushnull
+     ifne                L36
+
+     debugline           240
+     getlex              QName(PackageNamespace("mx.resources"), "ResourceManager")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 0
+     pushstring          "core"
+     debugline           241
+     getlex              QName(PackageNamespace(""), "VERSION_ALREADY_SET")
+     callproperty        QName(Namespace("mx.resources:IResourceManager"), "getString"), 2
+     coerce_s
+     setlocal2
+
+     debugline           242
+     findpropstrict      QName(PackageNamespace(""), "Error")
+     getlocal2
+     constructprop       QName(PackageNamespace(""), "Error"), 1
+     throw
+
+L36:
+     debugline           245
+     findpropstrict      QName(PackageNamespace(""), "compatibilityErrorFunction")
+     getlocal1
+     getlex              QName(PackageNamespace(""), "VERSION_ALREADY_SET")
+     callpropvoid        QName(PackageNamespace(""), "compatibilityErrorFunction"), 2
+
+L41:
+     debugline           248
+     getlex              QName(PrivateNamespace("mx.core:FlexVersion"), "compatibilityVersionRead")
+     iffalse             L67
+
+     debugline           250
+     getlex              QName(PackageNamespace(""), "compatibilityErrorFunction")
+     pushnull
+     ifne                L62
+
+     debugline           252
+     getlex              QName(PackageNamespace("mx.resources"), "ResourceManager")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 0
+     pushstring          "core"
+     debugline           253
+     getlex              QName(PackageNamespace(""), "VERSION_ALREADY_READ")
+     callproperty        QName(Namespace("mx.resources:IResourceManager"), "getString"), 2
+     coerce_s
+     setlocal2
+
+     debugline           254
+     findpropstrict      QName(PackageNamespace(""), "Error")
+     getlocal2
+     constructprop       QName(PackageNamespace(""), "Error"), 1
+     throw
+
+L62:
+     debugline           257
+     findpropstrict      QName(PackageNamespace(""), "compatibilityErrorFunction")
+     getlocal1
+     getlex              QName(PackageNamespace(""), "VERSION_ALREADY_READ")
+     callpropvoid        QName(PackageNamespace(""), "compatibilityErrorFunction"), 2
+
+L67:
+     debugline           260
+     findproperty        QName(PrivateNamespace("mx.core:FlexVersion"), "_compatibilityVersion")
+     getlocal1
+     setproperty         QName(PrivateNamespace("mx.core:FlexVersion"), "_compatibilityVersion")
+
+     debugline           261
+     findproperty        QName(PrivateNamespace("mx.core:FlexVersion"), "compatibilityVersionChanged")
+     pushtrue
+     setproperty         QName(PrivateNamespace("mx.core:FlexVersion"), "compatibilityVersionChanged")
+
+     debugline           262
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait getter QName(PackageNamespace(""), "compatibilityVersionString") flag FINAL dispid 7
+  method
+   name "mx.core:FlexVersion/compatibilityVersionString/get"
+   refid "mx.core:FlexVersion/class/compatibilityVersionString/getter"
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;FlexVersion.as"
+     debugline           279
+     getlocal0
+     pushscope
+
+     debug               1, "major", 0, 281
+     debug               1, "minor", 1, 282
+     debug               1, "update", 2, 283
+     debugline           281
+     getlex              QName(PackageNamespace(""), "compatibilityVersion")
+     pushbyte            24
+     rshift
+     pushshort           255
+     bitand
+     convert_u
+     setlocal1
+
+     debugline           282
+     getlex              QName(PackageNamespace(""), "compatibilityVersion")
+     pushbyte            16
+     rshift
+     pushshort           255
+     bitand
+     convert_u
+     setlocal2
+
+     debugline           283
+     getlex              QName(PackageNamespace(""), "compatibilityVersion")
+     pushint             65535
+     bitand
+     convert_u
+     setlocal3
+
+     debugline           285
+     getlocal1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+     pushstring          "."
+     add
+     debugline           286
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+     add
+     pushstring          "."
+     add
+     debugline           287
+     getlocal3
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait setter QName(PackageNamespace(""), "compatibilityVersionString") flag FINAL dispid 8
+  method
+   name "mx.core:FlexVersion/compatibilityVersionString/set"
+   refid "mx.core:FlexVersion/class/compatibilityVersionString/setter"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_PARAM_NAMES
+   paramname "versionAlreadyRead"
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;FlexVersion.as"
+     debugline           293
+     getlocal0
+     pushscope
+
+     debug               1, "value", 0, 293
+     debug               1, "pieces", 1, 295
+     debug               1, "major", 2, 297
+     debug               1, "minor", 3, 298
+     debug               1, "update", 4, 299
+     debugline           295
+     getlocal1
+     pushstring          "."
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal2
+
+     debugline           297
+     findpropstrict      QName(PackageNamespace(""), "parseInt")
+     getlocal2
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("mx.core:FlexVersion"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("FlexVersion.as$89"), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), ProtectedNamespace("mx.core:FlexVersion"), StaticProtectedNs("mx.core:FlexVersion"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "parseInt"), 1
+     convert_u
+     setlocal3
+
+     debugline           298
+     findpropstrict      QName(PackageNamespace(""), "parseInt")
+     getlocal2
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("mx.core:FlexVersion"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("FlexVersion.as$89"), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), ProtectedNamespace("mx.core:FlexVersion"), StaticProtectedNs("mx.core:FlexVersion"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "parseInt"), 1
+     convert_u
+     setlocal            4
+
+     debugline           299
+     findpropstrict      QName(PackageNamespace(""), "parseInt")
+     getlocal2
+     pushbyte            2
+     getproperty         MultinameL([PrivateNamespace("mx.core:FlexVersion"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("FlexVersion.as$89"), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), ProtectedNamespace("mx.core:FlexVersion"), StaticProtectedNs("mx.core:FlexVersion"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "parseInt"), 1
+     convert_u
+     setlocal            5
+
+     debugline           301
+     findproperty        QName(PackageNamespace(""), "compatibilityVersion")
+     getlocal3
+     pushbyte            24
+     lshift
+     getlocal            4
+     pushbyte            16
+     lshift
+     add
+     getlocal            5
+     add
+     setproperty         QName(PackageNamespace(""), "compatibilityVersion")
+
+     debugline           302
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "changeCompatibilityVersionString") flag FINAL dispid 9
+  method
+   name "mx.core:FlexVersion/mx_internal:changeCompatibilityVersionString"
+   refid "mx.core:FlexVersion/class/http://www.adobe.com/2006/flex/mx/internal:changeCompatibilityVersionString"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_PARAM_NAMES
+   paramname "versionAlreadyRead"
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;FlexVersion.as"
+     debugline           313
+     getlocal0
+     pushscope
+
+     debug               1, "value", 0, 313
+     debug               1, "pieces", 1, 316
+     debug               1, "major", 2, 318
+     debug               1, "minor", 3, 319
+     debug               1, "update", 4, 320
+     debugline           316
+     getlocal1
+     pushstring          "."
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal2
+
+     debugline           318
+     findpropstrict      QName(PackageNamespace(""), "parseInt")
+     getlocal2
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("mx.core:FlexVersion"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("FlexVersion.as$89"), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), ProtectedNamespace("mx.core:FlexVersion"), StaticProtectedNs("mx.core:FlexVersion"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "parseInt"), 1
+     convert_u
+     setlocal3
+
+     debugline           319
+     findpropstrict      QName(PackageNamespace(""), "parseInt")
+     getlocal2
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("mx.core:FlexVersion"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("FlexVersion.as$89"), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), ProtectedNamespace("mx.core:FlexVersion"), StaticProtectedNs("mx.core:FlexVersion"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "parseInt"), 1
+     convert_u
+     setlocal            4
+
+     debugline           320
+     findpropstrict      QName(PackageNamespace(""), "parseInt")
+     getlocal2
+     pushbyte            2
+     getproperty         MultinameL([PrivateNamespace("mx.core:FlexVersion"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("FlexVersion.as$89"), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), ProtectedNamespace("mx.core:FlexVersion"), StaticProtectedNs("mx.core:FlexVersion"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "parseInt"), 1
+     convert_u
+     setlocal            5
+
+     debugline           322
+     findproperty        QName(PrivateNamespace("mx.core:FlexVersion"), "_compatibilityVersion")
+     getlocal3
+     pushbyte            24
+     lshift
+     getlocal            4
+     pushbyte            16
+     lshift
+     add
+     getlocal            5
+     add
+     setproperty         QName(PrivateNamespace("mx.core:FlexVersion"), "_compatibilityVersion")
+
+     debugline           323
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

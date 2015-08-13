@@ -1,0 +1,34 @@
+script ; 44
+ sinit
+  name ""
+  refid "mx.managers:SystemManagerGlobals/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/managers;SystemManagerGlobals.as"
+    debugline           20
+    findpropstrict      Multiname("SystemManagerGlobals", [PackageNamespace("mx.managers")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.managers:SystemManagerGlobals"
+    popscope
+    initproperty        QName(PackageNamespace("mx.managers"), "SystemManagerGlobals")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/managers;SystemManagerGlobals.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.managers"), "SystemManagerGlobals")
+  #include "SystemManagerGlobals.class.asasm"
+ end ; trait
+end ; script

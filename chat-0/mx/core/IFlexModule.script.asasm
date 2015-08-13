@@ -1,0 +1,29 @@
+script ; 5
+ sinit
+  name ""
+  refid "mx.core:IFlexModule/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IFlexModule.as"
+    debugline           25
+    findpropstrict      Multiname("IFlexModule", [PackageNamespace("mx.core")])
+    pushnull
+    newclass            "mx.core:IFlexModule"
+    initproperty        QName(PackageNamespace("mx.core"), "IFlexModule")
+
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "IFlexModule")
+  #include "IFlexModule.class.asasm"
+ end ; trait
+end ; script

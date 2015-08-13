@@ -1,0 +1,49 @@
+class
+ refid "mx.core:IToolTip"
+ instance QName(PackageNamespace("mx.core"), "IToolTip")
+  implements Multiname("IUIComponent", [PackageNamespace("mx.core")])
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.core:IToolTip/IToolTip"
+   refid "mx.core:IToolTip/instance/init"
+  end ; method
+  trait getter QName(Namespace("mx.core:IToolTip"), "screen")
+   method
+    name "mx.core:IToolTip/mx.core:IToolTip:screen/get"
+    refid "mx.core:IToolTip/instance/mx.core:IToolTip:screen/getter"
+    returns QName(PackageNamespace("flash.geom"), "Rectangle")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IToolTip"), "text")
+   method
+    name "mx.core:IToolTip/mx.core:IToolTip:text/get"
+    refid "mx.core:IToolTip/instance/mx.core:IToolTip:text/getter"
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IToolTip"), "text")
+   method
+    name "mx.core:IToolTip/mx.core:IToolTip:text/set"
+    refid "mx.core:IToolTip/instance/mx.core:IToolTip:text/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IToolTip/mx.core:IToolTip:screen/get"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:IToolTip/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 6
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,136 @@
+class
+ refid "mx.core:IVisualElementContainer"
+ instance QName(PackageNamespace("mx.core"), "IVisualElementContainer")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.core:IVisualElementContainer/IVisualElementContainer"
+   refid "mx.core:IVisualElementContainer/instance/init"
+  end ; method
+  trait getter QName(Namespace("mx.core:IVisualElementContainer"), "numElements")
+   method
+    name "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:numElements/get"
+    refid "mx.core:IVisualElementContainer/instance/mx.core:IVisualElementContainer:numElements/getter"
+    returns QName(PackageNamespace(""), "int")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IVisualElementContainer"), "getElementAt")
+   method
+    name "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:getElementAt"
+    refid "mx.core:IVisualElementContainer/instance/mx.core:IVisualElementContainer:getElementAt"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("mx.core"), "IVisualElement")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElementContainer.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IVisualElementContainer"), "addElement")
+   method
+    name "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:addElement"
+    refid "mx.core:IVisualElementContainer/instance/mx.core:IVisualElementContainer:addElement"
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    returns QName(PackageNamespace("mx.core"), "IVisualElement")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElementContainer.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IVisualElementContainer"), "addElementAt")
+   method
+    name "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:addElementAt"
+    refid "mx.core:IVisualElementContainer/instance/mx.core:IVisualElementContainer:addElementAt"
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("mx.core"), "IVisualElement")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElementContainer.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElementContainer.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IVisualElementContainer"), "removeElement")
+   method
+    name "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:removeElement"
+    refid "mx.core:IVisualElementContainer/instance/mx.core:IVisualElementContainer:removeElement"
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    returns QName(PackageNamespace("mx.core"), "IVisualElement")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElementContainer.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IVisualElementContainer"), "removeElementAt")
+   method
+    name "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:removeElementAt"
+    refid "mx.core:IVisualElementContainer/instance/mx.core:IVisualElementContainer:removeElementAt"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("mx.core"), "IVisualElement")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElementContainer.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IVisualElementContainer"), "removeAllElements")
+   method
+    name "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:removeAllElements"
+    refid "mx.core:IVisualElementContainer/instance/mx.core:IVisualElementContainer:removeAllElements"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IVisualElementContainer"), "getElementIndex")
+   method
+    name "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:getElementIndex"
+    refid "mx.core:IVisualElementContainer/instance/mx.core:IVisualElementContainer:getElementIndex"
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_PARAM_NAMES
+    paramname ""
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IVisualElementContainer"), "setElementIndex")
+   method
+    name "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:setElementIndex"
+    refid "mx.core:IVisualElementContainer/instance/mx.core:IVisualElementContainer:setElementIndex"
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:numElements/get"
+    paramname "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:numElements/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IVisualElementContainer"), "swapElements")
+   method
+    name "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:swapElements"
+    refid "mx.core:IVisualElementContainer/instance/mx.core:IVisualElementContainer:swapElements"
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:numElements/get"
+    paramname "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:numElements/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IVisualElementContainer"), "swapElementsAt")
+   method
+    name "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:swapElementsAt"
+    refid "mx.core:IVisualElementContainer/instance/mx.core:IVisualElementContainer:swapElementsAt"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:numElements/get"
+    paramname "mx.core:IVisualElementContainer/mx.core:IVisualElementContainer:numElements/get"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:IVisualElementContainer/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

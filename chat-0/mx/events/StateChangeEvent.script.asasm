@@ -1,0 +1,38 @@
+script ; 54
+ sinit
+  name ""
+  refid "mx.events:StateChangeEvent/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;StateChangeEvent.as"
+    debugline           29
+    findpropstrict      Multiname("StateChangeEvent", [PackageNamespace("mx.events")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    newclass            "mx.events:StateChangeEvent"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("mx.events"), "StateChangeEvent")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;StateChangeEvent.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.events"), "StateChangeEvent")
+  #include "StateChangeEvent.class.asasm"
+ end ; trait
+end ; script

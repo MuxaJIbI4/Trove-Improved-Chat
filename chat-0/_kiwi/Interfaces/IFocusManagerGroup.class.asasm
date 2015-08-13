@@ -1,0 +1,58 @@
+class
+ refid "_kiwi.Interfaces:IFocusManagerGroup"
+ instance QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "_kiwi.Interfaces:IFocusManagerGroup/IFocusManagerGroup"
+   refid "_kiwi.Interfaces:IFocusManagerGroup/instance/init"
+  end ; method
+  trait getter QName(Namespace("_kiwi.Interfaces:IFocusManagerGroup"), "groupName")
+   method
+    name "_kiwi.Interfaces:IFocusManagerGroup/_kiwi.Interfaces:IFocusManagerGroup:groupName/get"
+    refid "_kiwi.Interfaces:IFocusManagerGroup/instance/_kiwi.Interfaces:IFocusManagerGroup:groupName/getter"
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("_kiwi.Interfaces:IFocusManagerGroup"), "groupName")
+   method
+    name "_kiwi.Interfaces:IFocusManagerGroup/_kiwi.Interfaces:IFocusManagerGroup:groupName/set"
+    refid "_kiwi.Interfaces:IFocusManagerGroup/instance/_kiwi.Interfaces:IFocusManagerGroup:groupName/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Interfaces;IFocusManagerGroup.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("_kiwi.Interfaces:IFocusManagerGroup"), "selected")
+   method
+    name "_kiwi.Interfaces:IFocusManagerGroup/_kiwi.Interfaces:IFocusManagerGroup:selected/get"
+    refid "_kiwi.Interfaces:IFocusManagerGroup/instance/_kiwi.Interfaces:IFocusManagerGroup:selected/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("_kiwi.Interfaces:IFocusManagerGroup"), "selected")
+   method
+    name "_kiwi.Interfaces:IFocusManagerGroup/_kiwi.Interfaces:IFocusManagerGroup:selected/set"
+    refid "_kiwi.Interfaces:IFocusManagerGroup/instance/_kiwi.Interfaces:IFocusManagerGroup:selected/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Interfaces;IFocusManagerGroup.as"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "_kiwi.Interfaces:IFocusManagerGroup/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

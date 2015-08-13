@@ -1,0 +1,38 @@
+script ; 69
+ sinit
+  name ""
+  refid "mx.core:UIComponentDescriptor/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;UIComponentDescriptor.as"
+    debugline           53
+    findpropstrict      Multiname("UIComponentDescriptor", [PackageNamespace("mx.core")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("mx.core"), "ComponentDescriptor")
+    pushscope
+
+    getlex              QName(PackageNamespace("mx.core"), "ComponentDescriptor")
+    newclass            "mx.core:UIComponentDescriptor"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("mx.core"), "UIComponentDescriptor")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;UIComponentDescriptor.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "UIComponentDescriptor")
+  #include "UIComponentDescriptor.class.asasm"
+ end ; trait
+end ; script

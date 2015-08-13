@@ -1,0 +1,70 @@
+class
+ refid "fl.controls:ButtonLabelPlacement"
+ instance QName(PackageNamespace("fl.controls"), "ButtonLabelPlacement")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls:ButtonLabelPlacement")
+  iinit
+   name "fl.controls:ButtonLabelPlacement/ButtonLabelPlacement"
+   refid "fl.controls:ButtonLabelPlacement/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;ButtonLabelPlacement.as"
+     debugline           72
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "fl.controls:ButtonLabelPlacement/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "BOTTOM", 0, 32
+    findproperty        QName(PackageNamespace(""), "BOTTOM")
+    pushstring          "bottom"
+    initproperty        QName(PackageNamespace(""), "BOTTOM")
+
+    debug               1, "TOP", 1, 44
+    findproperty        QName(PackageNamespace(""), "TOP")
+    pushstring          "top"
+    initproperty        QName(PackageNamespace(""), "TOP")
+
+    debug               1, "LEFT", 2, 56
+    findproperty        QName(PackageNamespace(""), "LEFT")
+    pushstring          "left"
+    initproperty        QName(PackageNamespace(""), "LEFT")
+
+    debug               1, "RIGHT", 3, 68
+    findproperty        QName(PackageNamespace(""), "RIGHT")
+    pushstring          "right"
+    initproperty        QName(PackageNamespace(""), "RIGHT")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "BOTTOM") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("bottom") end
+ trait const QName(PackageNamespace(""), "TOP") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("top") end
+ trait const QName(PackageNamespace(""), "LEFT") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("left") end
+ trait const QName(PackageNamespace(""), "RIGHT") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("right") end
+end ; class

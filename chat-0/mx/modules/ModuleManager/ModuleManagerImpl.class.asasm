@@ -1,0 +1,292 @@
+class
+ refid "mx.modules:ModuleManager/ModuleManagerImpl"
+ instance QName(PrivateNamespace("ModuleManager.as$140"), "ModuleManagerImpl")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("ModuleManager.as$140:ModuleManagerImpl")
+  iinit
+   name "ModuleManager.as$140:ModuleManagerImpl/ModuleManagerImpl"
+   refid "mx.modules:ModuleManager/ModuleManagerImpl/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+     debugline           147
+     getlocal0
+     pushscope
+
+     debugline           161
+     getlocal0
+     newobject           0
+     initproperty        QName(PrivateNamespace("ModuleManager.as$140:ModuleManagerImpl"), "moduleList")
+
+     debugline           149
+     getlocal0
+     constructsuper      0
+
+     debugline           150
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("ModuleManager.as$140:ModuleManagerImpl"), "moduleList") type QName(PackageNamespace(""), "Object") end
+  trait method QName(PackageNamespace(""), "getAssociatedFactory")
+   method
+    name "ModuleManager.as$140:ModuleManagerImpl/getAssociatedFactory"
+    refid "mx.modules:ModuleManager/ModuleManagerImpl/instance/getAssociatedFactory"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
+    flag NEED_ACTIVATION
+    flag HAS_PARAM_NAMES
+    paramname "url"
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 6
+     maxscopedepth 11
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           172
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal2
+
+      pushscope
+
+      debug               1, "getAssociatedFactory$1", 1, 172
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setslot             3
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfo")
+      setslot             4
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.system"), "ApplicationDomain")
+      setslot             5
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             6
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      debug               1, "object", 0, 172
+      debugline           174
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+      coerce_s
+      setslot             2
+
+      debugline           176
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleManagerImpl"), "moduleList")
+      coerce_a
+      setlocal            4
+
+      jump                L112
+
+L45:
+      label
+      getscopeobject      1
+      getlocal            4
+      getlocal3
+      nextvalue
+      coerce              QName(PackageNamespace(""), "Object")
+      setslot             3
+
+      debugline           178
+      getscopeobject      1
+      getscopeobject      1
+      getslot             3
+      getlex              QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfo")
+      astypelate
+      coerce              QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfo")
+      setslot             4
+
+      debugline           180
+      getscopeobject      1
+      getslot             4
+      getproperty         QName(PackageNamespace(""), "ready")
+      iftrue              L67
+
+      debugline           181
+      jump                L112
+
+L67:
+      debugline           183
+      getscopeobject      1
+      getscopeobject      1
+      getslot             4
+      getproperty         QName(PackageNamespace(""), "applicationDomain")
+      coerce              QName(PackageNamespace("flash.system"), "ApplicationDomain")
+      setslot             5
+
+L74:
+      debugline           187
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace(""), "Class")
+      getscopeobject      1
+      getslot             5
+      getscopeobject      1
+      getslot             2
+      callproperty        QName(PackageNamespace(""), "getDefinition"), 1
+      callproperty        QName(PackageNamespace(""), "Class"), 1
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             6
+
+      debugline           188
+      getscopeobject      1
+      getslot             1
+      getscopeobject      1
+      getslot             6
+      istypelate
+      iffalse             L97
+
+      debugline           189
+      getscopeobject      1
+      getslot             4
+      getproperty         QName(PackageNamespace(""), "factory")
+      returnvalue
+
+L97:
+      debugline           191
+      jump                L112
+
+L99:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            5
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                5
+L112:
+      debugline           176
+      hasnext2            4, 3
+      iftrue              L45
+
+      kill                4
+      kill                3
+      debugline           196
+      pushnull
+      returnvalue
+     end ; code
+     try from L74 to L97 target L99 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
+     trait slot QName(PrivateNamespace("ModuleManager.as$140"), "object") slotid 1 type QName(PackageNamespace(""), "Object") end
+     trait slot QName(PrivateNamespace("ModuleManager.as$140"), "className") slotid 2 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PrivateNamespace("ModuleManager.as$140"), "m") slotid 3 type QName(PackageNamespace(""), "Object") end
+     trait slot QName(PrivateNamespace("ModuleManager.as$140"), "info") slotid 4 type QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfo") end
+     trait slot QName(PrivateNamespace("ModuleManager.as$140"), "domain") slotid 5 type QName(PackageNamespace("flash.system"), "ApplicationDomain") end
+     trait slot QName(PrivateNamespace("ModuleManager.as$140"), "cls") slotid 6 type QName(PackageNamespace(""), "Class") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getModule")
+   method
+    name "ModuleManager.as$140:ModuleManagerImpl/getModule"
+    refid "mx.modules:ModuleManager/ModuleManagerImpl/instance/getModule"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("mx.modules"), "IModuleInfo")
+    flag HAS_PARAM_NAMES
+    paramname "4.0.0.0"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           202
+      getlocal0
+      pushscope
+
+      debug               1, "url", 0, 202
+      debug               1, "info", 1, 204
+      debugline           204
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleManagerImpl"), "moduleList")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("ModuleManager.as$140"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("ModuleManager.as$140:ModuleManagerImpl"), ProtectedNamespace("ModuleManager.as$140:ModuleManagerImpl"), StaticProtectedNs("ModuleManager.as$140:ModuleManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfo")
+      astypelate
+      coerce              QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfo")
+      setlocal2
+
+      debugline           206
+      getlocal2
+      iftrue              L30
+
+      debugline           208
+      findpropstrict      QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfo")
+      getlocal1
+      constructprop       QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfo"), 1
+      coerce              QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfo")
+      setlocal2
+
+      debugline           209
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleManagerImpl"), "moduleList")
+      getlocal1
+      getlocal2
+      setproperty         MultinameL([PrivateNamespace("ModuleManager.as$140"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("ModuleManager.as$140:ModuleManagerImpl"), ProtectedNamespace("ModuleManager.as$140:ModuleManagerImpl"), StaticProtectedNs("ModuleManager.as$140:ModuleManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L30:
+      debugline           212
+      findpropstrict      QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfoProxy")
+      getlocal2
+      constructprop       QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfoProxy"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.modules:ModuleManager/ModuleManagerImpl/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

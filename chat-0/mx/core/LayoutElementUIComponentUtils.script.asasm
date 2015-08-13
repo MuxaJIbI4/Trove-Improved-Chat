@@ -1,0 +1,34 @@
+script ; 20
+ sinit
+  name ""
+  refid "mx.core:LayoutElementUIComponentUtils/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+    debugline           16
+    findpropstrict      Multiname("LayoutElementUIComponentUtils", [PackageNamespace("mx.core")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.core:LayoutElementUIComponentUtils"
+    popscope
+    initproperty        QName(PackageNamespace("mx.core"), "LayoutElementUIComponentUtils")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+    debugline           1
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "LayoutElementUIComponentUtils")
+  #include "LayoutElementUIComponentUtils.class.asasm"
+ end ; trait
+end ; script

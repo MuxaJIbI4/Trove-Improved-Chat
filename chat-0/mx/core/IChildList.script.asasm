@@ -1,0 +1,29 @@
+script ; 27
+ sinit
+  name ""
+  refid "mx.core:IChildList/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IChildList.as"
+    debugline           59
+    findpropstrict      Multiname("IChildList", [PackageNamespace("mx.core")])
+    pushnull
+    newclass            "mx.core:IChildList"
+    initproperty        QName(PackageNamespace("mx.core"), "IChildList")
+
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "IChildList")
+  #include "IChildList.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,27 @@
+method
+ name ""
+ refid "_kiwi.Controls:BaseButton/instance/init/inline_method"
+ param QName(PackageNamespace("flash.events"), "Event")
+ returns QName(PackageNamespace(""), "void")
+ flag HAS_PARAM_NAMES
+ paramname "KB_RELEASE"
+ body
+  maxstack 3
+  localcount 2
+  initscopedepth 12
+  maxscopedepth 12
+  code
+   debug               1, "e", 0, 132
+   debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Controls;BaseButton.as"
+   debugline           132
+   findpropstrict      QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "handleMouseEvent")
+   findpropstrict      QName(PackageNamespace("flash.events"), "MouseEvent")
+   getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+   getproperty         QName(PackageNamespace(""), "ROLL_OUT")
+   constructprop       QName(PackageNamespace("flash.events"), "MouseEvent"), 1
+   callpropvoid        QName(ProtectedNamespace("_kiwi.Controls:BaseButton"), "handleMouseEvent"), 1
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

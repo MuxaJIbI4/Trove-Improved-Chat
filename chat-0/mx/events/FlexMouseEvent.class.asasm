@@ -1,0 +1,163 @@
+class
+ refid "mx.events:FlexMouseEvent"
+ instance QName(PackageNamespace("mx.events"), "FlexMouseEvent")
+  extends QName(PackageNamespace("flash.events"), "MouseEvent")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.events:FlexMouseEvent")
+  iinit
+   name "mx.events:FlexMouseEvent/FlexMouseEvent"
+   refid "mx.events:FlexMouseEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.display"), "InteractiveObject")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "int")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional False()
+   optional False()
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   optional False()
+   optional False()
+   optional False()
+   optional False()
+   optional Integer(0)
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 12
+    localcount 12
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;FlexMouseEvent.as"
+     debugline           192
+     getlocal0
+     pushscope
+
+     debug               1, "type", 0, 192
+     debug               1, "bubbles", 1, 192
+     debug               1, "cancelable", 2, 192
+     debug               1, "localX", 3, 192
+     debug               1, "localY", 4, 192
+     debug               1, "relatedObject", 5, 192
+     debug               1, "ctrlKey", 6, 192
+     debug               1, "altKey", 7, 192
+     debug               1, "shiftKey", 8, 192
+     debug               1, "buttonDown", 9, 192
+     debug               1, "delta", 10, 192
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;FlexMouseEvent.as"
+     debugline           202
+     getlocal0
+     debugline           202
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     getlocal            5
+     getlocal            6
+     debugline           203
+     getlocal            7
+     getlocal            8
+     getlocal            9
+     getlocal            10
+     getlocal            11
+     constructsuper      11
+
+     debugline           204
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    name "mx.events:FlexMouseEvent/clone"
+    refid "mx.events:FlexMouseEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 12
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;FlexMouseEvent.as"
+      debugline           215
+      getlocal0
+      pushscope
+
+      debugline           217
+      findpropstrict      QName(PackageNamespace("mx.events"), "FlexMouseEvent")
+      debugline           217
+      getlex              QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace(""), "bubbles")
+      getlex              QName(PackageNamespace(""), "cancelable")
+      getlex              QName(PackageNamespace(""), "localX")
+      getlex              QName(PackageNamespace(""), "localY")
+      debugline           218
+      getlex              QName(PackageNamespace(""), "relatedObject")
+      getlex              QName(PackageNamespace(""), "ctrlKey")
+      getlex              QName(PackageNamespace(""), "altKey")
+      getlex              QName(PackageNamespace(""), "shiftKey")
+      debugline           219
+      getlex              QName(PackageNamespace(""), "buttonDown")
+      getlex              QName(PackageNamespace(""), "delta")
+      constructprop       QName(PackageNamespace("mx.events"), "FlexMouseEvent"), 11
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.events:FlexMouseEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 17
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "MOUSE_DOWN_OUTSIDE", 1, 93
+    findproperty        QName(PackageNamespace(""), "MOUSE_DOWN_OUTSIDE")
+    pushstring          "mouseDownOutside"
+    initproperty        QName(PackageNamespace(""), "MOUSE_DOWN_OUTSIDE")
+
+    debug               1, "MOUSE_WHEEL_OUTSIDE", 2, 151
+    findproperty        QName(PackageNamespace(""), "MOUSE_WHEEL_OUTSIDE")
+    pushstring          "mouseWheelOutside"
+    initproperty        QName(PackageNamespace(""), "MOUSE_WHEEL_OUTSIDE")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PackageNamespace(""), "MOUSE_DOWN_OUTSIDE") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("mouseDownOutside") end
+ trait const QName(PackageNamespace(""), "MOUSE_WHEEL_OUTSIDE") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("mouseWheelOutside") end
+end ; class

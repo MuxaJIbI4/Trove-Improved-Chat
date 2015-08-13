@@ -1,0 +1,29 @@
+script ; 47
+ sinit
+  name ""
+  refid "com.kiwi.Interfaces:IKiwiComponent/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IKiwiComponent.as"
+    debugline           11
+    findpropstrict      Multiname("IKiwiComponent", [PackageNamespace("com.kiwi.Interfaces")])
+    pushnull
+    newclass            "com.kiwi.Interfaces:IKiwiComponent"
+    initproperty        QName(PackageNamespace("com.kiwi.Interfaces"), "IKiwiComponent")
+
+    debugline           1
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.kiwi.Interfaces"), "IKiwiComponent")
+  #include "IKiwiComponent.class.asasm"
+ end ; trait
+end ; script

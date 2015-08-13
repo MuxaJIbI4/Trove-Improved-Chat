@@ -1,0 +1,65 @@
+class
+ refid "mx.events:PropertyChangeEventKind"
+ instance QName(PackageNamespace("mx.events"), "PropertyChangeEventKind")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag FINAL
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.events:PropertyChangeEventKind")
+  iinit
+   name "mx.events:PropertyChangeEventKind/PropertyChangeEventKind"
+   refid "mx.events:PropertyChangeEventKind/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;PropertyChangeEventKind.as"
+     debugline           58
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "mx.events:PropertyChangeEventKind/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 17
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "UPDATE", 1, 44
+    findproperty        QName(PackageNamespace(""), "UPDATE")
+    pushstring          "update"
+    initproperty        QName(PackageNamespace(""), "UPDATE")
+
+    debug               1, "DELETE", 2, 54
+    findproperty        QName(PackageNamespace(""), "DELETE")
+    pushstring          "delete"
+    initproperty        QName(PackageNamespace(""), "DELETE")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PackageNamespace(""), "UPDATE") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("update") end
+ trait const QName(PackageNamespace(""), "DELETE") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("delete") end
+end ; class

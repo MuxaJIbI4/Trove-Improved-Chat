@@ -1,0 +1,64 @@
+class
+ refid "mx.managers:SystemManagerGlobals"
+ instance QName(PackageNamespace("mx.managers"), "SystemManagerGlobals")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.managers:SystemManagerGlobals")
+  iinit
+   name "mx.managers:SystemManagerGlobals/SystemManagerGlobals"
+   refid "mx.managers:SystemManagerGlobals/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/managers;SystemManagerGlobals.as"
+     debugline           49
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "mx.managers:SystemManagerGlobals/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "topLevelSystemManagers", 0, 22
+    findproperty        QName(PackageNamespace(""), "topLevelSystemManagers")
+    newarray            0
+    setproperty         QName(PackageNamespace(""), "topLevelSystemManagers")
+
+    debug               1, "bootstrapLoaderInfoURL", 1, 24
+    debug               1, "showMouseCursor", 2, 26
+    debug               1, "changingListenersInOtherSystemManagers", 3, 28
+    debug               1, "dispatchingEventToOtherSystemManagers", 4, 30
+    debug               1, "info", 5, 37
+    debug               1, "parameters", 6, 44
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "topLevelSystemManagers") slotid 1 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PackageNamespace(""), "bootstrapLoaderInfoURL") slotid 2 type QName(PackageNamespace(""), "String") end
+ trait slot QName(PackageNamespace(""), "showMouseCursor") slotid 3 type QName(PackageNamespace(""), "Boolean") end
+ trait slot QName(PackageNamespace(""), "changingListenersInOtherSystemManagers") slotid 4 type QName(PackageNamespace(""), "Boolean") end
+ trait slot QName(PackageNamespace(""), "dispatchingEventToOtherSystemManagers") slotid 5 type QName(PackageNamespace(""), "Boolean") end
+ trait slot QName(PackageNamespace(""), "info") slotid 6 type QName(PackageNamespace(""), "Object") end
+ trait slot QName(PackageNamespace(""), "parameters") slotid 7 type QName(PackageNamespace(""), "Object") end
+end ; class

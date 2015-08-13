@@ -1,0 +1,38 @@
+script ; 77
+ sinit
+  name ""
+  refid "IggyTween/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+    debugline           120
+    findpropstrict      Multiname("IggyTween", [PackageNamespace("")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "IggyTween"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "IggyTween")
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+    debugline           118
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "IggyTween")
+  #include "IggyTween.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,90 @@
+class
+ refid "mx.core:UIComponentDescriptor"
+ instance QName(PackageNamespace("mx.core"), "UIComponentDescriptor")
+  extends QName(PackageNamespace("mx.core"), "ComponentDescriptor")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.core:UIComponentDescriptor")
+  iinit
+   name "mx.core:UIComponentDescriptor/UIComponentDescriptor"
+   refid "mx.core:UIComponentDescriptor/instance/init"
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_PARAM_NAMES
+   paramname null
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;UIComponentDescriptor.as"
+     debugline           77
+     getlocal0
+     pushscope
+
+     debug               1, "descriptorProperties", 0, 77
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;UIComponentDescriptor.as"
+     debugline           79
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     debugline           80
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "effects") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "instanceIndices") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "repeaterIndices") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "repeaters") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "stylesFactory") type QName(PackageNamespace(""), "Function") end
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    name "mx.core:UIComponentDescriptor/toString"
+    refid "mx.core:UIComponentDescriptor/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;UIComponentDescriptor.as"
+      debugline           194
+      getlocal0
+      pushscope
+
+      pushstring          "UIComponentDescriptor_"
+      debugline           196
+      getlex              QName(PackageNamespace(""), "id")
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:UIComponentDescriptor/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 17
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+end ; class

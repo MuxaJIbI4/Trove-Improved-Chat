@@ -1,0 +1,38 @@
+script ; 67
+ sinit
+  name ""
+  refid "com.kiwi.Styles:KiwiTextfield/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Styles;KiwiTextfield.as"
+    debugline           9
+    findpropstrict      Multiname("KiwiTextfield", [PackageNamespace("com.kiwi.Styles")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.text"), "TextFormat")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.text"), "TextFormat")
+    newclass            "com.kiwi.Styles:KiwiTextfield"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.kiwi.Styles"), "KiwiTextfield")
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Styles;KiwiTextfield.as"
+    debugline           1
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.kiwi.Styles"), "KiwiTextfield")
+  #include "KiwiTextfield.class.asasm"
+ end ; trait
+end ; script

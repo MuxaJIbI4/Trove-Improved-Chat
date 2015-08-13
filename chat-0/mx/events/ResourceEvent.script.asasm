@@ -1,0 +1,42 @@
+script ; 84
+ sinit
+  name ""
+  refid "mx.events:ResourceEvent/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;ResourceEvent.as"
+    debugline           30
+    findpropstrict      Multiname("ResourceEvent", [PackageNamespace("mx.events")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
+    newclass            "mx.events:ResourceEvent"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("mx.events"), "ResourceEvent")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;ResourceEvent.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.events"), "ResourceEvent")
+  #include "ResourceEvent.class.asasm"
+ end ; trait
+end ; script

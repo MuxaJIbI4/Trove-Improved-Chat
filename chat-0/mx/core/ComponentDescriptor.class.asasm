@@ -1,0 +1,275 @@
+class
+ refid "mx.core:ComponentDescriptor"
+ instance QName(PackageNamespace("mx.core"), "ComponentDescriptor")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.core:ComponentDescriptor")
+  iinit
+   name "mx.core:ComponentDescriptor/ComponentDescriptor"
+   refid "mx.core:ComponentDescriptor/instance/init"
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_PARAM_NAMES
+   paramname null
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ComponentDescriptor.as"
+     debugline           82
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal2
+
+     debug               1, "descriptorProperties", 0, 82
+     debug               1, "p", 1, 86
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ComponentDescriptor.as"
+     debugline           84
+     getlocal0
+     constructsuper      0
+
+     debugline           86
+     pushbyte            0
+     setlocal3
+
+     getlocal1
+     coerce_a
+     setlocal            4
+
+     jump                L33
+
+L20:
+     label
+     getlocal            4
+     getlocal3
+     nextname
+     coerce_s
+     setlocal2
+
+     debugline           88
+     getlocal0
+     getlocal2
+     getlocal1
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace("mx.core:ComponentDescriptor"), PrivateNamespace("ComponentDescriptor.as$55"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:ComponentDescriptor"), StaticProtectedNs("mx.core:ComponentDescriptor"), StaticProtectedNs("Object")])
+     initproperty        MultinameL([PrivateNamespace("mx.core:ComponentDescriptor"), PrivateNamespace("ComponentDescriptor.as$55"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:ComponentDescriptor"), StaticProtectedNs("mx.core:ComponentDescriptor"), StaticProtectedNs("Object")])
+
+L33:
+     debugline           86
+     hasnext2            4, 3
+     iftrue              L20
+
+     kill                4
+     kill                3
+     debugline           90
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "document") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PackageNamespace(""), "events") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("mx.core:ComponentDescriptor"), "_properties") type QName(PackageNamespace(""), "Object") end
+  trait getter QName(PackageNamespace(""), "properties")
+   method
+    name "mx.core:ComponentDescriptor/properties/get"
+    refid "mx.core:ComponentDescriptor/instance/properties/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ComponentDescriptor.as"
+      debugline           265
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      debugline           267
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:ComponentDescriptor"), "_properties")
+      iffalse             L19
+
+      debugline           268
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:ComponentDescriptor"), "_properties")
+      returnvalue
+
+L19:
+      debugline           270
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "propertiesFactory")
+      pushnull
+      ifeq                L32
+
+      debugline           271
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "propertiesFactory")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "document")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "call"), 1
+      initproperty        QName(PrivateNamespace("mx.core:ComponentDescriptor"), "_properties")
+
+L32:
+      debugline           275
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:ComponentDescriptor"), "_properties")
+      iffalse             L71
+
+      debug               1, "cd", 0, 277
+      debugline           277
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:ComponentDescriptor"), "_properties")
+      getproperty         Multiname("childDescriptors", [PrivateNamespace("mx.core:ComponentDescriptor"), PrivateNamespace("ComponentDescriptor.as$55"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:ComponentDescriptor"), StaticProtectedNs("mx.core:ComponentDescriptor"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      debugline           278
+      getlocal1
+      iffalse             L70
+
+      debug               1, "n", 1, 280
+      debug               1, "i", 2, 281
+      debugline           280
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal2
+
+      debugline           281
+      pushbyte            0
+      setlocal3
+
+      jump                L67
+
+L57:
+      label
+      debugline           283
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("mx.core:ComponentDescriptor"), PrivateNamespace("ComponentDescriptor.as$55"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:ComponentDescriptor"), StaticProtectedNs("mx.core:ComponentDescriptor"), StaticProtectedNs("Object")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "document")
+      setproperty         Multiname("document", [PrivateNamespace("mx.core:ComponentDescriptor"), PrivateNamespace("ComponentDescriptor.as$55"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:ComponentDescriptor"), StaticProtectedNs("mx.core:ComponentDescriptor"), StaticProtectedNs("Object")])
+
+      debugline           281
+      inclocal_i          3
+L67:
+      getlocal3
+      getlocal2
+      iflt                L57
+
+L70:
+      jump                L75
+
+L71:
+      debugline           289
+      getlocal0
+      newobject           0
+      initproperty        QName(PrivateNamespace("mx.core:ComponentDescriptor"), "_properties")
+
+L75:
+      debugline           292
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:ComponentDescriptor"), "_properties")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "propertiesFactory") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PackageNamespace(""), "type") type QName(PackageNamespace(""), "Class") end
+  trait method QName(PackageNamespace(""), "invalidateProperties")
+   method
+    name "mx.core:ComponentDescriptor/invalidateProperties"
+    refid "mx.core:ComponentDescriptor/instance/invalidateProperties"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ComponentDescriptor.as"
+      debugline           405
+      getlocal0
+      pushscope
+
+      debugline           407
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("mx.core:ComponentDescriptor"), "_properties")
+
+      debugline           408
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    name "mx.core:ComponentDescriptor/toString"
+    refid "mx.core:ComponentDescriptor/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ComponentDescriptor.as"
+      debugline           422
+      getlocal0
+      pushscope
+
+      pushstring          "ComponentDescriptor_"
+      debugline           424
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "id")
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:ComponentDescriptor/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 17
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+end ; class

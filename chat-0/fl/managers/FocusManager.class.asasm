@@ -1,0 +1,4437 @@
+class
+ refid "fl.managers:FocusManager"
+ instance QName(PackageNamespace("fl.managers"), "FocusManager")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("IFocusManager", [PackageNamespace("fl.managers")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.managers:FocusManager")
+  iinit
+   name "fl.managers:FocusManager/FocusManager"
+   refid "fl.managers:FocusManager/instance/init"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   flag HAS_PARAM_NAMES
+   paramname null
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+     debugline           174
+     getlocal0
+     pushscope
+
+     debug               1, "container", 0, 174
+     debugline           174
+     getlocal0
+     constructsuper      0
+
+     debugline           175
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     pushtrue
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+     initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+
+     debugline           176
+     getlocal1
+     pushnull
+     ifeq                L25
+
+     debugline           177
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "_form")
+
+     debugline           178
+     getlocal0
+     callpropvoid        QName(PackageNamespace(""), "activate"), 0
+
+L25:
+     debugline           180
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("fl.managers:FocusManager"), "_form") type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+  trait slot QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("fl.managers:FocusManager"), "activated") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("fl.managers:FocusManager"), "calculateCandidates") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus") type QName(PackageNamespace("flash.display"), "InteractiveObject") end
+  trait slot QName(PrivateNamespace("fl.managers:FocusManager"), "_showFocusIndicator") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PrivateNamespace("fl.managers:FocusManager"), "lastAction") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("fl.managers:FocusManager"), "defButton") type QName(PackageNamespace("fl.controls"), "Button") end
+  trait slot QName(PrivateNamespace("fl.managers:FocusManager"), "_defaultButton") type QName(PackageNamespace("fl.controls"), "Button") end
+  trait slot QName(PrivateNamespace("fl.managers:FocusManager"), "_defaultButtonEnabled") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "addedHandler")
+   method
+    name "fl.managers:FocusManager/private:addedHandler"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/addedHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           189
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 189
+      debug               1, "target", 1, 190
+      debugline           190
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObject")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObject"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      debugline           193
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "stage")
+      iffalse             L24
+
+      debugline           194
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObject")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObject"), 1
+      callpropvoid        QName(PrivateNamespace("fl.managers:FocusManager"), "addFocusables"), 1
+
+L24:
+      debugline           196
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "removedHandler")
+   method
+    name "fl.managers:FocusManager/private:removedHandler"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/removedHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           205
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal            4
+
+      debug               1, "event", 0, 205
+      debug               1, "i", 1, 206
+      debug               1, "o", 2, 207
+      debugline           207
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObject")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObject"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal3
+
+      debugline           208
+      getlocal3
+      getlex              QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      istypelate
+      dup
+      iffalse             L32
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+      pushtrue
+      equals
+L32:
+      iffalse             L68
+
+      debugline           209
+      getlocal3
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+      ifne                L49
+
+      debugline           210
+      findpropstrict      QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+      callproperty        QName(PackageNamespace("fl.managers"), "IFocusManagerComponent"), 1
+      pushfalse
+      callpropvoid        QName(Namespace("fl.managers:IFocusManagerComponent"), "drawFocus"), 1
+
+      debugline           211
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+
+L49:
+      debugline           213
+      getlocal3
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_ENABLED_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "tabEnabledChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           214
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      getlocal3
+      deleteproperty      MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+      pop
+      debugline           215
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "calculateCandidates")
+
+      jump                L121
+
+L68:
+      debugline           216
+      getlocal3
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      istypelate
+      dup
+      iffalse             L81
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+      pushtrue
+      equals
+L81:
+      iffalse             L121
+
+      debug               1, "io", 3, 217
+      debugline           217
+      getlocal3
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal            4
+
+      debugline           218
+      getlocal            4
+      iffalse             L111
+
+      debugline           219
+      getlocal            4
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+      ifne                L101
+
+      debugline           220
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+
+L101:
+      debugline           222
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      getlocal            4
+      deleteproperty      MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+      pop
+      debugline           223
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "calculateCandidates")
+
+L111:
+      debugline           225
+      getlocal3
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_ENABLED_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "tabEnabledChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+L121:
+      debugline           227
+      getlocal0
+      getlocal3
+      callpropvoid        QName(PrivateNamespace("fl.managers:FocusManager"), "removeFocusables"), 1
+
+      debugline           228
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "addFocusables")
+   method
+    name "fl.managers:FocusManager/private:addFocusables"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/addFocusables"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional False()
+    paramname "fl.managers:FocusManager/FocusManager"
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 12
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           237
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal3
+
+      pushscope
+
+      debug               1, "addFocusables$0", 2, 237
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      setslot             3
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setslot             4
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             5
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             6
+
+      getscopeobject      1
+      pushbyte            0
+      setslot             7
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setslot             8
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getlocal2
+      setslot             2
+
+      debug               1, "o", 0, 237
+      debug               1, "skipTopLevel", 1, 237
+      debugline           238
+      getscopeobject      1
+      getslot             2
+      iftrue              L182
+
+      debugline           239
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      istypelate
+      iffalse             L111
+
+      debugline           240
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PackageNamespace("fl.managers"), "IFocusManagerComponent"), 1
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      setslot             3
+
+      debugline           241
+      getscopeobject      1
+      getslot             3
+      getproperty         QName(Namespace("fl.managers:IFocusManagerComponent"), "focusEnabled")
+      iffalse             L110
+
+      debugline           242
+      getscopeobject      1
+      getslot             3
+      getproperty         QName(Namespace("fl.managers:IFocusManagerComponent"), "tabEnabled")
+      convert_b
+      dup
+      iffalse             L76
+
+      pop
+      getlocal0
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "isTabVisible"), 1
+      convert_b
+L76:
+      iffalse             L88
+
+      debugline           243
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      getscopeobject      1
+      getslot             1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+
+      debugline           244
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "calculateCandidates")
+
+L88:
+      debugline           246
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_ENABLED_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "tabEnabledChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           247
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_INDEX_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "tabIndexChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+L110:
+      jump                L182
+
+L111:
+      debugline           249
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      istypelate
+      iffalse             L182
+
+      debugline           250
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setslot             4
+
+      debugline           251
+      getscopeobject      1
+      getslot             4
+      coerce_a
+      convert_b
+      dup
+      iffalse             L138
+
+      pop
+      getscopeobject      1
+      getslot             4
+      getproperty         QName(PackageNamespace(""), "tabEnabled")
+      coerce_a
+      convert_b
+L138:
+      dup
+      iffalse             L148
+
+      pop
+      getlocal0
+      getscopeobject      1
+      getslot             4
+      callproperty        QName(PackageNamespace(""), "findFocusManagerComponent"), 1
+      getscopeobject      1
+      getslot             4
+      equals
+L148:
+      iffalse             L160
+
+      debugline           252
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      getscopeobject      1
+      getslot             4
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+
+      debugline           253
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "calculateCandidates")
+
+L160:
+      debugline           255
+      getscopeobject      1
+      getslot             4
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_ENABLED_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "tabEnabledChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           256
+      getscopeobject      1
+      getslot             4
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_INDEX_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "tabIndexChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+L182:
+      debugline           259
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      istypelate
+      iffalse             L315
+
+      debugline           260
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObjectContainer"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             5
+
+      debugline           261
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_CHILDREN_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "tabChildrenChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           262
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             6
+
+L212:
+      debugline           264
+      getscopeobject      1
+      getscopeobject      1
+      getslot             5
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             6
+
+L219:
+      debugline           265
+      jump                L239
+
+L221:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      debugline           266
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             6
+
+      popscope
+      kill                4
+L239:
+      debugline           268
+      getscopeobject      1
+      getslot             5
+      getlex              QName(PackageNamespace("flash.display"), "Stage")
+      istypelate
+      dup
+      iftrue              L251
+
+      pop
+      getscopeobject      1
+      getslot             6
+      getlex              QName(PackageNamespace("flash.display"), "Stage")
+      istypelate
+L251:
+      dup
+      iftrue              L258
+
+      pop
+      getscopeobject      1
+      getslot             5
+      getproperty         QName(PackageNamespace(""), "tabChildren")
+      convert_b
+L258:
+      iffalse             L315
+
+      debugline           270
+      getscopeobject      1
+      pushbyte            0
+      setslot             7
+
+      jump                L309
+
+L264:
+      label
+L265:
+      debugline           272
+      getscopeobject      1
+      getscopeobject      1
+      getslot             5
+      getscopeobject      1
+      getslot             7
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setslot             8
+
+      debugline           273
+      getscopeobject      1
+      getslot             8
+      pushnull
+      ifeq                L287
+
+      debugline           274
+      getlocal0
+      getscopeobject      1
+      getslot             5
+      getscopeobject      1
+      getslot             7
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      callpropvoid        QName(PrivateNamespace("fl.managers:FocusManager"), "addFocusables"), 1
+
+L287:
+      debugline           276
+      jump                L302
+
+L289:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                4
+L302:
+      debugline           270
+      getscopeobject      1
+      getslot             7
+      increment_i
+      getscopeobject      1
+      swap
+      setslot             7
+
+L309:
+      getscopeobject      1
+      getslot             7
+      getscopeobject      1
+      getslot             5
+      getproperty         QName(PackageNamespace(""), "numChildren")
+      iflt                L264
+
+L315:
+      debugline           282
+      returnvoid
+     end ; code
+     try from L212 to L219 target L221 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+     try from L265 to L287 target L289 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "error") end
+     trait slot QName(PackageInternalNs("fl.managers"), "o") slotid 1 type QName(PackageNamespace("flash.display"), "DisplayObject") end
+     trait slot QName(PackageInternalNs("fl.managers"), "skipTopLevel") slotid 2 type QName(PackageNamespace(""), "Boolean") value False() end
+     trait slot QName(PackageInternalNs("fl.managers"), "focusable") slotid 3 type QName(PackageNamespace("fl.managers"), "IFocusManagerComponent") end
+     trait slot QName(PackageInternalNs("fl.managers"), "io") slotid 4 type QName(PackageNamespace("flash.display"), "InteractiveObject") end
+     trait slot QName(PackageInternalNs("fl.managers"), "doc") slotid 5 type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+     trait slot QName(PackageInternalNs("fl.managers"), "docParent") slotid 6 type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+     trait slot QName(PackageInternalNs("fl.managers"), "i") slotid 7 type QName(PackageNamespace(""), "int") end
+     trait slot QName(PackageInternalNs("fl.managers"), "child") slotid 8 type QName(PackageNamespace("flash.display"), "DisplayObject") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "removeFocusables")
+   method
+    name "fl.managers:FocusManager/private:removeFocusables"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/removeFocusables"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           291
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal3
+
+      debug               1, "o", 0, 291
+      debugline           292
+      getlocal1
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      istypelate
+      iffalse             L93
+
+      debug               1, "p", 1, 295
+      debugline           293
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_CHILDREN_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "tabChildrenChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           294
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_INDEX_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "tabIndexChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           295
+      pushbyte            0
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      coerce_a
+      setlocal            5
+
+      jump                L88
+
+L41:
+      label
+      getlocal            5
+      getlocal            4
+      nextname
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      debug               1, "dob", 2, 296
+      debugline           296
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObject")
+      getlocal2
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObject"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal3
+
+      debugline           297
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      getlocal1
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObjectContainer"), 1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iffalse             L88
+
+      debugline           298
+      getlocal3
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+      ifne                L70
+
+      debugline           299
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+
+L70:
+      debugline           301
+      getlocal3
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_ENABLED_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "tabEnabledChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           302
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      getlocal2
+      deleteproperty      MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+      pop
+      debugline           303
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "calculateCandidates")
+
+L88:
+      debugline           295
+      hasnext2            5, 4
+      iftrue              L41
+
+      kill                5
+      kill                4
+L93:
+      debugline           307
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "isTabVisible")
+   method
+    name "fl.managers:FocusManager/private:isTabVisible"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/isTabVisible"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "focusEnabled"
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 7
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           316
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+      debug               1, "o", 0, 316
+L8:
+      debugline           318
+      debug               1, "p", 1, 318
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+      jump                L28
+
+L15:
+      label
+      debugline           320
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabChildren")
+      iftrue              L23
+
+      debugline           321
+      pushfalse
+      returnvalue
+
+L23:
+      debugline           323
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+L28:
+      debugline           319
+      getlocal2
+      coerce_a
+      convert_b
+      dup
+      iffalse             L41
+
+      pop
+      getlocal2
+      getlex              QName(PackageNamespace("flash.display"), "Stage")
+      istypelate
+      not
+      coerce_a
+      convert_b
+L41:
+      dup
+      iffalse             L56
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce_a
+      dup
+      iffalse             L55
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace("flash.display"), "Stage")
+      istypelate
+      coerce_a
+L55:
+      not
+L56:
+      iftrue              L15
+
+L57:
+      debugline           325
+      jump                L70
+
+L59:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L70:
+      debugline           327
+      pushtrue
+      returnvalue
+     end ; code
+     try from L8 to L57 target L59 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "isValidFocusCandidate")
+   method
+    name "fl.managers:FocusManager/private:isValidFocusCandidate"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/isValidFocusCandidate"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "focusEnabled"
+    paramname "focusEnabled"
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           337
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      setlocal3
+
+      debug               1, "o", 0, 337
+      debug               1, "groupName", 1, 337
+      debugline           338
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "isEnabledAndVisible"), 1
+      iftrue              L17
+
+      debugline           339
+      pushfalse
+      returnvalue
+
+L17:
+      debugline           341
+      getlocal1
+      getlex              QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      istypelate
+      iffalse             L37
+
+      debug               1, "tg", 2, 342
+      debugline           342
+      findpropstrict      QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      getlocal1
+      callproperty        QName(PackageNamespace("fl.managers"), "IFocusManagerGroup"), 1
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      setlocal3
+
+      debugline           343
+      getlocal2
+      getlocal3
+      getproperty         QName(Namespace("fl.managers:IFocusManagerGroup"), "groupName")
+      ifne                L37
+
+      debugline           344
+      pushfalse
+      returnvalue
+
+L37:
+      debugline           347
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "isEnabledAndVisible")
+   method
+    name "fl.managers:FocusManager/private:isEnabledAndVisible"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/isEnabledAndVisible"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "focusEnabled"
+    body
+     maxstack 3
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 7
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           358
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "SimpleButton")
+      setlocal            4
+
+      debug               1, "o", 0, 358
+L14:
+      debugline           360
+      debug               1, "formParent", 1, 360
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObject")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObject"), 1
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+      jump                L100
+
+L24:
+      label
+      debugline           362
+      getlocal1
+      getlex              QName(PackageNamespace("fl.core"), "UIComponent")
+      istypelate
+      iffalse             L40
+
+      debugline           363
+      findpropstrict      QName(PackageNamespace("fl.core"), "UIComponent")
+      getlocal1
+      callproperty        QName(PackageNamespace("fl.core"), "UIComponent"), 1
+      getproperty         QName(PackageNamespace(""), "enabled")
+      iftrue              L39
+
+      debugline           365
+      pushfalse
+      returnvalue
+
+L39:
+      jump                L88
+
+L40:
+      debugline           367
+      getlocal1
+      getlex              QName(PackageNamespace("flash.text"), "TextField")
+      istypelate
+      iffalse             L69
+
+      debug               1, "tf", 2, 368
+      debugline           368
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      getlocal1
+      callproperty        QName(PackageNamespace("flash.text"), "TextField"), 1
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal3
+
+      debugline           369
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldType")
+      getproperty         QName(PackageNamespace(""), "DYNAMIC")
+      equals
+      dup
+      iftrue              L64
+
+      pop
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "selectable")
+      not
+L64:
+      iffalse             L68
+
+      debugline           371
+      pushfalse
+      returnvalue
+
+L68:
+      jump                L88
+
+L69:
+      debugline           373
+      getlocal1
+      getlex              QName(PackageNamespace("flash.display"), "SimpleButton")
+      istypelate
+      iffalse             L88
+
+      debug               1, "sb", 3, 374
+      debugline           374
+      findpropstrict      QName(PackageNamespace("flash.display"), "SimpleButton")
+      getlocal1
+      callproperty        QName(PackageNamespace("flash.display"), "SimpleButton"), 1
+      coerce              QName(PackageNamespace("flash.display"), "SimpleButton")
+      setlocal            4
+
+      debugline           375
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "enabled")
+      iftrue              L88
+
+      debugline           377
+      pushfalse
+      returnvalue
+
+L88:
+      debugline           380
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "visible")
+      iftrue              L95
+
+      debugline           382
+      pushfalse
+      returnvalue
+
+L95:
+      debugline           384
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+L100:
+      debugline           361
+      getlocal1
+      getlocal2
+      ifne                L24
+
+L104:
+      debugline           386
+      jump                L117
+
+L106:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            5
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                5
+L117:
+      debugline           388
+      pushtrue
+      returnvalue
+     end ; code
+     try from L14 to L104 target L106 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "tabEnabledChangeHandler")
+   method
+    name "fl.managers:FocusManager/private:tabEnabledChangeHandler"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/tabEnabledChangeHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           398
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 398
+      debug               1, "o", 1, 400
+      debug               1, "registeredFocusableObject", 2, 401
+      debugline           399
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "calculateCandidates")
+
+      debugline           400
+      findpropstrict      QName(PackageNamespace("flash.display"), "InteractiveObject")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      callproperty        QName(PackageNamespace("flash.display"), "InteractiveObject"), 1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           401
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+      pushtrue
+      equals
+      setlocal3
+
+      debugline           402
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabEnabled")
+      iffalse             L57
+
+      debugline           403
+      getlocal3
+      not
+      dup
+      iffalse             L40
+
+      pop
+      getlocal0
+      getlocal2
+      callproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "isTabVisible"), 1
+      convert_b
+L40:
+      iffalse             L56
+
+      debugline           404
+      getlocal2
+      getlex              QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      istypelate
+      iftrue              L50
+
+      debugline           405
+      getlocal2
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "focusRect")
+
+L50:
+      debugline           407
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      getlocal2
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+
+L56:
+      jump                L66
+
+L57:
+      debugline           411
+      getlocal3
+      iffalse             L66
+
+      debugline           412
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      getlocal2
+      deleteproperty      MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+      pop
+L66:
+      debugline           415
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "tabIndexChangeHandler")
+   method
+    name "fl.managers:FocusManager/private:tabIndexChangeHandler"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/tabIndexChangeHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           424
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 424
+      debugline           425
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "calculateCandidates")
+
+      debugline           426
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "tabChildrenChangeHandler")
+   method
+    name "fl.managers:FocusManager/private:tabChildrenChangeHandler"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/tabChildrenChangeHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           435
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 435
+      debug               1, "o", 1, 440
+      debugline           436
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "currentTarget")
+      ifeq                L14
+
+      debugline           437
+      returnvoid
+
+L14:
+      debugline           439
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "calculateCandidates")
+
+      debugline           440
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObjectContainer"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+      debugline           441
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabChildren")
+      iffalse             L35
+
+      debugline           442
+      getlocal0
+      getlocal2
+      pushtrue
+      callpropvoid        QName(PrivateNamespace("fl.managers:FocusManager"), "addFocusables"), 2
+
+      jump                L39
+
+L35:
+      debugline           444
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("fl.managers:FocusManager"), "removeFocusables"), 1
+
+L39:
+      debugline           446
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "activate")
+   method
+    name "fl.managers:FocusManager/activate"
+    refid "fl.managers:FocusManager/instance/activate"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 10
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           461
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+      debug               1, "activate$2", 0, 461
+      debugline           462
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "activated")
+      iffalse             L15
+
+      debugline           463
+      returnvoid
+
+L15:
+      debugline           465
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      callpropvoid        QName(PrivateNamespace("fl.managers:FocusManager"), "addFocusables"), 1
+
+      debugline           467
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "addedHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           468
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "removedHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+L42:
+      debugline           470
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_FOCUS_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "mouseFocusChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           471
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_FOCUS_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "keyFocusChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           472
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ACTIVATE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "activateHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           473
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "DEACTIVATE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "deactivateHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+L90:
+      debugline           474
+      jump                L141
+
+L92:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      debugline           476
+      getlex              QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_FOCUS_CHANGE")
+      getlex              QName(PrivateNamespace("fl.managers:FocusManager"), "mouseFocusChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           477
+      getlex              QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_FOCUS_CHANGE")
+      getlex              QName(PrivateNamespace("fl.managers:FocusManager"), "keyFocusChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           478
+      getlex              QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ACTIVATE")
+      getlex              QName(PrivateNamespace("fl.managers:FocusManager"), "activateHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           479
+      getlex              QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "DEACTIVATE")
+      getlex              QName(PrivateNamespace("fl.managers:FocusManager"), "deactivateHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      popscope
+      kill                2
+L141:
+      debugline           481
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "FOCUS_IN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusInHandler")
+      pushtrue
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           482
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "FOCUS_OUT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusOutHandler")
+      pushtrue
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           483
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "mouseDownHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           484
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "keyDownHandler")
+      pushtrue
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           485
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "activated")
+
+      debugline           487
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+      iffalse             L198
+
+      debugline           488
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+      callpropvoid        QName(PackageNamespace(""), "setFocus"), 1
+
+L198:
+      debugline           490
+      returnvoid
+     end ; code
+     try from L42 to L90 target L92 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "deactivate")
+   method
+    name "fl.managers:FocusManager/deactivate"
+    refid "fl.managers:FocusManager/instance/deactivate"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 7
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           504
+      getlocal0
+      pushscope
+
+      debugline           506
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "activated")
+      iftrue              L10
+
+      debugline           507
+      returnvoid
+
+L10:
+      debugline           509
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+      pushtrue
+      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+
+      debugline           510
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+
+      debugline           511
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+
+      debugline           512
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "defButton")
+
+      debugline           513
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "addedHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           514
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "removedHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+L46:
+      debugline           516
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_FOCUS_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "mouseFocusChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           517
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_FOCUS_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "keyFocusChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           518
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ACTIVATE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "activateHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           519
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "DEACTIVATE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "deactivateHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+L86:
+      debugline           520
+      jump                L99
+
+L88:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal1
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                1
+L99:
+      debugline           522
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_FOCUS_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "mouseFocusChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           523
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_FOCUS_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "keyFocusChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           524
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ACTIVATE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "activateHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           525
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "DEACTIVATE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "deactivateHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           526
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "FOCUS_IN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusInHandler")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           527
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "FOCUS_OUT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusOutHandler")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           528
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "mouseDownHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           529
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "keyDownHandler")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           530
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "activated")
+
+      debugline           531
+      returnvoid
+     end ; code
+     try from L46 to L86 target L88 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "focusInHandler")
+   method
+    name "fl.managers:FocusManager/private:focusInHandler"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/focusInHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           540
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("fl.controls"), "Button")
+      setlocal3
+
+      debug               1, "event", 0, 540
+      debug               1, "target", 1, 542
+      debugline           541
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "activated")
+      iftrue              L14
+
+      returnvoid
+
+L14:
+      debugline           542
+      findpropstrict      QName(PackageNamespace("flash.display"), "InteractiveObject")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      callproperty        QName(PackageNamespace("flash.display"), "InteractiveObject"), 1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           543
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iffalse             L96
+
+      debugline           544
+      getlocal0
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.display"), "InteractiveObject")
+      getlocal2
+      callproperty        QName(PackageNamespace("flash.display"), "InteractiveObject"), 1
+      callproperty        QName(PackageNamespace(""), "findFocusManagerComponent"), 1
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+
+      debugline           546
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+      getlex              QName(PackageNamespace("fl.controls"), "Button")
+      istypelate
+      iffalse             L67
+
+      debug               1, "x", 2, 547
+      debugline           547
+      findpropstrict      QName(PackageNamespace("fl.controls"), "Button")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+      callproperty        QName(PackageNamespace("fl.controls"), "Button"), 1
+      coerce              QName(PackageNamespace("fl.controls"), "Button")
+      setlocal3
+
+      debugline           549
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "defButton")
+      iffalse             L66
+
+      debugline           551
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "defButton")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "emphasized")
+
+      debugline           552
+      getlocal0
+      getlocal3
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "defButton")
+
+      debugline           553
+      getlocal3
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "emphasized")
+
+L66:
+      jump                L96
+
+L67:
+      debugline           557
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "defButton")
+      convert_b
+      dup
+      iffalse             L80
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "defButton")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "_defaultButton")
+      equals
+      not
+L80:
+      iffalse             L96
+
+      debugline           558
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "defButton")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "emphasized")
+
+      debugline           559
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "_defaultButton")
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "defButton")
+
+      debugline           560
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "_defaultButton")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "emphasized")
+
+L96:
+      debugline           564
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "focusOutHandler")
+   method
+    name "fl.managers:FocusManager/private:focusOutHandler"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/focusOutHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           573
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 573
+      debug               1, "target", 1, 575
+      debugline           574
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "activated")
+      iftrue              L11
+
+      returnvoid
+
+L11:
+      debugline           575
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           576
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "activateHandler")
+   method
+    name "fl.managers:FocusManager/private:activateHandler"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/activateHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           586
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 586
+      debug               1, "target", 1, 588
+      debugline           587
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "activated")
+      iftrue              L11
+
+      returnvoid
+
+L11:
+      debugline           588
+      findpropstrict      QName(PackageNamespace("flash.display"), "InteractiveObject")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      callproperty        QName(PackageNamespace("flash.display"), "InteractiveObject"), 1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           589
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+      iffalse             L42
+
+      debugline           590
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+      getlex              QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      istypelate
+      iffalse             L35
+
+      debugline           591
+      findpropstrict      QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+      callproperty        QName(PackageNamespace("fl.managers"), "IFocusManagerComponent"), 1
+      callpropvoid        QName(Namespace("fl.managers:IFocusManagerComponent"), "setFocus"), 0
+
+      jump                L42
+
+L35:
+      debugline           593
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+      setproperty         QName(PackageNamespace(""), "focus")
+
+L42:
+      debugline           596
+      getlocal0
+      pushstring          "ACTIVATE"
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "lastAction")
+
+      debugline           597
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "deactivateHandler")
+   method
+    name "fl.managers:FocusManager/private:deactivateHandler"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/deactivateHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           606
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 606
+      debug               1, "target", 1, 608
+      debugline           607
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "activated")
+      iftrue              L11
+
+      returnvoid
+
+L11:
+      debugline           608
+      findpropstrict      QName(PackageNamespace("flash.display"), "InteractiveObject")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      callproperty        QName(PackageNamespace("flash.display"), "InteractiveObject"), 1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           609
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "mouseFocusChangeHandler")
+   method
+    name "fl.managers:FocusManager/private:mouseFocusChangeHandler"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/mouseFocusChangeHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           619
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 619
+      debugline           620
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "activated")
+      iftrue              L10
+
+      returnvoid
+
+L10:
+      debugline           621
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "relatedObject")
+      getlex              QName(PackageNamespace("flash.text"), "TextField")
+      istypelate
+      iffalse             L18
+
+      debugline           622
+      returnvoid
+
+L18:
+      debugline           624
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "preventDefault"), 0
+
+      debugline           625
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "keyFocusChangeHandler")
+   method
+    name "fl.managers:FocusManager/private:keyFocusChangeHandler"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/keyFocusChangeHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           634
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 634
+      debugline           635
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "activated")
+      iftrue              L10
+
+      returnvoid
+
+L10:
+      debugline           636
+      getlocal0
+      pushtrue
+      initproperty        QName(PackageNamespace(""), "showFocusIndicator")
+
+      debugline           637
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "TAB")
+      equals
+      dup
+      iftrue              L27
+
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      pushbyte            0
+      equals
+L27:
+      dup
+      iffalse             L33
+
+      pop
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "isDefaultPrevented"), 0
+      not
+L33:
+      iffalse             L41
+
+      debugline           638
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("fl.managers:FocusManager"), "setFocusToNextObject"), 1
+
+      debugline           639
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "preventDefault"), 0
+
+L41:
+      debugline           641
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "keyDownHandler")
+   method
+    name "fl.managers:FocusManager/private:keyDownHandler"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/keyDownHandler"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           650
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 650
+      debugline           651
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "activated")
+      iftrue              L10
+
+      returnvoid
+
+L10:
+      debugline           652
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "TAB")
+      ifne                L31
+
+      debugline           653
+      getlocal0
+      pushstring          "KEY"
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "lastAction")
+
+      debugline           655
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "calculateCandidates")
+      iffalse             L31
+
+      debugline           656
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("fl.managers:FocusManager"), "sortFocusableObjects"), 0
+
+      debugline           657
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "calculateCandidates")
+
+L31:
+      debugline           660
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "defaultButtonEnabled")
+      dup
+      iffalse             L42
+
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "ENTER")
+      equals
+L42:
+      coerce_a
+      convert_b
+      dup
+      iffalse             L51
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "defaultButton")
+      coerce_a
+      convert_b
+L51:
+      dup
+      iffalse             L58
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "defButton")
+      getproperty         QName(PackageNamespace(""), "enabled")
+      convert_b
+L58:
+      iffalse             L62
+
+      debugline           661
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "sendDefaultButtonEvent"), 0
+
+L62:
+      debugline           663
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "mouseDownHandler")
+   method
+    name "fl.managers:FocusManager/private:mouseDownHandler"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/mouseDownHandler"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           678
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 678
+      debug               1, "o", 1, 683
+      debugline           679
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "activated")
+      iftrue              L11
+
+      returnvoid
+
+L11:
+      debugline           680
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "isDefaultPrevented"), 0
+      iffalse             L17
+
+      debugline           681
+      returnvoid
+
+L17:
+      debugline           683
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.display"), "InteractiveObject")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      callproperty        QName(PackageNamespace("flash.display"), "InteractiveObject"), 1
+      callproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "getTopLevelFocusTarget"), 1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           684
+      getlocal2
+      iftrue              L31
+
+      debugline           685
+      returnvoid
+
+L31:
+      debugline           687
+      getlocal0
+      pushfalse
+      initproperty        QName(PackageNamespace(""), "showFocusIndicator")
+
+      debugline           695
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastFocus")
+      equals
+      not
+      dup
+      iftrue              L48
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "lastAction")
+      pushstring          "ACTIVATE"
+      equals
+L48:
+      dup
+      iffalse             L55
+
+      pop
+      getlocal2
+      getlex              QName(PackageNamespace("flash.text"), "TextField")
+      istypelate
+      not
+L55:
+      iffalse             L60
+
+      debugline           696
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setFocus"), 1
+
+L60:
+      debugline           698
+      getlocal0
+      pushstring          "MOUSEDOWN"
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "lastAction")
+
+      debugline           699
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "defaultButton")
+   method
+    name "fl.managers:FocusManager/defaultButton/get"
+    refid "fl.managers:FocusManager/instance/defaultButton/getter"
+    returns QName(PackageNamespace("fl.controls"), "Button")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           715
+      getlocal0
+      pushscope
+
+      debugline           716
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "_defaultButton")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "defaultButton")
+   method
+    name "fl.managers:FocusManager/defaultButton/set"
+    refid "fl.managers:FocusManager/instance/defaultButton/setter"
+    param QName(PackageNamespace("fl.controls"), "Button")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           725
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 725
+      debug               1, "button", 1, 726
+      debugline           726
+      getlocal1
+      iffalse             L14
+
+      findpropstrict      QName(PackageNamespace("fl.controls"), "Button")
+      getlocal1
+      callproperty        QName(PackageNamespace("fl.controls"), "Button"), 1
+      coerce              QName(PackageNamespace("fl.controls"), "Button")
+      jump                L16
+
+L14:
+      pushnull
+      coerce              QName(PackageNamespace("fl.controls"), "Button")
+L16:
+      coerce              QName(PackageNamespace("fl.controls"), "Button")
+      setlocal2
+
+      debugline           727
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "_defaultButton")
+      ifeq                L56
+
+      debugline           728
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "_defaultButton")
+      iffalse             L32
+
+      debugline           729
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "_defaultButton")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "emphasized")
+
+L32:
+      debugline           731
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "defButton")
+      iffalse             L41
+
+      debugline           732
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "defButton")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "emphasized")
+
+L41:
+      debugline           734
+      getlocal0
+      getlocal2
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "_defaultButton")
+
+      debugline           735
+      getlocal0
+      getlocal2
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "defButton")
+
+      debugline           736
+      getlocal2
+      iffalse             L56
+
+      debugline           737
+      getlocal2
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "emphasized")
+
+L56:
+      debugline           740
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "sendDefaultButtonEvent")
+   method
+    name "fl.managers:FocusManager/sendDefaultButtonEvent"
+    refid "fl.managers:FocusManager/instance/sendDefaultButtonEvent"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           750
+      getlocal0
+      pushscope
+
+      debugline           751
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "defButton")
+      findpropstrict      QName(PackageNamespace("flash.events"), "MouseEvent")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      constructprop       QName(PackageNamespace("flash.events"), "MouseEvent"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           752
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "setFocusToNextObject")
+   method
+    name "fl.managers:FocusManager/private:setFocusToNextObject"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/setFocusToNextObject"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           760
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 760
+      debug               1, "o", 1, 762
+      debugline           761
+      getlocal0
+      callproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "hasFocusableObjects"), 0
+      iftrue              L11
+
+      returnvoid
+
+L11:
+      debugline           762
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "shiftKey")
+      callproperty        QName(PackageNamespace(""), "getNextFocusManagerComponent"), 1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           763
+      getlocal2
+      iffalse             L25
+
+      debugline           764
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setFocus"), 1
+
+L25:
+      debugline           766
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "hasFocusableObjects")
+   method
+    name "fl.managers:FocusManager/private:hasFocusableObjects"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/hasFocusableObjects"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           774
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      debug               1, "o", 0, 775
+      debugline           775
+      pushbyte            0
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      coerce_a
+      setlocal3
+
+      jump                L25
+
+L16:
+      label
+      getlocal3
+      getlocal2
+      nextname
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      debugline           776
+      pushtrue
+      returnvalue
+
+L25:
+      debugline           775
+      hasnext2            3, 2
+      iftrue              L16
+
+      kill                3
+      kill                2
+      debugline           778
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getNextFocusManagerComponent")
+   method
+    name "fl.managers:FocusManager/getNextFocusManagerComponent"
+    refid "fl.managers:FocusManager/instance/getNextFocusManagerComponent"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional False()
+    paramname "DisplayObjectContainer"
+    body
+     maxstack 5
+     localcount 9
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           800
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      setlocal            8
+
+      debug               1, "backward", 0, 800
+      debug               1, "o", 1, 807
+      debug               1, "g", 2, 809
+      debug               1, "i", 3, 814
+      debug               1, "bSearchAll", 4, 815
+      debug               1, "start", 5, 816
+      debug               1, "j", 6, 824
+      debugline           801
+      getlocal0
+      callproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "hasFocusableObjects"), 0
+      iftrue              L20
+
+      pushnull
+      returnvalue
+
+L20:
+      debugline           802
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "calculateCandidates")
+      iffalse             L31
+
+      debugline           803
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("fl.managers:FocusManager"), "sortFocusableObjects"), 0
+
+      debugline           804
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "calculateCandidates")
+
+L31:
+      debugline           807
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "focus")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      debugline           808
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObject")
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.display"), "InteractiveObject")
+      getlocal2
+      callproperty        QName(PackageNamespace("flash.display"), "InteractiveObject"), 1
+      callproperty        QName(PackageNamespace(""), "findFocusManagerComponent"), 1
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObject"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      pushstring          ""
+      debugline           809
+      coerce_s
+      setlocal3
+
+      debugline           810
+      getlocal2
+      getlex              QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      istypelate
+      iffalse             L69
+
+      debug               1, "tg", 7, 811
+      debugline           811
+      findpropstrict      QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      getlocal2
+      callproperty        QName(PackageNamespace("fl.managers"), "IFocusManagerGroup"), 1
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      setlocal            8
+
+      debugline           812
+      getlocal            8
+      getproperty         QName(Namespace("fl.managers:IFocusManagerGroup"), "groupName")
+      coerce_s
+      setlocal3
+
+L69:
+      debugline           814
+      getlocal0
+      getlocal2
+      callproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "getIndexOfFocusedObject"), 1
+      convert_i
+      setlocal            4
+
+      debugline           815
+      pushfalse
+      setlocal            5
+
+      debugline           816
+      getlocal            4
+      convert_i
+      setlocal            6
+
+      debugline           817
+      getlocal            4
+      pushbyte            255
+      ifne                L98
+
+      debugline           819
+      getlocal1
+      iffalse             L95
+
+      debugline           820
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            4
+
+L95:
+      debugline           822
+      pushtrue
+      setlocal            5
+
+L98:
+      debugline           824
+      getlocal0
+      getlocal            4
+      getlocal1
+      getlocal            5
+      getlocal3
+      callproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "getIndexOfNextObject"), 4
+      convert_i
+      setlocal            7
+
+      debugline           825
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+      callproperty        QName(PackageNamespace(""), "findFocusManagerComponent"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "getIndexOfFocusedObject")
+   method
+    name "fl.managers:FocusManager/private:getIndexOfFocusedObject"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/getIndexOfFocusedObject"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_PARAM_NAMES
+    paramname "TAB_CHILDREN_CHANGE"
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           834
+      getlocal0
+      pushscope
+
+      debug               1, "o", 0, 834
+      debug               1, "n", 1, 835
+      debug               1, "i", 2, 836
+      debugline           835
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal2
+
+      debugline           836
+      pushbyte            0
+      setlocal3
+
+      debugline           837
+      pushbyte            0
+      setlocal3
+
+      jump                L33
+
+L20:
+      label
+      debugline           839
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+      getlocal1
+      ifne                L31
+
+      debugline           840
+      getlocal3
+      returnvalue
+
+L31:
+      debugline           837
+      inclocal_i          3
+L33:
+      getlocal3
+      getlocal2
+      iflt                L20
+
+      debugline           843
+      pushbyte            255
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "getIndexOfNextObject")
+   method
+    name "fl.managers:FocusManager/private:getIndexOfNextObject"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/getIndexOfNextObject"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_PARAM_NAMES
+    paramname "TAB_CHILDREN_CHANGE"
+    paramname "TAB_CHILDREN_CHANGE"
+    paramname "TAB_CHILDREN_CHANGE"
+    paramname "TAB_CHILDREN_CHANGE"
+    body
+     maxstack 4
+     localcount 12
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           852
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      setlocal            8
+
+      pushbyte            0
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            10
+
+      pushnull
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      setlocal            11
+
+      debug               1, "i", 0, 852
+      debug               1, "shiftKey", 1, 852
+      debug               1, "bSearchAll", 2, 852
+      debug               1, "groupName", 3, 852
+      debug               1, "n", 4, 853
+      debug               1, "start", 5, 854
+      debugline           853
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            5
+
+      debugline           854
+      getlocal1
+      convert_i
+      setlocal            6
+
+      jump                L176
+
+L35:
+      label
+      debugline           856
+      getlocal2
+      iffalse             L44
+
+      debugline           857
+      getlocal1
+      decrement_i
+      setlocal1
+
+      jump                L46
+
+L44:
+      debugline           859
+      inclocal_i          1
+L46:
+      debugline           861
+      getlocal3
+      iffalse             L74
+
+      debugline           862
+      getlocal2
+      convert_b
+      dup
+      iffalse             L58
+
+      pop
+      getlocal1
+      pushbyte            0
+      lessthan
+L58:
+      iffalse             L61
+
+      debugline           863
+      jump                L178
+
+L61:
+      debugline           865
+      getlocal2
+      not
+      dup
+      iffalse             L70
+
+      pop
+      getlocal1
+      getlocal            5
+      equals
+L70:
+      iffalse             L73
+
+      debugline           866
+      jump                L178
+
+L73:
+      jump                L88
+
+L74:
+      debugline           869
+      getlocal1
+      getlocal            5
+      add
+      getlocal            5
+      modulo
+      convert_i
+      setlocal1
+
+      debugline           871
+      getlocal            6
+      getlocal1
+      ifne                L88
+
+      debugline           872
+      jump                L178
+
+L88:
+      debugline           875
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+      getlocal            4
+      callproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "isValidFocusCandidate"), 2
+      iffalse             L176
+
+      debug               1, "o", 6, 876
+      debugline           876
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObject")
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+      callproperty        QName(PackageNamespace(""), "findFocusManagerComponent"), 1
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObject"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            7
+
+      debugline           877
+      getlocal            7
+      getlex              QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      istypelate
+      iffalse             L173
+
+      debug               1, "tg1", 7, 880
+      debug               1, "j", 8, 881
+      debugline           880
+      findpropstrict      QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      getlocal            7
+      callproperty        QName(PackageNamespace("fl.managers"), "IFocusManagerGroup"), 1
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      setlocal            8
+
+      debugline           881
+      pushbyte            0
+      setlocal            9
+
+      jump                L168
+
+L126:
+      label
+      debug               1, "obj", 9, 882
+      debugline           882
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace("fl.managers:FocusManager"), PackageNamespace("flash.utils"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace("FocusManager.as$125"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:FocusManager"), StaticProtectedNs("fl.managers:FocusManager")])
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            10
+
+      debugline           883
+      getlocal            10
+      getlex              QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      istypelate
+      iffalse             L166
+
+      debug               1, "tg2", 10, 884
+      debugline           884
+      findpropstrict      QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      getlocal            10
+      callproperty        QName(PackageNamespace("fl.managers"), "IFocusManagerGroup"), 1
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManagerGroup")
+      setlocal            11
+
+      debugline           885
+      getlocal            11
+      getproperty         QName(Namespace("fl.managers:IFocusManagerGroup"), "groupName")
+      getlocal            8
+      getproperty         QName(Namespace("fl.managers:IFocusManagerGroup"), "groupName")
+      equals
+      dup
+      iffalse             L159
+
+      pop
+      getlocal            11
+      getproperty         QName(Namespace("fl.managers:IFocusManagerGroup"), "selected")
+      convert_b
+L159:
+      iffalse             L166
+
+      debugline           886
+      getlocal            9
+      convert_i
+      setlocal1
+
+      debugline           887
+      jump                L173
+
+L166:
+      debugline           881
+      inclocal_i          9
+L168:
+      getlocal            9
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L126
+
+L173:
+      debugline           892
+      getlocal1
+      returnvalue
+
+L176:
+      debugline           855
+      jump                L35
+
+L178:
+      debugline           895
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "sortFocusableObjects")
+   method
+    name "fl.managers:FocusManager/private:sortFocusableObjects"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/sortFocusableObjects"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           905
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debug               1, "o", 0, 907
+      debugline           906
+      getlocal0
+      newarray            0
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+
+      debugline           907
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      coerce_a
+      setlocal            4
+
+      jump                L71
+
+L23:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      debug               1, "c", 1, 908
+      debugline           908
+      findpropstrict      QName(PackageNamespace("flash.display"), "InteractiveObject")
+      getlocal1
+      callproperty        QName(PackageNamespace("flash.display"), "InteractiveObject"), 1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           909
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      coerce_a
+      convert_b
+      dup
+      iffalse             L53
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      not
+      coerce_a
+      convert_b
+L53:
+      dup
+      iffalse             L60
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      pushbyte            0
+      greaterthan
+L60:
+      iffalse             L66
+
+      debugline           910
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("fl.managers:FocusManager"), "sortFocusableObjectsTabIndex"), 0
+
+      debugline           911
+      returnvoid
+
+L66:
+      debugline           913
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L71:
+      debugline           907
+      hasnext2            4, 3
+      iftrue              L23
+
+      kill                4
+      kill                3
+      debugline           915
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "sortByDepth")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 1
+
+      debugline           916
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "sortFocusableObjectsTabIndex")
+   method
+    name "fl.managers:FocusManager/private:sortFocusableObjectsTabIndex"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/sortFocusableObjectsTabIndex"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           924
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debug               1, "o", 0, 926
+      debugline           925
+      getlocal0
+      newarray            0
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+
+      debugline           926
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableObjects")
+      coerce_a
+      setlocal            4
+
+      jump                L56
+
+L23:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      debug               1, "c", 1, 927
+      debugline           927
+      findpropstrict      QName(PackageNamespace("flash.display"), "InteractiveObject")
+      getlocal1
+      callproperty        QName(PackageNamespace("flash.display"), "InteractiveObject"), 1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           928
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      convert_b
+      dup
+      iffalse             L50
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      not
+L50:
+      iffalse             L56
+
+      debugline           930
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L56:
+      debugline           926
+      hasnext2            4, 3
+      iftrue              L23
+
+      kill                4
+      kill                3
+      debugline           933
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "focusableCandidates")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "sortByTabIndex")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 1
+
+      debugline           934
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "sortByDepth")
+   method
+    name "fl.managers:FocusManager/private:sortByDepth"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/sortByDepth"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_PARAM_NAMES
+    paramname "focusableCandidates"
+    paramname "focusableCandidates"
+    body
+     maxstack 4
+     localcount 12
+     initscopedepth 4
+     maxscopedepth 8
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           942
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            5
+
+      pushnull
+      coerce_s
+      setlocal            6
+
+      pushnull
+      coerce_s
+      setlocal            7
+
+      debug               1, "aa", 0, 942
+      debug               1, "bb", 1, 942
+      debug               1, "val1", 2, 943
+      debug               1, "val2", 3, 944
+      debug               1, "index", 4, 945
+      debug               1, "tmp", 5, 946
+      debug               1, "tmp2", 6, 947
+      debug               1, "zeros", 7, 948
+      debug               1, "a", 8, 949
+      debug               1, "b", 9, 950
+      pushstring          ""
+      debugline           943
+      coerce_s
+      setlocal3
+
+      pushstring          ""
+      debugline           944
+      coerce_s
+      setlocal            4
+
+      pushstring          "0000"
+      debugline           948
+      coerce_s
+      setlocal            8
+
+      debugline           949
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObject")
+      getlocal1
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObject"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            9
+
+      debugline           950
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObject")
+      getlocal2
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObject"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            10
+
+L46:
+      debugline           952
+      jump                L91
+
+L48:
+      label
+      debugline           953
+      getlocal0
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlocal            9
+      callproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "getChildIndex"), 2
+      convert_i
+      setlocal            5
+
+      debugline           954
+      getlocal            5
+      pushbyte            16
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+      coerce_s
+      setlocal            6
+
+      debugline           955
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            4
+      ifnlt               L80
+
+      debugline           956
+      getlocal            8
+      pushbyte            0
+      pushbyte            4
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "length")
+      subtract
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      getlocal            6
+      add
+      coerce_s
+      setlocal            7
+
+L80:
+      debugline           958
+      getlocal            7
+      getlocal3
+      add
+      coerce_s
+      setlocal3
+
+      debugline           959
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            9
+
+L91:
+      debugline           952
+      getlocal            9
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObject")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObject"), 1
+      equals
+      not
+      dup
+      iffalse             L105
+
+      pop
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "parent")
+      convert_b
+L105:
+      iftrue              L48
+
+L106:
+      debugline           961
+      jump                L119
+
+L108:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            11
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                11
+L119:
+      debugline           964
+      jump                L164
+
+L121:
+      label
+      debugline           965
+      getlocal0
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlocal            10
+      callproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "getChildIndex"), 2
+      convert_i
+      setlocal            5
+
+      debugline           966
+      getlocal            5
+      pushbyte            16
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+      coerce_s
+      setlocal            6
+
+      debugline           967
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            4
+      ifnlt               L153
+
+      debugline           968
+      getlocal            8
+      pushbyte            0
+      pushbyte            4
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "length")
+      subtract
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      getlocal            6
+      add
+      coerce_s
+      setlocal            7
+
+L153:
+      debugline           970
+      getlocal            7
+      getlocal            4
+      add
+      coerce_s
+      setlocal            4
+
+      debugline           971
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            10
+
+L164:
+      debugline           964
+      getlocal            10
+      findpropstrict      QName(PackageNamespace("flash.display"), "DisplayObject")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      callproperty        QName(PackageNamespace("flash.display"), "DisplayObject"), 1
+      equals
+      not
+      dup
+      iffalse             L178
+
+      pop
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "parent")
+      convert_b
+L178:
+      iftrue              L121
+
+L179:
+      debugline           973
+      jump                L192
+
+L181:
+      getlocal0
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal            11
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                11
+L192:
+      debugline           975
+      getlocal3
+      getlocal            4
+      greaterthan
+      iffalse             L200
+
+      pushbyte            1
+      convert_d
+      jump                L209
+
+L200:
+      getlocal3
+      getlocal            4
+      lessthan
+      iffalse             L207
+
+      pushbyte            255
+      convert_d
+      jump                L209
+
+L207:
+      pushbyte            0
+      convert_d
+L209:
+      returnvalue
+     end ; code
+     try from L46 to L106 target L108 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se1") end
+     try from L119 to L179 target L181 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se2") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "getChildIndex")
+   method
+    name "fl.managers:FocusManager/private:getChildIndex"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/getChildIndex"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_PARAM_NAMES
+    paramname "TAB_CHILDREN_CHANGE"
+    paramname "TAB_CHILDREN_CHANGE"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           984
+      getlocal0
+      pushscope
+
+      debug               1, "parent", 0, 984
+      debug               1, "child", 1, 984
+      debugline           985
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getChildIndex"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "sortByTabIndex")
+   method
+    name "fl.managers:FocusManager/private:sortByTabIndex"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/sortByTabIndex"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_PARAM_NAMES
+    paramname "TAB_CHILDREN_CHANGE"
+    paramname "TAB_CHILDREN_CHANGE"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           994
+      getlocal0
+      pushscope
+
+      debug               1, "a", 0, 994
+      debug               1, "b", 1, 994
+      debugline           995
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      greaterthan
+      iffalse             L15
+
+      pushbyte            1
+      jump                L28
+
+L15:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      lessthan
+      iffalse             L23
+
+      pushbyte            255
+      jump                L28
+
+L23:
+      getlocal0
+      getlocal1
+      getlocal2
+      callproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "sortByDepth"), 2
+      convert_i
+L28:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "defaultButtonEnabled")
+   method
+    name "fl.managers:FocusManager/defaultButtonEnabled/get"
+    refid "fl.managers:FocusManager/instance/defaultButtonEnabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           1008
+      getlocal0
+      pushscope
+
+      debugline           1009
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "_defaultButtonEnabled")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "defaultButtonEnabled")
+   method
+    name "fl.managers:FocusManager/defaultButtonEnabled/set"
+    refid "fl.managers:FocusManager/instance/defaultButtonEnabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           1018
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 1018
+      debugline           1019
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "_defaultButtonEnabled")
+
+      debugline           1020
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "nextTabIndex")
+   method
+    name "fl.managers:FocusManager/nextTabIndex/get"
+    refid "fl.managers:FocusManager/instance/nextTabIndex/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           1031
+      getlocal0
+      pushscope
+
+      debugline           1032
+      pushbyte            0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "showFocusIndicator")
+   method
+    name "fl.managers:FocusManager/showFocusIndicator/get"
+    refid "fl.managers:FocusManager/instance/showFocusIndicator/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           1044
+      getlocal0
+      pushscope
+
+      debugline           1045
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "_showFocusIndicator")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "showFocusIndicator")
+   method
+    name "fl.managers:FocusManager/showFocusIndicator/set"
+    refid "fl.managers:FocusManager/instance/showFocusIndicator/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           1054
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 1054
+      debugline           1055
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "_showFocusIndicator")
+
+      debugline           1056
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "form")
+   method
+    name "fl.managers:FocusManager/form/get"
+    refid "fl.managers:FocusManager/instance/form/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           1064
+      getlocal0
+      pushscope
+
+      debugline           1065
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.managers:FocusManager"), "_form")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "form")
+   method
+    name "fl.managers:FocusManager/form/set"
+    refid "fl.managers:FocusManager/instance/form/setter"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           1074
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 1074
+      debugline           1075
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("fl.managers:FocusManager"), "_form")
+
+      debugline           1076
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getFocus")
+   method
+    name "fl.managers:FocusManager/getFocus"
+    refid "fl.managers:FocusManager/instance/getFocus"
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           1093
+      getlocal0
+      pushscope
+
+      debug               1, "o", 0, 1094
+      debugline           1094
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "focus")
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal1
+
+      debugline           1095
+      getlocal0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "findFocusManagerComponent"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setFocus")
+   method
+    name "fl.managers:FocusManager/setFocus"
+    refid "fl.managers:FocusManager/instance/setFocus"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           1113
+      getlocal0
+      pushscope
+
+      debug               1, "component", 0, 1113
+      debugline           1114
+      getlocal1
+      getlex              QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      istypelate
+      iffalse             L16
+
+      debugline           1115
+      findpropstrict      QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      getlocal1
+      callproperty        QName(PackageNamespace("fl.managers"), "IFocusManagerComponent"), 1
+      callpropvoid        QName(Namespace("fl.managers:IFocusManagerComponent"), "setFocus"), 0
+
+      jump                L22
+
+L16:
+      debugline           1117
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "focus")
+
+L22:
+      debugline           1119
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "showFocus")
+   method
+    name "fl.managers:FocusManager/showFocus"
+    refid "fl.managers:FocusManager/instance/showFocus"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           1131
+      getlocal0
+      pushscope
+
+      debugline           1132
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "hideFocus")
+   method
+    name "fl.managers:FocusManager/hideFocus"
+    refid "fl.managers:FocusManager/instance/hideFocus"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           1144
+      getlocal0
+      pushscope
+
+      debugline           1145
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "findFocusManagerComponent")
+   method
+    name "fl.managers:FocusManager/findFocusManagerComponent"
+    refid "fl.managers:FocusManager/instance/findFocusManagerComponent"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+    flag HAS_PARAM_NAMES
+    paramname "DisplayObjectContainer"
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 7
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           1170
+      getlocal0
+      pushscope
+
+      debug               1, "component", 0, 1170
+      debug               1, "p", 1, 1171
+      debugline           1171
+      getlocal1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+L10:
+      debugline           1173
+      jump                L34
+
+L12:
+      label
+      debugline           1174
+      getlocal1
+      getlex              QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      istypelate
+      dup
+      iffalse             L25
+
+      pop
+      findpropstrict      QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      getlocal1
+      callproperty        QName(PackageNamespace("fl.managers"), "IFocusManagerComponent"), 1
+      getproperty         QName(Namespace("fl.managers:IFocusManagerComponent"), "focusEnabled")
+      convert_b
+L25:
+      iffalse             L29
+
+      debugline           1175
+      getlocal1
+      returnvalue
+
+L29:
+      debugline           1177
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal1
+
+L34:
+      debugline           1173
+      getlocal1
+      iftrue              L12
+
+L37:
+      debugline           1179
+      jump                L50
+
+L39:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L50:
+      debugline           1182
+      getlocal2
+      returnvalue
+     end ; code
+     try from L10 to L37 target L39 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("fl.managers:FocusManager"), "getTopLevelFocusTarget")
+   method
+    name "fl.managers:FocusManager/private:getTopLevelFocusTarget"
+    refid "fl.managers:FocusManager/instance/fl.managers:FocusManager/instance/getTopLevelFocusTarget"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+    flag HAS_PARAM_NAMES
+    paramname "DisplayObjectContainer"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 7
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;FocusManager.as"
+      debugline           1191
+      getlocal0
+      pushscope
+
+      debug               1, "o", 0, 1191
+L5:
+      debugline           1193
+      jump                L54
+
+L7:
+      label
+      debugline           1194
+      getlocal1
+      getlex              QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      istypelate
+      dup
+      iffalse             L21
+
+      pop
+      debugline           1195
+      findpropstrict      QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      getlocal1
+      callproperty        QName(PackageNamespace("fl.managers"), "IFocusManagerComponent"), 1
+      getproperty         QName(Namespace("fl.managers:IFocusManagerComponent"), "focusEnabled")
+      convert_b
+L21:
+      dup
+      iffalse             L30
+
+      pop
+      debugline           1196
+      findpropstrict      QName(PackageNamespace("fl.managers"), "IFocusManagerComponent")
+      getlocal1
+      callproperty        QName(PackageNamespace("fl.managers"), "IFocusManagerComponent"), 1
+      getproperty         QName(Namespace("fl.managers:IFocusManagerComponent"), "mouseFocusEnabled")
+      convert_b
+L30:
+      dup
+      iffalse             L39
+
+      pop
+      debugline           1197
+      findpropstrict      QName(PackageNamespace("fl.core"), "UIComponent")
+      getlocal1
+      callproperty        QName(PackageNamespace("fl.core"), "UIComponent"), 1
+      getproperty         QName(PackageNamespace(""), "enabled")
+      convert_b
+L39:
+      iffalse             L43
+
+      debugline           1198
+      getlocal1
+      returnvalue
+
+L43:
+      debugline           1200
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal1
+
+      debugline           1201
+      getlocal1
+      pushnull
+      ifne                L54
+
+      debugline           1202
+      jump                L61
+
+L54:
+      debugline           1193
+      getlocal1
+      findpropstrict      QName(PackageNamespace("flash.display"), "InteractiveObject")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      callproperty        QName(PackageNamespace("flash.display"), "InteractiveObject"), 1
+      ifne                L7
+
+L61:
+      debugline           1205
+      jump                L74
+
+L63:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L74:
+      debugline           1207
+      pushnull
+      returnvalue
+     end ; code
+     try from L5 to L61 target L63 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "fl.managers:FocusManager/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,201 @@
+class
+ refid "mx.events:ModuleEvent"
+ instance QName(PackageNamespace("mx.events"), "ModuleEvent")
+  extends QName(PackageNamespace("flash.events"), "ProgressEvent")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.events:ModuleEvent")
+  iinit
+   name "mx.events:ModuleEvent/ModuleEvent"
+   refid "mx.events:ModuleEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("mx.modules"), "IModuleInfo")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional False()
+   optional False()
+   optional Integer(0)
+   optional Integer(0)
+   optional Null()
+   optional Null()
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 6
+    localcount 8
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;ModuleEvent.as"
+     debugline           242
+     getlocal0
+     pushscope
+
+     debug               1, "type", 0, 242
+     debug               1, "bubbles", 1, 242
+     debug               1, "cancelable", 2, 242
+     debug               1, "bytesLoaded", 3, 242
+     debug               1, "bytesTotal", 4, 242
+     debug               1, "errorText", 5, 242
+     debug               1, "module", 6, 242
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;ModuleEvent.as"
+     debugline           247
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     getlocal            5
+     constructsuper      5
+
+     debugline           249
+     getlocal0
+     getlocal            6
+     initproperty        QName(PackageNamespace(""), "errorText")
+
+     debugline           250
+     getlocal0
+     getlocal            7
+     initproperty        QName(PrivateNamespace("mx.events:ModuleEvent"), "_module")
+
+     debugline           251
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "errorText") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("mx.events:ModuleEvent"), "_module") type QName(PackageNamespace("mx.modules"), "IModuleInfo") end
+  trait getter QName(PackageNamespace(""), "module")
+   method
+    name "mx.events:ModuleEvent/module/get"
+    refid "mx.events:ModuleEvent/instance/module/getter"
+    returns QName(PackageNamespace("mx.modules"), "IModuleInfo")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;ModuleEvent.as"
+      debugline           289
+      getlocal0
+      pushscope
+
+      debugline           291
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.events:ModuleEvent"), "_module")
+      iffalse             L11
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.events:ModuleEvent"), "_module")
+      returnvalue
+
+L11:
+      debugline           292
+      getlex              QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("mx.modules"), "IModuleInfo")
+      astypelate
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    name "mx.events:ModuleEvent/clone"
+    refid "mx.events:ModuleEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 8
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;ModuleEvent.as"
+      debugline           304
+      getlocal0
+      pushscope
+
+      debugline           306
+      findpropstrict      QName(PackageNamespace("mx.events"), "ModuleEvent")
+      debugline           306
+      getlex              QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace(""), "bubbles")
+      getlex              QName(PackageNamespace(""), "cancelable")
+      debugline           307
+      getlex              QName(PackageNamespace(""), "bytesLoaded")
+      getlex              QName(PackageNamespace(""), "bytesTotal")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "errorText")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "module")
+      constructprop       QName(PackageNamespace("mx.events"), "ModuleEvent"), 7
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.events:ModuleEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 17
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "ERROR", 1, 68
+    findproperty        QName(PackageNamespace(""), "ERROR")
+    pushstring          "error"
+    initproperty        QName(PackageNamespace(""), "ERROR")
+
+    debug               1, "PROGRESS", 2, 101
+    findproperty        QName(PackageNamespace(""), "PROGRESS")
+    pushstring          "progress"
+    initproperty        QName(PackageNamespace(""), "PROGRESS")
+
+    debug               1, "READY", 3, 133
+    findproperty        QName(PackageNamespace(""), "READY")
+    pushstring          "ready"
+    initproperty        QName(PackageNamespace(""), "READY")
+
+    debug               1, "SETUP", 4, 167
+    findproperty        QName(PackageNamespace(""), "SETUP")
+    pushstring          "setup"
+    initproperty        QName(PackageNamespace(""), "SETUP")
+
+    debug               1, "UNLOAD", 5, 200
+    findproperty        QName(PackageNamespace(""), "UNLOAD")
+    pushstring          "unload"
+    initproperty        QName(PackageNamespace(""), "UNLOAD")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PackageNamespace(""), "ERROR") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("error") end
+ trait const QName(PackageNamespace(""), "PROGRESS") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("progress") end
+ trait const QName(PackageNamespace(""), "READY") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("ready") end
+ trait const QName(PackageNamespace(""), "SETUP") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("setup") end
+ trait const QName(PackageNamespace(""), "UNLOAD") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("unload") end
+end ; class

@@ -1,0 +1,29 @@
+script ; 13
+ sinit
+  name ""
+  refid "_kiwi.Interfaces:IFocusManager/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Interfaces;IFocusManager.as"
+    debugline           10
+    findpropstrict      Multiname("IFocusManager", [PackageNamespace("_kiwi.Interfaces")])
+    pushnull
+    newclass            "_kiwi.Interfaces:IFocusManager"
+    initproperty        QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManager")
+
+    debugline           1
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManager")
+  #include "IFocusManager.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,29 @@
+script ; 7
+ sinit
+  name ""
+  refid "mx.managers:IFocusManagerComponent/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/managers;IFocusManagerComponent.as"
+    debugline           31
+    findpropstrict      Multiname("IFocusManagerComponent", [PackageNamespace("mx.managers")])
+    pushnull
+    newclass            "mx.managers:IFocusManagerComponent"
+    initproperty        QName(PackageNamespace("mx.managers"), "IFocusManagerComponent")
+
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.managers"), "IFocusManagerComponent")
+  #include "IFocusManagerComponent.class.asasm"
+ end ; trait
+end ; script

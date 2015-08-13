@@ -1,0 +1,344 @@
+class
+ refid "IggyFunctions"
+ instance QName(PackageNamespace(""), "IggyFunctions")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("IggyFunctions")
+  iinit
+   name "IggyFunctions/IggyFunctions"
+   refid "IggyFunctions/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyFunctions.as"
+     debugline           76
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "IggyFunctions/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "inIggy", 0, 12
+    findproperty        QName(PackageNamespace(""), "inIggy")
+    pushfalse
+    setproperty         QName(PackageNamespace(""), "inIggy")
+
+    debug               1, "HITTEST_NO_MOUSE", 1, 33
+    findproperty        QName(PackageNamespace(""), "HITTEST_NO_MOUSE")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "HITTEST_NO_MOUSE")
+
+    debug               1, "HITTEST_NO_GET_OBJECTS_UNDER_POINT", 2, 34
+    findproperty        QName(PackageNamespace(""), "HITTEST_NO_GET_OBJECTS_UNDER_POINT")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "HITTEST_NO_GET_OBJECTS_UNDER_POINT")
+
+    debug               1, "HITTEST_NO_IGGY_GET_OBJECTS_UNDER_POINT", 3, 35
+    findproperty        QName(PackageNamespace(""), "HITTEST_NO_IGGY_GET_OBJECTS_UNDER_POINT")
+    pushbyte            4
+    initproperty        QName(PackageNamespace(""), "HITTEST_NO_IGGY_GET_OBJECTS_UNDER_POINT")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "inIggy") slotid 1 value False() end
+ trait method QName(PackageNamespace(""), "translate") flag FINAL dispid 3
+  method
+   name "IggyFunctions/translate"
+   refid "IggyFunctions/class/translate"
+   param QName(PackageNamespace(""), "String")
+   flag HAS_PARAM_NAMES
+   paramname null
+   body
+    maxstack 1
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyFunctions.as"
+     debugline           15
+     getlocal0
+     pushscope
+
+     debug               1, "s", 0, 15
+     debugline           17
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "setTextureForBitmap") flag FINAL dispid 4
+  method
+   name "IggyFunctions/setTextureForBitmap"
+   refid "IggyFunctions/class/setTextureForBitmap"
+   param QName(PackageNamespace("flash.display"), "Bitmap")
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional Integer(-1)
+   optional Integer(-1)
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 2
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyFunctions.as"
+     debugline           21
+     getlocal0
+     pushscope
+
+     debug               1, "b", 0, 21
+     debug               1, "string_or_null", 1, 21
+     debug               1, "width", 2, 21
+     debug               1, "height", 3, 21
+     debugline           23
+     getlocal2
+     getlex              QName(PackageNamespace(""), "String")
+     istypelate
+     iffalse             L14
+
+     jump                L24
+
+L14:
+     debugline           25
+     getlocal2
+     pushnull
+     ifne                L19
+
+     jump                L24
+
+L19:
+     debugline           29
+     findpropstrict      QName(PackageNamespace(""), "TypeError")
+     pushstring          "must be String or null"
+     constructprop       QName(PackageNamespace(""), "TypeError"), 1
+     throw
+
+L24:
+     debugline           31
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait const QName(PackageNamespace(""), "HITTEST_NO_MOUSE") slotid 2 type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "HITTEST_NO_GET_OBJECTS_UNDER_POINT") slotid 3 type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait const QName(PackageNamespace(""), "HITTEST_NO_IGGY_GET_OBJECTS_UNDER_POINT") slotid 4 type QName(PackageNamespace(""), "int") value Integer(4) end
+ trait method QName(PackageNamespace(""), "iggyGetObjectsUnderPoint") flag FINAL dispid 5
+  method
+   name "IggyFunctions/iggyGetObjectsUnderPoint"
+   refid "IggyFunctions/class/iggyGetObjectsUnderPoint"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   returns QName(PackageNamespace(""), "Array")
+   flag HAS_PARAM_NAMES
+   paramname "b"
+   paramname "b"
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyFunctions.as"
+     debugline           37
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 37
+     debug               1, "point", 1, 37
+     debugline           39
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getObjectsUnderPoint"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "setHittestProperties") flag FINAL dispid 6
+  method
+   name "IggyFunctions/setHittestProperties"
+   refid "IggyFunctions/class/setHittestProperties"
+   param QName(PackageNamespace("flash.display"), "InteractiveObject")
+   param QName(PackageNamespace(""), "int")
+   flag HAS_PARAM_NAMES
+   paramname null
+   paramname null
+   body
+    maxstack 1
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyFunctions.as"
+     debugline           42
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 42
+     debug               1, "values", 1, 42
+     debugline           45
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getHittestProperties") flag FINAL dispid 7
+  method
+   name "IggyFunctions/getHittestProperties"
+   refid "IggyFunctions/class/getHittestProperties"
+   param QName(PackageNamespace("flash.display"), "InteractiveObject")
+   flag HAS_PARAM_NAMES
+   paramname null
+   body
+    maxstack 1
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyFunctions.as"
+     debugline           47
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 47
+     debugline           49
+     pushbyte            0
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "setObjectAntialiasingEnable") flag FINAL dispid 8
+  method
+   name "IggyFunctions/setObjectAntialiasingEnable"
+   refid "IggyFunctions/class/setObjectAntialiasingEnable"
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_PARAM_NAMES
+   paramname null
+   paramname null
+   body
+    maxstack 1
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyFunctions.as"
+     debugline           56
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 56
+     debug               1, "enable", 1, 56
+     debugline           59
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "setDepth") flag FINAL dispid 9
+  method
+   name "IggyFunctions/setDepth"
+   refid "IggyFunctions/class/setDepth"
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname null
+   paramname null
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyFunctions.as"
+     debugline           61
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 61
+     debug               1, "depth", 1, 61
+     debugline           64
+     getlocal1
+     pushstring          "_iggy_depth"
+     getlocal2
+     setproperty         MultinameL([PrivateNamespace("IggyFunctions"), PackageNamespace(""), PackageNamespace("flash.display"), PackageNamespace("flash.geom"), PrivateNamespace("IggyFunctions.as$130"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("IggyFunctions"), StaticProtectedNs("IggyFunctions")])
+
+     debugline           65
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getDepth") flag FINAL dispid 10
+  method
+   name "IggyFunctions/getDepth"
+   refid "IggyFunctions/class/getDepth"
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   flag HAS_PARAM_NAMES
+   paramname null
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyFunctions.as"
+     debugline           67
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 67
+     pushstring          "_iggy_depth"
+     debugline           69
+     getlocal1
+     in
+     iffalse             L15
+
+     debugline           70
+     getlocal1
+     pushstring          "_iggy_depth"
+     getproperty         MultinameL([PrivateNamespace("IggyFunctions"), PackageNamespace(""), PackageNamespace("flash.display"), PackageNamespace("flash.geom"), PrivateNamespace("IggyFunctions.as$130"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("IggyFunctions"), StaticProtectedNs("IggyFunctions")])
+     returnvalue
+
+L15:
+     debugline           72
+     pushbyte            0
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

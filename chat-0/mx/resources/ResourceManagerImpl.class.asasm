@@ -1,0 +1,2549 @@
+class
+ refid "mx.resources:ResourceManagerImpl"
+ instance QName(PackageNamespace("mx.resources"), "ResourceManagerImpl")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  implements Multiname("IResourceManager", [PackageNamespace("mx.resources")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.resources:ResourceManagerImpl")
+  iinit
+   name "mx.resources:ResourceManagerImpl/ResourceManagerImpl"
+   refid "mx.resources:ResourceManagerImpl/instance/init"
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+     debugline           116
+     getlocal0
+     pushscope
+
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+     debugline           144
+     getlocal0
+     newobject           0
+     initproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "localeMap")
+
+     debugline           151
+     getlocal0
+     newobject           0
+     initproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "resourceModules")
+
+     debug               1, "info", 0, 120
+     debugline           118
+     getlocal0
+     constructsuper      0
+
+     debugline           120
+     getlex              QName(PackageNamespace("mx.managers"), "SystemManagerGlobals")
+     getproperty         QName(PackageNamespace(""), "info")
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal1
+
+     debugline           121
+     getlocal1
+     iffalse             L29
+
+     debugline           122
+     getlocal0
+     getlocal1
+     callpropvoid        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "processInfo"), 1
+
+L29:
+     debugline           124
+     getlex              QName(PackageNamespace("mx.managers"), "SystemManagerGlobals")
+     getproperty         QName(PackageNamespace(""), "topLevelSystemManagers")
+     getproperty         QName(PackageNamespace(""), "length")
+     iffalse             L45
+
+     debugline           125
+     getlex              QName(PackageNamespace("mx.managers"), "SystemManagerGlobals")
+     getproperty         QName(PackageNamespace(""), "topLevelSystemManagers")
+     pushbyte            0
+     getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     debugline           126
+     getlex              QName(PackageNamespace("mx.events"), "FlexEvent")
+     getproperty         QName(PackageNamespace(""), "NEW_CHILD_APPLICATION")
+     getlocal0
+     getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "newChildApplicationHandler")
+     callpropvoid        Multiname("addEventListener", [PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
+
+L45:
+     debugline           127
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "localeMap") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "resourceModules") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "initializedForNonFrameworkApp") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "_localeChain") type QName(PackageNamespace(""), "Array") end
+  trait getter QName(PackageNamespace(""), "localeChain")
+   method
+    name "mx.resources:ResourceManagerImpl/localeChain/get"
+    refid "mx.resources:ResourceManagerImpl/instance/localeChain/getter"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           182
+      getlocal0
+      pushscope
+
+      debugline           184
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "_localeChain")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "localeChain")
+   method
+    name "mx.resources:ResourceManagerImpl/localeChain/set"
+    refid "mx.resources:ResourceManagerImpl/instance/localeChain/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           190
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 190
+      debugline           192
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "_localeChain")
+
+      debugline           194
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "update"), 0
+
+      debugline           195
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "installCompiledResourceBundles")
+   method
+    name "mx.resources:ResourceManagerImpl/installCompiledResourceBundles"
+    refid "mx.resources:ResourceManagerImpl/instance/installCompiledResourceBundles"
+    param QName(PackageNamespace("flash.system"), "ApplicationDomain")
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 4
+     localcount 10
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           247
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal            7
+
+      pushbyte            0
+      setlocal            8
+
+      pushnull
+      coerce_s
+      setlocal            9
+
+      debug               1, "applicationDomain", 0, 247
+      debug               1, "locales", 1, 247
+      debug               1, "bundleNames", 2, 247
+      debug               1, "n", 3, 255
+      debug               1, "m", 4, 256
+      debug               1, "i", 5, 259
+      debugline           255
+      getlocal2
+      iffalse             L25
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      jump                L26
+
+L25:
+      pushbyte            0
+L26:
+      convert_i
+      setlocal            4
+
+      debugline           256
+      getlocal3
+      iffalse             L35
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      jump                L36
+
+L35:
+      pushbyte            0
+L36:
+      convert_i
+      setlocal            5
+
+      debugline           259
+      pushbyte            0
+      setlocal            6
+
+      jump                L77
+
+L42:
+      label
+      debug               1, "locale", 6, 261
+      debug               1, "j", 7, 264
+      debugline           261
+      getlocal2
+      getlocal            6
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal            7
+
+      debugline           264
+      pushbyte            0
+      setlocal            8
+
+      jump                L72
+
+L55:
+      label
+      debug               1, "bundleName", 8, 266
+      debugline           266
+      getlocal3
+      getlocal            8
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal            9
+
+      debugline           268
+      getlocal0
+      debugline           269
+      getlocal1
+      getlocal            7
+      getlocal            9
+      callpropvoid        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "installCompiledResourceBundle"), 3
+
+      debugline           264
+      inclocal_i          8
+L72:
+      getlocal            8
+      getlocal            5
+      iflt                L55
+
+      debugline           259
+      inclocal_i          6
+L77:
+      getlocal            6
+      getlocal            4
+      iflt                L42
+
+      debugline           272
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "installCompiledResourceBundle")
+   method
+    name "mx.resources:ResourceManagerImpl/private:installCompiledResourceBundle"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/installCompiledResourceBundle"
+    param QName(PackageNamespace("flash.system"), "ApplicationDomain")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 3
+     localcount 10
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           277
+      getlocal0
+      pushscope
+
+      debug               1, "applicationDomain", 0, 277
+      debug               1, "locale", 1, 277
+      debug               1, "bundleName", 2, 277
+      debug               1, "packageName", 3, 281
+      debug               1, "localName", 4, 282
+      debug               1, "colonIndex", 5, 283
+      debug               1, "resourceBundleClassName", 6, 298
+      debug               1, "bundleClass", 7, 307
+      debug               1, "resourceBundle", 8, 344
+      debugline           281
+      pushnull
+      coerce_s
+      setlocal            4
+
+      debugline           282
+      getlocal3
+      coerce_s
+      setlocal            5
+
+      debugline           283
+      getlocal3
+      pushstring          ":"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_i
+      setlocal            6
+
+      debugline           284
+      getlocal            6
+      pushbyte            255
+      ifeq                L46
+
+      debugline           286
+      getlocal3
+      pushbyte            0
+      getlocal            6
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      coerce_s
+      setlocal            4
+
+      debugline           287
+      getlocal3
+      getlocal            6
+      pushbyte            1
+      add
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 1
+      coerce_s
+      setlocal            5
+
+L46:
+      debugline           292
+      getlocal0
+      getlocal2
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getResourceBundle"), 2
+      iffalse             L54
+
+      debugline           293
+      returnvoid
+
+L54:
+      debugline           299
+      getlocal2
+      pushstring          "$"
+      add
+      getlocal            5
+      add
+      pushstring          "_properties"
+      add
+      setlocal            7
+
+      debugline           300
+      getlocal            4
+      pushnull
+      ifeq                L75
+
+      debugline           301
+      getlocal            4
+      pushstring          "."
+      add
+      getlocal            7
+      add
+      coerce_s
+      setlocal            7
+
+L75:
+      debugline           307
+      pushnull
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal            8
+
+      debugline           308
+      getlocal1
+      getlocal            7
+      callproperty        QName(PackageNamespace(""), "hasDefinition"), 1
+      iffalse             L93
+
+      debugline           310
+      findpropstrict      QName(PackageNamespace(""), "Class")
+      getlocal1
+      debugline           311
+      getlocal            7
+      callproperty        QName(PackageNamespace(""), "getDefinition"), 1
+      callproperty        QName(PackageNamespace(""), "Class"), 1
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal            8
+
+L93:
+      debugline           314
+      getlocal            8
+      iftrue              L114
+
+      debugline           316
+      getlocal3
+      coerce_s
+      setlocal            7
+
+      debugline           317
+      getlocal1
+      getlocal            7
+      callproperty        QName(PackageNamespace(""), "hasDefinition"), 1
+      iffalse             L114
+
+      debugline           319
+      findpropstrict      QName(PackageNamespace(""), "Class")
+      getlocal1
+      debugline           320
+      getlocal            7
+      callproperty        QName(PackageNamespace(""), "getDefinition"), 1
+      callproperty        QName(PackageNamespace(""), "Class"), 1
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal            8
+
+L114:
+      debugline           326
+      getlocal            8
+      iftrue              L136
+
+      debugline           328
+      getlocal3
+      pushstring          "_properties"
+      add
+      setlocal            7
+
+      debugline           329
+      getlocal1
+      getlocal            7
+      callproperty        QName(PackageNamespace(""), "hasDefinition"), 1
+      iffalse             L136
+
+      debugline           331
+      findpropstrict      QName(PackageNamespace(""), "Class")
+      getlocal1
+      debugline           332
+      getlocal            7
+      callproperty        QName(PackageNamespace(""), "getDefinition"), 1
+      callproperty        QName(PackageNamespace(""), "Class"), 1
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal            8
+
+L136:
+      debugline           336
+      getlocal            8
+      iftrue              L154
+
+      debugline           338
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "Could not find compiled resource bundle '"
+      debugline           339
+      getlocal3
+      add
+      pushstring          "' for locale '"
+      debugline           340
+      add
+      getlocal2
+      add
+      pushstring          "'."
+      add
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+
+L154:
+      debugline           345
+      findpropstrict      QName(PackageNamespace("mx.resources"), "ResourceBundle")
+      getlocal            8
+      construct           0
+      callproperty        QName(PackageNamespace("mx.resources"), "ResourceBundle"), 1
+      coerce              QName(PackageNamespace("mx.resources"), "ResourceBundle")
+      setlocal            9
+
+      debugline           350
+      getlocal            9
+      getlocal2
+      setproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "_locale")
+
+      debugline           351
+      getlocal            9
+      getlocal3
+      setproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "_bundleName")
+
+      debugline           354
+      getlocal0
+      getlocal            9
+      callpropvoid        QName(PackageNamespace(""), "addResourceBundle"), 1
+
+      debugline           355
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "newChildApplicationHandler")
+   method
+    name "mx.resources:ResourceManagerImpl/private:newChildApplicationHandler"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/newChildApplicationHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           358
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 358
+      debug               1, "info", 1, 360
+      debugline           360
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "relatedObject")
+      dup
+      setlocal3
+
+      pushstring          "info"
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal3
+      call                0
+      kill                3
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      debugline           361
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "processInfo"), 1
+
+      debugline           362
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "processInfo")
+   method
+    name "mx.resources:ResourceManagerImpl/private:processInfo"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/processInfo"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           364
+      getlocal0
+      pushscope
+
+      debug               1, "info", 0, 364
+      debug               1, "compiledLocales", 1, 366
+      debug               1, "localeChainList", 2, 376
+      debug               1, "applicationDomain", 3, 381
+      debug               1, "compiledResourceBundleNames", 4, 383
+      debugline           366
+      getlocal1
+      pushstring          "compiledLocales"
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      debugline           368
+      getlex              QName(PackageNamespace("mx.resources"), "ResourceBundle")
+      debugline           369
+      getlocal2
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L29
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      greaterthan
+L29:
+      iffalse             L36
+
+      debugline           370
+      getlocal2
+      pushbyte            0
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      jump                L39
+
+L36:
+      pushstring          "en_US"
+      debugline           371
+      coerce_s
+L39:
+      setproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "locale")
+
+      debugline           377
+      getlex              QName(PackageNamespace("mx.managers"), "SystemManagerGlobals")
+      getproperty         QName(PackageNamespace(""), "parameters")
+      pushstring          "localeChain"
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal3
+
+      debugline           378
+      getlocal3
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L59
+
+      pop
+      getlocal3
+      pushstring          ""
+      equals
+      not
+L59:
+      iffalse             L66
+
+      debugline           379
+      getlocal0
+      getlocal3
+      pushstring          ","
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      initproperty        QName(PackageNamespace(""), "localeChain")
+
+L66:
+      debugline           381
+      getlocal1
+      pushstring          "currentDomain"
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("flash.system"), "ApplicationDomain")
+      setlocal            4
+
+      debugline           384
+      getlocal1
+      pushstring          "compiledResourceBundleNames"
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            5
+
+      debugline           386
+      getlocal0
+      debugline           387
+      getlocal            4
+      getlocal2
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "installCompiledResourceBundles"), 3
+
+      debugline           397
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "localeChain")
+      iftrue              L93
+
+      debugline           398
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "initializeLocaleChain"), 1
+
+L93:
+      debugline           400
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "initializeLocaleChain")
+   method
+    name "mx.resources:ResourceManagerImpl/initializeLocaleChain"
+    refid "mx.resources:ResourceManagerImpl/instance/initializeLocaleChain"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           410
+      getlocal0
+      pushscope
+
+      debug               1, "compiledLocales", 0, 410
+      debugline           412
+      getlocal0
+      getlex              QName(PackageNamespace("mx.resources"), "LocaleSorter")
+      debugline           413
+      getlocal1
+      getlocal0
+      callproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "getSystemPreferredLocales"), 0
+      pushnull
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "sortLocalesByPreference"), 4
+      initproperty        QName(PackageNamespace(""), "localeChain")
+
+      debugline           414
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "loadResourceModule")
+   method
+    name "mx.resources:ResourceManagerImpl/loadResourceModule"
+    refid "mx.resources:ResourceManagerImpl/instance/loadResourceModule"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace("flash.system"), "ApplicationDomain")
+    param QName(PackageNamespace("flash.system"), "SecurityDomain")
+    returns QName(PackageNamespace("flash.events"), "IEventDispatcher")
+    flag NEED_ACTIVATION
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    optional Null()
+    optional Null()
+    paramname "resourceBundleClassName"
+    paramname "resourceBundleClassName"
+    paramname "resourceBundleClassName"
+    paramname "resourceBundleClassName"
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 6
+     maxscopedepth 8
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           424
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal            5
+
+      pushscope
+
+      debug               1, "loadResourceModule$1", 4, 424
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("mx.modules"), "IModuleInfo")
+      setslot             5
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PrivateNamespace("ResourceManagerImpl.as$130"), "ResourceEventDispatcher")
+      setslot             6
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.utils"), "Timer")
+      setslot             9
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace(""), "Function")
+      setslot             10
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getlocal2
+      setslot             2
+
+      getscopeobject      1
+      getlocal3
+      setslot             3
+
+      getscopeobject      1
+      getlocal            4
+      setslot             4
+
+      debug               1, "url", 0, 424
+      debug               1, "updateFlag", 1, 424
+      debug               1, "applicationDomain", 2, 424
+      debug               1, "securityDomain", 3, 424
+      debugline           429
+      getscopeobject      1
+      getlex              QName(PackageNamespace("mx.modules"), "ModuleManager")
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PackageNamespace(""), "getModule"), 1
+      coerce              QName(PackageNamespace("mx.modules"), "IModuleInfo")
+      setslot             5
+
+      debugline           432
+      getscopeobject      1
+      debugline           433
+      findpropstrict      QName(PrivateNamespace("ResourceManagerImpl.as$130"), "ResourceEventDispatcher")
+      getscopeobject      1
+      getslot             5
+      constructprop       QName(PrivateNamespace("ResourceManagerImpl.as$130"), "ResourceEventDispatcher"), 1
+      coerce              QName(PrivateNamespace("ResourceManagerImpl.as$130"), "ResourceEventDispatcher")
+      setslot             6
+
+      debugline           438
+      getscopeobject      1
+      newfunction         "mx.resources:ResourceManagerImpl/instance/loadResourceModule/inline_method#2"
+      coerce              QName(PackageNamespace(""), "Function")
+      setslot             7
+
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           452
+      getscopeobject      1
+      getslot             5
+      debugline           452
+      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getproperty         QName(PackageNamespace(""), "READY")
+      getscopeobject      1
+      getslot             7
+      debugline           453
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 5
+
+      debugline           458
+      getscopeobject      1
+      newfunction         "mx.resources:ResourceManagerImpl/instance/loadResourceModule/inline_method#1"
+      coerce              QName(PackageNamespace(""), "Function")
+      setslot             8
+
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           476
+      getscopeobject      1
+      getslot             5
+      debugline           476
+      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getproperty         QName(PackageNamespace(""), "ERROR")
+      getscopeobject      1
+      getslot             8
+      debugline           477
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 5
+
+      debugline           479
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "resourceModules")
+      getscopeobject      1
+      getslot             1
+      debugline           480
+      findpropstrict      QName(PrivateNamespace("ResourceManagerImpl.as$130"), "ResourceModuleInfo")
+      getscopeobject      1
+      getslot             5
+      getscopeobject      1
+      getslot             7
+      getscopeobject      1
+      getslot             8
+      constructprop       QName(PrivateNamespace("ResourceManagerImpl.as$130"), "ResourceModuleInfo"), 3
+      setproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      debugline           487
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 1
+      coerce              QName(PackageNamespace("flash.utils"), "Timer")
+      setslot             9
+
+      debugline           488
+      getscopeobject      1
+      newfunction         "mx.resources:ResourceManagerImpl/instance/loadResourceModule/inline_method#0"
+      coerce              QName(PackageNamespace(""), "Function")
+      setslot             10
+
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           498
+      getscopeobject      1
+      getslot             9
+      debugline           498
+      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+      getproperty         QName(PackageNamespace(""), "TIMER")
+      getscopeobject      1
+      getslot             10
+      debugline           499
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           500
+      getscopeobject      1
+      getslot             9
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+      debugline           502
+      getscopeobject      1
+      getslot             6
+      returnvalue
+     end ; code
+     trait slot QName(PackageInternalNs("mx.resources"), "url") slotid 1 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("mx.resources"), "updateFlag") slotid 2 type QName(PackageNamespace(""), "Boolean") value True() end
+     trait slot QName(PackageInternalNs("mx.resources"), "applicationDomain") slotid 3 type QName(PackageNamespace("flash.system"), "ApplicationDomain") value Null() end
+     trait slot QName(PackageInternalNs("mx.resources"), "securityDomain") slotid 4 type QName(PackageNamespace("flash.system"), "SecurityDomain") value Null() end
+     trait slot QName(PackageInternalNs("mx.resources"), "moduleInfo") slotid 5 type QName(PackageNamespace("mx.modules"), "IModuleInfo") end
+     trait slot QName(PackageInternalNs("mx.resources"), "resourceEventDispatcher") slotid 6 type QName(PrivateNamespace("ResourceManagerImpl.as$130"), "ResourceEventDispatcher") end
+     trait slot QName(PackageInternalNs("mx.resources"), "readyHandler") slotid 7 type QName(PackageNamespace(""), "Function") end
+     trait slot QName(PackageInternalNs("mx.resources"), "errorHandler") slotid 8 type QName(PackageNamespace(""), "Function") end
+     trait slot QName(PackageInternalNs("mx.resources"), "timer") slotid 9 type QName(PackageNamespace("flash.utils"), "Timer") end
+     trait slot QName(PackageInternalNs("mx.resources"), "timerHandler") slotid 10 type QName(PackageNamespace(""), "Function") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "unloadResourceModule")
+   method
+    name "mx.resources:ResourceManagerImpl/unloadResourceModule"
+    refid "mx.resources:ResourceManagerImpl/instance/unloadResourceModule"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 3
+     localcount 9
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           513
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      pushbyte            0
+      setlocal            5
+
+      pushbyte            0
+      setlocal            6
+
+      pushnull
+      coerce_s
+      setlocal            7
+
+      pushnull
+      coerce_s
+      setlocal            8
+
+      debug               1, "url", 0, 513
+      debug               1, "update", 1, 513
+      debug               1, "rmi", 2, 516
+      debugline           516
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "resourceModules")
+      getlocal1
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PrivateNamespace("ResourceManagerImpl.as$130"), "ResourceModuleInfo")
+      setlocal3
+
+      debugline           517
+      getlocal3
+      iftrue              L32
+
+      debugline           518
+      returnvoid
+
+L32:
+      debugline           520
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "resourceModule")
+      iffalse             L84
+
+      debug               1, "bundles", 3, 523
+      debugline           523
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "resourceModule")
+      getproperty         QName(Namespace("mx.resources:IResourceModule"), "resourceBundles")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      debugline           524
+      getlocal            4
+      iffalse             L84
+
+      debug               1, "n", 4, 526
+      debug               1, "i", 5, 527
+      debugline           526
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            5
+
+      debugline           527
+      pushbyte            0
+      setlocal            6
+
+      jump                L81
+
+L57:
+      label
+      debug               1, "locale", 6, 530
+      debug               1, "bundleName", 7, 531
+      debugline           530
+      getlocal            4
+      getlocal            6
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("locale", [PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal            7
+
+      debugline           531
+      getlocal            4
+      getlocal            6
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("bundleName", [PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal            8
+
+      debugline           532
+      getlocal0
+      getlocal            7
+      getlocal            8
+      callpropvoid        QName(PackageNamespace(""), "removeResourceBundle"), 2
+
+      debugline           527
+      inclocal_i          6
+L81:
+      getlocal            6
+      getlocal            5
+      iflt                L57
+
+L84:
+      debugline           538
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "resourceModules")
+      getlocal1
+      pushnull
+      setproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      debugline           539
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "resourceModules")
+      getlocal1
+      deleteproperty      MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pop
+      debugline           542
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "moduleInfo")
+      callpropvoid        QName(Namespace("mx.modules:IModuleInfo"), "unload"), 0
+
+      debugline           545
+      getlocal2
+      iffalse             L106
+
+      debugline           546
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "update"), 0
+
+L106:
+      debugline           547
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addResourceBundle")
+   method
+    name "mx.resources:ResourceManagerImpl/addResourceBundle"
+    refid "mx.resources:ResourceManagerImpl/instance/addResourceBundle"
+    param QName(PackageNamespace("mx.resources"), "IResourceBundle")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           557
+      getlocal0
+      pushscope
+
+      debug               1, "resourceBundle", 0, 557
+      debug               1, "locale", 1, 559
+      debug               1, "bundleName", 2, 560
+      debugline           559
+      getlocal1
+      getproperty         QName(Namespace("mx.resources:IResourceBundle"), "locale")
+      coerce_s
+      setlocal2
+
+      debugline           560
+      getlocal1
+      getproperty         QName(Namespace("mx.resources:IResourceBundle"), "bundleName")
+      coerce_s
+      setlocal3
+
+      debugline           562
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "localeMap")
+      getlocal2
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iftrue              L29
+
+      debugline           563
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "localeMap")
+      getlocal2
+      newobject           0
+      setproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L29:
+      debugline           565
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "localeMap")
+      getlocal2
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal3
+      getlocal1
+      setproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      debugline           566
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getResourceBundle")
+   method
+    name "mx.resources:ResourceManagerImpl/getResourceBundle"
+    refid "mx.resources:ResourceManagerImpl/instance/getResourceBundle"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("mx.resources"), "IResourceBundle")
+    flag HAS_PARAM_NAMES
+    paramname "_properties"
+    paramname "_properties"
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           576
+      getlocal0
+      pushscope
+
+      debug               1, "locale", 0, 576
+      debug               1, "bundleName", 1, 576
+      debug               1, "bundleMap", 2, 579
+      debugline           579
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "localeMap")
+      getlocal1
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      debugline           580
+      getlocal3
+      iftrue              L20
+
+      debugline           581
+      pushnull
+      returnvalue
+
+L20:
+      debugline           583
+      getlocal3
+      getlocal2
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeResourceBundle")
+   method
+    name "mx.resources:ResourceManagerImpl/removeResourceBundle"
+    refid "mx.resources:ResourceManagerImpl/instance/removeResourceBundle"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           594
+      getlocal0
+      pushscope
+
+      debug               1, "locale", 0, 594
+      debug               1, "bundleName", 1, 594
+      debugline           597
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "localeMap")
+      getlocal1
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal2
+      deleteproperty      MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pop
+      debugline           601
+      getlocal0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getBundleNamesForLocale"), 1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifne                L27
+
+      debugline           602
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "localeMap")
+      getlocal1
+      deleteproperty      MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pop
+L27:
+      debugline           603
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeResourceBundlesForLocale")
+   method
+    name "mx.resources:ResourceManagerImpl/removeResourceBundlesForLocale"
+    refid "mx.resources:ResourceManagerImpl/instance/removeResourceBundlesForLocale"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           613
+      getlocal0
+      pushscope
+
+      debug               1, "locale", 0, 613
+      debugline           615
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "localeMap")
+      getlocal1
+      deleteproperty      MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pop
+      debugline           616
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "update")
+   method
+    name "mx.resources:ResourceManagerImpl/update"
+    refid "mx.resources:ResourceManagerImpl/instance/update"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           626
+      getlocal0
+      pushscope
+
+      debugline           628
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           629
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getLocales")
+   method
+    name "mx.resources:ResourceManagerImpl/getLocales"
+    refid "mx.resources:ResourceManagerImpl/instance/getLocales"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           639
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      debug               1, "locales", 0, 641
+      debug               1, "p", 1, 642
+      debugline           641
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      debugline           642
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "localeMap")
+      coerce_a
+      setlocal            4
+
+      jump                L31
+
+L21:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_s
+      setlocal2
+
+      debugline           644
+      getlocal1
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L31:
+      debugline           642
+      hasnext2            4, 3
+      iftrue              L21
+
+      kill                4
+      kill                3
+      debugline           646
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getPreferredLocaleChain")
+   method
+    name "mx.resources:ResourceManagerImpl/getPreferredLocaleChain"
+    refid "mx.resources:ResourceManagerImpl/instance/getPreferredLocaleChain"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           657
+      getlocal0
+      pushscope
+
+      debugline           659
+      getlex              QName(PackageNamespace("mx.resources"), "LocaleSorter")
+      debugline           660
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "getLocales"), 0
+      getlocal0
+      callproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "getSystemPreferredLocales"), 0
+      pushnull
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "sortLocalesByPreference"), 4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getBundleNamesForLocale")
+   method
+    name "mx.resources:ResourceManagerImpl/getBundleNamesForLocale"
+    refid "mx.resources:ResourceManagerImpl/instance/getBundleNamesForLocale"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Array")
+    flag HAS_PARAM_NAMES
+    paramname "dispatchEvent"
+    body
+     maxstack 2
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           671
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal3
+
+      debug               1, "locale", 0, 671
+      debug               1, "bundleNames", 1, 673
+      debug               1, "p", 2, 674
+      debugline           673
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      debugline           674
+      pushbyte            0
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "localeMap")
+      getlocal1
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_a
+      setlocal            5
+
+      jump                L34
+
+L24:
+      label
+      getlocal            5
+      getlocal            4
+      nextname
+      coerce_s
+      setlocal3
+
+      debugline           676
+      getlocal2
+      getlocal3
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L34:
+      debugline           674
+      hasnext2            5, 4
+      iftrue              L24
+
+      kill                5
+      kill                4
+      debugline           678
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "findResourceBundleWithResource")
+   method
+    name "mx.resources:ResourceManagerImpl/findResourceBundleWithResource"
+    refid "mx.resources:ResourceManagerImpl/instance/findResourceBundleWithResource"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("mx.resources"), "IResourceBundle")
+    flag HAS_PARAM_NAMES
+    paramname "_properties"
+    paramname "_properties"
+    body
+     maxstack 2
+     localcount 8
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           689
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("mx.resources"), "ResourceBundle")
+      setlocal            7
+
+      debug               1, "bundleName", 0, 689
+      debug               1, "resourceName", 1, 689
+      debug               1, "n", 2, 695
+      debug               1, "i", 3, 696
+      debugline           692
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "_localeChain")
+      iftrue              L24
+
+      debugline           693
+      pushnull
+      returnvalue
+
+L24:
+      debugline           695
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "_localeChain")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal3
+
+      debugline           696
+      pushbyte            0
+      setlocal            4
+
+      jump                L79
+
+L34:
+      label
+      debug               1, "locale", 4, 698
+      debug               1, "bundleMap", 5, 700
+      debug               1, "bundle", 6, 704
+      debugline           698
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "localeChain")
+      getlocal            4
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal            5
+
+      debugline           700
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "localeMap")
+      getlocal            5
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            6
+
+      debugline           701
+      getlocal            6
+      iftrue              L57
+
+      debugline           702
+      jump                L77
+
+L57:
+      debugline           704
+      getlocal            6
+      getlocal1
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("mx.resources"), "ResourceBundle")
+      setlocal            7
+
+      debugline           705
+      getlocal            7
+      iftrue              L68
+
+      debugline           706
+      jump                L77
+
+L68:
+      debugline           708
+      getlocal2
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "content")
+      in
+      iffalse             L77
+
+      debugline           709
+      getlocal            7
+      returnvalue
+
+L77:
+      debugline           696
+      inclocal_i          4
+L79:
+      getlocal            4
+      getlocal3
+      iflt                L34
+
+      debugline           712
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getObject")
+   method
+    name "mx.resources:ResourceManagerImpl/getObject"
+    refid "mx.resources:ResourceManagerImpl/instance/getObject"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    paramname null
+    paramname null
+    paramname null
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           725
+      getlocal0
+      pushscope
+
+      debug               1, "bundleName", 0, 725
+      debug               1, "resourceName", 1, 725
+      debug               1, "locale", 2, 725
+      debug               1, "resourceBundle", 3, 728
+      debugline           729
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "findBundle"), 3
+      coerce              QName(PackageNamespace("mx.resources"), "IResourceBundle")
+      setlocal            4
+
+      debugline           730
+      getlocal            4
+      iftrue              L22
+
+      debugline           731
+      getlex              QName(PackageNamespace(""), "undefined")
+      returnvalue
+
+L22:
+      debugline           733
+      getlocal            4
+      getproperty         QName(Namespace("mx.resources:IResourceBundle"), "content")
+      getlocal2
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getString")
+   method
+    name "mx.resources:ResourceManagerImpl/getString"
+    refid "mx.resources:ResourceManagerImpl/instance/getString"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "String")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    optional Null()
+    paramname "4.0.0.0"
+    paramname "4.0.0.0"
+    paramname "4.0.0.0"
+    paramname "4.0.0.0"
+    body
+     maxstack 4
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           746
+      getlocal0
+      pushscope
+
+      debug               1, "bundleName", 0, 746
+      debug               1, "resourceName", 1, 746
+      debug               1, "parameters", 2, 746
+      debug               1, "locale", 3, 746
+      debug               1, "resourceBundle", 4, 750
+      debug               1, "value", 5, 755
+      debugline           751
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal            4
+      callproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "findBundle"), 3
+      coerce              QName(PackageNamespace("mx.resources"), "IResourceBundle")
+      setlocal            5
+
+      debugline           752
+      getlocal            5
+      iftrue              L24
+
+      debugline           753
+      pushnull
+      returnvalue
+
+L24:
+      debugline           755
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal            5
+      getproperty         QName(Namespace("mx.resources:IResourceBundle"), "content")
+      getlocal2
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      coerce_s
+      setlocal            6
+
+      debugline           757
+      getlocal3
+      iffalse             L43
+
+      debugline           758
+      getlex              QName(PackageNamespace("mx.utils"), "StringUtil")
+      getlocal            6
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "substitute"), 2
+      coerce_s
+      setlocal            6
+
+L43:
+      debugline           760
+      getlocal            6
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getStringArray")
+   method
+    name "mx.resources:ResourceManagerImpl/getStringArray"
+    refid "mx.resources:ResourceManagerImpl/instance/getStringArray"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Array")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    paramname "dispatchEvent"
+    paramname "dispatchEvent"
+    paramname "dispatchEvent"
+    body
+     maxstack 5
+     localcount 9
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           773
+      getlocal0
+      pushscope
+
+      debug               1, "bundleName", 0, 773
+      debug               1, "resourceName", 1, 773
+      debug               1, "locale", 2, 773
+      debug               1, "resourceBundle", 3, 777
+      debug               1, "value", 4, 782
+      debug               1, "array", 5, 784
+      debug               1, "n", 6, 786
+      debug               1, "i", 7, 787
+      debugline           778
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "findBundle"), 3
+      coerce              QName(PackageNamespace("mx.resources"), "IResourceBundle")
+      setlocal            4
+
+      debugline           779
+      getlocal            4
+      iftrue              L26
+
+      debugline           780
+      pushnull
+      returnvalue
+
+L26:
+      debugline           782
+      getlocal            4
+      getproperty         QName(Namespace("mx.resources:IResourceBundle"), "content")
+      getlocal2
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_a
+      setlocal            5
+
+      debugline           784
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      pushstring          ","
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            6
+
+      debugline           786
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            7
+
+      debugline           787
+      pushbyte            0
+      setlocal            8
+
+      jump                L62
+
+L50:
+      label
+      debugline           789
+      getlocal            6
+      getlocal            8
+      getlex              QName(PackageNamespace("mx.utils"), "StringUtil")
+      getlocal            6
+      getlocal            8
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      setproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      debugline           787
+      inclocal_i          8
+L62:
+      getlocal            8
+      getlocal            7
+      iflt                L50
+
+      debugline           792
+      getlocal            6
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getNumber")
+   method
+    name "mx.resources:ResourceManagerImpl/getNumber"
+    refid "mx.resources:ResourceManagerImpl/instance/getNumber"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    paramname "String"
+    paramname "String"
+    paramname "String"
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           805
+      getlocal0
+      pushscope
+
+      debug               1, "bundleName", 0, 805
+      debug               1, "resourceName", 1, 805
+      debug               1, "locale", 2, 805
+      debug               1, "resourceBundle", 3, 808
+      debug               1, "value", 4, 813
+      debugline           809
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "findBundle"), 3
+      coerce              QName(PackageNamespace("mx.resources"), "IResourceBundle")
+      setlocal            4
+
+      debugline           810
+      getlocal            4
+      iftrue              L23
+
+      debugline           811
+      getlex              QName(PackageNamespace(""), "NaN")
+      returnvalue
+
+L23:
+      debugline           813
+      getlocal            4
+      getproperty         QName(Namespace("mx.resources:IResourceBundle"), "content")
+      getlocal2
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_a
+      setlocal            5
+
+      debugline           815
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getInt")
+   method
+    name "mx.resources:ResourceManagerImpl/getInt"
+    refid "mx.resources:ResourceManagerImpl/instance/getInt"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    paramname "relatedObject"
+    paramname "relatedObject"
+    paramname "relatedObject"
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           828
+      getlocal0
+      pushscope
+
+      debug               1, "bundleName", 0, 828
+      debug               1, "resourceName", 1, 828
+      debug               1, "locale", 2, 828
+      debug               1, "resourceBundle", 3, 831
+      debug               1, "value", 4, 836
+      debugline           832
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "findBundle"), 3
+      coerce              QName(PackageNamespace("mx.resources"), "IResourceBundle")
+      setlocal            4
+
+      debugline           833
+      getlocal            4
+      iftrue              L23
+
+      debugline           834
+      pushbyte            0
+      returnvalue
+
+L23:
+      debugline           836
+      getlocal            4
+      getproperty         QName(Namespace("mx.resources:IResourceBundle"), "content")
+      getlocal2
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_a
+      setlocal            5
+
+      debugline           838
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getUint")
+   method
+    name "mx.resources:ResourceManagerImpl/getUint"
+    refid "mx.resources:ResourceManagerImpl/instance/getUint"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "uint")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    paramname "mx.resources:ResourceManagerImpl/private:newChildApplicationHandler"
+    paramname "mx.resources:ResourceManagerImpl/private:newChildApplicationHandler"
+    paramname "mx.resources:ResourceManagerImpl/private:newChildApplicationHandler"
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           851
+      getlocal0
+      pushscope
+
+      debug               1, "bundleName", 0, 851
+      debug               1, "resourceName", 1, 851
+      debug               1, "locale", 2, 851
+      debug               1, "resourceBundle", 3, 854
+      debug               1, "value", 4, 859
+      debugline           855
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "findBundle"), 3
+      coerce              QName(PackageNamespace("mx.resources"), "IResourceBundle")
+      setlocal            4
+
+      debugline           856
+      getlocal            4
+      iftrue              L23
+
+      debugline           857
+      pushbyte            0
+      returnvalue
+
+L23:
+      debugline           859
+      getlocal            4
+      getproperty         QName(Namespace("mx.resources:IResourceBundle"), "content")
+      getlocal2
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_a
+      setlocal            5
+
+      debugline           861
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getBoolean")
+   method
+    name "mx.resources:ResourceManagerImpl/getBoolean"
+    refid "mx.resources:ResourceManagerImpl/instance/getBoolean"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    paramname "ApplicationDomain"
+    paramname "ApplicationDomain"
+    paramname "ApplicationDomain"
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           874
+      getlocal0
+      pushscope
+
+      debug               1, "bundleName", 0, 874
+      debug               1, "resourceName", 1, 874
+      debug               1, "locale", 2, 874
+      debug               1, "resourceBundle", 3, 877
+      debug               1, "value", 4, 882
+      debugline           878
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "findBundle"), 3
+      coerce              QName(PackageNamespace("mx.resources"), "IResourceBundle")
+      setlocal            4
+
+      debugline           879
+      getlocal            4
+      iftrue              L23
+
+      debugline           880
+      pushfalse
+      returnvalue
+
+L23:
+      debugline           882
+      getlocal            4
+      getproperty         QName(Namespace("mx.resources:IResourceBundle"), "content")
+      getlocal2
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_a
+      setlocal            5
+
+      debugline           884
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      pushstring          "true"
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getClass")
+   method
+    name "mx.resources:ResourceManagerImpl/getClass"
+    refid "mx.resources:ResourceManagerImpl/instance/getClass"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Class")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    paramname "34717"
+    paramname "34717"
+    paramname "34717"
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           897
+      getlocal0
+      pushscope
+
+      debug               1, "bundleName", 0, 897
+      debug               1, "resourceName", 1, 897
+      debug               1, "locale", 2, 897
+      debug               1, "resourceBundle", 3, 900
+      debug               1, "value", 4, 905
+      debugline           901
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "findBundle"), 3
+      coerce              QName(PackageNamespace("mx.resources"), "IResourceBundle")
+      setlocal            4
+
+      debugline           902
+      getlocal            4
+      iftrue              L23
+
+      debugline           903
+      pushnull
+      returnvalue
+
+L23:
+      debugline           905
+      getlocal            4
+      getproperty         QName(Namespace("mx.resources:IResourceBundle"), "content")
+      getlocal2
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_a
+      setlocal            5
+
+      debugline           907
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "findBundle")
+   method
+    name "mx.resources:ResourceManagerImpl/private:findBundle"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/findBundle"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("mx.resources"), "IResourceBundle")
+    flag HAS_PARAM_NAMES
+    paramname "_properties"
+    paramname "_properties"
+    paramname "_properties"
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           913
+      getlocal0
+      pushscope
+
+      debug               1, "bundleName", 0, 913
+      debug               1, "resourceName", 1, 913
+      debug               1, "locale", 2, 913
+      debugline           916
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "supportNonFrameworkApps"), 0
+
+      debugline           918
+      getlocal3
+      pushnull
+      ifeq                L21
+
+      debugline           919
+      getlocal0
+      getlocal3
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getResourceBundle"), 2
+      coerce              QName(PackageNamespace("mx.resources"), "IResourceBundle")
+      jump                L27
+
+L21:
+      debugline           920
+      getlocal0
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "findResourceBundleWithResource"), 2
+      coerce              QName(PackageNamespace("mx.resources"), "IResourceBundle")
+L27:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "supportNonFrameworkApps")
+   method
+    name "mx.resources:ResourceManagerImpl/private:supportNonFrameworkApps"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/supportNonFrameworkApps"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           927
+      getlocal0
+      pushscope
+
+      debug               1, "applicationDomain", 0, 936
+      debug               1, "c", 1, 941
+      debug               1, "locales", 2, 944
+      debug               1, "bundleNames", 3, 945
+      debugline           929
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "initializedForNonFrameworkApp")
+      iffalse             L14
+
+      debugline           930
+      returnvoid
+
+L14:
+      debugline           931
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "initializedForNonFrameworkApp")
+
+      debugline           933
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "getLocales"), 0
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L26
+
+      debugline           934
+      returnvoid
+
+L26:
+      debugline           937
+      getlex              QName(PackageNamespace("flash.system"), "ApplicationDomain")
+      getproperty         QName(PackageNamespace(""), "currentDomain")
+      coerce              QName(PackageNamespace("flash.system"), "ApplicationDomain")
+      setlocal1
+
+      debugline           939
+      getlocal1
+      pushstring          "_CompiledResourceBundleInfo"
+      callproperty        QName(PackageNamespace(""), "hasDefinition"), 1
+      iftrue              L38
+
+      debugline           940
+      returnvoid
+
+L38:
+      debugline           941
+      findpropstrict      QName(PackageNamespace(""), "Class")
+      getlocal1
+      pushstring          "_CompiledResourceBundleInfo"
+      debugline           942
+      callproperty        QName(PackageNamespace(""), "getDefinition"), 1
+      callproperty        QName(PackageNamespace(""), "Class"), 1
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal2
+
+      debugline           944
+      getlocal2
+      getproperty         Multiname("compiledLocales", [PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      debugline           945
+      getlocal2
+      getproperty         Multiname("compiledResourceBundleNames", [PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      debugline           947
+      getlocal0
+      debugline           948
+      getlocal1
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "installCompiledResourceBundles"), 3
+
+      debugline           950
+      getlocal0
+      getlocal3
+      initproperty        QName(PackageNamespace(""), "localeChain")
+
+      debugline           951
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "getSystemPreferredLocales")
+   method
+    name "mx.resources:ResourceManagerImpl/private:getSystemPreferredLocales"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/getSystemPreferredLocales"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           956
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      debug               1, "systemPreferences", 0, 958
+      debugline           962
+      getlex              QName(PackageNamespace("flash.system"), "Capabilities")
+      pushstring          "languages"
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L20
+
+      debugline           963
+      getlex              QName(PackageNamespace("flash.system"), "Capabilities")
+      pushstring          "languages"
+      getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      jump                L26
+
+L20:
+      debugline           965
+      getlex              QName(PackageNamespace("flash.system"), "Capabilities")
+      getproperty         QName(PackageNamespace(""), "language")
+      newarray            1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+L26:
+      debugline           967
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "dumpResourceModule")
+   method
+    name "mx.resources:ResourceManagerImpl/private:dumpResourceModule"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/dumpResourceModule"
+    param null
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 3
+     localcount 8
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           973
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("mx.resources"), "ResourceBundle")
+      setlocal2
+
+      pushnull
+      coerce_s
+      setlocal3
+
+      debug               1, "resourceModule", 0, 973
+      debug               1, "bundle", 1, 975
+      debugline           975
+      pushbyte            0
+      setlocal            4
+
+      getlocal1
+      getproperty         Multiname("resourceBundles", [PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_a
+      setlocal            5
+
+      jump                L52
+
+L20:
+      label
+      getlocal            5
+      getlocal            4
+      nextvalue
+      coerce              QName(PackageNamespace("mx.resources"), "ResourceBundle")
+      setlocal2
+
+      debug               1, "p", 2, 978
+      debugline           977
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "locale")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "bundleName")
+      callpropvoid        QName(PackageNamespace(""), "trace"), 2
+
+      debugline           978
+      pushbyte            0
+      setlocal            6
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "content")
+      coerce_a
+      setlocal            7
+
+      jump                L48
+
+L42:
+      label
+      getlocal            7
+      getlocal            6
+      nextname
+      coerce_s
+      setlocal3
+
+L48:
+      hasnext2            7, 6
+      iftrue              L42
+
+      kill                7
+      kill                6
+L52:
+      debugline           975
+      hasnext2            5, 4
+      iftrue              L20
+
+      kill                5
+      kill                4
+      debugline           983
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.resources:ResourceManagerImpl/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 17
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "instance", 1, 75
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait slot QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "instance") slotid 2 type QName(PackageNamespace("mx.resources"), "IResourceManager") end
+ trait method QName(PackageNamespace(""), "getInstance") flag FINAL dispid 3
+  method
+   name "mx.resources:ResourceManagerImpl/getInstance"
+   refid "mx.resources:ResourceManagerImpl/class/getInstance"
+   returns QName(PackageNamespace("mx.resources"), "IResourceManager")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+     debugline           94
+     getlocal0
+     pushscope
+
+     debugline           96
+     getlex              QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "instance")
+     iftrue              L12
+
+     debugline           97
+     findproperty        QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "instance")
+     getlocal0
+     construct           0
+     setproperty         QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "instance")
+
+L12:
+     debugline           99
+     getlex              QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "instance")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

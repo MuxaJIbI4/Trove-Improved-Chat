@@ -1,0 +1,1379 @@
+class
+ refid "ChatLog"
+ instance QName(PackageNamespace(""), "ChatLog")
+  extends QName(PackageNamespace("com.kiwi.Core"), "KiwiComponent")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("ChatLog")
+  iinit
+   name "ChatLog/ChatLog"
+   refid "ChatLog/instance/init"
+   body
+    maxstack 11
+    localcount 2
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+     debugline           61
+     getlocal0
+     pushscope
+
+     debugline           23
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+     pushshort           15000
+     pushbyte            1
+     constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
+     initproperty        QName(PrivateNamespace("ChatLog"), "_timeout")
+
+     debugline           24
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "IggyTween")
+     getlocal0
+     pushstring          "alpha"
+     getlex              QName(PackageNamespace("fl.transitions.easing"), "None")
+     getproperty         QName(PackageNamespace(""), "easeOut")
+     pushbyte            1
+     pushdouble          0
+     pushbyte            1
+     pushtrue
+     constructprop       QName(PackageNamespace(""), "IggyTween"), 7
+     initproperty        QName(PrivateNamespace("ChatLog"), "_fadeOut")
+
+     debugline           25
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PrivateNamespace("ChatLog"), "_renderers")
+
+     debugline           26
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PrivateNamespace("ChatLog"), "_pendingRenderers")
+
+     debug               1, "rect", 0, 65
+     debugline           63
+     getlocal0
+     constructsuper      0
+
+     debugline           64
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     initproperty        QName(PackageNamespace(""), "BGShader")
+
+     debugline           65
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "width")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "height")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "inputHeight")
+     add
+     pushbyte            0
+     dup
+     dup
+     pushbyte            0
+     dup
+     pushint             728620
+     pushint             728620
+     pushbyte            1
+     callproperty        QName(PackageInternalNs(""), "drawRoundRect"), 10
+     coerce_a
+     setlocal1
+
+     debugline           66
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "BGShader")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     debugline           67
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "BGShader")
+     pushdouble          0.6
+     setproperty         QName(PackageNamespace(""), "alpha")
+
+     debugline           68
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "BGShader")
+     pushbyte            0
+     callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+     debugline           69
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "BGShader")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "visible")
+
+     debugline           70
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PackageInternalNs(""), "MaxMessages") type QName(PackageNamespace(""), "Number") value Integer(100) end
+  trait const QName(PackageInternalNs(""), "ScrollScale") type QName(PackageNamespace(""), "Number") value Integer(3) end
+  trait slot QName(PrivateNamespace("ChatLog"), "vScrollbar") type QName(PackageNamespace("fl.controls"), "UIScrollBar") end
+  trait slot QName(PrivateNamespace("ChatLog"), "_timeout") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait slot QName(PrivateNamespace("ChatLog"), "_fadeOut") type QName(PackageNamespace(""), "IggyTween") end
+  trait slot QName(PrivateNamespace("ChatLog"), "_renderers") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("ChatLog"), "_pendingRenderers") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("ChatLog"), "_finalHeight") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "container") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PackageNamespace(""), "chatMask") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PrivateNamespace("ChatLog"), "scrollLockedToBottom") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PrivateNamespace("ChatLog"), "currentMessageIndex") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "background") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "BGShader") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PackageNamespace(""), "inputHeight") type QName(PackageNamespace(""), "Number") value Integer(28) end
+  trait getter QName(PackageNamespace(""), "isOpaque")
+   method
+    name "ChatLog/isOpaque/get"
+    refid "ChatLog/instance/isOpaque/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           36
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "alpha")
+      pushbyte            1
+      greaterequals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("ChatLog"), "_maxScrollV") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait getter QName(PackageNamespace(""), "maxScrollV")
+   method
+    name "ChatLog/maxScrollV/get"
+    refid "ChatLog/instance/maxScrollV/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           39
+      getlocal0
+      pushscope
+
+      debugline           40
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_maxScrollV")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("ChatLog"), "_scrollV") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait getter QName(PackageNamespace(""), "scrollV")
+   method
+    name "ChatLog/scrollV/get"
+    refid "ChatLog/instance/scrollV/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           44
+      getlocal0
+      pushscope
+
+      debugline           45
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_scrollV")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "scrollV")
+   method
+    name "ChatLog/scrollV/set"
+    refid "ChatLog/instance/scrollV/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "scrollLockedToBottom"
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           47
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 47
+      debugline           48
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_maxScrollV")
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      convert_d
+      setlocal1
+
+      debugline           50
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_scrollV")
+      equals
+      not
+      dup
+      iffalse             L28
+
+      pop
+      getlocal1
+      pushbyte            0
+      greaterequals
+L28:
+      dup
+      iffalse             L35
+
+      pop
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_maxScrollV")
+      lessequals
+L35:
+      iffalse             L60
+
+      debugline           51
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("ChatLog"), "_scrollV")
+
+      debugline           52
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_scrollV")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "maxScrollV")
+      greaterequals
+      initproperty        QName(PrivateNamespace("ChatLog"), "scrollLockedToBottom")
+
+      debugline           54
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "vScrollbar")
+      callpropvoid        QName(PackageNamespace(""), "update"), 0
+
+      debugline           55
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SCROLL_BAR")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      debugline           56
+      findpropstrict      QName(PackageNamespace(""), "validateNow")
+      callpropvoid        QName(PackageNamespace(""), "validateNow"), 0
+
+L60:
+      debugline           58
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "drawRoundRect")
+   method
+    name "ChatLog/drawRoundRect"
+    refid "ChatLog/instance/drawRoundRect"
+    param null
+    param null
+    param null
+    param null
+    param null
+    param null
+    param null
+    param null
+    param null
+    param null
+    returns QName(PackageNamespace("flash.display"), "Shape")
+    flag HAS_PARAM_NAMES
+    paramname "_renderers"
+    paramname "_renderers"
+    paramname "_renderers"
+    paramname "_renderers"
+    paramname "_renderers"
+    paramname "_renderers"
+    paramname "_renderers"
+    paramname "_renderers"
+    paramname "_renderers"
+    paramname "_renderers"
+    body
+     maxstack 6
+     localcount 12
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           72
+      getlocal0
+      pushscope
+
+      debug               1, "w", 0, 72
+      debug               1, "h", 1, 72
+      debug               1, "tl", 2, 72
+      debug               1, "tr", 3, 72
+      debug               1, "bl", 4, 72
+      debug               1, "br", 5, 72
+      debug               1, "thick", 6, 72
+      debug               1, "borderColor", 7, 72
+      debug               1, "bgColor", 8, 72
+      debug               1, "trans", 9, 72
+      debug               1, "rect", 10, 73
+      debugline           73
+      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+      coerce              QName(PackageNamespace("flash.display"), "Shape")
+      setlocal            11
+
+      debugline           74
+      getlocal            7
+      pushbyte            0
+      ifeq                L29
+
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal            7
+      getlocal            8
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 2
+
+L29:
+      debugline           75
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal            9
+      getlocal            10
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+      debugline           76
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      debugline           77
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlocal3
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "curveTo"), 4
+
+      debugline           78
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getlocal            4
+      subtract
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      debugline           79
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      pushbyte            0
+      getlocal1
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "curveTo"), 4
+
+      debugline           80
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getlocal2
+      getlocal            6
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      debugline           81
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getlocal2
+      getlocal1
+      getlocal            6
+      subtract
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "curveTo"), 4
+
+      debugline           82
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal            5
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      debugline           83
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      getlocal2
+      pushbyte            0
+      getlocal2
+      getlocal            5
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "curveTo"), 4
+
+      debugline           84
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      debugline           85
+      getlocal            11
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("ChatLog"), "config") flag OVERRIDE
+   method
+    name "ChatLog/protected:config"
+    refid "ChatLog/instance/ChatLog:config"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           88
+      getlocal0
+      pushscope
+
+      debugline           89
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "config"), 0
+      debugline           91
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "container")
+      iftrue              L36
+
+      debugline           92
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      initproperty        QName(PackageNamespace(""), "container")
+
+      debugline           94
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatMask")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      debugline           95
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatMask")
+      pushdouble          0.2
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+      debugline           96
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "container")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      debugline           97
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "container")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+L36:
+      debugline           101
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_timeout")
+      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+      getproperty         QName(PackageNamespace(""), "TIMER")
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "onTimerComplete")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      debugline           102
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "resetFadeOut")
+   method
+    name "ChatLog/resetFadeOut"
+    refid "ChatLog/instance/resetFadeOut"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "scrollLockedToBottom"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           104
+      getlocal0
+      pushscope
+
+      debug               1, "startTimer", 0, 104
+      debugline           105
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_timeout")
+      callpropvoid        QName(PackageNamespace(""), "reset"), 0
+
+      debugline           106
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_fadeOut")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      debugline           107
+      findproperty        QName(PackageNamespace(""), "alpha")
+      pushbyte            1
+      initproperty        QName(PackageNamespace(""), "alpha")
+
+      debugline           112
+      getlocal1
+      iffalse             L24
+
+      debugline           113
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_timeout")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+L24:
+      debugline           115
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "inputToggled")
+   method
+    name "ChatLog/inputToggled"
+    refid "ChatLog/instance/inputToggled"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "scrollLockedToBottom"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           117
+      getlocal0
+      pushscope
+
+      debug               1, "state", 0, 117
+      debugline           118
+      getlocal1
+      iffalse             L28
+
+      debugline           119
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "background")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      debugline           120
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "vScrollbar")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      debugline           121
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BGShader")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      debugline           122
+      getlocal0
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "resetFadeOut"), 1
+
+      jump                L47
+
+L28:
+      debugline           124
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "background")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      debugline           125
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "vScrollbar")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      debugline           126
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BGShader")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      debugline           127
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_timeout")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+L47:
+      debugline           129
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onChatMessage")
+   method
+    name "ChatLog/onChatMessage"
+    refid "ChatLog/instance/onChatMessage"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "scrollLockedToBottom"
+    paramname "scrollLockedToBottom"
+    paramname "scrollLockedToBottom"
+    paramname "scrollLockedToBottom"
+    paramname "scrollLockedToBottom"
+    paramname "scrollLockedToBottom"
+    paramname "scrollLockedToBottom"
+    body
+     maxstack 15
+     localcount 11
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           131
+      getlocal0
+      pushscope
+
+      debug               1, "index", 0, 131
+      debug               1, "channel", 1, 131
+      debug               1, "message", 2, 131
+      debug               1, "author", 3, 131
+      debug               1, "authorColor", 4, 131
+      debug               1, "msgColor", 5, 131
+      debug               1, "showAuthorPrefix", 6, 131
+      debug               1, "renderer", 7, 133
+      debugline           133
+      findpropstrict      QName(PackageNamespace(""), "ChatItemRenderer")
+      constructprop       QName(PackageNamespace(""), "ChatItemRenderer"), 0
+      coerce              QName(PackageNamespace(""), "ChatItemRenderer")
+      setlocal            8
+
+      debugline           134
+      getlocal            8
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      debugline           135
+      getlocal            8
+      pushstring          "index"
+      getlocal1
+      pushstring          "channel"
+      getlocal2
+      pushstring          "message"
+      getlocal3
+      pushstring          "author"
+      getlocal            4
+      pushstring          "authorColor"
+      getlocal            5
+      pushstring          "msgColor"
+      getlocal            6
+      pushstring          "showAuthorPrefix"
+      getlocal            7
+      newobject           7
+      callpropvoid        QName(PackageNamespace(""), "setData"), 1
+
+      debugline           137
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "container")
+      getlocal            8
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      debugline           138
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_pendingRenderers")
+      getlocal            8
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      debugline           140
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "currentMessageIndex")
+      pushbyte            2
+      modulo
+      pushbyte            0
+      ifeq                L61
+
+      debugline           142
+      getlocal            8
+      callpropvoid        QName(PackageNamespace(""), "addBG"), 0
+
+L61:
+      debugline           144
+      getlocal0
+      dup
+      setlocal            9
+
+      getproperty         QName(PrivateNamespace("ChatLog"), "currentMessageIndex")
+      increment_i
+      setlocal            10
+
+      getlocal            9
+      getlocal            10
+      setproperty         QName(PrivateNamespace("ChatLog"), "currentMessageIndex")
+
+      kill                10
+      kill                9
+      debugline           146
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_pendingRenderers")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_renderers")
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      callpropvoid        QName(PrivateNamespace("ChatLog"), "enforceMessageLimit"), 1
+
+      debugline           148
+      getlocal0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "resetFadeOut"), 1
+
+      debugline           149
+      findpropstrict      QName(PackageNamespace(""), "invalidateData")
+      callpropvoid        QName(PackageNamespace(""), "invalidateData"), 0
+
+      debugline           150
+      findpropstrict      QName(PackageNamespace(""), "validateNow")
+      callpropvoid        QName(PackageNamespace(""), "validateNow"), 0
+
+      debugline           151
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("ChatLog"), "enforceMessageLimit")
+   method
+    name "ChatLog/private:enforceMessageLimit"
+    refid "ChatLog/instance/ChatLog/instance/enforceMessageLimit"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "scrollLockedToBottom"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           153
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "ChatItemRenderer")
+      setlocal2
+
+      debug               1, "totalMessagesCount", 0, 153
+      jump                L42
+
+L9:
+      label
+      debug               1, "oldestRenderer", 1, 155
+      debugline           155
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_renderers")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+      coerce              QName(PackageNamespace(""), "ChatItemRenderer")
+      setlocal2
+
+      debugline           156
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_finalHeight")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      initproperty        QName(PrivateNamespace("ChatLog"), "_finalHeight")
+
+      debugline           157
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "container")
+      getlocal2
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+      debugline           159
+      getlocal1
+      decrement
+      convert_d
+      setlocal1
+
+      debugline           161
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SCROLL_BAR")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+L42:
+      debugline           154
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxMessages")
+      ifgt                L9
+
+      debugline           163
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("ChatLog"), "onTimerComplete")
+   method
+    name "ChatLog/private:onTimerComplete"
+    refid "ChatLog/instance/ChatLog/instance/onTimerComplete"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "scrollLockedToBottom"
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           165
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 165
+      debugline           167
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_fadeOut")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+      debugline           168
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setupLayout")
+   method
+    name "ChatLog/setupLayout"
+    refid "ChatLog/instance/setupLayout"
+    param null
+    param null
+    param null
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "scrollLockedToBottom"
+    paramname "scrollLockedToBottom"
+    paramname "scrollLockedToBottom"
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           171
+      getlocal0
+      pushscope
+
+      debug               1, "isActive", 0, 171
+      debug               1, "newHeight", 1, 171
+      debug               1, "newPos", 2, 171
+      debugline           173
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "background")
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "height")
+
+      debugline           174
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "vScrollbar")
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "height")
+
+      debugline           175
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "vScrollbar")
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           176
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatMask")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "background")
+      getproperty         QName(PackageNamespace(""), "y")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           177
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatMask")
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "height")
+
+      debugline           178
+      getlocal0
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           180
+      getlocal1
+      iffalse             L53
+
+      debugline           182
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "container")
+      pushshort           180
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           183
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "container")
+      getproperty         QName(PackageNamespace(""), "height")
+      callpropvoid        QName(PrivateNamespace("ChatLog"), "updateScrollArea"), 1
+
+      jump                L59
+
+L53:
+      debugline           187
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "container")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputHeight")
+      setproperty         QName(PackageNamespace(""), "y")
+
+L59:
+      debugline           192
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("ChatLog"), "draw") flag OVERRIDE
+   method
+    name "ChatLog/protected:draw"
+    refid "ChatLog/instance/ChatLog:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           194
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal1
+
+      pushnan
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "ChatItemRenderer")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      debugline           195
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "draw"), 0
+      debugline           197
+      findpropstrict      QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "isInvalid")
+      getlex              QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "isInvalid"), 1
+      iffalse             L127
+
+      debug               1, "ypos", 0, 199
+      debug               1, "i", 1, 203
+      debugline           199
+      pushbyte            0
+      convert_d
+      setlocal1
+
+      debugline           200
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_renderers")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L55
+
+      debugline           201
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_renderers")
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_renderers")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("ChatLog"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("ChatLog.as$3"), ProtectedNamespace("ChatLog"), StaticProtectedNs("ChatLog"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("y", [PrivateNamespace("ChatLog"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("ChatLog.as$3"), ProtectedNamespace("ChatLog"), StaticProtectedNs("ChatLog"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_renderers")
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_renderers")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getproperty         MultinameL([PrivateNamespace("ChatLog"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("ChatLog.as$3"), ProtectedNamespace("ChatLog"), StaticProtectedNs("ChatLog"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("height", [PrivateNamespace("ChatLog"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("ChatLog.as$3"), ProtectedNamespace("ChatLog"), StaticProtectedNs("ChatLog"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      add
+      convert_d
+      setlocal1
+
+L55:
+      debugline           203
+      pushbyte            0
+      convert_d
+      setlocal2
+
+      jump                L102
+
+L60:
+      label
+      debug               1, "renderer", 2, 204
+      debugline           204
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_pendingRenderers")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("ChatLog"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("ChatLog.as$3"), ProtectedNamespace("ChatLog"), StaticProtectedNs("ChatLog"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace(""), "ChatItemRenderer")
+      setlocal3
+
+      debugline           205
+      getlocal3
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           206
+      getlocal3
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      debugline           208
+      getlocal1
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "height")
+      add
+      convert_d
+      setlocal1
+
+      debugline           209
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_finalHeight")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "height")
+      add
+      initproperty        QName(PrivateNamespace("ChatLog"), "_finalHeight")
+
+      debugline           210
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_renderers")
+      getlocal3
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      debugline           203
+      getlocal2
+      increment
+      convert_d
+      setlocal2
+
+L102:
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_pendingRenderers")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L60
+
+      debugline           212
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_pendingRenderers")
+      pushbyte            0
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_pendingRenderers")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      debugline           215
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_finalHeight")
+      callpropvoid        QName(PrivateNamespace("ChatLog"), "updateScrollArea"), 1
+
+      debugline           216
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "scrollLockedToBottom")
+      iffalse             L127
+
+      debugline           217
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("ChatLog"), "scrollToEnd"), 0
+
+L127:
+      debugline           221
+      findpropstrict      QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "isInvalid")
+      getlex              QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SCROLL_BAR")
+      callproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "isInvalid"), 1
+      iffalse             L185
+
+      debug               1, "length", 3, 223
+      debugline           223
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_renderers")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_u
+      setlocal            4
+
+      debugline           224
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_scrollV")
+      negate
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "ScrollScale")
+      multiply
+      convert_d
+      setlocal1
+
+      debugline           225
+      pushbyte            0
+      convert_d
+      setlocal2
+
+      jump                L182
+
+L154:
+      label
+      debugline           226
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "_renderers")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("ChatLog"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("ChatLog.as$3"), ProtectedNamespace("ChatLog"), StaticProtectedNs("ChatLog"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace(""), "ChatItemRenderer")
+      setlocal3
+
+      debugline           227
+      getlocal3
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           228
+      getlocal3
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           229
+      getlocal1
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "height")
+      add
+      convert_d
+      setlocal1
+
+      debugline           225
+      getlocal2
+      increment
+      convert_d
+      setlocal2
+
+L182:
+      getlocal2
+      getlocal            4
+      iflt                L154
+
+L185:
+      debugline           232
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("ChatLog"), "scrollToEnd")
+   method
+    name "ChatLog/private:scrollToEnd"
+    refid "ChatLog/instance/ChatLog/instance/scrollToEnd"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           235
+      getlocal0
+      pushscope
+
+      debugline           236
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "maxScrollV")
+      initproperty        QName(PackageNamespace(""), "scrollV")
+
+      debugline           237
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setScrollbar")
+   method
+    name "ChatLog/setScrollbar"
+    refid "ChatLog/instance/setScrollbar"
+    param QName(PackageNamespace("fl.controls"), "UIScrollBar")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "scrollLockedToBottom"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           239
+      getlocal0
+      pushscope
+
+      debug               1, "scrollbar", 0, 239
+      debugline           240
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("ChatLog"), "vScrollbar")
+
+      debugline           241
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("ChatLog"), "updateScrollArea")
+   method
+    name "ChatLog/private:updateScrollArea"
+    refid "ChatLog/instance/ChatLog/instance/updateScrollArea"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "scrollLockedToBottom"
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatLog.as"
+      debugline           243
+      getlocal0
+      pushscope
+
+      debug               1, "totalContentHeight", 0, 243
+      debugline           244
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "vScrollbar")
+      iffalse             L29
+
+      debugline           245
+      getlocal0
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      getlex              QName(PackageNamespace(""), "height")
+      pushbyte            10
+      subtract
+      subtract
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "ScrollScale")
+      divide
+      callproperty        QName(PackageNamespace(""), "ceil"), 1
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      initproperty        QName(PrivateNamespace("ChatLog"), "_maxScrollV")
+
+      debugline           246
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatLog"), "vScrollbar")
+      callpropvoid        QName(PackageNamespace(""), "update"), 0
+
+L29:
+      debugline           248
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "ChatLog/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,34 @@
+script ; 17
+ sinit
+  name ""
+  refid "fl.managers:StyleManager/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;StyleManager.as"
+    debugline           27
+    findpropstrict      Multiname("StyleManager", [PackageNamespace("fl.managers")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "fl.managers:StyleManager"
+    popscope
+    initproperty        QName(PackageNamespace("fl.managers"), "StyleManager")
+
+    debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;StyleManager.as"
+    debugline           2
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("fl.managers"), "StyleManager")
+  #include "StyleManager.class.asasm"
+ end ; trait
+end ; script

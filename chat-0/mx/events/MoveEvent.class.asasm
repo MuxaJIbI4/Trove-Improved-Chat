@@ -1,0 +1,128 @@
+class
+ refid "mx.events:MoveEvent"
+ instance QName(PackageNamespace("mx.events"), "MoveEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.events:MoveEvent")
+  iinit
+   name "mx.events:MoveEvent/MoveEvent"
+   refid "mx.events:MoveEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional False()
+   optional False()
+   optional Double(nan)
+   optional Double(nan)
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;MoveEvent.as"
+     debugline           93
+     getlocal0
+     pushscope
+
+     debug               1, "type", 0, 93
+     debug               1, "bubbles", 1, 93
+     debug               1, "cancelable", 2, 93
+     debug               1, "oldX", 3, 93
+     debug               1, "oldY", 4, 93
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;MoveEvent.as"
+     debugline           97
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     debugline           99
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "oldX")
+
+     debugline           100
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace(""), "oldY")
+
+     debugline           101
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "oldX") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "oldY") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    name "mx.events:MoveEvent/clone"
+    refid "mx.events:MoveEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;MoveEvent.as"
+      debugline           146
+      getlocal0
+      pushscope
+
+      debugline           148
+      findpropstrict      QName(PackageNamespace("mx.events"), "MoveEvent")
+      getlex              QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace(""), "bubbles")
+      getlex              QName(PackageNamespace(""), "cancelable")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "oldX")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "oldY")
+      constructprop       QName(PackageNamespace("mx.events"), "MoveEvent"), 5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.events:MoveEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 18
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "MOVE", 1, 65
+    findproperty        QName(PackageNamespace(""), "MOVE")
+    pushstring          "move"
+    initproperty        QName(PackageNamespace(""), "MOVE")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PackageNamespace(""), "MOVE") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("move") end
+end ; class

@@ -1,0 +1,29 @@
+script ; 3
+ sinit
+  name ""
+  refid "mx.core:IStateClient/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IStateClient.as"
+    debugline           24
+    findpropstrict      Multiname("IStateClient", [PackageNamespace("mx.core")])
+    pushnull
+    newclass            "mx.core:IStateClient"
+    initproperty        QName(PackageNamespace("mx.core"), "IStateClient")
+
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "IStateClient")
+  #include "IStateClient.class.asasm"
+ end ; trait
+end ; script

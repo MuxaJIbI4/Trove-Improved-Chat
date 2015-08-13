@@ -1,0 +1,124 @@
+class
+ refid "mx.events:Request"
+ instance QName(PackageNamespace("mx.events"), "Request")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.events:Request")
+  iinit
+   name "mx.events:Request/Request"
+   refid "mx.events:Request/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional False()
+   optional False()
+   optional Null()
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;Request.as"
+     debugline           71
+     getlocal0
+     pushscope
+
+     debug               1, "type", 0, 71
+     debug               1, "bubbles", 1, 71
+     debug               1, "cancelable", 2, 71
+     debug               1, "value", 3, 71
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;Request.as"
+     debugline           75
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     debugline           77
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "value")
+
+     debugline           78
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "value") type QName(PackageNamespace(""), "Object") end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    name "mx.events:Request/clone"
+    refid "mx.events:Request/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;Request.as"
+      debugline           109
+      getlocal0
+      pushscope
+
+      debug               1, "cloneEvent", 0, 111
+      debugline           111
+      findpropstrict      QName(PackageNamespace("mx.events"), "Request")
+      debugline           111
+      getlex              QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace(""), "bubbles")
+      getlex              QName(PackageNamespace(""), "cancelable")
+      debugline           112
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "value")
+      constructprop       QName(PackageNamespace("mx.events"), "Request"), 4
+      coerce              QName(PackageNamespace("mx.events"), "Request")
+      setlocal1
+
+      debugline           114
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.events:Request/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 18
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "GET_PARENT_FLEX_MODULE_FACTORY_REQUEST", 1, 42
+    findproperty        QName(PackageNamespace(""), "GET_PARENT_FLEX_MODULE_FACTORY_REQUEST")
+    pushstring          "getParentFlexModuleFactoryRequest"
+    initproperty        QName(PackageNamespace(""), "GET_PARENT_FLEX_MODULE_FACTORY_REQUEST")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PackageNamespace(""), "GET_PARENT_FLEX_MODULE_FACTORY_REQUEST") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("getParentFlexModuleFactoryRequest") end
+end ; class

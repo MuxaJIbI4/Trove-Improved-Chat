@@ -1,0 +1,146 @@
+class
+ refid "mx.events:ToolTipEvent"
+ instance QName(PackageNamespace("mx.events"), "ToolTipEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.events:ToolTipEvent")
+  iinit
+   name "mx.events:ToolTipEvent/ToolTipEvent"
+   refid "mx.events:ToolTipEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace("mx.core"), "IToolTip")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional False()
+   optional False()
+   optional Null()
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;ToolTipEvent.as"
+     debugline           245
+     getlocal0
+     pushscope
+
+     debug               1, "type", 0, 245
+     debug               1, "bubbles", 1, 245
+     debug               1, "cancelable", 2, 245
+     debug               1, "toolTip", 3, 245
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;ToolTipEvent.as"
+     debugline           249
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     debugline           251
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "toolTip")
+
+     debugline           252
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "toolTip") type QName(PackageNamespace("mx.core"), "IToolTip") end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    name "mx.events:ToolTipEvent/clone"
+    refid "mx.events:ToolTipEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;ToolTipEvent.as"
+      debugline           285
+      getlocal0
+      pushscope
+
+      debugline           287
+      findpropstrict      QName(PackageNamespace("mx.events"), "ToolTipEvent")
+      getlex              QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace(""), "bubbles")
+      getlex              QName(PackageNamespace(""), "cancelable")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "toolTip")
+      constructprop       QName(PackageNamespace("mx.events"), "ToolTipEvent"), 4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.events:ToolTipEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 19
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "TOOL_TIP_CREATE", 1, 69
+    findproperty        QName(PackageNamespace(""), "TOOL_TIP_CREATE")
+    pushstring          "toolTipCreate"
+    initproperty        QName(PackageNamespace(""), "TOOL_TIP_CREATE")
+
+    debug               1, "TOOL_TIP_END", 2, 99
+    findproperty        QName(PackageNamespace(""), "TOOL_TIP_END")
+    pushstring          "toolTipEnd"
+    initproperty        QName(PackageNamespace(""), "TOOL_TIP_END")
+
+    debug               1, "TOOL_TIP_HIDE", 3, 129
+    findproperty        QName(PackageNamespace(""), "TOOL_TIP_HIDE")
+    pushstring          "toolTipHide"
+    initproperty        QName(PackageNamespace(""), "TOOL_TIP_HIDE")
+
+    debug               1, "TOOL_TIP_SHOW", 4, 159
+    findproperty        QName(PackageNamespace(""), "TOOL_TIP_SHOW")
+    pushstring          "toolTipShow"
+    initproperty        QName(PackageNamespace(""), "TOOL_TIP_SHOW")
+
+    debug               1, "TOOL_TIP_SHOWN", 5, 189
+    findproperty        QName(PackageNamespace(""), "TOOL_TIP_SHOWN")
+    pushstring          "toolTipShown"
+    initproperty        QName(PackageNamespace(""), "TOOL_TIP_SHOWN")
+
+    debug               1, "TOOL_TIP_START", 6, 219
+    findproperty        QName(PackageNamespace(""), "TOOL_TIP_START")
+    pushstring          "toolTipStart"
+    initproperty        QName(PackageNamespace(""), "TOOL_TIP_START")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PackageNamespace(""), "TOOL_TIP_CREATE") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("toolTipCreate") end
+ trait const QName(PackageNamespace(""), "TOOL_TIP_END") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("toolTipEnd") end
+ trait const QName(PackageNamespace(""), "TOOL_TIP_HIDE") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("toolTipHide") end
+ trait const QName(PackageNamespace(""), "TOOL_TIP_SHOW") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("toolTipShow") end
+ trait const QName(PackageNamespace(""), "TOOL_TIP_SHOWN") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("toolTipShown") end
+ trait const QName(PackageNamespace(""), "TOOL_TIP_START") slotid 7 type QName(PackageNamespace(""), "String") value Utf8("toolTipStart") end
+end ; class

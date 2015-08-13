@@ -1,0 +1,236 @@
+class
+ refid "mx.events:PropertyChangeEvent"
+ instance QName(PackageNamespace("mx.events"), "PropertyChangeEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.events:PropertyChangeEvent")
+  iinit
+   name "mx.events:PropertyChangeEvent/PropertyChangeEvent"
+   refid "mx.events:PropertyChangeEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional False()
+   optional False()
+   optional Null()
+   optional Null()
+   optional Null()
+   optional Null()
+   optional Null()
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 4
+    localcount 9
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;PropertyChangeEvent.as"
+     debugline           163
+     getlocal0
+     pushscope
+
+     debug               1, "type", 0, 163
+     debug               1, "bubbles", 1, 163
+     debug               1, "cancelable", 2, 163
+     debug               1, "kind", 3, 163
+     debug               1, "property", 4, 163
+     debug               1, "oldValue", 5, 163
+     debug               1, "newValue", 6, 163
+     debug               1, "source", 7, 163
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;PropertyChangeEvent.as"
+     debugline           171
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     debugline           173
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "kind")
+
+     debugline           174
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace(""), "property")
+
+     debugline           175
+     getlocal0
+     getlocal            6
+     initproperty        QName(PackageNamespace(""), "oldValue")
+
+     debugline           176
+     getlocal0
+     getlocal            7
+     initproperty        QName(PackageNamespace(""), "newValue")
+
+     debugline           177
+     getlocal0
+     getlocal            8
+     initproperty        QName(PackageNamespace(""), "source")
+
+     debugline           178
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "kind") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "newValue") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PackageNamespace(""), "oldValue") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PackageNamespace(""), "property") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PackageNamespace(""), "source") type QName(PackageNamespace(""), "Object") end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    name "mx.events:PropertyChangeEvent/clone"
+    refid "mx.events:PropertyChangeEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 9
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;PropertyChangeEvent.as"
+      debugline           267
+      getlocal0
+      pushscope
+
+      debugline           269
+      findpropstrict      QName(PackageNamespace("mx.events"), "PropertyChangeEvent")
+      debugline           269
+      getlex              QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace(""), "bubbles")
+      getlex              QName(PackageNamespace(""), "cancelable")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "kind")
+      debugline           270
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "property")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "oldValue")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "newValue")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "source")
+      constructprop       QName(PackageNamespace("mx.events"), "PropertyChangeEvent"), 8
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.events:PropertyChangeEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 19
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "PROPERTY_CHANGE", 1, 79
+    findproperty        QName(PackageNamespace(""), "PROPERTY_CHANGE")
+    pushstring          "propertyChange"
+    initproperty        QName(PackageNamespace(""), "PROPERTY_CHANGE")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PackageNamespace(""), "PROPERTY_CHANGE") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("propertyChange") end
+ trait method QName(PackageNamespace(""), "createUpdateEvent") flag FINAL dispid 3
+  method
+   name "mx.events:PropertyChangeEvent/createUpdateEvent"
+   refid "mx.events:PropertyChangeEvent/class/createUpdateEvent"
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "Object")
+   returns QName(PackageNamespace("mx.events"), "PropertyChangeEvent")
+   flag HAS_PARAM_NAMES
+   paramname "http://www.adobe.com/2006/flex/mx/internal"
+   paramname "http://www.adobe.com/2006/flex/mx/internal"
+   paramname "http://www.adobe.com/2006/flex/mx/internal"
+   paramname "http://www.adobe.com/2006/flex/mx/internal"
+   body
+    maxstack 2
+    localcount 6
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;PropertyChangeEvent.as"
+     debugline           110
+     getlocal0
+     pushscope
+
+     debug               1, "source", 0, 110
+     debug               1, "property", 1, 110
+     debug               1, "oldValue", 2, 110
+     debug               1, "newValue", 3, 110
+     debug               1, "event", 4, 116
+     debugline           117
+     getlocal0
+     getlex              QName(PackageNamespace(""), "PROPERTY_CHANGE")
+     construct           1
+     coerce              QName(PackageNamespace("mx.events"), "PropertyChangeEvent")
+     setlocal            5
+
+     debugline           119
+     getlocal            5
+     getlex              QName(PackageNamespace("mx.events"), "PropertyChangeEventKind")
+     getproperty         QName(PackageNamespace(""), "UPDATE")
+     setproperty         QName(PackageNamespace(""), "kind")
+
+     debugline           120
+     getlocal            5
+     getlocal3
+     setproperty         QName(PackageNamespace(""), "oldValue")
+
+     debugline           121
+     getlocal            5
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "newValue")
+
+     debugline           122
+     getlocal            5
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "source")
+
+     debugline           123
+     getlocal            5
+     getlocal2
+     setproperty         QName(PackageNamespace(""), "property")
+
+     debugline           125
+     getlocal            5
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

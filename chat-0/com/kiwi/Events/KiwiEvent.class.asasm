@@ -1,0 +1,82 @@
+class
+ refid "com.kiwi.Events:KiwiEvent"
+ instance QName(PackageNamespace("com.kiwi.Events"), "KiwiEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.kiwi.Events:KiwiEvent")
+  iinit
+   name "com.kiwi.Events:KiwiEvent/KiwiEvent"
+   refid "com.kiwi.Events:KiwiEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional False()
+   optional False()
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Events;KiwiEvent.as"
+     debugline           15
+     getlocal0
+     pushscope
+
+     debug               1, "type", 0, 15
+     debug               1, "bubbles", 1, 15
+     debug               1, "cancelable", 2, 15
+     debugline           16
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     debugline           17
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "com.kiwi.Events:KiwiEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "STATE_CHANGE", 0, 11
+    findproperty        QName(PackageNamespace(""), "STATE_CHANGE")
+    pushstring          "state_change"
+    initproperty        QName(PackageNamespace(""), "STATE_CHANGE")
+
+    debug               1, "SHOW", 1, 12
+    findproperty        QName(PackageNamespace(""), "SHOW")
+    pushstring          "show"
+    initproperty        QName(PackageNamespace(""), "SHOW")
+
+    debug               1, "HIDE", 2, 13
+    findproperty        QName(PackageNamespace(""), "HIDE")
+    pushstring          "hide"
+    initproperty        QName(PackageNamespace(""), "HIDE")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "STATE_CHANGE") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("state_change") end
+ trait const QName(PackageNamespace(""), "SHOW") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("show") end
+ trait const QName(PackageNamespace(""), "HIDE") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("hide") end
+end ; class

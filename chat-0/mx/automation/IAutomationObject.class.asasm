@@ -1,0 +1,183 @@
+class
+ refid "mx.automation:IAutomationObject"
+ instance QName(PackageNamespace("mx.automation"), "IAutomationObject")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.automation:IAutomationObject/IAutomationObject"
+   refid "mx.automation:IAutomationObject/instance/init"
+  end ; method
+  trait getter QName(Namespace("mx.automation:IAutomationObject"), "automationDelegate")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:automationDelegate/get"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:automationDelegate/getter"
+    returns QName(PackageNamespace(""), "Object")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.automation:IAutomationObject"), "automationDelegate")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:automationDelegate/set"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:automationDelegate/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/automation;IAutomationObject.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.automation:IAutomationObject"), "automationName")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:automationName/get"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:automationName/getter"
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.automation:IAutomationObject"), "automationName")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:automationName/set"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:automationName/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/automation;IAutomationObject.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.automation:IAutomationObject"), "automationValue")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:automationValue/get"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:automationValue/getter"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.automation:IAutomationObject"), "numAutomationChildren")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:numAutomationChildren/get"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:numAutomationChildren/getter"
+    returns QName(PackageNamespace(""), "int")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.automation:IAutomationObject"), "showInAutomationHierarchy")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:showInAutomationHierarchy/get"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:showInAutomationHierarchy/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.automation:IAutomationObject"), "showInAutomationHierarchy")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:showInAutomationHierarchy/set"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:showInAutomationHierarchy/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/automation;IAutomationObject.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.automation:IAutomationObject"), "automationTabularData")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:automationTabularData/get"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:automationTabularData/getter"
+    returns QName(PackageNamespace(""), "Object")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.automation:IAutomationObject"), "automationOwner")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:automationOwner/get"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:automationOwner/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.automation:IAutomationObject"), "automationParent")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:automationParent/get"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:automationParent/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.automation:IAutomationObject"), "automationEnabled")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:automationEnabled/get"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:automationEnabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.automation:IAutomationObject"), "automationVisible")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:automationVisible/get"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:automationVisible/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.automation:IAutomationObject"), "createAutomationIDPart")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:createAutomationIDPart"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:createAutomationIDPart"
+    param QName(PackageNamespace("mx.automation"), "IAutomationObject")
+    returns QName(PackageNamespace(""), "Object")
+    flag HAS_PARAM_NAMES
+    paramname ""
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.automation:IAutomationObject"), "createAutomationIDPartWithRequiredProperties")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:createAutomationIDPartWithRequiredProperties"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:createAutomationIDPartWithRequiredProperties"
+    param QName(PackageNamespace("mx.automation"), "IAutomationObject")
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "Object")
+    flag HAS_PARAM_NAMES
+    paramname ""
+    paramname ""
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.automation:IAutomationObject"), "resolveAutomationIDPart")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:resolveAutomationIDPart"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:resolveAutomationIDPart"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Array")
+    flag HAS_PARAM_NAMES
+    paramname "Object"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.automation:IAutomationObject"), "getAutomationChildAt")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:getAutomationChildAt"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:getAutomationChildAt"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("mx.automation"), "IAutomationObject")
+    flag HAS_PARAM_NAMES
+    paramname "mx.automation:IAutomationObject/mx.automation:IAutomationObject:automationName/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.automation:IAutomationObject"), "getAutomationChildren")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:getAutomationChildren"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:getAutomationChildren"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.automation:IAutomationObject"), "replayAutomatableEvent")
+   method
+    name "mx.automation:IAutomationObject/mx.automation:IAutomationObject:replayAutomatableEvent"
+    refid "mx.automation:IAutomationObject/instance/mx.automation:IAutomationObject:replayAutomatableEvent"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "mx.automation:IAutomationObject/mx.automation:IAutomationObject:automationDelegate/set"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.automation:IAutomationObject/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

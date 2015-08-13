@@ -1,0 +1,29 @@
+script ; 15
+ sinit
+  name ""
+  refid "mx.core:IInvalidating/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IInvalidating.as"
+    debugline           25
+    findpropstrict      Multiname("IInvalidating", [PackageNamespace("mx.core")])
+    pushnull
+    newclass            "mx.core:IInvalidating"
+    initproperty        QName(PackageNamespace("mx.core"), "IInvalidating")
+
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "IInvalidating")
+  #include "IInvalidating.class.asasm"
+ end ; trait
+end ; script

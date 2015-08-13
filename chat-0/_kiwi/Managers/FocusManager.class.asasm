@@ -1,0 +1,4436 @@
+class
+ refid "_kiwi.Managers:FocusManager"
+ instance QName(PackageNamespace("_kiwi.Managers"), "FocusManager")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("IFocusManager", [PackageNamespace("_kiwi.Interfaces")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_kiwi.Managers:FocusManager")
+  iinit
+   name "_kiwi.Managers:FocusManager/FocusManager"
+   refid "_kiwi.Managers:FocusManager/instance/init"
+   param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   flag HAS_PARAM_NAMES
+   paramname null
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+     debugline           39
+     getlocal0
+     pushscope
+
+     debug               1, "container", 0, 39
+     debugline           40
+     getlocal0
+     constructsuper      0
+
+     debugline           41
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     pushtrue
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+     initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+
+     debugline           42
+     getlocal1
+     iffalse             L24
+
+     debugline           44
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_form")
+
+     debugline           45
+     getlocal0
+     callpropvoid        QName(PackageNamespace(""), "activate"), 0
+
+L24:
+     debugline           47
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_form") type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+  trait slot QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_activated") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_calculateCandidates") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus") type QName(PackageNamespace("flash.display"), "InteractiveObject") end
+  trait slot QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_showFocusIndicator") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_lastAction") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton") type QName(PackageNamespace("_kiwi.Controls"), "BaseButton") end
+  trait slot QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_defaultButton") type QName(PackageNamespace("_kiwi.Controls"), "BaseButton") end
+  trait slot QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_defaultButtonEnabled") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "addedHandler")
+   method
+    name "_kiwi.Managers:FocusManager/private:addedHandler"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/addedHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           49
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 49
+      debug               1, "target", 1, 51
+      debugline           51
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      debugline           53
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "stage")
+      iffalse             L21
+
+      debugline           55
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "addFocusables"), 1
+
+L21:
+      debugline           57
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "removedHandler")
+   method
+    name "_kiwi.Managers:FocusManager/private:removedHandler"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/removedHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           59
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal            4
+
+      debug               1, "e", 0, 59
+      debug               1, "i", 1, 61
+      debug               1, "obj", 2, 62
+      debugline           62
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal3
+
+      debugline           64
+      getlocal3
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      istypelate
+      dup
+      iffalse             L32
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+      pushtrue
+      equals
+L32:
+      iffalse             L68
+
+      debugline           66
+      getlocal3
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      ifne                L49
+
+      debugline           68
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      astypelate
+      pushfalse
+      callpropvoid        QName(Namespace("_kiwi.Interfaces:IFocusManagerComponent"), "drawFocus"), 1
+
+      debugline           69
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+
+L49:
+      debugline           72
+      getlocal3
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_ENABLED_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "tabEnabledChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           73
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      getlocal3
+      deleteproperty      MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+      pop
+      debugline           74
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_calculateCandidates")
+
+      jump                L121
+
+L68:
+      debugline           76
+      getlocal3
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      istypelate
+      dup
+      iffalse             L81
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+      pushtrue
+      equals
+L81:
+      iffalse             L121
+
+      debug               1, "io", 3, 78
+      debugline           78
+      getlocal3
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal            4
+
+      debugline           79
+      getlocal            4
+      iffalse             L111
+
+      debugline           81
+      getlocal            4
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      ifne                L101
+
+      debugline           83
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+
+L101:
+      debugline           86
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      getlocal            4
+      deleteproperty      MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+      pop
+      debugline           87
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_calculateCandidates")
+
+L111:
+      debugline           89
+      getlocal3
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_ENABLED_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "tabEnabledChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+L121:
+      debugline           91
+      getlocal0
+      getlocal3
+      callpropvoid        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "removeFocusables"), 1
+
+      debugline           92
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "addFocusables")
+   method
+    name "_kiwi.Managers:FocusManager/private:addFocusables"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/addFocusables"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional False()
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           94
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal3
+
+      pushscope
+
+      debug               1, "addFocusables$1", 2, 94
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      setslot             3
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setslot             4
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             5
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             6
+
+      getscopeobject      1
+      pushbyte            0
+      setslot             7
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setslot             8
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getlocal2
+      setslot             2
+
+      debug               1, "obj", 0, 94
+      debug               1, "skipTopLevel", 1, 94
+      debugline           96
+      getscopeobject      1
+      getslot             2
+      iftrue              L182
+
+      debugline           98
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      istypelate
+      iffalse             L111
+
+      debugline           100
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      astypelate
+      coerce              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      setslot             3
+
+      debugline           101
+      getscopeobject      1
+      getslot             3
+      getproperty         QName(Namespace("_kiwi.Interfaces:IFocusManagerComponent"), "focusEnabled")
+      iffalse             L110
+
+      debugline           103
+      getscopeobject      1
+      getslot             3
+      getproperty         QName(Namespace("_kiwi.Interfaces:IFocusManagerComponent"), "tabEnabled")
+      convert_b
+      dup
+      iffalse             L76
+
+      pop
+      getlocal0
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "isTabVisible"), 1
+      convert_b
+L76:
+      iffalse             L88
+
+      debugline           105
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      getscopeobject      1
+      getslot             1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+
+      debugline           106
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_calculateCandidates")
+
+L88:
+      debugline           109
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_ENABLED_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "tabEnabledChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           110
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_INDEX_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "tabIndexChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+L110:
+      jump                L182
+
+L111:
+      debugline           113
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      istypelate
+      iffalse             L182
+
+      debugline           115
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setslot             4
+
+      debugline           116
+      getscopeobject      1
+      getslot             4
+      coerce_a
+      convert_b
+      dup
+      iffalse             L138
+
+      pop
+      getscopeobject      1
+      getslot             4
+      getproperty         QName(PackageNamespace(""), "tabEnabled")
+      coerce_a
+      convert_b
+L138:
+      dup
+      iffalse             L148
+
+      pop
+      getlocal0
+      getscopeobject      1
+      getslot             4
+      callproperty        QName(PackageNamespace(""), "findFocusManagerComponent"), 1
+      getscopeobject      1
+      getslot             4
+      equals
+L148:
+      iffalse             L160
+
+      debugline           118
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      getscopeobject      1
+      getslot             4
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+
+      debugline           119
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_calculateCandidates")
+
+L160:
+      debugline           121
+      getscopeobject      1
+      getslot             4
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_ENABLED_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "tabEnabledChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           122
+      getscopeobject      1
+      getslot             4
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_INDEX_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "tabIndexChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+L182:
+      debugline           126
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      istypelate
+      iffalse             L315
+
+      debugline           128
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             5
+
+      debugline           129
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_CHILDREN_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "tabChildrenChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           130
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             6
+
+L212:
+      debugline           134
+      getscopeobject      1
+      getscopeobject      1
+      getslot             5
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             6
+
+L219:
+      debugline           136
+      jump                L239
+
+L221:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      debugline           138
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             6
+
+      popscope
+      kill                4
+L239:
+      debugline           141
+      getscopeobject      1
+      getslot             5
+      getlex              QName(PackageNamespace("flash.display"), "Stage")
+      istypelate
+      dup
+      iftrue              L251
+
+      pop
+      getscopeobject      1
+      getslot             6
+      getlex              QName(PackageNamespace("flash.display"), "Stage")
+      istypelate
+L251:
+      dup
+      iftrue              L258
+
+      pop
+      getscopeobject      1
+      getslot             5
+      getproperty         QName(PackageNamespace(""), "tabChildren")
+      convert_b
+L258:
+      iffalse             L315
+
+      debugline           143
+      getscopeobject      1
+      pushbyte            0
+      setslot             7
+
+      jump                L309
+
+L264:
+      label
+L265:
+      debugline           147
+      getscopeobject      1
+      getscopeobject      1
+      getslot             5
+      getscopeobject      1
+      getslot             7
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setslot             8
+
+      debugline           148
+      getscopeobject      1
+      getslot             8
+      pushnull
+      ifeq                L287
+
+      debugline           150
+      getlocal0
+      getscopeobject      1
+      getslot             5
+      getscopeobject      1
+      getslot             7
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      callpropvoid        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "addFocusables"), 1
+
+L287:
+      debugline           153
+      jump                L302
+
+L289:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                4
+L302:
+      debugline           143
+      getscopeobject      1
+      getslot             7
+      increment_i
+      getscopeobject      1
+      swap
+      setslot             7
+
+L309:
+      getscopeobject      1
+      getslot             7
+      getscopeobject      1
+      getslot             5
+      getproperty         QName(PackageNamespace(""), "numChildren")
+      iflt                L264
+
+L315:
+      debugline           159
+      returnvoid
+     end ; code
+     try from L212 to L219 target L221 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+     try from L265 to L287 target L289 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "error") end
+     trait slot QName(PackageInternalNs("_kiwi.Managers"), "obj") slotid 1 type QName(PackageNamespace("flash.display"), "DisplayObject") end
+     trait slot QName(PackageInternalNs("_kiwi.Managers"), "skipTopLevel") slotid 2 type QName(PackageNamespace(""), "Boolean") value False() end
+     trait slot QName(PackageInternalNs("_kiwi.Managers"), "focusable") slotid 3 type QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent") end
+     trait slot QName(PackageInternalNs("_kiwi.Managers"), "io") slotid 4 type QName(PackageNamespace("flash.display"), "InteractiveObject") end
+     trait slot QName(PackageInternalNs("_kiwi.Managers"), "doc") slotid 5 type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+     trait slot QName(PackageInternalNs("_kiwi.Managers"), "docParent") slotid 6 type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+     trait slot QName(PackageInternalNs("_kiwi.Managers"), "i") slotid 7 type QName(PackageNamespace(""), "int") end
+     trait slot QName(PackageInternalNs("_kiwi.Managers"), "child") slotid 8 type QName(PackageNamespace("flash.display"), "DisplayObject") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "removeFocusables")
+   method
+    name "_kiwi.Managers:FocusManager/private:removeFocusables"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/removeFocusables"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           161
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal3
+
+      debug               1, "obj", 0, 161
+      debugline           163
+      getlocal1
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      istypelate
+      iffalse             L93
+
+      debug               1, "p", 1, 167
+      debugline           165
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_CHILDREN_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "tabChildrenChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           166
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_INDEX_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "tabIndexChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           167
+      pushbyte            0
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      coerce_a
+      setlocal            5
+
+      jump                L88
+
+L41:
+      label
+      getlocal            5
+      getlocal            4
+      nextname
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      debug               1, "dob", 2, 169
+      debugline           169
+      getlocal2
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal3
+
+      debugline           171
+      getlocal1
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      astypelate
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iffalse             L88
+
+      debugline           173
+      getlocal3
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      ifne                L70
+
+      debugline           175
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+
+L70:
+      debugline           177
+      getlocal3
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "TAB_ENABLED_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "tabEnabledChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           178
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      getlocal2
+      deleteproperty      MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+      pop
+      debugline           179
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_calculateCandidates")
+
+L88:
+      debugline           167
+      hasnext2            5, 4
+      iftrue              L41
+
+      kill                5
+      kill                4
+L93:
+      debugline           183
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "isTabVisible")
+   method
+    name "_kiwi.Managers:FocusManager/private:isTabVisible"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/isTabVisible"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "skipTopLevel"
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 7
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           185
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+      debug               1, "obj", 0, 185
+L8:
+      debugline           189
+      debug               1, "p", 1, 189
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+      jump                L28
+
+L15:
+      label
+      debugline           192
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabChildren")
+      iftrue              L23
+
+      debugline           194
+      pushfalse
+      returnvalue
+
+L23:
+      debugline           196
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+L28:
+      debugline           190
+      getlocal2
+      coerce_a
+      convert_b
+      dup
+      iffalse             L41
+
+      pop
+      getlocal2
+      getlex              QName(PackageNamespace("flash.display"), "Stage")
+      istypelate
+      not
+      coerce_a
+      convert_b
+L41:
+      dup
+      iffalse             L56
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce_a
+      dup
+      iffalse             L55
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace("flash.display"), "Stage")
+      istypelate
+      coerce_a
+L55:
+      not
+L56:
+      iftrue              L15
+
+L57:
+      debugline           199
+      jump                L70
+
+L59:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L70:
+      debugline           203
+      pushtrue
+      returnvalue
+     end ; code
+     try from L8 to L57 target L59 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "isValidFocusCandidate")
+   method
+    name "_kiwi.Managers:FocusManager/private:isValidFocusCandidate"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/isValidFocusCandidate"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "skipTopLevel"
+    paramname "skipTopLevel"
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           206
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      setlocal3
+
+      debug               1, "obj", 0, 206
+      debug               1, "groupName", 1, 206
+      debugline           208
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "isEnabledAndVisible"), 1
+      iftrue              L17
+
+      debugline           210
+      pushfalse
+      returnvalue
+
+L17:
+      debugline           212
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      istypelate
+      iffalse             L37
+
+      debug               1, "tg", 2, 214
+      debugline           214
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      astypelate
+      coerce              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      setlocal3
+
+      debugline           215
+      getlocal2
+      getlocal3
+      getproperty         QName(Namespace("_kiwi.Interfaces:IFocusManagerGroup"), "groupName")
+      ifne                L37
+
+      debugline           217
+      pushfalse
+      returnvalue
+
+L37:
+      debugline           221
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "isEnabledAndVisible")
+   method
+    name "_kiwi.Managers:FocusManager/private:isEnabledAndVisible"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/isEnabledAndVisible"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "skipTopLevel"
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 7
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           224
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("_kiwi.Core"), "UIComponent")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("_kiwi.Controls"), "BaseButton")
+      setlocal            5
+
+      debug               1, "obj", 0, 224
+L17:
+      debugline           228
+      debug               1, "formParent", 1, 228
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+      jump                L108
+
+L27:
+      label
+      debugline           231
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Core"), "UIComponent")
+      istypelate
+      iffalse             L48
+
+      debug               1, "ui", 2, 233
+      debugline           233
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Core"), "UIComponent")
+      astypelate
+      coerce              QName(PackageNamespace("_kiwi.Core"), "UIComponent")
+      setlocal3
+
+      debugline           234
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "enabled")
+      iftrue              L47
+
+      debugline           236
+      pushfalse
+      returnvalue
+
+L47:
+      jump                L96
+
+L48:
+      debugline           239
+      getlocal1
+      getlex              QName(PackageNamespace("flash.text"), "TextField")
+      istypelate
+      iffalse             L77
+
+      debug               1, "tf", 3, 241
+      debugline           241
+      getlocal1
+      getlex              QName(PackageNamespace("flash.text"), "TextField")
+      astypelate
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            4
+
+      debugline           242
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldType")
+      getproperty         QName(PackageNamespace(""), "DYNAMIC")
+      equals
+      dup
+      iftrue              L72
+
+      pop
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "selectable")
+      not
+L72:
+      iffalse             L76
+
+      debugline           244
+      pushfalse
+      returnvalue
+
+L76:
+      jump                L96
+
+L77:
+      debugline           247
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Controls"), "BaseButton")
+      istypelate
+      iffalse             L96
+
+      debug               1, "bb", 4, 249
+      debugline           249
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Controls"), "BaseButton")
+      astypelate
+      coerce              QName(PackageNamespace("_kiwi.Controls"), "BaseButton")
+      setlocal            5
+
+      debugline           250
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "enabled")
+      iftrue              L96
+
+      debugline           252
+      pushfalse
+      returnvalue
+
+L96:
+      debugline           256
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "visible")
+      iftrue              L103
+
+      debugline           258
+      pushfalse
+      returnvalue
+
+L103:
+      debugline           260
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+L108:
+      debugline           229
+      getlocal1
+      getlocal2
+      ifne                L27
+
+L112:
+      debugline           263
+      jump                L125
+
+L114:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            6
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                6
+L125:
+      debugline           266
+      pushtrue
+      returnvalue
+     end ; code
+     try from L17 to L112 target L114 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "tabEnabledChangeHandler")
+   method
+    name "_kiwi.Managers:FocusManager/private:tabEnabledChangeHandler"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/tabEnabledChangeHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           269
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 269
+      debug               1, "obj", 1, 272
+      debug               1, "registeredFocusableObject", 2, 273
+      debugline           271
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_calculateCandidates")
+
+      debugline           272
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           273
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+      pushtrue
+      equals
+      setlocal3
+
+      debugline           274
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabEnabled")
+      iffalse             L57
+
+      debugline           276
+      getlocal3
+      not
+      dup
+      iffalse             L40
+
+      pop
+      getlocal0
+      getlocal2
+      callproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "isTabVisible"), 1
+      convert_b
+L40:
+      iffalse             L56
+
+      debugline           278
+      getlocal2
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      istypelate
+      iftrue              L50
+
+      debugline           280
+      getlocal2
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "focusRect")
+
+L50:
+      debugline           282
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      getlocal2
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+
+L56:
+      jump                L66
+
+L57:
+      debugline           287
+      getlocal3
+      iffalse             L66
+
+      debugline           289
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      getlocal2
+      deleteproperty      MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+      pop
+L66:
+      debugline           292
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "tabIndexChangeHandler")
+   method
+    name "_kiwi.Managers:FocusManager/private:tabIndexChangeHandler"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/tabIndexChangeHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           294
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 294
+      debugline           296
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_calculateCandidates")
+
+      debugline           297
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "tabChildrenChangeHandler")
+   method
+    name "_kiwi.Managers:FocusManager/private:tabChildrenChangeHandler"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/tabChildrenChangeHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           299
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 299
+      debug               1, "obj", 1, 307
+      debugline           301
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "currentTarget")
+      ifeq                L14
+
+      debugline           303
+      returnvoid
+
+L14:
+      debugline           306
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_calculateCandidates")
+
+      debugline           307
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+      debugline           308
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabChildren")
+      iffalse             L35
+
+      debugline           310
+      getlocal0
+      getlocal2
+      pushtrue
+      callpropvoid        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "addFocusables"), 2
+
+      jump                L39
+
+L35:
+      debugline           314
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "removeFocusables"), 1
+
+L39:
+      debugline           316
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "defaultButton")
+   method
+    name "_kiwi.Managers:FocusManager/defaultButton/get"
+    refid "_kiwi.Managers:FocusManager/instance/defaultButton/getter"
+    returns QName(PackageNamespace("_kiwi.Controls"), "BaseButton")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           318
+      getlocal0
+      pushscope
+
+      debugline           320
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_defaultButton")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "defaultButton")
+   method
+    name "_kiwi.Managers:FocusManager/defaultButton/set"
+    refid "_kiwi.Managers:FocusManager/instance/defaultButton/setter"
+    param QName(PackageNamespace("_kiwi.Controls"), "BaseButton")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           323
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 323
+      debugline           325
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_defaultButton")
+      ifeq                L43
+
+      debugline           327
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_defaultButton")
+      iffalse             L19
+
+      debugline           329
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_defaultButton")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+L19:
+      debugline           332
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+      iffalse             L28
+
+      debugline           334
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+L28:
+      debugline           337
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_defaultButton")
+
+      debugline           338
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+
+      debugline           339
+      getlocal1
+      iffalse             L43
+
+      debugline           341
+      getlocal1
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "selected")
+
+L43:
+      debugline           344
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "defaultButtonEnabled")
+   method
+    name "_kiwi.Managers:FocusManager/defaultButtonEnabled/get"
+    refid "_kiwi.Managers:FocusManager/instance/defaultButtonEnabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           346
+      getlocal0
+      pushscope
+
+      debugline           348
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_defaultButtonEnabled")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "defaultButtonEnabled")
+   method
+    name "_kiwi.Managers:FocusManager/defaultButtonEnabled/set"
+    refid "_kiwi.Managers:FocusManager/instance/defaultButtonEnabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           351
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 351
+      debugline           353
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_defaultButtonEnabled")
+
+      debugline           354
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "nextTabIndex")
+   method
+    name "_kiwi.Managers:FocusManager/nextTabIndex/get"
+    refid "_kiwi.Managers:FocusManager/instance/nextTabIndex/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           356
+      getlocal0
+      pushscope
+
+      debugline           358
+      pushbyte            0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "showFocusIndicator")
+   method
+    name "_kiwi.Managers:FocusManager/showFocusIndicator/get"
+    refid "_kiwi.Managers:FocusManager/instance/showFocusIndicator/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           361
+      getlocal0
+      pushscope
+
+      debugline           363
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_showFocusIndicator")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "showFocusIndicator")
+   method
+    name "_kiwi.Managers:FocusManager/showFocusIndicator/set"
+    refid "_kiwi.Managers:FocusManager/instance/showFocusIndicator/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           366
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 366
+      debugline           368
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_showFocusIndicator")
+
+      debugline           369
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getFocus")
+   method
+    name "_kiwi.Managers:FocusManager/getFocus"
+    refid "_kiwi.Managers:FocusManager/instance/getFocus"
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           371
+      getlocal0
+      pushscope
+
+      debug               1, "obj", 0, 373
+      debugline           373
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "focus")
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal1
+
+      debugline           374
+      getlocal0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "findFocusManagerComponent"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setFocus")
+   method
+    name "_kiwi.Managers:FocusManager/setFocus"
+    refid "_kiwi.Managers:FocusManager/instance/setFocus"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           377
+      getlocal0
+      pushscope
+
+      debug               1, "obj", 0, 377
+      debugline           379
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      istypelate
+      iffalse             L16
+
+      debugline           381
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      astypelate
+      callpropvoid        QName(Namespace("_kiwi.Interfaces:IFocusManagerComponent"), "setFocus"), 0
+
+      jump                L22
+
+L16:
+      debugline           385
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "focus")
+
+L22:
+      debugline           387
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "showFocus")
+   method
+    name "_kiwi.Managers:FocusManager/showFocus"
+    refid "_kiwi.Managers:FocusManager/instance/showFocus"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           389
+      getlocal0
+      pushscope
+
+      debugline           392
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "hideFocus")
+   method
+    name "_kiwi.Managers:FocusManager/hideFocus"
+    refid "_kiwi.Managers:FocusManager/instance/hideFocus"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           394
+      getlocal0
+      pushscope
+
+      debugline           397
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "activate")
+   method
+    name "_kiwi.Managers:FocusManager/activate"
+    refid "_kiwi.Managers:FocusManager/instance/activate"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 10
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           399
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+      debug               1, "activate$3", 0, 399
+      debugline           401
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_activated")
+      iftrue              L196
+
+      debugline           403
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      callpropvoid        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "addFocusables"), 1
+
+      debugline           405
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "addedHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           406
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "removedHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+L40:
+      debugline           409
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_FOCUS_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "mouseFocusChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           410
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_FOCUS_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "keyFocusChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           411
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ACTIVATE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "activateHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           412
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "DEACTIVATE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "deactivateHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+L88:
+      debugline           414
+      jump                L139
+
+L90:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      debugline           416
+      getlex              QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_FOCUS_CHANGE")
+      getlex              QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "mouseFocusChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           417
+      getlex              QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_FOCUS_CHANGE")
+      getlex              QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "keyFocusChangeHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           418
+      getlex              QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ACTIVATE")
+      getlex              QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "activateHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           419
+      getlex              QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "DEACTIVATE")
+      getlex              QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "deactivateHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      popscope
+      kill                2
+L139:
+      debugline           422
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "FOCUS_IN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusInHandler")
+      pushtrue
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           423
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "FOCUS_OUT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusOutHandler")
+      pushtrue
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           424
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "mouseDownHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           425
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "keyDownHandler")
+      pushtrue
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           426
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_activated")
+
+      debugline           428
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      iffalse             L196
+
+      debugline           430
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      callpropvoid        QName(PackageNamespace(""), "setFocus"), 1
+
+L196:
+      debugline           433
+      returnvoid
+     end ; code
+     try from L40 to L88 target L90 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "deactivate")
+   method
+    name "_kiwi.Managers:FocusManager/deactivate"
+    refid "_kiwi.Managers:FocusManager/instance/deactivate"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 7
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           435
+      getlocal0
+      pushscope
+
+      debugline           437
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_activated")
+      iffalse             L173
+
+      debugline           439
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+      pushtrue
+      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+
+      debugline           440
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+
+      debugline           441
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+
+      debugline           442
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+
+      debugline           443
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "addedHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           444
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "removedHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+L44:
+      debugline           447
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_FOCUS_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "mouseFocusChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           448
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_FOCUS_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "keyFocusChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           449
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ACTIVATE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "activateHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           450
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "DEACTIVATE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "deactivateHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+L84:
+      debugline           452
+      jump                L97
+
+L86:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal1
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                1
+L97:
+      debugline           455
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_FOCUS_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "mouseFocusChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           456
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_FOCUS_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "keyFocusChangeHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           457
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ACTIVATE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "activateHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           458
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "DEACTIVATE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "deactivateHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           459
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "FOCUS_IN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusInHandler")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           460
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "FOCUS_OUT")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusOutHandler")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           461
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "mouseDownHandler")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           462
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "keyDownHandler")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           463
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_activated")
+
+L173:
+      debugline           465
+      returnvoid
+     end ; code
+     try from L44 to L84 target L86 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusInHandler")
+   method
+    name "_kiwi.Managers:FocusManager/private:focusInHandler"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/focusInHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           467
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("_kiwi.Controls"), "BaseButton")
+      setlocal3
+
+      debug               1, "e", 0, 467
+      debugline           469
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_activated")
+      iffalse             L110
+
+      debug               1, "target", 1, 471
+      debugline           471
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           472
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_form")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iffalse             L110
+
+      debugline           474
+      getlocal0
+      getlocal0
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "findFocusManagerComponent"), 1
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+
+      debugline           475
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      getlex              QName(PackageNamespace("_kiwi.Controls"), "BaseButton")
+      istypelate
+      iffalse             L77
+
+      debug               1, "x", 2, 477
+      debugline           477
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      getlex              QName(PackageNamespace("_kiwi.Controls"), "BaseButton")
+      astypelate
+      coerce              QName(PackageNamespace("_kiwi.Controls"), "BaseButton")
+      setlocal3
+
+      debugline           478
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+      convert_b
+      dup
+      iffalse             L62
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      equals
+      not
+L62:
+      iffalse             L68
+
+      debugline           480
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+L68:
+      debugline           482
+      getlocal0
+      getlocal3
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+
+      debugline           483
+      getlocal3
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      jump                L110
+
+L77:
+      debugline           487
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+      convert_b
+      dup
+      iffalse             L90
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_defaultButton")
+      equals
+      not
+L90:
+      iffalse             L110
+
+      debugline           489
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      debugline           490
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_defaultButton")
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+
+      debugline           491
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_defaultButton")
+      iffalse             L110
+
+      debugline           493
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_defaultButton")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "selected")
+
+L110:
+      debugline           499
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusOutHandler")
+   method
+    name "_kiwi.Managers:FocusManager/private:focusOutHandler"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/focusOutHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           501
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debug               1, "e", 0, 501
+      debugline           503
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_activated")
+      iffalse             L20
+
+      debug               1, "target", 1, 505
+      debugline           505
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+L20:
+      debugline           507
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "activateHandler")
+   method
+    name "_kiwi.Managers:FocusManager/private:activateHandler"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/activateHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           509
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debug               1, "e", 0, 509
+      debugline           511
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_activated")
+      iffalse             L48
+
+      debug               1, "target", 1, 513
+      debugline           513
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           514
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      iffalse             L44
+
+      debugline           516
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      istypelate
+      iffalse             L37
+
+      debugline           518
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      astypelate
+      callpropvoid        QName(Namespace("_kiwi.Interfaces:IFocusManagerComponent"), "setFocus"), 0
+
+      jump                L44
+
+L37:
+      debugline           522
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      setproperty         QName(PackageNamespace(""), "focus")
+
+L44:
+      debugline           525
+      getlocal0
+      pushstring          "ACTIVATE"
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_lastAction")
+
+L48:
+      debugline           527
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "deactivateHandler")
+   method
+    name "_kiwi.Managers:FocusManager/private:deactivateHandler"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/deactivateHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           529
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debug               1, "e", 0, 529
+      debugline           531
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_activated")
+      iffalse             L20
+
+      debug               1, "target", 1, 533
+      debugline           533
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+L20:
+      debugline           535
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "mouseFocusChangeHandler")
+   method
+    name "_kiwi.Managers:FocusManager/private:mouseFocusChangeHandler"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/mouseFocusChangeHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           537
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 537
+      debugline           539
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_activated")
+      convert_b
+      dup
+      iffalse             L17
+
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "relatedObject")
+      getlex              QName(PackageNamespace("flash.text"), "TextField")
+      istypelate
+      not
+L17:
+      iffalse             L21
+
+      debugline           541
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "preventDefault"), 0
+
+L21:
+      debugline           543
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "keyFocusChangeHandler")
+   method
+    name "_kiwi.Managers:FocusManager/private:keyFocusChangeHandler"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/keyFocusChangeHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           545
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 545
+      debugline           547
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_activated")
+      iffalse             L40
+
+      debugline           549
+      getlocal0
+      pushtrue
+      initproperty        QName(PackageNamespace(""), "showFocusIndicator")
+
+      debugline           550
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "TAB")
+      equals
+      dup
+      iftrue              L26
+
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      pushbyte            0
+      equals
+L26:
+      dup
+      iffalse             L32
+
+      pop
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "isDefaultPrevented"), 0
+      not
+L32:
+      iffalse             L40
+
+      debugline           552
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "setFocusToNextObject"), 1
+
+      debugline           553
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "preventDefault"), 0
+
+L40:
+      debugline           556
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "keyDownHandler")
+   method
+    name "_kiwi.Managers:FocusManager/private:keyDownHandler"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/keyDownHandler"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           558
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 558
+      debugline           560
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_activated")
+      iffalse             L61
+
+      debugline           562
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "TAB")
+      ifne                L30
+
+      debugline           564
+      getlocal0
+      pushstring          "KEY"
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_lastAction")
+
+      debugline           566
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_calculateCandidates")
+      iffalse             L30
+
+      debugline           568
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "sortFocusableObjects"), 0
+
+      debugline           569
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_calculateCandidates")
+
+L30:
+      debugline           573
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "defaultButtonEnabled")
+      dup
+      iffalse             L41
+
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "ENTER")
+      equals
+L41:
+      coerce_a
+      convert_b
+      dup
+      iffalse             L50
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "defaultButton")
+      coerce_a
+      convert_b
+L50:
+      dup
+      iffalse             L57
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+      getproperty         QName(PackageNamespace(""), "enabled")
+      convert_b
+L57:
+      iffalse             L61
+
+      debugline           575
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "sendDefaultButtonEvent"), 0
+
+L61:
+      debugline           578
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "mouseDownHandler")
+   method
+    name "_kiwi.Managers:FocusManager/private:mouseDownHandler"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/mouseDownHandler"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           580
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debug               1, "e", 0, 580
+      debugline           582
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_activated")
+      convert_b
+      dup
+      iffalse             L18
+
+      pop
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "isDefaultPrevented"), 0
+      not
+L18:
+      iffalse             L65
+
+      debug               1, "obj", 1, 584
+      debugline           584
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      callproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "getTopLevelFocusTarget"), 1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           585
+      getlocal2
+      iffalse             L65
+
+      debugline           587
+      getlocal0
+      pushfalse
+      initproperty        QName(PackageNamespace(""), "showFocusIndicator")
+
+      debugline           589
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "lastFocus")
+      equals
+      not
+      dup
+      iftrue              L49
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_lastAction")
+      pushstring          "ACTIVATE"
+      equals
+L49:
+      dup
+      iffalse             L56
+
+      pop
+      getlocal2
+      getlex              QName(PackageNamespace("flash.text"), "TextField")
+      istypelate
+      not
+L56:
+      iffalse             L61
+
+      debugline           591
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setFocus"), 1
+
+L61:
+      debugline           593
+      getlocal0
+      pushstring          "MOUSEDOWN"
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_lastAction")
+
+L65:
+      debugline           596
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "getTopLevelFocusTarget")
+   method
+    name "_kiwi.Managers:FocusManager/private:getTopLevelFocusTarget"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/getTopLevelFocusTarget"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+    flag HAS_PARAM_NAMES
+    paramname "DisplayObjectContainer"
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 7
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           598
+      getlocal0
+      pushscope
+
+      debug               1, "obj", 0, 598
+      debug               1, "result", 1, 600
+      debugline           600
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+L10:
+      debugline           603
+      jump                L58
+
+L12:
+      label
+      debugline           605
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      istypelate
+      dup
+      iffalse             L25
+
+      pop
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      astypelate
+      getproperty         QName(Namespace("_kiwi.Interfaces:IFocusManagerComponent"), "focusEnabled")
+      convert_b
+L25:
+      dup
+      iffalse             L33
+
+      pop
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      astypelate
+      getproperty         QName(Namespace("_kiwi.Interfaces:IFocusManagerComponent"), "mouseFocusEnabled")
+      convert_b
+L33:
+      dup
+      iffalse             L41
+
+      pop
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Core"), "UIComponent")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "enabled")
+      convert_b
+L41:
+      iffalse             L48
+
+      debugline           607
+      getlocal1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           608
+      jump                L65
+
+L48:
+      debugline           611
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal1
+
+      debugline           612
+      getlocal1
+      iftrue              L58
+
+      debugline           614
+      jump                L65
+
+L58:
+      debugline           603
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      ifne                L12
+
+L65:
+      debugline           618
+      jump                L78
+
+L67:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L78:
+      debugline           622
+      getlocal2
+      returnvalue
+     end ; code
+     try from L10 to L65 target L67 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "sendDefaultButtonEvent")
+   method
+    name "_kiwi.Managers:FocusManager/sendDefaultButtonEvent"
+    refid "_kiwi.Managers:FocusManager/instance/sendDefaultButtonEvent"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           625
+      getlocal0
+      pushscope
+
+      debugline           627
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "defButton")
+      findpropstrict      QName(PackageNamespace("flash.events"), "MouseEvent")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      constructprop       QName(PackageNamespace("flash.events"), "MouseEvent"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           628
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "setFocusToNextObject")
+   method
+    name "_kiwi.Managers:FocusManager/private:setFocusToNextObject"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/setFocusToNextObject"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           630
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debug               1, "e", 0, 630
+      debugline           632
+      getlocal0
+      callproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "hasFocusableObjects"), 0
+      iffalse             L27
+
+      debug               1, "obj", 1, 634
+      debugline           634
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "shiftKey")
+      callproperty        QName(PackageNamespace(""), "getNextFocusManagerComponent"), 1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           635
+      getlocal2
+      iffalse             L27
+
+      debugline           637
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setFocus"), 1
+
+L27:
+      debugline           640
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "hasFocusableObjects")
+   method
+    name "_kiwi.Managers:FocusManager/private:hasFocusableObjects"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/hasFocusableObjects"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           642
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      debug               1, "result", 0, 644
+      debug               1, "o", 1, 645
+      debugline           644
+      pushfalse
+      setlocal1
+
+      debugline           645
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      coerce_a
+      setlocal            4
+
+      jump                L31
+
+L20:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      debugline           647
+      pushtrue
+      setlocal1
+
+      debugline           648
+      jump                L34
+
+L31:
+      debugline           645
+      hasnext2            4, 3
+      iftrue              L20
+
+L34:
+      kill                4
+      kill                3
+      debugline           651
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "findFocusManagerComponent")
+   method
+    name "_kiwi.Managers:FocusManager/findFocusManagerComponent"
+    refid "_kiwi.Managers:FocusManager/instance/findFocusManagerComponent"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+    flag HAS_PARAM_NAMES
+    paramname "DisplayObjectContainer"
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 7
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           654
+      getlocal0
+      pushscope
+
+      debug               1, "obj", 0, 654
+      debug               1, "p", 1, 656
+      debugline           656
+      getlocal1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+L10:
+      debugline           659
+      jump                L34
+
+L12:
+      label
+      debugline           661
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      istypelate
+      dup
+      iffalse             L25
+
+      pop
+      getlocal1
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerComponent")
+      astypelate
+      getproperty         QName(Namespace("_kiwi.Interfaces:IFocusManagerComponent"), "focusEnabled")
+      convert_b
+L25:
+      iffalse             L29
+
+      debugline           663
+      getlocal1
+      returnvalue
+
+L29:
+      debugline           666
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal1
+
+L34:
+      debugline           659
+      getlocal1
+      iftrue              L12
+
+L37:
+      debugline           669
+      jump                L50
+
+L39:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L50:
+      debugline           673
+      getlocal2
+      returnvalue
+     end ; code
+     try from L10 to L37 target L39 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "getIndexOfFocusedObject")
+   method
+    name "_kiwi.Managers:FocusManager/private:getIndexOfFocusedObject"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/getIndexOfFocusedObject"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_PARAM_NAMES
+    paramname "findFocusManagerComponent"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           676
+      getlocal0
+      pushscope
+
+      debug               1, "obj", 0, 676
+      debugline           678
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "sortFocusableObjects")
+   method
+    name "_kiwi.Managers:FocusManager/private:sortFocusableObjects"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/sortFocusableObjects"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           681
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debug               1, "obj", 0, 684
+      debugline           683
+      getlocal0
+      newarray            0
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+
+      debugline           684
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      coerce_a
+      setlocal            4
+
+      jump                L71
+
+L23:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      debug               1, "c", 1, 686
+      debugline           686
+      getlocal1
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           687
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      coerce_a
+      convert_b
+      dup
+      iffalse             L53
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      not
+      coerce_a
+      convert_b
+L53:
+      dup
+      iffalse             L60
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      pushbyte            0
+      greaterthan
+L60:
+      iffalse             L66
+
+      debugline           689
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "sortFocusableObjectsTabIndex"), 0
+
+      debugline           690
+      returnvoid
+
+L66:
+      debugline           692
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L71:
+      debugline           684
+      hasnext2            4, 3
+      iftrue              L23
+
+      kill                4
+      kill                3
+      debugline           694
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "sortByDepth")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 1
+
+      debugline           695
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "sortByDepth")
+   method
+    name "_kiwi.Managers:FocusManager/private:sortByDepth"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/sortByDepth"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_PARAM_NAMES
+    paramname "addedHandler"
+    paramname "addedHandler"
+    body
+     maxstack 4
+     localcount 12
+     initscopedepth 4
+     maxscopedepth 8
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           697
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            5
+
+      pushnull
+      coerce_s
+      setlocal            6
+
+      pushnull
+      coerce_s
+      setlocal            7
+
+      debug               1, "lhs", 0, 697
+      debug               1, "rhs", 1, 697
+      debug               1, "val1", 2, 699
+      debug               1, "val2", 3, 700
+      debug               1, "index", 4, 701
+      debug               1, "tmp", 5, 702
+      debug               1, "tmp2", 6, 703
+      debug               1, "zeros", 7, 704
+      debug               1, "a", 8, 705
+      debug               1, "b", 9, 706
+      pushstring          ""
+      debugline           699
+      coerce_s
+      setlocal3
+
+      pushstring          ""
+      debugline           700
+      coerce_s
+      setlocal            4
+
+      pushstring          "0000"
+      debugline           704
+      coerce_s
+      setlocal            8
+
+      debugline           705
+      getlocal1
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            9
+
+      debugline           706
+      getlocal2
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            10
+
+L46:
+      debugline           710
+      jump                L91
+
+L48:
+      label
+      debugline           712
+      getlocal0
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlocal            9
+      callproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "getChildIndex"), 2
+      convert_i
+      setlocal            5
+
+      debugline           713
+      getlocal            5
+      pushbyte            16
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+      coerce_s
+      setlocal            6
+
+      debugline           714
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            4
+      ifnlt               L80
+
+      debugline           716
+      getlocal            8
+      pushbyte            0
+      pushbyte            4
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "length")
+      subtract
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      getlocal            6
+      add
+      coerce_s
+      setlocal            7
+
+L80:
+      debugline           718
+      getlocal            7
+      getlocal3
+      add
+      coerce_s
+      setlocal3
+
+      debugline           719
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            9
+
+L91:
+      debugline           710
+      getlocal            9
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      equals
+      not
+      dup
+      iffalse             L105
+
+      pop
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "parent")
+      convert_b
+L105:
+      iftrue              L48
+
+L106:
+      debugline           722
+      jump                L119
+
+L108:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            11
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                11
+L119:
+      debugline           728
+      jump                L164
+
+L121:
+      label
+      debugline           730
+      getlocal0
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlocal            10
+      callproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "getChildIndex"), 2
+      convert_i
+      setlocal            5
+
+      debugline           731
+      getlocal            5
+      pushbyte            16
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+      coerce_s
+      setlocal            6
+
+      debugline           732
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            4
+      ifnlt               L153
+
+      debugline           734
+      getlocal            8
+      pushbyte            0
+      pushbyte            4
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "length")
+      subtract
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
+      getlocal            6
+      add
+      coerce_s
+      setlocal            7
+
+L153:
+      debugline           736
+      getlocal            7
+      getlocal            4
+      add
+      coerce_s
+      setlocal            4
+
+      debugline           737
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            10
+
+L164:
+      debugline           728
+      getlocal            10
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "form")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      equals
+      not
+      dup
+      iffalse             L178
+
+      pop
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "parent")
+      convert_b
+L178:
+      iftrue              L121
+
+L179:
+      debugline           740
+      jump                L192
+
+L181:
+      getlocal0
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal            11
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                11
+L192:
+      debugline           744
+      getlocal3
+      getlocal            4
+      greaterthan
+      iffalse             L200
+
+      pushbyte            1
+      convert_d
+      jump                L209
+
+L200:
+      getlocal3
+      getlocal            4
+      lessthan
+      iffalse             L207
+
+      pushbyte            255
+      convert_d
+      jump                L209
+
+L207:
+      pushbyte            0
+      convert_d
+L209:
+      returnvalue
+     end ; code
+     try from L46 to L106 target L108 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se1") end
+     try from L119 to L179 target L181 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se2") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "sortFocusableObjectsTabIndex")
+   method
+    name "_kiwi.Managers:FocusManager/private:sortFocusableObjectsTabIndex"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/sortFocusableObjectsTabIndex"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           747
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debug               1, "obj", 0, 750
+      debugline           749
+      getlocal0
+      newarray            0
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+
+      debugline           750
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableObjects")
+      coerce_a
+      setlocal            4
+
+      jump                L56
+
+L23:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      debug               1, "c", 1, 752
+      debugline           752
+      getlocal1
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           753
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      convert_b
+      dup
+      iffalse             L50
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      not
+L50:
+      iffalse             L56
+
+      debugline           755
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L56:
+      debugline           750
+      hasnext2            4, 3
+      iftrue              L23
+
+      kill                4
+      kill                3
+      debugline           758
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "sortByTabIndex")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 1
+
+      debugline           759
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "getChildIndex")
+   method
+    name "_kiwi.Managers:FocusManager/private:getChildIndex"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/getChildIndex"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_PARAM_NAMES
+    paramname "findFocusManagerComponent"
+    paramname "findFocusManagerComponent"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           761
+      getlocal0
+      pushscope
+
+      debug               1, "parent", 0, 761
+      debug               1, "child", 1, 761
+      debugline           763
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getChildIndex"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "sortByTabIndex")
+   method
+    name "_kiwi.Managers:FocusManager/private:sortByTabIndex"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/sortByTabIndex"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_PARAM_NAMES
+    paramname "findFocusManagerComponent"
+    paramname "findFocusManagerComponent"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           766
+      getlocal0
+      pushscope
+
+      debug               1, "a", 0, 766
+      debug               1, "b", 1, 766
+      debugline           768
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      greaterthan
+      iffalse             L15
+
+      pushbyte            1
+      jump                L28
+
+L15:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tabIndex")
+      lessthan
+      iffalse             L23
+
+      pushbyte            255
+      jump                L28
+
+L23:
+      getlocal0
+      getlocal1
+      getlocal2
+      callproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "sortByDepth"), 2
+      convert_i
+L28:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getNextFocusManagerComponent")
+   method
+    name "_kiwi.Managers:FocusManager/getNextFocusManagerComponent"
+    refid "_kiwi.Managers:FocusManager/instance/getNextFocusManagerComponent"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional False()
+    paramname "DisplayObjectContainer"
+    body
+     maxstack 5
+     localcount 10
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           771
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal3
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      pushbyte            0
+      setlocal            5
+
+      pushfalse
+      setlocal            6
+
+      pushbyte            0
+      setlocal            7
+
+      pushbyte            0
+      setlocal            8
+
+      pushnull
+      coerce              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      setlocal            9
+
+      debug               1, "backward", 0, 771
+      debug               1, "result", 1, 773
+      debugline           773
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+      debugline           775
+      getlocal0
+      callproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "hasFocusableObjects"), 0
+      iffalse             L133
+
+      debug               1, "obj", 2, 783
+      debug               1, "g", 3, 785
+      debug               1, "i", 4, 792
+      debug               1, "searchAll", 5, 793
+      debug               1, "start", 6, 794
+      debug               1, "j", 7, 804
+      debugline           777
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_calculateCandidates")
+      iffalse             L48
+
+      debugline           779
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "sortFocusableObjects"), 0
+
+      debugline           780
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_calculateCandidates")
+
+L48:
+      debugline           783
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_form")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "focus")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal3
+
+      debugline           784
+      getlocal0
+      getlocal3
+      getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      astypelate
+      callproperty        QName(PackageNamespace(""), "findFocusManagerComponent"), 1
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal3
+
+      pushstring          ""
+      debugline           785
+      coerce_s
+      setlocal            4
+
+      debugline           786
+      getlocal3
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      istypelate
+      iffalse             L86
+
+      debug               1, "tg", 8, 788
+      debugline           788
+      getlocal3
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      astypelate
+      coerce              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      setlocal            9
+
+      debugline           789
+      getlocal            9
+      getproperty         QName(Namespace("_kiwi.Interfaces:IFocusManagerGroup"), "groupName")
+      coerce_s
+      setlocal            4
+
+L86:
+      debugline           792
+      getlocal0
+      getlocal3
+      callproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "getIndexOfFocusedObject"), 1
+      convert_i
+      setlocal            5
+
+      debugline           793
+      pushfalse
+      setlocal            6
+
+      debugline           794
+      getlocal            5
+      convert_i
+      setlocal            7
+
+      debugline           795
+      getlocal            5
+      pushbyte            255
+      ifne                L115
+
+      debugline           797
+      getlocal1
+      iffalse             L112
+
+      debugline           799
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            5
+
+L112:
+      debugline           802
+      pushtrue
+      setlocal            6
+
+L115:
+      debugline           804
+      getlocal0
+      getlocal            5
+      getlocal1
+      getlocal            6
+      getlocal            4
+      callproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "getIndexOfNextObject"), 4
+      convert_i
+      setlocal            8
+
+      debugline           805
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+      callproperty        QName(PackageNamespace(""), "findFocusManagerComponent"), 1
+      coerce              QName(PackageNamespace("flash.display"), "InteractiveObject")
+      setlocal2
+
+L133:
+      debugline           808
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "getIndexOfNextObject")
+   method
+    name "_kiwi.Managers:FocusManager/private:getIndexOfNextObject"
+    refid "_kiwi.Managers:FocusManager/instance/_kiwi.Managers:FocusManager/instance/getIndexOfNextObject"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_PARAM_NAMES
+    paramname "findFocusManagerComponent"
+    paramname "findFocusManagerComponent"
+    paramname "findFocusManagerComponent"
+    paramname "findFocusManagerComponent"
+    body
+     maxstack 3
+     localcount 12
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           811
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      setlocal            8
+
+      pushbyte            0
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            10
+
+      pushnull
+      coerce              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      setlocal            11
+
+      debug               1, "i", 0, 811
+      debug               1, "shiftKey", 1, 811
+      debug               1, "searchAll", 2, 811
+      debug               1, "groupName", 3, 811
+      debug               1, "n", 4, 813
+      debug               1, "start", 5, 814
+      debugline           813
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            5
+
+      debugline           814
+      getlocal1
+      convert_i
+      setlocal            6
+
+      jump                L176
+
+L35:
+      label
+      debugline           817
+      getlocal2
+      iffalse             L44
+
+      debugline           819
+      getlocal1
+      decrement_i
+      setlocal1
+
+      jump                L46
+
+L44:
+      debugline           823
+      inclocal_i          1
+L46:
+      debugline           826
+      getlocal3
+      iffalse             L74
+
+      debugline           828
+      getlocal2
+      convert_b
+      dup
+      iffalse             L58
+
+      pop
+      getlocal1
+      pushbyte            0
+      lessthan
+L58:
+      iffalse             L61
+
+      debugline           830
+      jump                L178
+
+L61:
+      debugline           832
+      getlocal2
+      not
+      dup
+      iffalse             L70
+
+      pop
+      getlocal1
+      getlocal            5
+      equals
+L70:
+      iffalse             L73
+
+      debugline           834
+      jump                L178
+
+L73:
+      jump                L88
+
+L74:
+      debugline           839
+      getlocal1
+      getlocal            5
+      add
+      getlocal            5
+      modulo
+      convert_i
+      setlocal1
+
+      debugline           841
+      getlocal            6
+      getlocal1
+      ifne                L88
+
+      debugline           843
+      jump                L178
+
+L88:
+      debugline           847
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+      getlocal            4
+      callproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "isValidFocusCandidate"), 2
+      iffalse             L176
+
+      debug               1, "obj", 6, 849
+      debugline           849
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+      callproperty        QName(PackageNamespace(""), "findFocusManagerComponent"), 1
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            7
+
+      debugline           850
+      getlocal            7
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      istypelate
+      iffalse             L173
+
+      debug               1, "tg1", 7, 854
+      debug               1, "j", 8, 855
+      debugline           854
+      getlocal            7
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      astypelate
+      coerce              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      setlocal            8
+
+      debugline           855
+      pushbyte            0
+      setlocal            9
+
+      jump                L168
+
+L126:
+      label
+      debug               1, "obj2", 9, 857
+      debugline           857
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Managers:FocusManager"), PackageNamespace(""), PrivateNamespace("FocusManager.as$131"), PackageNamespace("_kiwi.Managers"), PackageInternalNs("_kiwi.Managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_kiwi.Managers:FocusManager"), StaticProtectedNs("_kiwi.Managers:FocusManager")])
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            10
+
+      debugline           858
+      getlocal            10
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      istypelate
+      iffalse             L166
+
+      debug               1, "tg2", 10, 860
+      debugline           860
+      getlocal            10
+      getlex              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      astypelate
+      coerce              QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManagerGroup")
+      setlocal            11
+
+      debugline           861
+      getlocal            11
+      getproperty         QName(Namespace("_kiwi.Interfaces:IFocusManagerGroup"), "groupName")
+      getlocal            8
+      getproperty         QName(Namespace("_kiwi.Interfaces:IFocusManagerGroup"), "groupName")
+      equals
+      dup
+      iffalse             L159
+
+      pop
+      getlocal            11
+      getproperty         QName(Namespace("_kiwi.Interfaces:IFocusManagerGroup"), "selected")
+      convert_b
+L159:
+      iffalse             L166
+
+      debugline           863
+      getlocal            9
+      convert_i
+      setlocal1
+
+      debugline           864
+      jump                L173
+
+L166:
+      debugline           855
+      inclocal_i          9
+L168:
+      getlocal            9
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "focusableCandidates")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L126
+
+L173:
+      debugline           869
+      getlocal1
+      returnvalue
+
+L176:
+      debugline           815
+      jump                L35
+
+L178:
+      debugline           872
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "form")
+   method
+    name "_kiwi.Managers:FocusManager/form/get"
+    refid "_kiwi.Managers:FocusManager/instance/form/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           875
+      getlocal0
+      pushscope
+
+      debugline           877
+      getlocal0
+      getproperty         QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_form")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "form")
+   method
+    name "_kiwi.Managers:FocusManager/form/set"
+    refid "_kiwi.Managers:FocusManager/instance/form/setter"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "_kiwi.Managers:FocusManager/FocusManager"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+      debugline           880
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 880
+      debugline           882
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("_kiwi.Managers:FocusManager"), "_form")
+
+      debugline           883
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "_kiwi.Managers:FocusManager/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

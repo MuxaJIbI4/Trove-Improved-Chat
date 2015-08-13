@@ -1,0 +1,38 @@
+script ; 64
+ sinit
+  name ""
+  refid "mx.geom:Transform/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;Transform.as"
+    debugline           43
+    findpropstrict      Multiname("Transform", [PackageNamespace("mx.geom")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.geom"), "Transform")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.geom"), "Transform")
+    newclass            "mx.geom:Transform"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("mx.geom"), "Transform")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;Transform.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.geom"), "Transform")
+  #include "Transform.class.asasm"
+ end ; trait
+end ; script

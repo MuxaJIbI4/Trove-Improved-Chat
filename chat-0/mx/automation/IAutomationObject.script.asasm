@@ -1,0 +1,29 @@
+script ; 4
+ sinit
+  name ""
+  refid "mx.automation:IAutomationObject/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/automation;IAutomationObject.as"
+    debugline           30
+    findpropstrict      Multiname("IAutomationObject", [PackageNamespace("mx.automation")])
+    pushnull
+    newclass            "mx.automation:IAutomationObject"
+    initproperty        QName(PackageNamespace("mx.automation"), "IAutomationObject")
+
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.automation"), "IAutomationObject")
+  #include "IAutomationObject.class.asasm"
+ end ; trait
+end ; script

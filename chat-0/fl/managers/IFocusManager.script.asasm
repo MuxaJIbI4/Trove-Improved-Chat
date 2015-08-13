@@ -1,0 +1,29 @@
+script ; 10
+ sinit
+  name ""
+  refid "fl.managers:IFocusManager/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\managers;IFocusManager.as"
+    debugline           23
+    findpropstrict      Multiname("IFocusManager", [PackageNamespace("fl.managers")])
+    pushnull
+    newclass            "fl.managers:IFocusManager"
+    initproperty        QName(PackageNamespace("fl.managers"), "IFocusManager")
+
+    debugline           2
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("fl.managers"), "IFocusManager")
+  #include "IFocusManager.class.asasm"
+ end ; trait
+end ; script

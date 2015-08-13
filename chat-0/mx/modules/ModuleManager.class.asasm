@@ -1,0 +1,148 @@
+class
+ refid "mx.modules:ModuleManager"
+ instance QName(PackageNamespace("mx.modules"), "ModuleManager")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.modules:ModuleManager")
+  iinit
+   name "mx.modules:ModuleManager/ModuleManager"
+   refid "mx.modules:ModuleManager/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+     debugline           1171
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "mx.modules:ModuleManager/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 17
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait method QName(PackageNamespace(""), "getModule") flag FINAL dispid 3
+  method
+   name "mx.modules:ModuleManager/getModule"
+   refid "mx.modules:ModuleManager/class/getModule"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace("mx.modules"), "IModuleInfo")
+   flag HAS_PARAM_NAMES
+   paramname "4.0.0.0"
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+     debugline           58
+     getlocal0
+     pushscope
+
+     debug               1, "url", 0, 58
+     debugline           60
+     findpropstrict      QName(PrivateNamespace("mx.modules:ModuleManager"), "getSingleton")
+     callproperty        QName(PrivateNamespace("mx.modules:ModuleManager"), "getSingleton"), 0
+     getlocal1
+     callproperty        Multiname("getModule", [PrivateNamespace("mx.modules:ModuleManager"), PrivateNamespace("ModuleManager.as$140"), PackageNamespace(""), PackageNamespace("mx.modules"), PackageInternalNs("mx.modules"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.modules:ModuleManager"), StaticProtectedNs("mx.modules:ModuleManager"), StaticProtectedNs("Object")]), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getAssociatedFactory") flag FINAL dispid 4
+  method
+   name "mx.modules:ModuleManager/getAssociatedFactory"
+   refid "mx.modules:ModuleManager/class/getAssociatedFactory"
+   param QName(PackageNamespace(""), "Object")
+   returns QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
+   flag HAS_PARAM_NAMES
+   paramname "url"
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+     debugline           77
+     getlocal0
+     pushscope
+
+     debug               1, "object", 0, 77
+     debugline           80
+     findpropstrict      QName(PrivateNamespace("mx.modules:ModuleManager"), "getSingleton")
+     callproperty        QName(PrivateNamespace("mx.modules:ModuleManager"), "getSingleton"), 0
+     getlocal1
+     callproperty        Multiname("getAssociatedFactory", [PrivateNamespace("mx.modules:ModuleManager"), PrivateNamespace("ModuleManager.as$140"), PackageNamespace(""), PackageNamespace("mx.modules"), PackageInternalNs("mx.modules"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.modules:ModuleManager"), StaticProtectedNs("mx.modules:ModuleManager"), StaticProtectedNs("Object")]), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("mx.modules:ModuleManager"), "getSingleton") flag FINAL dispid 5
+  method
+   name "mx.modules:ModuleManager/private:getSingleton"
+   refid "mx.modules:ModuleManager/class/mx.modules:ModuleManager/class/getSingleton"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+     debugline           87
+     getlocal0
+     pushscope
+
+     debugline           89
+     getlex              QName(PackageNamespace("mx.modules"), "ModuleManagerGlobals")
+     getproperty         QName(PackageNamespace(""), "managerSingleton")
+     iftrue              L13
+
+     debugline           90
+     getlex              QName(PackageNamespace("mx.modules"), "ModuleManagerGlobals")
+     findpropstrict      QName(PrivateNamespace("ModuleManager.as$140"), "ModuleManagerImpl")
+     constructprop       QName(PrivateNamespace("ModuleManager.as$140"), "ModuleManagerImpl"), 0
+     setproperty         QName(PackageNamespace(""), "managerSingleton")
+
+L13:
+     debugline           92
+     getlex              QName(PackageNamespace("mx.modules"), "ModuleManagerGlobals")
+     getproperty         QName(PackageNamespace(""), "managerSingleton")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,77 @@
+class
+ refid "mx.resources:ResourceManagerImpl/ResourceModuleInfo"
+ instance QName(PrivateNamespace("ResourceManagerImpl.as$130"), "ResourceModuleInfo")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("ResourceManagerImpl.as$130:ResourceModuleInfo")
+  iinit
+   name "ResourceManagerImpl.as$130:ResourceModuleInfo/ResourceModuleInfo"
+   refid "mx.resources:ResourceManagerImpl/ResourceModuleInfo/instance/init"
+   param QName(PackageNamespace("mx.modules"), "IModuleInfo")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Function")
+   flag HAS_PARAM_NAMES
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 2
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+     debugline           1020
+     getlocal0
+     pushscope
+
+     debug               1, "moduleInfo", 0, 1020
+     debug               1, "readyHandler", 1, 1020
+     debug               1, "errorHandler", 2, 1020
+     debugline           1024
+     getlocal0
+     constructsuper      0
+
+     debugline           1026
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "moduleInfo")
+
+     debugline           1027
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "readyHandler")
+
+     debugline           1028
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "errorHandler")
+
+     debugline           1029
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "errorHandler") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PackageNamespace(""), "moduleInfo") type QName(PackageNamespace("mx.modules"), "IModuleInfo") end
+  trait slot QName(PackageNamespace(""), "readyHandler") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PackageNamespace(""), "resourceModule") type QName(PackageNamespace("mx.resources"), "IResourceModule") end
+ end ; instance
+ cinit
+  name ""
+  refid "mx.resources:ResourceManagerImpl/ResourceModuleInfo/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

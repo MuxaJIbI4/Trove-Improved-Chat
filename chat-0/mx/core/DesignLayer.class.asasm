@@ -1,0 +1,859 @@
+class
+ refid "mx.core:DesignLayer"
+ instance QName(PackageNamespace("mx.core"), "DesignLayer")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  implements Multiname("IMXMLObject", [PackageNamespace("mx.core")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.core:DesignLayer")
+  iinit
+   name "mx.core:DesignLayer/DesignLayer"
+   refid "mx.core:DesignLayer/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+     debugline           57
+     getlocal0
+     pushscope
+
+     debugline           152
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PrivateNamespace("mx.core:DesignLayer"), "layerChildren")
+
+     debugline           59
+     getlocal0
+     constructsuper      0
+
+     debugline           60
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("mx.core:DesignLayer"), "_id") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "id")
+   method
+    name "mx.core:DesignLayer/id/get"
+    refid "mx.core:DesignLayer/instance/id/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           82
+      getlocal0
+      pushscope
+
+      debugline           84
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "_id")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "id")
+   method
+    name "mx.core:DesignLayer/id/set"
+    refid "mx.core:DesignLayer/instance/id/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "layerChildren"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           90
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 90
+      debugline           92
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.core:DesignLayer"), "_id")
+
+      debugline           93
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("mx.core:DesignLayer"), "_parent") type QName(PackageNamespace("mx.core"), "DesignLayer") end
+  trait getter QName(PackageNamespace(""), "parent")
+   method
+    name "mx.core:DesignLayer/parent/get"
+    refid "mx.core:DesignLayer/instance/parent/getter"
+    returns QName(PackageNamespace("mx.core"), "DesignLayer")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           115
+      getlocal0
+      pushscope
+
+      debugline           117
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "_parent")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("mx.core:DesignLayer"), "parentChanged")
+   method
+    name "mx.core:DesignLayer/protected:parentChanged"
+    refid "mx.core:DesignLayer/instance/mx.core:DesignLayer:parentChanged"
+    param QName(PackageNamespace("mx.core"), "DesignLayer")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "layerChildren"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           132
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 132
+      debugline           137
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "_parent")
+      convert_b
+      dup
+      iffalse             L14
+
+      pop
+      getlocal1
+      convert_b
+L14:
+      iffalse             L20
+
+      debugline           138
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "_parent")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeLayer"), 1
+
+L20:
+      debugline           140
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.core:DesignLayer"), "_parent")
+
+      debugline           141
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "_visible")
+      callpropvoid        QName(ProtectedNamespace("mx.core:DesignLayer"), "effectiveVisibilityChanged"), 1
+
+      debugline           142
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "_alpha")
+      callpropvoid        QName(ProtectedNamespace("mx.core:DesignLayer"), "effectiveAlphaChanged"), 1
+
+      debugline           143
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("mx.core:DesignLayer"), "layerChildren") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("mx.core:DesignLayer"), "_visible") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait getter QName(PackageNamespace(""), "visible")
+   method
+    name "mx.core:DesignLayer/visible/get"
+    refid "mx.core:DesignLayer/instance/visible/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           177
+      getlocal0
+      pushscope
+
+      debugline           179
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "_visible")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "visible")
+   method
+    name "mx.core:DesignLayer/visible/set"
+    refid "mx.core:DesignLayer/instance/visible/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "layerChildren"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           185
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 185
+      debugline           187
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "_visible")
+      getlocal1
+      ifeq                L19
+
+      debugline           189
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.core:DesignLayer"), "_visible")
+
+      debugline           190
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "effectiveVisibility")
+      callpropvoid        QName(ProtectedNamespace("mx.core:DesignLayer"), "effectiveVisibilityChanged"), 1
+
+L19:
+      debugline           192
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "effectiveVisibility")
+   method
+    name "mx.core:DesignLayer/effectiveVisibility/get"
+    refid "mx.core:DesignLayer/instance/effectiveVisibility/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           210
+      getlocal0
+      pushscope
+
+      debug               1, "isVisible", 0, 212
+      debug               1, "currentLayer", 1, 213
+      debugline           212
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "_visible")
+      convert_b
+      setlocal1
+
+      debugline           213
+      getlocal0
+      coerce              QName(PackageNamespace("mx.core"), "DesignLayer")
+      setlocal2
+
+      jump                L27
+
+L16:
+      label
+      debugline           216
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("mx.core"), "DesignLayer")
+      setlocal2
+
+      debugline           217
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "visible")
+      convert_b
+      setlocal1
+
+L27:
+      debugline           214
+      getlocal1
+      convert_b
+      dup
+      iffalse             L36
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "parent")
+      convert_b
+L36:
+      iftrue              L16
+
+      debugline           219
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("mx.core:DesignLayer"), "effectiveVisibilityChanged")
+   method
+    name "mx.core:DesignLayer/protected:effectiveVisibilityChanged"
+    refid "mx.core:DesignLayer/instance/mx.core:DesignLayer:effectiveVisibilityChanged"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "layerChildren"
+    body
+     maxstack 9
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           228
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("mx.core"), "DesignLayer")
+      setlocal3
+
+      debug               1, "value", 0, 228
+      debug               1, "i", 1, 234
+      debugline           230
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("mx.events"), "PropertyChangeEvent")
+      pushstring          "layerPropertyChange"
+      debugline           230
+      pushfalse
+      debugline           231
+      pushfalse
+      getlex              QName(PackageNamespace("mx.events"), "PropertyChangeEventKind")
+      getproperty         QName(PackageNamespace(""), "UPDATE")
+      pushstring          "effectiveVisibility"
+      debugline           232
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "effectiveVisibility")
+      not
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "effectiveVisibility")
+      constructprop       QName(PackageNamespace("mx.events"), "PropertyChangeEvent"), 7
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           234
+      pushbyte            0
+      setlocal2
+
+      jump                L51
+
+L32:
+      label
+      debug               1, "layerChild", 2, 236
+      debugline           236
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "layerChildren")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("mx.core:DesignLayer"), PackageNamespace(""), PackageNamespace("mx.core"), ProtectedNamespace("mx.core:DesignLayer"), PrivateNamespace("DesignLayer.as$69"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("mx.core:DesignLayer"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("mx.core"), "DesignLayer")
+      setlocal3
+
+      debugline           241
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "visible")
+      iffalse             L49
+
+      debugline           242
+      getlocal3
+      getlocal1
+      callpropvoid        QName(ProtectedNamespace("mx.core:DesignLayer"), "effectiveVisibilityChanged"), 1
+
+L49:
+      debugline           234
+      inclocal_i          2
+L51:
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "layerChildren")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L32
+
+      debugline           244
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("mx.core:DesignLayer"), "_alpha") type QName(PackageNamespace(""), "Number") value Double(1) end
+  trait getter QName(PackageNamespace(""), "alpha")
+   method
+    name "mx.core:DesignLayer/alpha/get"
+    refid "mx.core:DesignLayer/instance/alpha/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           269
+      getlocal0
+      pushscope
+
+      debugline           271
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "_alpha")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "alpha")
+   method
+    name "mx.core:DesignLayer/alpha/set"
+    refid "mx.core:DesignLayer/instance/alpha/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "layerChildren"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           277
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      debug               1, "value", 0, 277
+      debugline           279
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "_alpha")
+      getlocal1
+      ifeq                L26
+
+      debug               1, "oldAlpha", 1, 281
+      debugline           281
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "_alpha")
+      convert_d
+      setlocal2
+
+      debugline           282
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.core:DesignLayer"), "_alpha")
+
+      debugline           283
+      getlocal0
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("mx.core:DesignLayer"), "effectiveAlphaChanged"), 1
+
+L26:
+      debugline           285
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "effectiveAlpha")
+   method
+    name "mx.core:DesignLayer/effectiveAlpha/get"
+    refid "mx.core:DesignLayer/instance/effectiveAlpha/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           304
+      getlocal0
+      pushscope
+
+      debug               1, "currentAlpha", 0, 306
+      debug               1, "currentLayer", 1, 307
+      debugline           306
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "_alpha")
+      convert_d
+      setlocal1
+
+      debugline           307
+      getlocal0
+      coerce              QName(PackageNamespace("mx.core"), "DesignLayer")
+      setlocal2
+
+      jump                L29
+
+L16:
+      label
+      debugline           310
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce              QName(PackageNamespace("mx.core"), "DesignLayer")
+      setlocal2
+
+      debugline           311
+      getlocal1
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "alpha")
+      multiply
+      convert_d
+      setlocal1
+
+L29:
+      debugline           308
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "parent")
+      iftrue              L16
+
+      debugline           313
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("mx.core:DesignLayer"), "effectiveAlphaChanged")
+   method
+    name "mx.core:DesignLayer/protected:effectiveAlphaChanged"
+    refid "mx.core:DesignLayer/instance/mx.core:DesignLayer:effectiveAlphaChanged"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "layerChildren"
+    body
+     maxstack 9
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           322
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("mx.core"), "DesignLayer")
+      setlocal3
+
+      debug               1, "oldAlpha", 0, 322
+      debug               1, "i", 1, 328
+      debugline           324
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("mx.events"), "PropertyChangeEvent")
+      pushstring          "layerPropertyChange"
+      debugline           324
+      pushfalse
+      debugline           325
+      pushfalse
+      getlex              QName(PackageNamespace("mx.events"), "PropertyChangeEventKind")
+      getproperty         QName(PackageNamespace(""), "UPDATE")
+      pushstring          "effectiveAlpha"
+      debugline           326
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "effectiveAlpha")
+      constructprop       QName(PackageNamespace("mx.events"), "PropertyChangeEvent"), 7
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           328
+      pushbyte            0
+      setlocal2
+
+      jump                L46
+
+L30:
+      label
+      debug               1, "layerChild", 2, 330
+      debugline           330
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "layerChildren")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("mx.core:DesignLayer"), PackageNamespace(""), PackageNamespace("mx.core"), ProtectedNamespace("mx.core:DesignLayer"), PrivateNamespace("DesignLayer.as$69"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("mx.core:DesignLayer"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("mx.core"), "DesignLayer")
+      setlocal3
+
+      debugline           331
+      getlocal3
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "alpha")
+      callpropvoid        QName(ProtectedNamespace("mx.core:DesignLayer"), "effectiveAlphaChanged"), 1
+
+      debugline           328
+      inclocal_i          2
+L46:
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "layerChildren")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L30
+
+      debugline           333
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "numLayers")
+   method
+    name "mx.core:DesignLayer/numLayers/get"
+    refid "mx.core:DesignLayer/instance/numLayers/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           349
+      getlocal0
+      pushscope
+
+      debugline           351
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "layerChildren")
+      getproperty         QName(PackageNamespace(""), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addLayer")
+   method
+    name "mx.core:DesignLayer/addLayer"
+    refid "mx.core:DesignLayer/instance/addLayer"
+    param QName(PackageNamespace("mx.core"), "DesignLayer")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "layerChildren"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           370
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 370
+      debugline           372
+      getlocal1
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("mx.core:DesignLayer"), "parentChanged"), 1
+
+      debugline           373
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "layerChildren")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      debugline           374
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getLayerAt")
+   method
+    name "mx.core:DesignLayer/getLayerAt"
+    refid "mx.core:DesignLayer/instance/getLayerAt"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("mx.core"), "DesignLayer")
+    flag HAS_PARAM_NAMES
+    paramname "_id"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           396
+      getlocal0
+      pushscope
+
+      debug               1, "index", 0, 396
+      debugline           398
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "layerChildren")
+      getproperty         QName(PackageNamespace(""), "length")
+      lessthan
+      dup
+      iffalse             L17
+
+      pop
+      getlocal1
+      pushbyte            0
+      greaterequals
+L17:
+      iffalse             L25
+
+      debugline           399
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "layerChildren")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("mx.core:DesignLayer"), PackageNamespace(""), PackageNamespace("mx.core"), ProtectedNamespace("mx.core:DesignLayer"), PrivateNamespace("DesignLayer.as$69"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("mx.core:DesignLayer"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("mx.core"), "DesignLayer")
+      jump                L27
+
+L25:
+      pushnull
+      coerce              QName(PackageNamespace("mx.core"), "DesignLayer")
+L27:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "initialized")
+   method
+    name "mx.core:DesignLayer/initialized"
+    refid "mx.core:DesignLayer/instance/initialized"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "layerChildren"
+    paramname "layerChildren"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           410
+      getlocal0
+      pushscope
+
+      debug               1, "document", 0, 410
+      debug               1, "id", 1, 410
+      debugline           412
+      getlocal0
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "id")
+
+      debugline           413
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeLayer")
+   method
+    name "mx.core:DesignLayer/removeLayer"
+    refid "mx.core:DesignLayer/instance/removeLayer"
+    param QName(PackageNamespace("mx.core"), "DesignLayer")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "layerChildren"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DesignLayer.as"
+      debugline           425
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 425
+      debug               1, "i", 1, 427
+      debugline           427
+      pushbyte            0
+      setlocal2
+
+      jump                L32
+
+L10:
+      label
+      debugline           429
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "layerChildren")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("mx.core:DesignLayer"), PackageNamespace(""), PackageNamespace("mx.core"), ProtectedNamespace("mx.core:DesignLayer"), PrivateNamespace("DesignLayer.as$69"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("mx.core:DesignLayer"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      ifne                L30
+
+      debugline           431
+      getlocal1
+      pushnull
+      callpropvoid        QName(ProtectedNamespace("mx.core:DesignLayer"), "parentChanged"), 1
+
+      debugline           432
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "layerChildren")
+      getlocal2
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      debugline           433
+      returnvoid
+
+L30:
+      debugline           427
+      inclocal_i          2
+L32:
+      getlocal2
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DesignLayer"), "layerChildren")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L10
+
+      debugline           436
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:DesignLayer/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

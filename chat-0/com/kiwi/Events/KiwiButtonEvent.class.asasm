@@ -1,0 +1,261 @@
+class
+ refid "com.kiwi.Events:KiwiButtonEvent"
+ instance QName(PackageNamespace("com.kiwi.Events"), "KiwiButtonEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.kiwi.Events:KiwiButtonEvent")
+  iinit
+   name "com.kiwi.Events:KiwiButtonEvent/KiwiButtonEvent"
+   refid "com.kiwi.Events:KiwiButtonEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional False()
+   optional False()
+   optional Integer(0)
+   optional Integer(0)
+   optional False()
+   optional False()
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 4
+    localcount 8
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Events;KiwiButtonEvent.as"
+     debugline           22
+     getlocal0
+     pushscope
+
+     debug               1, "type", 0, 22
+     debug               1, "bubbles", 1, 22
+     debug               1, "cancelable", 2, 22
+     debug               1, "controllerIndex", 3, 22
+     debug               1, "buttonIndex", 4, 22
+     debug               1, "isKeyboard", 5, 22
+     debug               1, "isRepeat", 6, 22
+     debugline           26
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     debugline           27
+     getlocal0
+     getlocal            4
+     initproperty        QName(PrivateNamespace("com.kiwi.Events:KiwiButtonEvent"), "_controllerIndex")
+
+     debugline           28
+     getlocal0
+     getlocal            5
+     initproperty        QName(PrivateNamespace("com.kiwi.Events:KiwiButtonEvent"), "_buttonIndex")
+
+     debugline           29
+     getlocal0
+     getlocal            6
+     initproperty        QName(PrivateNamespace("com.kiwi.Events:KiwiButtonEvent"), "_isKeyboard")
+
+     debugline           30
+     getlocal0
+     getlocal            7
+     initproperty        QName(PrivateNamespace("com.kiwi.Events:KiwiButtonEvent"), "_isRepeat")
+
+     debugline           31
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("com.kiwi.Events:KiwiButtonEvent"), "_controllerIndex") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PrivateNamespace("com.kiwi.Events:KiwiButtonEvent"), "_buttonIndex") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PrivateNamespace("com.kiwi.Events:KiwiButtonEvent"), "_isKeyboard") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("com.kiwi.Events:KiwiButtonEvent"), "_isRepeat") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    name "com.kiwi.Events:KiwiButtonEvent/clone"
+    refid "com.kiwi.Events:KiwiButtonEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 8
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Events;KiwiButtonEvent.as"
+      debugline           33
+      getlocal0
+      pushscope
+
+      debugline           35
+      findpropstrict      QName(PackageNamespace("com.kiwi.Events"), "KiwiButtonEvent")
+      getlex              QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace(""), "bubbles")
+      getlex              QName(PackageNamespace(""), "cancelable")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "controllerIndex")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "buttonIndex")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "isKeyboard")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "isRepeat")
+      constructprop       QName(PackageNamespace("com.kiwi.Events"), "KiwiButtonEvent"), 7
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "controllerIndex")
+   method
+    name "com.kiwi.Events:KiwiButtonEvent/controllerIndex/get"
+    refid "com.kiwi.Events:KiwiButtonEvent/instance/controllerIndex/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Events;KiwiButtonEvent.as"
+      debugline           38
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("com.kiwi.Events:KiwiButtonEvent"), "_controllerIndex")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "buttonIndex")
+   method
+    name "com.kiwi.Events:KiwiButtonEvent/buttonIndex/get"
+    refid "com.kiwi.Events:KiwiButtonEvent/instance/buttonIndex/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Events;KiwiButtonEvent.as"
+      debugline           39
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("com.kiwi.Events:KiwiButtonEvent"), "_buttonIndex")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "isKeyboard")
+   method
+    name "com.kiwi.Events:KiwiButtonEvent/isKeyboard/get"
+    refid "com.kiwi.Events:KiwiButtonEvent/instance/isKeyboard/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Events;KiwiButtonEvent.as"
+      debugline           40
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("com.kiwi.Events:KiwiButtonEvent"), "_isKeyboard")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "isRepeat")
+   method
+    name "com.kiwi.Events:KiwiButtonEvent/isRepeat/get"
+    refid "com.kiwi.Events:KiwiButtonEvent/instance/isRepeat/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Events;KiwiButtonEvent.as"
+      debugline           41
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("com.kiwi.Events:KiwiButtonEvent"), "_isRepeat")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "com.kiwi.Events:KiwiButtonEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "PRESS", 0, 11
+    findproperty        QName(PackageNamespace(""), "PRESS")
+    pushstring          "button_press"
+    initproperty        QName(PackageNamespace(""), "PRESS")
+
+    debug               1, "CLICK", 1, 12
+    findproperty        QName(PackageNamespace(""), "CLICK")
+    pushstring          "button_click"
+    initproperty        QName(PackageNamespace(""), "CLICK")
+
+    debug               1, "DRAG_OVER", 2, 13
+    findproperty        QName(PackageNamespace(""), "DRAG_OVER")
+    pushstring          "drag_over"
+    initproperty        QName(PackageNamespace(""), "DRAG_OVER")
+
+    debug               1, "DRAG_OUT", 3, 14
+    findproperty        QName(PackageNamespace(""), "DRAG_OUT")
+    pushstring          "drag_out"
+    initproperty        QName(PackageNamespace(""), "DRAG_OUT")
+
+    debug               1, "RELEASE_OUTSIDE", 4, 15
+    findproperty        QName(PackageNamespace(""), "RELEASE_OUTSIDE")
+    pushstring          "release_outside"
+    initproperty        QName(PackageNamespace(""), "RELEASE_OUTSIDE")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "PRESS") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("button_press") end
+ trait const QName(PackageNamespace(""), "CLICK") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("button_click") end
+ trait const QName(PackageNamespace(""), "DRAG_OVER") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("drag_over") end
+ trait const QName(PackageNamespace(""), "DRAG_OUT") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("drag_out") end
+ trait const QName(PackageNamespace(""), "RELEASE_OUTSIDE") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("release_outside") end
+end ; class

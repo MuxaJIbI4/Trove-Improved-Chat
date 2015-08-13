@@ -1,0 +1,1237 @@
+class
+ refid "IggyTween"
+ instance QName(PackageNamespace(""), "IggyTween")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("IggyTween")
+  iinit
+   name "IggyTween/IggyTween"
+   refid "IggyTween/instance/init"
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   flag NEED_ACTIVATION
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional False()
+   optional False()
+   optional False()
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 3
+    localcount 11
+    initscopedepth 6
+    maxscopedepth 8
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+     debugline           282
+     getlocal0
+     pushscope
+
+     newactivation
+     dup
+     setlocal            10
+
+     pushscope
+
+     debug               1, "IggyTween$0", 9, 282
+     getscopeobject      1
+     pushnull
+     coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+     setslot             10
+
+     getscopeobject      1
+     pushnull
+     coerce              QName(PackageNamespace(""), "IggyTween")
+     setslot             11
+
+     getscopeobject      1
+     getlocal1
+     setslot             1
+
+     getscopeobject      1
+     getlocal2
+     setslot             2
+
+     getscopeobject      1
+     getlocal3
+     setslot             3
+
+     getscopeobject      1
+     getlocal            4
+     setslot             4
+
+     getscopeobject      1
+     getlocal            5
+     setslot             5
+
+     getscopeobject      1
+     getlocal            6
+     setslot             6
+
+     getscopeobject      1
+     getlocal            7
+     setslot             7
+
+     getscopeobject      1
+     getlocal            8
+     setslot             8
+
+     getscopeobject      1
+     getlocal            9
+     setslot             9
+
+     debug               1, "obj", 0, 282
+     debug               1, "prop", 1, 282
+     debug               1, "func", 2, 282
+     debug               1, "begin", 3, 282
+     debug               1, "finish", 4, 282
+     debug               1, "duration", 5, 282
+     debug               1, "useSeconds", 6, 282
+     debug               1, "useWeakRef", 7, 282
+     debug               1, "manageCollisions", 8, 282
+     debugline           283
+     getlocal0
+     constructsuper      0
+
+     debugline           285
+     getscopeobject      1
+     getslot             9
+     iffalse             L105
+
+     debugline           286
+     getscopeobject      1
+     getlex              QName(PrivateNamespace("IggyTween"), "_tweenObjects")
+     getscopeobject      1
+     getslot             1
+     getproperty         MultinameL([PrivateNamespace("IggyTween"), PackageNamespace("flash.utils"), PackageNamespace(""), PrivateNamespace("IggyTween.as$108"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.display"), ProtectedNamespace("IggyTween"), StaticProtectedNs("IggyTween"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+     setslot             10
+
+     debugline           287
+     getscopeobject      1
+     getslot             10
+     iftrue              L80
+
+     debugline           289
+     getlex              QName(PrivateNamespace("IggyTween"), "_tweenObjects")
+     getscopeobject      1
+     getslot             1
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+     setproperty         MultinameL([PrivateNamespace("IggyTween"), PackageNamespace("flash.utils"), PackageNamespace(""), PrivateNamespace("IggyTween.as$108"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.display"), ProtectedNamespace("IggyTween"), StaticProtectedNs("IggyTween"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     jump                L105
+
+L80:
+     debugline           292
+     getscopeobject      1
+     getscopeobject      1
+     getslot             10
+     getscopeobject      1
+     getslot             2
+     getproperty         MultinameL([PrivateNamespace("IggyTween"), PackageNamespace("flash.utils"), PackageNamespace(""), PrivateNamespace("IggyTween.as$108"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.display"), ProtectedNamespace("IggyTween"), StaticProtectedNs("IggyTween"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce              QName(PackageNamespace(""), "IggyTween")
+     setslot             11
+
+     debugline           294
+     getscopeobject      1
+     getslot             11
+     iffalse             L105
+
+     debugline           295
+     getscopeobject      1
+     getslot             11
+     callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+     debugline           296
+     getscopeobject      1
+     getslot             11
+     callpropvoid        QName(PrivateNamespace("IggyTween"), "_cancel"), 0
+
+     debugline           297
+     getscopeobject      1
+     getslot             11
+     callpropvoid        QName(PackageNamespace(""), "motionOverride"), 0
+
+L105:
+     debugline           303
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     initproperty        QName(PrivateNamespace("IggyTween"), "_sprite")
+
+     debugline           305
+     getlocal0
+     getscopeobject      1
+     getslot             1
+     initproperty        QName(PrivateNamespace("IggyTween"), "_obj")
+
+     debugline           306
+     getlocal0
+     getscopeobject      1
+     getslot             2
+     initproperty        QName(PrivateNamespace("IggyTween"), "_prop")
+
+     debugline           307
+     getscopeobject      1
+     getslot             3
+     pushnull
+     ifeq                L131
+
+     debugline           308
+     getlocal0
+     getscopeobject      1
+     getslot             3
+     initproperty        QName(PackageNamespace(""), "func")
+
+     jump                L135
+
+L131:
+     debugline           310
+     getlocal0
+     newfunction         "IggyTween/instance/init/inline_method"
+     initproperty        QName(PackageNamespace(""), "func")
+
+L135:
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+     debugline           312
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getscopeobject      1
+     getslot             4
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     iffalse             L151
+
+     debugline           313
+     getlocal0
+     getscopeobject      1
+     getslot             1
+     getscopeobject      1
+     getslot             2
+     getproperty         MultinameL([PrivateNamespace("IggyTween"), PackageNamespace("flash.utils"), PackageNamespace(""), PrivateNamespace("IggyTween.as$108"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.display"), ProtectedNamespace("IggyTween"), StaticProtectedNs("IggyTween"), StaticProtectedNs("flash.events:EventDispatcher")])
+     initproperty        QName(PackageNamespace(""), "begin")
+
+     jump                L156
+
+L151:
+     debugline           315
+     getlocal0
+     getscopeobject      1
+     getslot             4
+     initproperty        QName(PackageNamespace(""), "begin")
+
+L156:
+     debugline           317
+     getlocal0
+     getscopeobject      1
+     getslot             5
+     initproperty        QName(PackageNamespace(""), "finish")
+
+     debugline           318
+     getlocal0
+     getscopeobject      1
+     getslot             6
+     initproperty        QName(PackageNamespace(""), "duration")
+
+     debugline           319
+     getlocal0
+     getscopeobject      1
+     getslot             7
+     initproperty        QName(PackageNamespace(""), "useSeconds")
+
+     debugline           320
+     getlocal0
+     getscopeobject      1
+     getslot             9
+     initproperty        QName(PrivateNamespace("IggyTween"), "_manageCollisions")
+
+     debugline           321
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "finish")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "begin")
+     subtract
+     initproperty        QName(PrivateNamespace("IggyTween"), "_cachedDelta")
+
+     debugline           322
+     getlocal0
+     getscopeobject      1
+     getslot             8
+     initproperty        QName(PrivateNamespace("IggyTween"), "_useWeakRef")
+
+     debugline           324
+     getscopeobject      1
+     getslot             9
+     iffalse             L202
+
+     debugline           325
+     getlex              QName(PrivateNamespace("IggyTween"), "_tweenObjects")
+     getscopeobject      1
+     getslot             1
+     getproperty         MultinameL([PrivateNamespace("IggyTween"), PackageNamespace("flash.utils"), PackageNamespace(""), PrivateNamespace("IggyTween.as$108"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.display"), ProtectedNamespace("IggyTween"), StaticProtectedNs("IggyTween"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getscopeobject      1
+     getslot             2
+     getlocal0
+     setproperty         MultinameL([PrivateNamespace("IggyTween"), PackageNamespace("flash.utils"), PackageNamespace(""), PrivateNamespace("IggyTween.as$108"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.display"), ProtectedNamespace("IggyTween"), StaticProtectedNs("IggyTween"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L202:
+     debugline           327
+     getlocal0
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "isPlaying")
+
+     debugline           328
+     getlocal0
+     callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+     debugline           329
+     returnvoid
+    end ; code
+    trait slot QName(PackageInternalNs(""), "obj") slotid 1 type QName(PackageNamespace(""), "Object") end
+    trait slot QName(PackageInternalNs(""), "prop") slotid 2 type QName(PackageNamespace(""), "String") end
+    trait slot QName(PackageInternalNs(""), "func") slotid 3 type QName(PackageNamespace(""), "Function") end
+    trait slot QName(PackageInternalNs(""), "begin") slotid 4 type QName(PackageNamespace(""), "Number") end
+    trait slot QName(PackageInternalNs(""), "finish") slotid 5 type QName(PackageNamespace(""), "Number") end
+    trait slot QName(PackageInternalNs(""), "duration") slotid 6 type QName(PackageNamespace(""), "Number") end
+    trait slot QName(PackageInternalNs(""), "useSeconds") slotid 7 type QName(PackageNamespace(""), "Boolean") value False() end
+    trait slot QName(PackageInternalNs(""), "useWeakRef") slotid 8 type QName(PackageNamespace(""), "Boolean") value False() end
+    trait slot QName(PackageInternalNs(""), "manageCollisions") slotid 9 type QName(PackageNamespace(""), "Boolean") value False() end
+    trait slot QName(PackageInternalNs(""), "d") slotid 10 type QName(PackageNamespace("flash.utils"), "Dictionary") end
+    trait slot QName(PackageInternalNs(""), "t") slotid 11 type QName(PackageNamespace(""), "IggyTween") end
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "motionStart")
+   method
+    name "IggyTween/motionStart"
+    refid "IggyTween/instance/motionStart"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           126
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "motionStop")
+   method
+    name "IggyTween/motionStop"
+    refid "IggyTween/instance/motionStop"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           127
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "motionResume")
+   method
+    name "IggyTween/motionResume"
+    refid "IggyTween/instance/motionResume"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           128
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "motionLoop")
+   method
+    name "IggyTween/motionLoop"
+    refid "IggyTween/instance/motionLoop"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           129
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "motionOverride")
+   method
+    name "IggyTween/motionOverride"
+    refid "IggyTween/instance/motionOverride"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           130
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "begin") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "duration") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "finish") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "func") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PackageNamespace(""), "isPlaying") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "looping") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "position") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "useSeconds") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "motionFinishCallback") type QName(PackageNamespace(""), "Function") value Null() end
+  trait getter QName(PackageNamespace(""), "obj")
+   method
+    name "IggyTween/obj/get"
+    refid "IggyTween/instance/obj/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           151
+      getlocal0
+      pushscope
+
+      debugline           153
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_obj")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "prop")
+   method
+    name "IggyTween/prop/get"
+    refid "IggyTween/instance/prop/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           156
+      getlocal0
+      pushscope
+
+      debugline           158
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_prop")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "time")
+   method
+    name "IggyTween/time/get"
+    refid "IggyTween/instance/time/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           161
+      getlocal0
+      pushscope
+
+      debugline           163
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_time")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "time")
+   method
+    name "IggyTween/time/set"
+    refid "IggyTween/instance/time/setter"
+    param QName(PackageNamespace(""), "Number")
+    flag HAS_PARAM_NAMES
+    paramname null
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           166
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      debug               1, "value", 0, 166
+      debugline           169
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "duration")
+      ifnle               L49
+
+      debug               1, "p", 1, 174
+      debugline           171
+      getlocal1
+      pushbyte            0
+      ifnlt               L21
+
+      pushbyte            0
+      convert_d
+      setlocal1
+
+L21:
+      debugline           174
+      getlocal0
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "begin")
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_cachedDelta")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "duration")
+      callproperty        QName(PackageNamespace(""), "func"), 4
+      coerce_a
+      setlocal2
+
+      debugline           176
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace("IggyTween"), "_time")
+
+      debugline           177
+      getlocal0
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "position")
+
+      debugline           179
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_obj")
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_prop")
+      getlocal2
+      setproperty         MultinameL([PrivateNamespace("IggyTween"), PackageNamespace("flash.utils"), PackageNamespace(""), PrivateNamespace("IggyTween.as$108"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.display"), ProtectedNamespace("IggyTween"), StaticProtectedNs("IggyTween"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      jump                L81
+
+L49:
+      debugline           182
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "looping")
+      iffalse             L61
+
+      debugline           183
+      getlocal0
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "time")
+
+      debugline           184
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "motionLoop"), 0
+
+      jump                L81
+
+L61:
+      debugline           186
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "useSeconds")
+      iffalse             L70
+
+      debugline           187
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "duration")
+      setproperty         QName(PackageNamespace(""), "time")
+
+L70:
+      debugline           190
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      debugline           191
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "motionFinishCallback")
+      pushnull
+      ifeq                L81
+
+      debugline           192
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "motionFinishCallback"), 0
+
+L81:
+      debugline           195
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "continueTo")
+   method
+    name "IggyTween/continueTo"
+    refid "IggyTween/instance/continueTo"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Double(nan)
+    paramname null
+    paramname null
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           197
+      getlocal0
+      pushscope
+
+      debug               1, "finish", 0, 197
+      debug               1, "duration", 1, 197
+      debugline           199
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "position")
+      setproperty         QName(PackageNamespace(""), "begin")
+
+      debugline           200
+      getlocal0
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "finish")
+
+      debugline           201
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "finish")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "begin")
+      subtract
+      setproperty         QName(PrivateNamespace("IggyTween"), "_cachedDelta")
+
+      debugline           202
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      iftrue              L32
+
+      debugline           203
+      getlocal0
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "duration")
+
+L32:
+      debugline           211
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+      debugline           212
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "fforward")
+   method
+    name "IggyTween/fforward"
+    refid "IggyTween/instance/fforward"
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           214
+      getlocal0
+      pushscope
+
+      debugline           216
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "duration")
+      callpropvoid        QName(PrivateNamespace("IggyTween"), "_settime"), 1
+
+      debugline           218
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextFrame")
+   method
+    name "IggyTween/nextFrame"
+    refid "IggyTween/instance/nextFrame"
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           220
+      getlocal0
+      pushscope
+
+      debugline           222
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "useSeconds")
+      iffalse             L19
+
+      debugline           224
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_beginTime")
+      subtract
+      pushshort           1000
+      divide
+      setproperty         QName(PackageNamespace(""), "time")
+
+      jump                L26
+
+L19:
+      debugline           226
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_time")
+      pushbyte            1
+      add
+      setproperty         QName(PackageNamespace(""), "time")
+
+L26:
+      debugline           227
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "prevFrame")
+   method
+    name "IggyTween/prevFrame"
+    refid "IggyTween/instance/prevFrame"
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           229
+      getlocal0
+      pushscope
+
+      debugline           231
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "useSeconds")
+      iftrue              L14
+
+      debugline           232
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_time")
+      decrement
+      setproperty         QName(PackageNamespace(""), "time")
+
+L14:
+      debugline           233
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "resume")
+   method
+    name "IggyTween/resume"
+    refid "IggyTween/instance/resume"
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           235
+      getlocal0
+      pushscope
+
+      debugline           238
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_obj")
+      iftrue              L10
+
+      debugline           239
+      returnvoid
+
+L10:
+      debugline           243
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "isPlaying")
+      iffalse             L16
+
+      debugline           244
+      returnvoid
+
+L16:
+      debugline           246
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_time")
+      callpropvoid        QName(PrivateNamespace("IggyTween"), "_settime"), 1
+
+      debugline           247
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("IggyTween"), "_startPlaying"), 0
+
+      debugline           248
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "motionResume"), 0
+
+      debugline           249
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "rewind")
+   method
+    name "IggyTween/rewind"
+    refid "IggyTween/instance/rewind"
+    param QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Integer(0)
+    paramname null
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           251
+      getlocal0
+      pushscope
+
+      debug               1, "t", 0, 251
+      debugline           253
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PrivateNamespace("IggyTween"), "_settime"), 1
+
+      debugline           254
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_time")
+      setproperty         QName(PackageNamespace(""), "time")
+
+      debugline           255
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "start")
+   method
+    name "IggyTween/start"
+    refid "IggyTween/instance/start"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           257
+      getlocal0
+      pushscope
+
+      debugline           260
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_obj")
+      iftrue              L10
+
+      debugline           261
+      returnvoid
+
+L10:
+      debugline           263
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "rewind"), 0
+
+      debugline           264
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "isPlaying")
+      iftrue              L23
+
+      debugline           265
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("IggyTween"), "_startPlaying"), 0
+
+      debugline           266
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "motionStart"), 0
+
+L23:
+      debugline           268
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "stop")
+   method
+    name "IggyTween/stop"
+    refid "IggyTween/instance/stop"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           270
+      getlocal0
+      pushscope
+
+      debugline           272
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("IggyTween"), "_stopPlaying"), 0
+
+      debugline           273
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "motionStop"), 0
+
+      debugline           274
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "yoyo")
+   method
+    name "IggyTween/yoyo"
+    refid "IggyTween/instance/yoyo"
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           276
+      getlocal0
+      pushscope
+
+      debugline           279
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "begin")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "time")
+      callpropvoid        QName(PackageNamespace(""), "continueTo"), 2
+
+      debugline           280
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("IggyTween"), "_time") end
+  trait slot QName(PrivateNamespace("IggyTween"), "_beginTime") end
+  trait slot QName(PrivateNamespace("IggyTween"), "_cachedDelta") end
+  trait slot QName(PrivateNamespace("IggyTween"), "_sprite") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace("IggyTween"), "_manageCollisions") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("IggyTween"), "_useWeakRef") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("IggyTween"), "_obj") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("IggyTween"), "_prop") type QName(PackageNamespace(""), "String") end
+  trait method QName(PrivateNamespace("IggyTween"), "_settime")
+   method
+    name "IggyTween/private:_settime"
+    refid "IggyTween/instance/IggyTween/_settime"
+    param QName(PackageNamespace(""), "Number")
+    flag HAS_PARAM_NAMES
+    paramname null
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           349
+      getlocal0
+      pushscope
+
+      debug               1, "now", 0, 349
+      debugline           351
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace("IggyTween"), "_time")
+
+      debugline           352
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "useSeconds")
+      iffalse             L22
+
+      debugline           353
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      getlocal1
+      pushshort           1000
+      multiply
+      subtract
+      setproperty         QName(PrivateNamespace("IggyTween"), "_beginTime")
+
+L22:
+      debugline           354
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("IggyTween"), "_cancel")
+   method
+    name "IggyTween/private:_cancel"
+    refid "IggyTween/instance/IggyTween/_cancel"
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           356
+      getlocal0
+      pushscope
+
+      debugline           358
+      getlocal0
+      pushnull
+      setproperty         QName(PrivateNamespace("IggyTween"), "_obj")
+
+      debugline           359
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("IggyTween"), "_startPlaying")
+   method
+    name "IggyTween/private:_startPlaying"
+    refid "IggyTween/instance/IggyTween/_startPlaying"
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           361
+      getlocal0
+      pushscope
+
+      debugline           363
+      getlocal0
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "isPlaying")
+
+      debugline           364
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_sprite")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_onEnterFrame")
+      pushfalse
+      pushbyte            0
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_useWeakRef")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           365
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_manageCollisions")
+      iffalse             L33
+
+      debugline           366
+      getlex              QName(PrivateNamespace("IggyTween"), "_tweenObjects")
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_obj")
+      getproperty         MultinameL([PrivateNamespace("IggyTween"), PackageNamespace("flash.utils"), PackageNamespace(""), PrivateNamespace("IggyTween.as$108"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.display"), ProtectedNamespace("IggyTween"), StaticProtectedNs("IggyTween"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_prop")
+      getlocal0
+      setproperty         MultinameL([PrivateNamespace("IggyTween"), PackageNamespace("flash.utils"), PackageNamespace(""), PrivateNamespace("IggyTween.as$108"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.display"), ProtectedNamespace("IggyTween"), StaticProtectedNs("IggyTween"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L33:
+      debugline           367
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("IggyTween"), "_stopPlaying")
+   method
+    name "IggyTween/private:_stopPlaying"
+    refid "IggyTween/instance/IggyTween/_stopPlaying"
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           369
+      getlocal0
+      pushscope
+
+      debugline           371
+      getlocal0
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "isPlaying")
+
+      debugline           372
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_sprite")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_onEnterFrame")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      debugline           373
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_manageCollisions")
+      iffalse             L29
+
+      debugline           374
+      getlex              QName(PrivateNamespace("IggyTween"), "_tweenObjects")
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_obj")
+      getproperty         MultinameL([PrivateNamespace("IggyTween"), PackageNamespace("flash.utils"), PackageNamespace(""), PrivateNamespace("IggyTween.as$108"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.display"), ProtectedNamespace("IggyTween"), StaticProtectedNs("IggyTween"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         QName(PrivateNamespace("IggyTween"), "_prop")
+      pushnull
+      setproperty         MultinameL([PrivateNamespace("IggyTween"), PackageNamespace("flash.utils"), PackageNamespace(""), PrivateNamespace("IggyTween.as$108"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.display"), ProtectedNamespace("IggyTween"), StaticProtectedNs("IggyTween"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L29:
+      debugline           375
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("IggyTween"), "_onEnterFrame")
+   method
+    name "IggyTween/private:_onEnterFrame"
+    refid "IggyTween/instance/IggyTween/_onEnterFrame"
+    param QName(PackageNamespace("flash.events"), "Event")
+    flag HAS_PARAM_NAMES
+    paramname null
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+      debugline           377
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 377
+      debugline           379
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "nextFrame"), 0
+
+      debugline           380
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "IggyTween/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "_tweenObjects", 0, 343
+    findproperty        QName(PrivateNamespace("IggyTween"), "_tweenObjects")
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    pushtrue
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+    setproperty         QName(PrivateNamespace("IggyTween"), "_tweenObjects")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("IggyTween"), "_tweenObjects") slotid 1 type QName(PackageNamespace("flash.utils"), "Dictionary") end
+end ; class

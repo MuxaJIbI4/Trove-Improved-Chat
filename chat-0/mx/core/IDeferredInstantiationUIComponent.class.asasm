@@ -1,0 +1,118 @@
+class
+ refid "mx.core:IDeferredInstantiationUIComponent"
+ instance QName(PackageNamespace("mx.core"), "IDeferredInstantiationUIComponent")
+  implements Multiname("IUIComponent", [PackageNamespace("mx.core")])
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.core:IDeferredInstantiationUIComponent/IDeferredInstantiationUIComponent"
+   refid "mx.core:IDeferredInstantiationUIComponent/instance/init"
+  end ; method
+  trait setter QName(Namespace("mx.core:IDeferredInstantiationUIComponent"), "cacheHeuristic")
+   method
+    name "mx.core:IDeferredInstantiationUIComponent/mx.core:IDeferredInstantiationUIComponent:cacheHeuristic/set"
+    refid "mx.core:IDeferredInstantiationUIComponent/instance/mx.core:IDeferredInstantiationUIComponent:cacheHeuristic/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname ""
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IDeferredInstantiationUIComponent"), "cachePolicy")
+   method
+    name "mx.core:IDeferredInstantiationUIComponent/mx.core:IDeferredInstantiationUIComponent:cachePolicy/get"
+    refid "mx.core:IDeferredInstantiationUIComponent/instance/mx.core:IDeferredInstantiationUIComponent:cachePolicy/getter"
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IDeferredInstantiationUIComponent"), "descriptor")
+   method
+    name "mx.core:IDeferredInstantiationUIComponent/mx.core:IDeferredInstantiationUIComponent:descriptor/get"
+    refid "mx.core:IDeferredInstantiationUIComponent/instance/mx.core:IDeferredInstantiationUIComponent:descriptor/getter"
+    returns QName(PackageNamespace("mx.core"), "UIComponentDescriptor")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IDeferredInstantiationUIComponent"), "descriptor")
+   method
+    name "mx.core:IDeferredInstantiationUIComponent/mx.core:IDeferredInstantiationUIComponent:descriptor/set"
+    refid "mx.core:IDeferredInstantiationUIComponent/instance/mx.core:IDeferredInstantiationUIComponent:descriptor/setter"
+    param QName(PackageNamespace("mx.core"), "UIComponentDescriptor")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname ""
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IDeferredInstantiationUIComponent"), "id")
+   method
+    name "mx.core:IDeferredInstantiationUIComponent/mx.core:IDeferredInstantiationUIComponent:id/get"
+    refid "mx.core:IDeferredInstantiationUIComponent/instance/mx.core:IDeferredInstantiationUIComponent:id/getter"
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IDeferredInstantiationUIComponent"), "id")
+   method
+    name "mx.core:IDeferredInstantiationUIComponent/mx.core:IDeferredInstantiationUIComponent:id/set"
+    refid "mx.core:IDeferredInstantiationUIComponent/instance/mx.core:IDeferredInstantiationUIComponent:id/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname ""
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IDeferredInstantiationUIComponent"), "createReferenceOnParentDocument")
+   method
+    name "mx.core:IDeferredInstantiationUIComponent/mx.core:IDeferredInstantiationUIComponent:createReferenceOnParentDocument"
+    refid "mx.core:IDeferredInstantiationUIComponent/instance/mx.core:IDeferredInstantiationUIComponent:createReferenceOnParentDocument"
+    param QName(PackageNamespace("mx.core"), "IFlexDisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname ""
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IDeferredInstantiationUIComponent"), "deleteReferenceOnParentDocument")
+   method
+    name "mx.core:IDeferredInstantiationUIComponent/mx.core:IDeferredInstantiationUIComponent:deleteReferenceOnParentDocument"
+    refid "mx.core:IDeferredInstantiationUIComponent/instance/mx.core:IDeferredInstantiationUIComponent:deleteReferenceOnParentDocument"
+    param QName(PackageNamespace("mx.core"), "IFlexDisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname ""
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IDeferredInstantiationUIComponent"), "executeBindings")
+   method
+    name "mx.core:IDeferredInstantiationUIComponent/mx.core:IDeferredInstantiationUIComponent:executeBindings"
+    refid "mx.core:IDeferredInstantiationUIComponent/instance/mx.core:IDeferredInstantiationUIComponent:executeBindings"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional False()
+    paramname ""
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IDeferredInstantiationUIComponent"), "registerEffects")
+   method
+    name "mx.core:IDeferredInstantiationUIComponent/mx.core:IDeferredInstantiationUIComponent:registerEffects"
+    refid "mx.core:IDeferredInstantiationUIComponent/instance/mx.core:IDeferredInstantiationUIComponent:registerEffects"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname ""
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:IDeferredInstantiationUIComponent/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 6
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

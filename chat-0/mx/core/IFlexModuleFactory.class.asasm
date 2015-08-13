@@ -1,0 +1,104 @@
+class
+ refid "mx.core:IFlexModuleFactory"
+ instance QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.core:IFlexModuleFactory/IFlexModuleFactory"
+   refid "mx.core:IFlexModuleFactory/instance/init"
+  end ; method
+  trait getter QName(Namespace("mx.core:IFlexModuleFactory"), "preloadedRSLs")
+   method
+    name "mx.core:IFlexModuleFactory/mx.core:IFlexModuleFactory:preloadedRSLs/get"
+    refid "mx.core:IFlexModuleFactory/instance/mx.core:IFlexModuleFactory:preloadedRSLs/getter"
+    returns QName(PackageNamespace("flash.utils"), "Dictionary")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexModuleFactory"), "allowDomain")
+   method
+    name "mx.core:IFlexModuleFactory/mx.core:IFlexModuleFactory:allowDomain"
+    refid "mx.core:IFlexModuleFactory/instance/mx.core:IFlexModuleFactory:allowDomain"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_REST
+    flag HAS_PARAM_NAMES
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexModuleFactory"), "allowInsecureDomain")
+   method
+    name "mx.core:IFlexModuleFactory/mx.core:IFlexModuleFactory:allowInsecureDomain"
+    refid "mx.core:IFlexModuleFactory/instance/mx.core:IFlexModuleFactory:allowInsecureDomain"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_REST
+    flag HAS_PARAM_NAMES
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexModuleFactory"), "callInContext")
+   method
+    name "mx.core:IFlexModuleFactory/mx.core:IFlexModuleFactory:callInContext"
+    refid "mx.core:IFlexModuleFactory/instance/mx.core:IFlexModuleFactory:callInContext"
+    param QName(PackageNamespace(""), "Function")
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "Boolean")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname null
+    paramname null
+    paramname null
+    paramname null
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexModuleFactory"), "create")
+   method
+    name "mx.core:IFlexModuleFactory/mx.core:IFlexModuleFactory:create"
+    refid "mx.core:IFlexModuleFactory/instance/mx.core:IFlexModuleFactory:create"
+    returns QName(PackageNamespace(""), "Object")
+    flag NEED_REST
+    flag HAS_PARAM_NAMES
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexModuleFactory"), "getImplementation")
+   method
+    name "mx.core:IFlexModuleFactory/mx.core:IFlexModuleFactory:getImplementation"
+    refid "mx.core:IFlexModuleFactory/instance/mx.core:IFlexModuleFactory:getImplementation"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    flag HAS_PARAM_NAMES
+    paramname "flash.utils"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexModuleFactory"), "info")
+   method
+    name "mx.core:IFlexModuleFactory/mx.core:IFlexModuleFactory:info"
+    refid "mx.core:IFlexModuleFactory/instance/mx.core:IFlexModuleFactory:info"
+    returns QName(PackageNamespace(""), "Object")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexModuleFactory"), "registerImplementation")
+   method
+    name "mx.core:IFlexModuleFactory/mx.core:IFlexModuleFactory:registerImplementation"
+    refid "mx.core:IFlexModuleFactory/instance/mx.core:IFlexModuleFactory:registerImplementation"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IFlexModuleFactory.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IFlexModuleFactory.as"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:IFlexModuleFactory/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

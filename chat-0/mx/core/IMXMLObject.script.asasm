@@ -1,0 +1,29 @@
+script ; 26
+ sinit
+  name ""
+  refid "mx.core:IMXMLObject/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IMXMLObject.as"
+    debugline           26
+    findpropstrict      Multiname("IMXMLObject", [PackageNamespace("mx.core")])
+    pushnull
+    newclass            "mx.core:IMXMLObject"
+    initproperty        QName(PackageNamespace("mx.core"), "IMXMLObject")
+
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "IMXMLObject")
+  #include "IMXMLObject.class.asasm"
+ end ; trait
+end ; script

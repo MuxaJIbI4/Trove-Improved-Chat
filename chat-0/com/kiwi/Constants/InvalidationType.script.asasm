@@ -1,0 +1,34 @@
+script ; 19
+ sinit
+  name ""
+  refid "com.kiwi.Constants:InvalidationType/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Constants;InvalidationType.as"
+    debugline           7
+    findpropstrict      Multiname("InvalidationType", [PackageNamespace("com.kiwi.Constants")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.kiwi.Constants:InvalidationType"
+    popscope
+    initproperty        QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Constants;InvalidationType.as"
+    debugline           1
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+  #include "InvalidationType.class.asasm"
+ end ; trait
+end ; script

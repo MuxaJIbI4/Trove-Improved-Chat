@@ -1,0 +1,62 @@
+script ; 45
+ sinit
+  name ""
+  refid "mx.resources:LocaleSorter/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+    debugline           22
+    findpropstrict      Multiname("LocaleSorter", [PackageNamespace("mx.resources")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.resources:LocaleSorter"
+    popscope
+    initproperty        QName(PackageNamespace("mx.resources"), "LocaleSorter")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+    debugline           196
+    findpropstrict      Multiname("LocaleID", [PrivateNamespace("LocaleSorter.as$133")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.resources:LocaleSorter/LocaleID"
+    popscope
+    initproperty        QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleID")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+    debugline           612
+    findpropstrict      Multiname("LocaleRegistry", [PrivateNamespace("LocaleSorter.as$133")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.resources:LocaleSorter/LocaleRegistry"
+    popscope
+    initproperty        QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleRegistry")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.resources"), "LocaleSorter")
+  #include "LocaleSorter.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleID")
+  #include "LocaleSorter/LocaleID.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleRegistry")
+  #include "LocaleSorter/LocaleRegistry.class.asasm"
+ end ; trait
+end ; script

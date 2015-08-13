@@ -1,0 +1,34 @@
+script ; 66
+ sinit
+  name ""
+  refid "_kiwi.Managers:FocusManager/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+    debugline           24
+    findpropstrict      Multiname("FocusManager", [PackageNamespace("_kiwi.Managers")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_kiwi.Managers:FocusManager"
+    popscope
+    initproperty        QName(PackageNamespace("_kiwi.Managers"), "FocusManager")
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Managers;FocusManager.as"
+    debugline           1
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_kiwi.Managers"), "FocusManager")
+  #include "FocusManager.class.asasm"
+ end ; trait
+end ; script
