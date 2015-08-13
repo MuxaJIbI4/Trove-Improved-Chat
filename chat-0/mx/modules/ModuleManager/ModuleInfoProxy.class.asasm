@@ -1,0 +1,652 @@
+class
+ refid "mx.modules:ModuleManager/ModuleInfoProxy"
+ instance QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfoProxy")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  implements Multiname("IModuleInfo", [PackageNamespace("mx.modules")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("ModuleManager.as$140:ModuleInfoProxy")
+  iinit
+   name "ModuleManager.as$140:ModuleInfoProxy/ModuleInfoProxy"
+   refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/init"
+   param QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfo")
+   flag HAS_PARAM_NAMES
+   paramname null
+   body
+    maxstack 6
+    localcount 2
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+     debugline           932
+     getlocal0
+     pushscope
+
+     debug               1, "info", 0, 932
+     debugline           934
+     getlocal0
+     constructsuper      0
+
+     debugline           936
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+
+     debugline           938
+     getlocal1
+     getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+     getproperty         QName(PackageNamespace(""), "SETUP")
+     getlocal0
+     getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "moduleEventHandler")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     debugline           939
+     getlocal1
+     getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+     getproperty         QName(PackageNamespace(""), "PROGRESS")
+     getlocal0
+     getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "moduleEventHandler")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     debugline           940
+     getlocal1
+     getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+     getproperty         QName(PackageNamespace(""), "READY")
+     getlocal0
+     getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "moduleEventHandler")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     debugline           941
+     getlocal1
+     getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+     getproperty         QName(PackageNamespace(""), "ERROR")
+     getlocal0
+     getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "moduleEventHandler")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     debugline           942
+     getlocal1
+     getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+     getproperty         QName(PackageNamespace(""), "UNLOAD")
+     getlocal0
+     getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "moduleEventHandler")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     debugline           943
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info") type QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfo") end
+  trait slot QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "referenced") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "_data") type QName(PackageNamespace(""), "Object") end
+  trait getter QName(PackageNamespace(""), "data")
+   method
+    name "ModuleManager.as$140:ModuleInfoProxy/data/get"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/data/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           980
+      getlocal0
+      pushscope
+
+      debugline           982
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "_data")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "data")
+   method
+    name "ModuleManager.as$140:ModuleInfoProxy/data/set"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/data/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Boolean"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           988
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 988
+      debugline           990
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "_data")
+
+      debugline           991
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "error")
+   method
+    name "ModuleManager.as$140:ModuleInfoProxy/error/get"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/error/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           1000
+      getlocal0
+      pushscope
+
+      debugline           1002
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getproperty         QName(PackageNamespace(""), "error")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "factory")
+   method
+    name "ModuleManager.as$140:ModuleInfoProxy/factory/get"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/factory/getter"
+    returns QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           1012
+      getlocal0
+      pushscope
+
+      debugline           1014
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getproperty         QName(PackageNamespace(""), "factory")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "loaded")
+   method
+    name "ModuleManager.as$140:ModuleInfoProxy/loaded/get"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/loaded/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           1024
+      getlocal0
+      pushscope
+
+      debugline           1026
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getproperty         QName(PackageNamespace(""), "loaded")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "ready")
+   method
+    name "ModuleManager.as$140:ModuleInfoProxy/ready/get"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/ready/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           1036
+      getlocal0
+      pushscope
+
+      debugline           1038
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getproperty         QName(PackageNamespace(""), "ready")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "setup")
+   method
+    name "ModuleManager.as$140:ModuleInfoProxy/setup/get"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/setup/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           1048
+      getlocal0
+      pushscope
+
+      debugline           1050
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getproperty         QName(PackageNamespace(""), "setup")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "url")
+   method
+    name "ModuleManager.as$140:ModuleInfoProxy/url/get"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/url/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           1060
+      getlocal0
+      pushscope
+
+      debugline           1062
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getproperty         QName(PackageNamespace(""), "url")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "publish")
+   method
+    name "ModuleManager.as$140:ModuleInfoProxy/publish"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/publish"
+    param QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Boolean"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           1074
+      getlocal0
+      pushscope
+
+      debug               1, "factory", 0, 1074
+      debugline           1076
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "publish"), 1
+
+      debugline           1077
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "load")
+   method
+    name "ModuleManager.as$140:ModuleInfoProxy/load"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/load"
+    param QName(PackageNamespace("flash.system"), "ApplicationDomain")
+    param QName(PackageNamespace("flash.system"), "SecurityDomain")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    optional Null()
+    optional Null()
+    optional Null()
+    paramname "Boolean"
+    paramname "Boolean"
+    paramname "Boolean"
+    paramname "Boolean"
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           1082
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("mx.events"), "ModuleEvent")
+      setlocal            5
+
+      debug               1, "applicationDomain", 0, 1082
+      debug               1, "securityDomain", 1, 1082
+      debug               1, "bytes", 2, 1082
+      debug               1, "moduleFactory", 3, 1082
+      debugline           1087
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      callpropvoid        QName(PackageNamespace(""), "resurrect"), 0
+
+      debugline           1089
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "referenced")
+      iftrue              L27
+
+      debugline           1091
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      callpropvoid        QName(PackageNamespace(""), "addReference"), 0
+
+      debugline           1092
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "referenced")
+
+L27:
+      debugline           1097
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getproperty         QName(PackageNamespace(""), "error")
+      iffalse             L40
+
+      debugline           1100
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getproperty         QName(PackageNamespace(""), "ERROR")
+      constructprop       QName(PackageNamespace("mx.events"), "ModuleEvent"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      jump                L102
+
+L40:
+      debugline           1102
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getproperty         QName(PackageNamespace(""), "loaded")
+      iffalse             L94
+
+      debugline           1106
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getproperty         QName(PackageNamespace(""), "setup")
+      iffalse             L93
+
+      debugline           1109
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getproperty         QName(PackageNamespace(""), "SETUP")
+      constructprop       QName(PackageNamespace("mx.events"), "ModuleEvent"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           1111
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getproperty         QName(PackageNamespace(""), "ready")
+      iffalse             L93
+
+      debug               1, "moduleEvent", 4, 1115
+      debugline           1116
+      findpropstrict      QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getproperty         QName(PackageNamespace(""), "PROGRESS")
+      constructprop       QName(PackageNamespace("mx.events"), "ModuleEvent"), 1
+      coerce              QName(PackageNamespace("mx.events"), "ModuleEvent")
+      setlocal            5
+
+      debugline           1117
+      getlocal            5
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getproperty         QName(PackageNamespace(""), "size")
+      setproperty         QName(PackageNamespace(""), "bytesLoaded")
+
+      debugline           1118
+      getlocal            5
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getproperty         QName(PackageNamespace(""), "size")
+      setproperty         QName(PackageNamespace(""), "bytesTotal")
+
+      debugline           1119
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           1121
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getproperty         QName(PackageNamespace(""), "READY")
+      constructprop       QName(PackageNamespace("mx.events"), "ModuleEvent"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L93:
+      jump                L102
+
+L94:
+      debugline           1127
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "load"), 4
+
+L102:
+      debugline           1129
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "release")
+   method
+    name "ModuleManager.as$140:ModuleInfoProxy/release"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/release"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           1134
+      getlocal0
+      pushscope
+
+      debugline           1136
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "referenced")
+      iffalse             L16
+
+      debugline           1138
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      callpropvoid        QName(PackageNamespace(""), "removeReference"), 0
+
+      debugline           1139
+      getlocal0
+      pushfalse
+      initproperty        QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "referenced")
+
+L16:
+      debugline           1141
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "unload")
+   method
+    name "ModuleManager.as$140:ModuleInfoProxy/unload"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/unload"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           1146
+      getlocal0
+      pushscope
+
+      debugline           1148
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      callpropvoid        QName(PackageNamespace(""), "unload"), 0
+
+      debugline           1150
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getproperty         QName(PackageNamespace(""), "SETUP")
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "moduleEventHandler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      debugline           1151
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getproperty         QName(PackageNamespace(""), "PROGRESS")
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "moduleEventHandler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      debugline           1152
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getproperty         QName(PackageNamespace(""), "READY")
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "moduleEventHandler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      debugline           1153
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getproperty         QName(PackageNamespace(""), "ERROR")
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "moduleEventHandler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      debugline           1154
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "info")
+      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+      getproperty         QName(PackageNamespace(""), "UNLOAD")
+      getlocal0
+      getproperty         QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "moduleEventHandler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      debugline           1155
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("ModuleManager.as$140:ModuleInfoProxy"), "moduleEventHandler")
+   method
+    name "ModuleManager.as$140:ModuleInfoProxy/private:moduleEventHandler"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/mx.modules:ModuleManager/ModuleInfoProxy/instance/moduleEventHandler"
+    param QName(PackageNamespace("mx.events"), "ModuleEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Boolean"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+      debugline           1166
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 1166
+      debugline           1168
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           1169
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.modules:ModuleManager/ModuleInfoProxy/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,34 @@
+script ; 35
+ sinit
+  name ""
+  refid "mx.core:FlexVersion/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;FlexVersion.as"
+    debugline           33
+    findpropstrict      Multiname("FlexVersion", [PackageNamespace("mx.core")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.core:FlexVersion"
+    popscope
+    initproperty        QName(PackageNamespace("mx.core"), "FlexVersion")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;FlexVersion.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "FlexVersion")
+  #include "FlexVersion.class.asasm"
+ end ; trait
+end ; script

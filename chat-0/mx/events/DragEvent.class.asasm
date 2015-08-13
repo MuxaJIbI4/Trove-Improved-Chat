@@ -1,0 +1,229 @@
+class
+ refid "mx.events:DragEvent"
+ instance QName(PackageNamespace("mx.events"), "DragEvent")
+  extends QName(PackageNamespace("flash.events"), "MouseEvent")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.events:DragEvent")
+  iinit
+   name "mx.events:DragEvent/DragEvent"
+   refid "mx.events:DragEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace("mx.core"), "DragSource")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional False()
+   optional True()
+   optional Null()
+   optional Null()
+   optional Null()
+   optional False()
+   optional False()
+   optional False()
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 4
+    localcount 10
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;DragEvent.as"
+     debugline           280
+     getlocal0
+     pushscope
+
+     debug               1, "type", 0, 280
+     debug               1, "bubbles", 1, 280
+     debug               1, "cancelable", 2, 280
+     debug               1, "dragInitiator", 3, 280
+     debug               1, "dragSource", 4, 280
+     debug               1, "action", 5, 280
+     debug               1, "ctrlKey", 6, 280
+     debug               1, "altKey", 7, 280
+     debug               1, "shiftKey", 8, 280
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;DragEvent.as"
+     debugline           289
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     debugline           291
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "dragInitiator")
+
+     debugline           292
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace(""), "dragSource")
+
+     debugline           293
+     getlocal0
+     getlocal            6
+     initproperty        QName(PackageNamespace(""), "action")
+
+     debugline           294
+     getlocal0
+     getlocal            7
+     initproperty        QName(PackageNamespace(""), "ctrlKey")
+
+     debugline           295
+     getlocal0
+     getlocal            8
+     initproperty        QName(PackageNamespace(""), "altKey")
+
+     debugline           296
+     getlocal0
+     getlocal            9
+     initproperty        QName(PackageNamespace(""), "shiftKey")
+
+     debugline           297
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "action") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "draggedItem") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PackageNamespace(""), "dragInitiator") type QName(PackageNamespace("mx.core"), "IUIComponent") end
+  trait slot QName(PackageNamespace(""), "dragSource") type QName(PackageNamespace("mx.core"), "DragSource") end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    name "mx.events:DragEvent/clone"
+    refid "mx.events:DragEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 10
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;DragEvent.as"
+      debugline           376
+      getlocal0
+      pushscope
+
+      debug               1, "cloneEvent", 0, 378
+      debugline           378
+      findpropstrict      QName(PackageNamespace("mx.events"), "DragEvent")
+      debugline           378
+      getlex              QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace(""), "bubbles")
+      getlex              QName(PackageNamespace(""), "cancelable")
+      debugline           379
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "dragInitiator")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "dragSource")
+      debugline           380
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "action")
+      getlex              QName(PackageNamespace(""), "ctrlKey")
+      debugline           381
+      getlex              QName(PackageNamespace(""), "altKey")
+      getlex              QName(PackageNamespace(""), "shiftKey")
+      constructprop       QName(PackageNamespace("mx.events"), "DragEvent"), 9
+      coerce              QName(PackageNamespace("mx.events"), "DragEvent")
+      setlocal1
+
+      debugline           384
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "relatedObject")
+      setproperty         QName(PackageNamespace(""), "relatedObject")
+
+      debugline           385
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "localX")
+      setproperty         QName(PackageNamespace(""), "localX")
+
+      debugline           386
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "localY")
+      setproperty         QName(PackageNamespace(""), "localY")
+
+      debugline           388
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.events:DragEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 18
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "DRAG_COMPLETE", 1, 75
+    findproperty        QName(PackageNamespace(""), "DRAG_COMPLETE")
+    pushstring          "dragComplete"
+    initproperty        QName(PackageNamespace(""), "DRAG_COMPLETE")
+
+    debug               1, "DRAG_DROP", 2, 109
+    findproperty        QName(PackageNamespace(""), "DRAG_DROP")
+    pushstring          "dragDrop"
+    initproperty        QName(PackageNamespace(""), "DRAG_DROP")
+
+    debug               1, "DRAG_ENTER", 3, 142
+    findproperty        QName(PackageNamespace(""), "DRAG_ENTER")
+    pushstring          "dragEnter"
+    initproperty        QName(PackageNamespace(""), "DRAG_ENTER")
+
+    debug               1, "DRAG_EXIT", 4, 176
+    findproperty        QName(PackageNamespace(""), "DRAG_EXIT")
+    pushstring          "dragExit"
+    initproperty        QName(PackageNamespace(""), "DRAG_EXIT")
+
+    debug               1, "DRAG_OVER", 5, 210
+    findproperty        QName(PackageNamespace(""), "DRAG_OVER")
+    pushstring          "dragOver"
+    initproperty        QName(PackageNamespace(""), "DRAG_OVER")
+
+    debug               1, "DRAG_START", 6, 244
+    findproperty        QName(PackageNamespace(""), "DRAG_START")
+    pushstring          "dragStart"
+    initproperty        QName(PackageNamespace(""), "DRAG_START")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PackageNamespace(""), "DRAG_COMPLETE") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("dragComplete") end
+ trait const QName(PackageNamespace(""), "DRAG_DROP") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("dragDrop") end
+ trait const QName(PackageNamespace(""), "DRAG_ENTER") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("dragEnter") end
+ trait const QName(PackageNamespace(""), "DRAG_EXIT") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("dragExit") end
+ trait const QName(PackageNamespace(""), "DRAG_OVER") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("dragOver") end
+ trait const QName(PackageNamespace(""), "DRAG_START") slotid 7 type QName(PackageNamespace(""), "String") value Utf8("dragStart") end
+end ; class

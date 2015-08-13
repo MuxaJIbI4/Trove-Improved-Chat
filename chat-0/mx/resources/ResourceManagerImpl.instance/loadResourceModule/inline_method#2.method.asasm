@@ -1,0 +1,47 @@
+method
+ name ""
+ refid "mx.resources:ResourceManagerImpl/instance/loadResourceModule/inline_method#2"
+ param QName(PackageNamespace("mx.events"), "ModuleEvent")
+ returns QName(PackageNamespace(""), "void")
+ flag HAS_PARAM_NAMES
+ paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+ body
+  maxstack 2
+  localcount 3
+  initscopedepth 6
+  maxscopedepth 6
+  code
+   debug               1, "event", 0, 438
+   debug               1, "resourceModule", 1, 442
+   debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+   debugline           443
+   getlocal1
+   getproperty         QName(PackageNamespace(""), "module")
+   getproperty         QName(Namespace("mx.modules:IModuleInfo"), "factory")
+   callproperty        QName(Namespace("mx.core:IFlexModuleFactory"), "create"), 0
+   coerce_a
+   setlocal2
+
+   debugline           447
+   getlex              QName(PrivateNamespace("mx.resources:ResourceManagerImpl"), "resourceModules")
+   getlocal1
+   getproperty         QName(PackageNamespace(""), "module")
+   getproperty         QName(Namespace("mx.modules:IModuleInfo"), "url")
+   getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+   getlocal2
+   setproperty         Multiname("resourceModule", [PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("ResourceManagerImpl.as$130"), PrivateNamespace("mx.resources:ResourceManagerImpl"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+   debugline           449
+   getlex              QName(PackageInternalNs("mx.resources"), "updateFlag")
+   iffalse             L24
+
+   debugline           450
+   findpropstrict      QName(PackageNamespace(""), "update")
+   callpropvoid        QName(PackageNamespace(""), "update"), 0
+
+L24:
+   debugline           451
+   returnvoid
+  end ; code
+ end ; body
+end ; method

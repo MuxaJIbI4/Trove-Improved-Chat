@@ -1,0 +1,42 @@
+script ; 82
+ sinit
+  name ""
+  refid "mx.events:DragEvent/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;DragEvent.as"
+    debugline           33
+    findpropstrict      Multiname("DragEvent", [PackageNamespace("mx.events")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+    newclass            "mx.events:DragEvent"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("mx.events"), "DragEvent")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;DragEvent.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.events"), "DragEvent")
+  #include "DragEvent.class.asasm"
+ end ; trait
+end ; script

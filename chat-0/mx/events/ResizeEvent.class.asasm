@@ -1,0 +1,128 @@
+class
+ refid "mx.events:ResizeEvent"
+ instance QName(PackageNamespace("mx.events"), "ResizeEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.events:ResizeEvent")
+  iinit
+   name "mx.events:ResizeEvent/ResizeEvent"
+   refid "mx.events:ResizeEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional False()
+   optional False()
+   optional Double(nan)
+   optional Double(nan)
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;ResizeEvent.as"
+     debugline           94
+     getlocal0
+     pushscope
+
+     debug               1, "type", 0, 94
+     debug               1, "bubbles", 1, 94
+     debug               1, "cancelable", 2, 94
+     debug               1, "oldWidth", 3, 94
+     debug               1, "oldHeight", 4, 94
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;ResizeEvent.as"
+     debugline           98
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     debugline           100
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "oldWidth")
+
+     debugline           101
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace(""), "oldHeight")
+
+     debugline           102
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "oldHeight") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "oldWidth") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    name "mx.events:ResizeEvent/clone"
+    refid "mx.events:ResizeEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;ResizeEvent.as"
+      debugline           147
+      getlocal0
+      pushscope
+
+      debugline           149
+      findpropstrict      QName(PackageNamespace("mx.events"), "ResizeEvent")
+      getlex              QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace(""), "bubbles")
+      getlex              QName(PackageNamespace(""), "cancelable")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "oldWidth")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "oldHeight")
+      constructprop       QName(PackageNamespace("mx.events"), "ResizeEvent"), 5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.events:ResizeEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 18
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "RESIZE", 1, 66
+    findproperty        QName(PackageNamespace(""), "RESIZE")
+    pushstring          "resize"
+    initproperty        QName(PackageNamespace(""), "RESIZE")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PackageNamespace(""), "RESIZE") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("resize") end
+end ; class

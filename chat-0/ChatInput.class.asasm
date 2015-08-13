@@ -1,0 +1,459 @@
+class
+ refid "ChatInput"
+ instance QName(PackageNamespace(""), "ChatInput")
+  extends QName(PackageNamespace("_kiwi.Core"), "UIComponent")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("ChatInput")
+  iinit
+   name "ChatInput/ChatInput"
+   refid "ChatInput/instance/init"
+   body
+    maxstack 7
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatInput.as"
+     debugline           28
+     getlocal0
+     pushscope
+
+     debugline           20
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.kiwi.Styles"), "KiwiTextfield")
+     pushbyte            14
+     pushint             16777215
+     pushtrue
+     pushfalse
+     getlex              QName(PackageNamespace("flash.text"), "TextFormatAlign")
+     getproperty         QName(PackageNamespace(""), "LEFT")
+     constructprop       QName(PackageNamespace("com.kiwi.Styles"), "KiwiTextfield"), 5
+     initproperty        QName(PrivateNamespace("ChatInput"), "_style")
+
+     debugline           29
+     getlocal0
+     constructsuper      0
+
+     debugline           30
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("ChatInput"), "WidgetSpacing") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace("ChatInput"), "_style") type QName(PackageNamespace("com.kiwi.Styles"), "KiwiTextfield") end
+  trait slot QName(PackageNamespace(""), "defaultChannelTextField") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "inputBG") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "inputText") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait method QName(ProtectedNamespace("ChatInput"), "configUI") flag OVERRIDE
+   method
+    name "ChatInput/protected:configUI"
+    refid "ChatInput/instance/ChatInput:configUI"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatInput.as"
+      debugline           32
+      getlocal0
+      pushscope
+
+      debugline           34
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("_kiwi.Core:UIComponent"), "configUI"), 0
+      debugline           37
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatInput"), "onKeyPressed")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      debugline           39
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      pushstring          "setDefaultChannel"
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatInput"), "setDefaultChannel")
+      callpropvoid        QName(PackageNamespace(""), "addCallback"), 2
+
+      debugline           40
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      pushstring          "SET_INPUT"
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatInput"), "onSetInput")
+      callpropvoid        QName(PackageNamespace(""), "addCallback"), 2
+
+      debugline           41
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("ChatInput"), "onKeyPressed")
+   method
+    name "ChatInput/private:onKeyPressed"
+    refid "ChatInput/instance/ChatInput/instance/onKeyPressed"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events"
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatInput.as"
+      debugline           43
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 43
+      debugline           45
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "ENTER")
+      ifne                L19
+
+      debugline           47
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      pushstring          "OnExecute"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getproperty         QName(PackageNamespace(""), "text")
+      callpropvoid        QName(PackageNamespace(""), "call"), 2
+
+      jump                L96
+
+L19:
+      debugline           49
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "SPACE")
+      ifne                L33
+
+      debugline           51
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      pushstring          "OnAutocomplete"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getproperty         QName(PackageNamespace(""), "text")
+      callpropvoid        QName(PackageNamespace(""), "call"), 2
+
+      jump                L96
+
+L33:
+      debugline           53
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "TAB")
+      ifne                L73
+
+      debugline           56
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      pushstring          "OnCycleWhisperTarget"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getproperty         QName(PackageNamespace(""), "text")
+      callpropvoid        QName(PackageNamespace(""), "call"), 2
+
+      debugline           57
+      getlex              QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "focus")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      ifeq                L72
+
+      debugline           59
+      getlex              QName(PackageNamespace(""), "stage")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      setproperty         QName(PackageNamespace(""), "focus")
+
+      debugline           60
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getproperty         QName(PackageNamespace(""), "text")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getproperty         QName(PackageNamespace(""), "text")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PackageNamespace(""), "setSelection"), 2
+
+      debugline           61
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "stopPropagation"), 0
+
+L72:
+      jump                L96
+
+L73:
+      debugline           64
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "UP")
+      ifne                L85
+
+      debugline           66
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      pushstring          "OnCycleInputHistory"
+      pushbyte            255
+      callpropvoid        QName(PackageNamespace(""), "call"), 2
+
+      jump                L96
+
+L85:
+      debugline           68
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "DOWN")
+      ifne                L96
+
+      debugline           70
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      pushstring          "OnCycleInputHistory"
+      pushbyte            1
+      callpropvoid        QName(PackageNamespace(""), "call"), 2
+
+L96:
+      debugline           72
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onSetActive")
+   method
+    name "ChatInput/onSetActive"
+    refid "ChatInput/instance/onSetActive"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatInput.as"
+      debugline           74
+      getlocal0
+      pushscope
+
+      debug               1, "state", 0, 74
+      debugline           76
+      getlocal1
+      iffalse             L14
+
+      debugline           78
+      getlex              QName(PackageNamespace(""), "stage")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      setproperty         QName(PackageNamespace(""), "focus")
+
+      jump                L18
+
+L14:
+      debugline           82
+      getlex              QName(PackageNamespace(""), "stage")
+      pushnull
+      setproperty         QName(PackageNamespace(""), "focus")
+
+L18:
+      debugline           85
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      debugline           86
+      getlocal0
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      debugline           87
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("ChatInput"), "onSetInput")
+   method
+    name "ChatInput/private:onSetInput"
+    refid "ChatInput/instance/ChatInput/instance/onSetInput"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events"
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatInput.as"
+      debugline           89
+      getlocal0
+      pushscope
+
+      debug               1, "text", 0, 89
+      debugline           91
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getproperty         QName(PackageNamespace(""), "text")
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      pushshort           257
+      ifnlt               L21
+
+      debugline           93
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L25
+
+L21:
+      debugline           97
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "input text too long"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L25:
+      debugline           99
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getproperty         QName(PackageNamespace(""), "text")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getproperty         QName(PackageNamespace(""), "text")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PackageNamespace(""), "setSelection"), 2
+
+      debugline           100
+      getlex              QName(PackageNamespace(""), "stage")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      setproperty         QName(PackageNamespace(""), "focus")
+
+      debugline           101
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("ChatInput"), "setDefaultChannel")
+   method
+    name "ChatInput/private:setDefaultChannel"
+    refid "ChatInput/instance/ChatInput/instance/setDefaultChannel"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events"
+    paramname "flash.events"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;ChatInput.as"
+      debugline           103
+      getlocal0
+      pushscope
+
+      debug               1, "text", 0, 103
+      debug               1, "color", 1, 103
+      debugline           105
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "defaultChannelTextField")
+      getlocal1
+      pushstring          ":"
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      debugline           106
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "defaultChannelTextField")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "defaultChannelTextField")
+      getproperty         QName(PackageNamespace(""), "textWidth")
+      pushbyte            5
+      add
+      setproperty         QName(PackageNamespace(""), "width")
+
+      debugline           107
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "defaultChannelTextField")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "defaultChannelTextField")
+      getproperty         QName(PackageNamespace(""), "width")
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace("ChatInput"), "WidgetSpacing")
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           108
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getlex              QName(PackageNamespace(""), "width")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputText")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      setproperty         QName(PackageNamespace(""), "width")
+
+      debugline           109
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "defaultChannelTextField")
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "textColor")
+
+      debugline           110
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "ChatInput/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

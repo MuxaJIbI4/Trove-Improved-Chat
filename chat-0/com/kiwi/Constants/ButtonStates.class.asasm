@@ -1,0 +1,112 @@
+class
+ refid "com.kiwi.Constants:ButtonStates"
+ instance QName(PackageNamespace("com.kiwi.Constants"), "ButtonStates")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.kiwi.Constants:ButtonStates")
+  iinit
+   name "com.kiwi.Constants:ButtonStates/ButtonStates"
+   refid "com.kiwi.Constants:ButtonStates/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Constants;ButtonStates.as"
+     debugline           23
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "com.kiwi.Constants:ButtonStates/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "UP", 0, 9
+    findproperty        QName(PackageNamespace(""), "UP")
+    pushstring          "up"
+    initproperty        QName(PackageNamespace(""), "UP")
+
+    debug               1, "OVER", 1, 10
+    findproperty        QName(PackageNamespace(""), "OVER")
+    pushstring          "over"
+    initproperty        QName(PackageNamespace(""), "OVER")
+
+    debug               1, "DOWN", 2, 11
+    findproperty        QName(PackageNamespace(""), "DOWN")
+    pushstring          "down"
+    initproperty        QName(PackageNamespace(""), "DOWN")
+
+    debug               1, "RELEASE", 3, 12
+    findproperty        QName(PackageNamespace(""), "RELEASE")
+    pushstring          "release"
+    initproperty        QName(PackageNamespace(""), "RELEASE")
+
+    debug               1, "OUT", 4, 13
+    findproperty        QName(PackageNamespace(""), "OUT")
+    pushstring          "out"
+    initproperty        QName(PackageNamespace(""), "OUT")
+
+    debug               1, "DISABLED", 5, 14
+    findproperty        QName(PackageNamespace(""), "DISABLED")
+    pushstring          "disabled"
+    initproperty        QName(PackageNamespace(""), "DISABLED")
+
+    debug               1, "SELECTING", 6, 15
+    findproperty        QName(PackageNamespace(""), "SELECTING")
+    pushstring          "selecting"
+    initproperty        QName(PackageNamespace(""), "SELECTING")
+
+    debug               1, "TOGGLE", 7, 16
+    findproperty        QName(PackageNamespace(""), "TOGGLE")
+    pushstring          "toggle"
+    initproperty        QName(PackageNamespace(""), "TOGGLE")
+
+    debug               1, "KB_SELECTING", 8, 17
+    findproperty        QName(PackageNamespace(""), "KB_SELECTING")
+    pushstring          "kb_selecting"
+    initproperty        QName(PackageNamespace(""), "KB_SELECTING")
+
+    debug               1, "KB_RELEASE", 9, 18
+    findproperty        QName(PackageNamespace(""), "KB_RELEASE")
+    pushstring          "kb_release"
+    initproperty        QName(PackageNamespace(""), "KB_RELEASE")
+
+    debug               1, "KB_DOWN", 10, 19
+    findproperty        QName(PackageNamespace(""), "KB_DOWN")
+    pushstring          "kb_down"
+    initproperty        QName(PackageNamespace(""), "KB_DOWN")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "UP") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("up") end
+ trait const QName(PackageNamespace(""), "OVER") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("over") end
+ trait const QName(PackageNamespace(""), "DOWN") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("down") end
+ trait const QName(PackageNamespace(""), "RELEASE") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("release") end
+ trait const QName(PackageNamespace(""), "OUT") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("out") end
+ trait const QName(PackageNamespace(""), "DISABLED") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("disabled") end
+ trait const QName(PackageNamespace(""), "SELECTING") slotid 7 type QName(PackageNamespace(""), "String") value Utf8("selecting") end
+ trait const QName(PackageNamespace(""), "TOGGLE") slotid 8 type QName(PackageNamespace(""), "String") value Utf8("toggle") end
+ trait const QName(PackageNamespace(""), "KB_SELECTING") slotid 9 type QName(PackageNamespace(""), "String") value Utf8("kb_selecting") end
+ trait const QName(PackageNamespace(""), "KB_RELEASE") slotid 10 type QName(PackageNamespace(""), "String") value Utf8("kb_release") end
+ trait const QName(PackageNamespace(""), "KB_DOWN") slotid 11 type QName(PackageNamespace(""), "String") value Utf8("kb_down") end
+end ; class

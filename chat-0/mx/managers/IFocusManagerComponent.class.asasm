@@ -1,0 +1,106 @@
+class
+ refid "mx.managers:IFocusManagerComponent"
+ instance QName(PackageNamespace("mx.managers"), "IFocusManagerComponent")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.managers:IFocusManagerComponent/IFocusManagerComponent"
+   refid "mx.managers:IFocusManagerComponent/instance/init"
+  end ; method
+  trait getter QName(Namespace("mx.managers:IFocusManagerComponent"), "focusEnabled")
+   method
+    name "mx.managers:IFocusManagerComponent/mx.managers:IFocusManagerComponent:focusEnabled/get"
+    refid "mx.managers:IFocusManagerComponent/instance/mx.managers:IFocusManagerComponent:focusEnabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.managers:IFocusManagerComponent"), "focusEnabled")
+   method
+    name "mx.managers:IFocusManagerComponent/mx.managers:IFocusManagerComponent:focusEnabled/set"
+    refid "mx.managers:IFocusManagerComponent/instance/mx.managers:IFocusManagerComponent:focusEnabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/managers;IFocusManagerComponent.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.managers:IFocusManagerComponent"), "hasFocusableChildren")
+   method
+    name "mx.managers:IFocusManagerComponent/mx.managers:IFocusManagerComponent:hasFocusableChildren/get"
+    refid "mx.managers:IFocusManagerComponent/instance/mx.managers:IFocusManagerComponent:hasFocusableChildren/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.managers:IFocusManagerComponent"), "hasFocusableChildren")
+   method
+    name "mx.managers:IFocusManagerComponent/mx.managers:IFocusManagerComponent:hasFocusableChildren/set"
+    refid "mx.managers:IFocusManagerComponent/instance/mx.managers:IFocusManagerComponent:hasFocusableChildren/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/managers;IFocusManagerComponent.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.managers:IFocusManagerComponent"), "mouseFocusEnabled")
+   method
+    name "mx.managers:IFocusManagerComponent/mx.managers:IFocusManagerComponent:mouseFocusEnabled/get"
+    refid "mx.managers:IFocusManagerComponent/instance/mx.managers:IFocusManagerComponent:mouseFocusEnabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.managers:IFocusManagerComponent"), "tabFocusEnabled")
+   method
+    name "mx.managers:IFocusManagerComponent/mx.managers:IFocusManagerComponent:tabFocusEnabled/get"
+    refid "mx.managers:IFocusManagerComponent/instance/mx.managers:IFocusManagerComponent:tabFocusEnabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.managers:IFocusManagerComponent"), "tabIndex")
+   method
+    name "mx.managers:IFocusManagerComponent/mx.managers:IFocusManagerComponent:tabIndex/get"
+    refid "mx.managers:IFocusManagerComponent/instance/mx.managers:IFocusManagerComponent:tabIndex/getter"
+    returns QName(PackageNamespace(""), "int")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.managers:IFocusManagerComponent"), "tabIndex")
+   method
+    name "mx.managers:IFocusManagerComponent/mx.managers:IFocusManagerComponent:tabIndex/set"
+    refid "mx.managers:IFocusManagerComponent/instance/mx.managers:IFocusManagerComponent:tabIndex/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/managers;IFocusManagerComponent.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.managers:IFocusManagerComponent"), "setFocus")
+   method
+    name "mx.managers:IFocusManagerComponent/mx.managers:IFocusManagerComponent:setFocus"
+    refid "mx.managers:IFocusManagerComponent/instance/mx.managers:IFocusManagerComponent:setFocus"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.managers:IFocusManagerComponent"), "drawFocus")
+   method
+    name "mx.managers:IFocusManagerComponent/mx.managers:IFocusManagerComponent:drawFocus"
+    refid "mx.managers:IFocusManagerComponent/instance/mx.managers:IFocusManagerComponent:drawFocus"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/managers;IFocusManagerComponent.as"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.managers:IFocusManagerComponent/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

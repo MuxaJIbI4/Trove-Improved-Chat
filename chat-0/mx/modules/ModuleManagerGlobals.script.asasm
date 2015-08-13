@@ -1,0 +1,34 @@
+script ; 46
+ sinit
+  name ""
+  refid "mx.modules:ModuleManagerGlobals/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManagerGlobals.as"
+    debugline           18
+    findpropstrict      Multiname("ModuleManagerGlobals", [PackageNamespace("mx.modules")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.modules:ModuleManagerGlobals"
+    popscope
+    initproperty        QName(PackageNamespace("mx.modules"), "ModuleManagerGlobals")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManagerGlobals.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.modules"), "ModuleManagerGlobals")
+  #include "ModuleManagerGlobals.class.asasm"
+ end ; trait
+end ; script

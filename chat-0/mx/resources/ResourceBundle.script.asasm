@@ -1,0 +1,34 @@
+script ; 70
+ sinit
+  name ""
+  refid "mx.resources:ResourceBundle/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceBundle.as"
+    debugline           41
+    findpropstrict      Multiname("ResourceBundle", [PackageNamespace("mx.resources")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.resources:ResourceBundle"
+    popscope
+    initproperty        QName(PackageNamespace("mx.resources"), "ResourceBundle")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceBundle.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.resources"), "ResourceBundle")
+  #include "ResourceBundle.class.asasm"
+ end ; trait
+end ; script

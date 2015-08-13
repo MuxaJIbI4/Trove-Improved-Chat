@@ -1,0 +1,511 @@
+class
+ refid "fl.controls:Button"
+ instance QName(PackageNamespace("fl.controls"), "Button")
+  extends QName(PackageNamespace("fl.controls"), "LabelButton")
+  implements Multiname("IFocusManagerComponent", [PackageNamespace("fl.managers")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls:Button")
+  iinit
+   name "fl.controls:Button/Button"
+   refid "fl.controls:Button/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 12
+    maxscopedepth 13
+    code
+     debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;Button.as"
+     debugline           140
+     getlocal0
+     pushscope
+
+     debugline           141
+     getlocal0
+     constructsuper      0
+
+     debugline           142
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("fl.controls:Button"), "_emphasized") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait getter QName(PackageNamespace(""), "emphasized")
+   method
+    name "fl.controls:Button/emphasized/get"
+    refid "fl.controls:Button/instance/emphasized/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;Button.as"
+      debugline           166
+      getlocal0
+      pushscope
+
+      debugline           167
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:Button"), "_emphasized")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "emphasized")
+   method
+    name "fl.controls:Button/emphasized/set"
+    refid "fl.controls:Button/instance/emphasized/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.controls"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;Button.as"
+      debugline           176
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 176
+      debugline           177
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:Button"), "_emphasized")
+
+      debugline           178
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      debugline           179
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:Button"), "draw") flag OVERRIDE
+   method
+    name "fl.controls:Button/protected:draw"
+    refid "fl.controls:Button/instance/fl.controls:Button:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;Button.as"
+      debugline           187
+      getlocal0
+      pushscope
+
+      debugline           188
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid"), 1
+      convert_b
+      dup
+      iftrue              L18
+
+      pop
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid"), 1
+      convert_b
+L18:
+      iffalse             L22
+
+      debugline           189
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:Button"), "drawEmphasized"), 0
+
+L22:
+      debugline           191
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.controls:LabelButton"), "draw"), 0
+      debugline           192
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      pushnull
+      ifeq                L37
+
+      debugline           193
+      findpropstrict      QName(PackageNamespace(""), "setChildIndex")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      getlex              QName(PackageNamespace(""), "numChildren")
+      decrement
+      callpropvoid        QName(PackageNamespace(""), "setChildIndex"), 2
+
+L37:
+      debugline           195
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:Button"), "drawEmphasized")
+   method
+    name "fl.controls:Button/protected:drawEmphasized"
+    refid "fl.controls:Button/instance/fl.controls:Button:drawEmphasized"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;Button.as"
+      debugline           203
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      debug               1, "emphasizedStyle", 0, 208
+      debugline           204
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      pushnull
+      ifeq                L16
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L16:
+      debugline           205
+      getlocal0
+      pushnull
+      initproperty        QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+
+      debugline           206
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:Button"), "_emphasized")
+      iftrue              L25
+
+      returnvoid
+
+L25:
+      debugline           208
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "emphasizedSkin"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      debugline           209
+      getlocal1
+      pushnull
+      ifeq                L41
+
+      debugline           210
+      getlocal0
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance")
+      getlocal1
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance"), 1
+      initproperty        QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+
+L41:
+      debugline           212
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      pushnull
+      ifeq                L92
+
+      debug               1, "padding", 1, 215
+      debugline           213
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      debugline           215
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "emphasizedPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      convert_d
+      setlocal2
+
+      debugline           216
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      getlocal2
+      negate
+      dup
+      setlocal3
+
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal3
+      kill                3
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           217
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      getlex              QName(PackageNamespace(""), "width")
+      getlocal2
+      pushbyte            2
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "width")
+
+      debugline           218
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      getlex              QName(PackageNamespace(""), "height")
+      getlocal2
+      pushbyte            2
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "height")
+
+L92:
+      debugline           220
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "drawFocus") flag OVERRIDE
+   method
+    name "fl.controls:Button/drawFocus"
+    refid "fl.controls:Button/instance/drawFocus"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "fl.controls"
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;Button.as"
+      debugline           231
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      pushundefined
+      coerce_a
+      setlocal3
+
+      debug               1, "focused", 0, 231
+      debugline           232
+      getlocal0
+      getlocal1
+      callsupervoid       QName(PackageNamespace(""), "drawFocus"), 1
+      debugline           235
+      getlocal1
+      iffalse             L90
+
+      debug               1, "emphasizedPadding", 1, 237
+      debug               1, "focusPadding", 2, 240
+      debugline           237
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "emphasizedPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      convert_d
+      setlocal2
+
+      debugline           238
+      getlocal2
+      pushbyte            0
+      lessthan
+      dup
+      iftrue              L37
+
+      pop
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:Button"), "_emphasized")
+      not
+L37:
+      iffalse             L41
+
+      pushbyte            0
+      convert_d
+      setlocal2
+
+L41:
+      debugline           240
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "focusRectPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      coerce_a
+      setlocal3
+
+      debugline           241
+      getlocal3
+      pushnull
+      ifne                L54
+
+      pushbyte            2
+      coerce_a
+      jump                L56
+
+L54:
+      getlocal3
+      coerce_a
+L56:
+      coerce_a
+      setlocal3
+
+      debugline           242
+      getlocal3
+      getlocal2
+      add
+      coerce_a
+      setlocal3
+
+      debugline           244
+      getlex              QName(ProtectedNamespace("fl.core:UIComponent"), "uiFocusRect")
+      getlocal3
+      negate
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           245
+      getlex              QName(ProtectedNamespace("fl.core:UIComponent"), "uiFocusRect")
+      getlocal3
+      negate
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           246
+      getlex              QName(ProtectedNamespace("fl.core:UIComponent"), "uiFocusRect")
+      getlex              QName(PackageNamespace(""), "width")
+      getlocal3
+      pushbyte            2
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "width")
+
+      debugline           247
+      getlex              QName(ProtectedNamespace("fl.core:UIComponent"), "uiFocusRect")
+      getlex              QName(PackageNamespace(""), "height")
+      getlocal3
+      pushbyte            2
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "height")
+
+L90:
+      debugline           249
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:Button"), "initializeAccessibility") flag OVERRIDE
+   method
+    name "fl.controls:Button/protected:initializeAccessibility"
+    refid "fl.controls:Button/instance/fl.controls:Button:initializeAccessibility"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;Button.as"
+      debugline           257
+      getlocal0
+      pushscope
+
+      debugline           258
+      getlex              QName(PackageNamespace("fl.controls"), "Button")
+      getproperty         QName(PackageNamespace(""), "createAccessibilityImplementation")
+      pushnull
+      ifeq                L13
+
+      debugline           259
+      getlex              QName(PackageNamespace("fl.controls"), "Button")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "createAccessibilityImplementation"), 1
+
+L13:
+      debugline           261
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "fl.controls:Button/class/init"
+  body
+   maxstack 5
+   localcount 1
+   initscopedepth 11
+   maxscopedepth 12
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "defaultStyles", 0, 95
+    findproperty        QName(PrivateNamespace("fl.controls:Button"), "defaultStyles")
+    pushstring          "emphasizedSkin"
+    pushstring          "Button_emphasizedSkin"
+    pushstring          "emphasizedPadding"
+    pushbyte            2
+    newobject           2
+    setproperty         QName(PrivateNamespace("fl.controls:Button"), "defaultStyles")
+
+    debug               1, "createAccessibilityImplementation", 1, 128
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("fl.controls:Button"), "defaultStyles") slotid 1 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "getStyleDefinition") flag FINAL dispid 3
+  method
+   name "fl.controls:Button/getStyleDefinition"
+   refid "fl.controls:Button/class/getStyleDefinition"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;Button.as"
+     debugline           115
+     getlocal0
+     pushscope
+
+     debugline           116
+     getlex              QName(PackageNamespace("fl.core"), "UIComponent")
+     getlex              QName(PackageNamespace("fl.controls"), "LabelButton")
+     callproperty        QName(PackageNamespace(""), "getStyleDefinition"), 0
+     getlex              QName(PrivateNamespace("fl.controls:Button"), "defaultStyles")
+     callproperty        QName(PackageNamespace(""), "mergeStyles"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PackageNamespace(""), "createAccessibilityImplementation") slotid 2 type QName(PackageNamespace(""), "Function") end
+end ; class

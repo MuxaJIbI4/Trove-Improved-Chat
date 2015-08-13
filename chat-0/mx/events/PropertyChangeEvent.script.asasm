@@ -1,0 +1,38 @@
+script ; 55
+ sinit
+  name ""
+  refid "mx.events:PropertyChangeEvent/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;PropertyChangeEvent.as"
+    debugline           33
+    findpropstrict      Multiname("PropertyChangeEvent", [PackageNamespace("mx.events")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    newclass            "mx.events:PropertyChangeEvent"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("mx.events"), "PropertyChangeEvent")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;PropertyChangeEvent.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.events"), "PropertyChangeEvent")
+  #include "PropertyChangeEvent.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,29 @@
+script ; 71
+ sinit
+  name ""
+  refid "com.kiwi.Interfaces:IListItemRenderer/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IListItemRenderer.as"
+    debugline           10
+    findpropstrict      Multiname("IListItemRenderer", [PackageNamespace("com.kiwi.Interfaces")])
+    pushnull
+    newclass            "com.kiwi.Interfaces:IListItemRenderer"
+    initproperty        QName(PackageNamespace("com.kiwi.Interfaces"), "IListItemRenderer")
+
+    debugline           1
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.kiwi.Interfaces"), "IListItemRenderer")
+  #include "IListItemRenderer.class.asasm"
+ end ; trait
+end ; script

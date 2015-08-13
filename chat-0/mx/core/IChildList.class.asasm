@@ -1,0 +1,135 @@
+class
+ refid "mx.core:IChildList"
+ instance QName(PackageNamespace("mx.core"), "IChildList")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.core:IChildList/IChildList"
+   refid "mx.core:IChildList/instance/init"
+  end ; method
+  trait getter QName(Namespace("mx.core:IChildList"), "numChildren")
+   method
+    name "mx.core:IChildList/mx.core:IChildList:numChildren/get"
+    refid "mx.core:IChildList/instance/mx.core:IChildList:numChildren/getter"
+    returns QName(PackageNamespace(""), "int")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IChildList"), "addChild")
+   method
+    name "mx.core:IChildList/mx.core:IChildList:addChild"
+    refid "mx.core:IChildList/instance/mx.core:IChildList:addChild"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IChildList.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IChildList"), "addChildAt")
+   method
+    name "mx.core:IChildList/mx.core:IChildList:addChildAt"
+    refid "mx.core:IChildList/instance/mx.core:IChildList:addChildAt"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IChildList.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IChildList.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IChildList"), "removeChild")
+   method
+    name "mx.core:IChildList/mx.core:IChildList:removeChild"
+    refid "mx.core:IChildList/instance/mx.core:IChildList:removeChild"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IChildList.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IChildList"), "removeChildAt")
+   method
+    name "mx.core:IChildList/mx.core:IChildList:removeChildAt"
+    refid "mx.core:IChildList/instance/mx.core:IChildList:removeChildAt"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IChildList.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IChildList"), "getChildAt")
+   method
+    name "mx.core:IChildList/mx.core:IChildList:getChildAt"
+    refid "mx.core:IChildList/instance/mx.core:IChildList:getChildAt"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IChildList.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IChildList"), "getChildByName")
+   method
+    name "mx.core:IChildList/mx.core:IChildList:getChildByName"
+    refid "mx.core:IChildList/instance/mx.core:IChildList:getChildByName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IChildList.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IChildList"), "getChildIndex")
+   method
+    name "mx.core:IChildList/mx.core:IChildList:getChildIndex"
+    refid "mx.core:IChildList/instance/mx.core:IChildList:getChildIndex"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_PARAM_NAMES
+    paramname ""
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IChildList"), "setChildIndex")
+   method
+    name "mx.core:IChildList/mx.core:IChildList:setChildIndex"
+    refid "mx.core:IChildList/instance/mx.core:IChildList:setChildIndex"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "int"
+    paramname "int"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IChildList"), "getObjectsUnderPoint")
+   method
+    name "mx.core:IChildList/mx.core:IChildList:getObjectsUnderPoint"
+    refid "mx.core:IChildList/instance/mx.core:IChildList:getObjectsUnderPoint"
+    param QName(PackageNamespace("flash.geom"), "Point")
+    returns QName(PackageNamespace(""), "Array")
+    flag HAS_PARAM_NAMES
+    paramname "child"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IChildList"), "contains")
+   method
+    name "mx.core:IChildList/mx.core:IChildList:contains"
+    refid "mx.core:IChildList/instance/mx.core:IChildList:contains"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:IChildList/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

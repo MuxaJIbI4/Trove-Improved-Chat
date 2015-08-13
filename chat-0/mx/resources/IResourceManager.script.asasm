@@ -1,0 +1,29 @@
+script ; 49
+ sinit
+  name ""
+  refid "mx.resources:IResourceManager/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;IResourceManager.as"
+    debugline           96
+    findpropstrict      Multiname("IResourceManager", [PackageNamespace("mx.resources")])
+    pushnull
+    newclass            "mx.resources:IResourceManager"
+    initproperty        QName(PackageNamespace("mx.resources"), "IResourceManager")
+
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.resources"), "IResourceManager")
+  #include "IResourceManager.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,1113 @@
+class
+ refid "mx.flash:ContainerMovieClip"
+ instance QName(PackageNamespace("mx.flash"), "ContainerMovieClip")
+  extends QName(PackageNamespace("mx.flash"), "UIMovieClip")
+  implements Multiname("IVisualElementContainer", [PackageNamespace("mx.core")])
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.flash:ContainerMovieClip")
+  iinit
+   name "mx.flash:ContainerMovieClip/ContainerMovieClip"
+   refid "mx.flash:ContainerMovieClip/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+     debugline           97
+     getlocal0
+     pushscope
+
+     debugline           99
+     getlocal0
+     constructsuper      0
+
+     debugline           101
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ADDED")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "addedHandler")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     debugline           102
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "REMOVED")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "removedHandler")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     debugline           103
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait getter QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "bounds") flag OVERRIDE
+   method
+    name "mx.flash:ContainerMovieClip/protected:bounds/get"
+    refid "mx.flash:ContainerMovieClip/instance/mx.flash:ContainerMovieClip:bounds/getter"
+    returns QName(PackageNamespace("flash.geom"), "Rectangle")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           119
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      pushnan
+      setlocal3
+
+      debug               1, "bounds", 0, 142
+      debugline           125
+      getlex              QName(PackageNamespace(""), "boundingBoxName")
+      coerce_a
+      dup
+      iffalse             L20
+
+      pop
+      getlex              QName(PackageNamespace(""), "boundingBoxName")
+      pushstring          ""
+      equals
+      not
+      coerce_a
+L20:
+      coerce_a
+      convert_b
+      dup
+      iffalse             L31
+
+      pop
+      debugline           126
+      getlex              QName(PackageNamespace(""), "boundingBoxName")
+      getlocal0
+      in
+      coerce_a
+      convert_b
+L31:
+      dup
+      iffalse             L38
+
+      pop
+      getlocal0
+      getlex              QName(PackageNamespace(""), "boundingBoxName")
+      getproperty         MultinameL([PrivateNamespace("mx.flash:ContainerMovieClip"), PackageNamespace(""), ProtectedNamespace("mx.flash:ContainerMovieClip"), PrivateNamespace("ContainerMovieClip.as$24"), PackageNamespace("mx.flash"), PackageInternalNs("mx.flash"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), StaticProtectedNs("mx.flash:ContainerMovieClip"), StaticProtectedNs("mx.flash:UIMovieClip"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      convert_b
+L38:
+      iffalse             L46
+
+      debugline           128
+      getlocal0
+      getlex              QName(PackageNamespace(""), "boundingBoxName")
+      getproperty         MultinameL([PrivateNamespace("mx.flash:ContainerMovieClip"), PackageNamespace(""), ProtectedNamespace("mx.flash:ContainerMovieClip"), PrivateNamespace("ContainerMovieClip.as$24"), PackageNamespace("mx.flash"), PackageInternalNs("mx.flash"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), StaticProtectedNs("mx.flash:ContainerMovieClip"), StaticProtectedNs("mx.flash:UIMovieClip"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal0
+      callproperty        Multiname("getBounds", [PrivateNamespace("mx.flash:ContainerMovieClip"), PackageNamespace(""), ProtectedNamespace("mx.flash:ContainerMovieClip"), PrivateNamespace("ContainerMovieClip.as$24"), PackageNamespace("mx.flash"), PackageInternalNs("mx.flash"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), StaticProtectedNs("mx.flash:ContainerMovieClip"), StaticProtectedNs("mx.flash:UIMovieClip"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
+      returnvalue
+
+L46:
+      debugline           133
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      iffalse             L74
+
+      debug               1, "oldScaleX", 1, 135
+      debug               1, "oldScaleY", 2, 136
+      debugline           135
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      getproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "$scaleX")
+      convert_d
+      setlocal2
+
+      debugline           136
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      getproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "$scaleY")
+      convert_d
+      setlocal3
+
+      debugline           138
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      pushdouble          0.001
+      setproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "$scaleX")
+
+      debugline           139
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      pushdouble          0.001
+      setproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "$scaleY")
+
+L74:
+      debugline           142
+      findpropstrict      QName(PackageNamespace(""), "getBounds")
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "getBounds"), 1
+      coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+      setlocal1
+
+      debugline           144
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      iffalse             L94
+
+      debugline           146
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      getlocal2
+      setproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "$scaleX")
+
+      debugline           147
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      getlocal3
+      setproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "$scaleY")
+
+L94:
+      debugline           150
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_contentHolder") end
+  trait getter QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+   method
+    name "mx.flash:ContainerMovieClip/protected:contentHolderObj/get"
+    refid "mx.flash:ContainerMovieClip/instance/mx.flash:ContainerMovieClip:contentHolderObj/getter"
+    returns QName(PackageNamespace("mx.flash"), "FlexContentHolder")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           161
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("mx.flash"), "FlexContentHolder")
+      setlocal2
+
+      debugline           163
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_contentHolder")
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifstrictne          L43
+
+      debug               1, "i", 0, 165
+      debugline           165
+      pushbyte            0
+      setlocal1
+
+      jump                L40
+
+L19:
+      label
+      debug               1, "child", 1, 167
+      debugline           167
+      findpropstrict      QName(PackageNamespace(""), "getChildAt")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      getlex              QName(PackageNamespace("mx.flash"), "FlexContentHolder")
+      astypelate
+      coerce              QName(PackageNamespace("mx.flash"), "FlexContentHolder")
+      setlocal2
+
+      debugline           169
+      getlocal2
+      iffalse             L38
+
+      debugline           171
+      getlocal0
+      getlocal2
+      initproperty        QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_contentHolder")
+
+      debugline           172
+      jump                L43
+
+L38:
+      debugline           165
+      inclocal_i          1
+L40:
+      getlocal1
+      getlex              QName(PackageNamespace(""), "numChildren")
+      iflt                L19
+
+L43:
+      debugline           177
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_contentHolder")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_content") type QName(PackageNamespace("mx.core"), "IUIComponent") end
+  trait getter QName(PackageNamespace(""), "content")
+   method
+    name "mx.flash:ContainerMovieClip/content/get"
+    refid "mx.flash:ContainerMovieClip/instance/content/getter"
+    returns QName(PackageNamespace("mx.core"), "IUIComponent")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           235
+      getlocal0
+      pushscope
+
+      debugline           237
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      iffalse             L13
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      getproperty         QName(PackageNamespace(""), "content")
+      coerce              QName(PackageNamespace("mx.core"), "IUIComponent")
+      jump                L16
+
+L13:
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_content")
+      coerce              QName(PackageNamespace("mx.core"), "IUIComponent")
+L16:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "content")
+   method
+    name "mx.flash:ContainerMovieClip/content/set"
+    refid "mx.flash:ContainerMovieClip/instance/content/setter"
+    param QName(PackageNamespace("mx.core"), "IUIComponent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events:EventDispatcher"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           243
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 243
+      debugline           245
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      iffalse             L14
+
+      debugline           247
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "content")
+
+L14:
+      debugline           250
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_content")
+
+      debugline           252
+      findpropstrict      QName(ProtectedNamespace("mx.flash:UIMovieClip"), "invalidateParentSizeAndDisplayList")
+      callpropvoid        QName(ProtectedNamespace("mx.flash:UIMovieClip"), "invalidateParentSizeAndDisplayList"), 0
+
+      debugline           253
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_scaleContentWhenResized") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait getter QName(PackageNamespace(""), "scaleContentWhenResized")
+   method
+    name "mx.flash:ContainerMovieClip/scaleContentWhenResized/get"
+    refid "mx.flash:ContainerMovieClip/instance/scaleContentWhenResized/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           281
+      getlocal0
+      pushscope
+
+      debugline           283
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_scaleContentWhenResized")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "scaleContentWhenResized")
+   method
+    name "mx.flash:ContainerMovieClip/scaleContentWhenResized/set"
+    refid "mx.flash:ContainerMovieClip/instance/scaleContentWhenResized/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events:EventDispatcher"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           289
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 289
+      debugline           291
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_scaleContentWhenResized")
+
+      debugline           293
+      getlex              QName(ProtectedNamespace("mx.flash:UIMovieClip"), "initialized")
+      iffalse             L15
+
+      debugline           294
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "sizeContentHolder"), 0
+
+L15:
+      debugline           295
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setActualSize") flag OVERRIDE
+   method
+    name "mx.flash:ContainerMovieClip/setActualSize"
+    refid "mx.flash:ContainerMovieClip/instance/setActualSize"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events:EventDispatcher"
+    paramname "flash.events:EventDispatcher"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           306
+      getlocal0
+      pushscope
+
+      debug               1, "newWidth", 0, 306
+      debug               1, "newHeight", 1, 306
+      debugline           308
+      getlocal0
+      getlocal1
+      getlocal2
+      callsupervoid       QName(PackageNamespace(""), "setActualSize"), 2
+      debugline           310
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "sizeContentHolder"), 0
+
+      debugline           311
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "sizeContentHolder")
+   method
+    name "mx.flash:ContainerMovieClip/protected:sizeContentHolder"
+    refid "mx.flash:ContainerMovieClip/instance/mx.flash:ContainerMovieClip:sizeContentHolder"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           319
+      getlocal0
+      pushscope
+
+      debugline           321
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      iffalse             L51
+
+      debugline           325
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scaleContentWhenResized")
+      not
+      dup
+      iffalse             L19
+
+      pop
+      getlex              QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "_layoutFeatures")
+      pushnull
+      equals
+      not
+L19:
+      iffalse             L37
+
+      debugline           328
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      pushbyte            1
+      getlex              QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "_layoutFeatures")
+      getproperty         QName(PackageNamespace(""), "stretchX")
+      divide
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+      debugline           329
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      pushbyte            1
+      getlex              QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "_layoutFeatures")
+      getproperty         QName(PackageNamespace(""), "stretchY")
+      divide
+      setproperty         QName(PackageNamespace(""), "scaleY")
+
+      jump                L47
+
+L37:
+      debugline           334
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+      debugline           335
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "scaleY")
+
+L47:
+      debugline           338
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "contentHolderObj")
+      callpropvoid        QName(PackageNamespace(""), "sizeFlexContent"), 0
+
+L51:
+      debugline           340
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "findFocusCandidates") flag OVERRIDE
+   method
+    name "mx.flash:ContainerMovieClip/protected:findFocusCandidates"
+    refid "mx.flash:ContainerMovieClip/instance/mx.flash:ContainerMovieClip:findFocusCandidates"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events:EventDispatcher"
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           345
+      getlocal0
+      pushscope
+
+      debug               1, "obj", 0, 345
+      debugline           348
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "focusInHandler") flag OVERRIDE
+   method
+    name "mx.flash:ContainerMovieClip/protected:focusInHandler"
+    refid "mx.flash:ContainerMovieClip/instance/mx.flash:ContainerMovieClip:focusInHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events:EventDispatcher"
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           353
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 353
+      debugline           356
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "numElements")
+   method
+    name "mx.flash:ContainerMovieClip/numElements/get"
+    refid "mx.flash:ContainerMovieClip/instance/numElements/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           374
+      getlocal0
+      pushscope
+
+      debugline           376
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "content")
+      iffalse             L10
+
+      pushbyte            1
+      jump                L11
+
+L10:
+      pushbyte            0
+L11:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getElementAt")
+   method
+    name "mx.flash:ContainerMovieClip/getElementAt"
+    refid "mx.flash:ContainerMovieClip/instance/getElementAt"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("mx.core"), "IVisualElement")
+    flag HAS_PARAM_NAMES
+    paramname "numChildren"
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           394
+      getlocal0
+      pushscope
+
+      debug               1, "index", 0, 394
+      debugline           396
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "content")
+      convert_b
+      dup
+      iffalse             L15
+
+      pop
+      getlocal1
+      pushbyte            0
+      equals
+L15:
+      iffalse             L22
+
+      debugline           397
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "content")
+      getlex              QName(PackageNamespace("mx.core"), "IVisualElement")
+      astypelate
+      returnvalue
+
+L22:
+      debugline           399
+      findpropstrict      QName(PackageNamespace(""), "RangeError")
+      pushstring          "Index "
+      getlocal1
+      add
+      pushstring          " is out of range."
+      add
+      constructprop       QName(PackageNamespace(""), "RangeError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getElementIndex")
+   method
+    name "mx.flash:ContainerMovieClip/getElementIndex"
+    refid "mx.flash:ContainerMovieClip/instance/getElementIndex"
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_PARAM_NAMES
+    paramname "getChildAt"
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           417
+      getlocal0
+      pushscope
+
+      debug               1, "element", 0, 417
+      debugline           419
+      getlocal1
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L17
+
+      pop
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "content")
+      equals
+L17:
+      iffalse             L21
+
+      debugline           420
+      pushbyte            0
+      returnvalue
+
+L21:
+      debugline           422
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      getlocal1
+      pushstring          " is not found in this container."
+      add
+      callproperty        QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addElement")
+   method
+    name "mx.flash:ContainerMovieClip/addElement"
+    refid "mx.flash:ContainerMovieClip/instance/addElement"
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    returns QName(PackageNamespace("mx.core"), "IVisualElement")
+    flag HAS_PARAM_NAMES
+    paramname "numChildren"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           437
+      getlocal0
+      pushscope
+
+      debug               1, "element", 0, 437
+      debugline           439
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "This operation is not supported."
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addElementAt")
+   method
+    name "mx.flash:ContainerMovieClip/addElementAt"
+    refid "mx.flash:ContainerMovieClip/instance/addElementAt"
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("mx.core"), "IVisualElement")
+    flag HAS_PARAM_NAMES
+    paramname "numChildren"
+    paramname "numChildren"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           454
+      getlocal0
+      pushscope
+
+      debug               1, "element", 0, 454
+      debug               1, "index", 1, 454
+      debugline           456
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "This operation is not supported."
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeElement")
+   method
+    name "mx.flash:ContainerMovieClip/removeElement"
+    refid "mx.flash:ContainerMovieClip/instance/removeElement"
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    returns QName(PackageNamespace("mx.core"), "IVisualElement")
+    flag HAS_PARAM_NAMES
+    paramname "numChildren"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           471
+      getlocal0
+      pushscope
+
+      debug               1, "element", 0, 471
+      debugline           473
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "This operation is not supported."
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeElementAt")
+   method
+    name "mx.flash:ContainerMovieClip/removeElementAt"
+    refid "mx.flash:ContainerMovieClip/instance/removeElementAt"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("mx.core"), "IVisualElement")
+    flag HAS_PARAM_NAMES
+    paramname "numChildren"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           488
+      getlocal0
+      pushscope
+
+      debug               1, "index", 0, 488
+      debugline           490
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "This operation is not supported."
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeAllElements")
+   method
+    name "mx.flash:ContainerMovieClip/removeAllElements"
+    refid "mx.flash:ContainerMovieClip/instance/removeAllElements"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           505
+      getlocal0
+      pushscope
+
+      debugline           507
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "This operation is not supported."
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setElementIndex")
+   method
+    name "mx.flash:ContainerMovieClip/setElementIndex"
+    refid "mx.flash:ContainerMovieClip/instance/setElementIndex"
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events:EventDispatcher"
+    paramname "flash.events:EventDispatcher"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           522
+      getlocal0
+      pushscope
+
+      debug               1, "element", 0, 522
+      debug               1, "index", 1, 522
+      debugline           524
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "This operation is not supported."
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "swapElements")
+   method
+    name "mx.flash:ContainerMovieClip/swapElements"
+    refid "mx.flash:ContainerMovieClip/instance/swapElements"
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    param QName(PackageNamespace("mx.core"), "IVisualElement")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events:EventDispatcher"
+    paramname "flash.events:EventDispatcher"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           539
+      getlocal0
+      pushscope
+
+      debug               1, "element1", 0, 539
+      debug               1, "element2", 1, 539
+      debugline           541
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "This operation is not supported."
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "swapElementsAt")
+   method
+    name "mx.flash:ContainerMovieClip/swapElementsAt"
+    refid "mx.flash:ContainerMovieClip/instance/swapElementsAt"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events:EventDispatcher"
+    paramname "flash.events:EventDispatcher"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           556
+      getlocal0
+      pushscope
+
+      debug               1, "index1", 0, 556
+      debug               1, "index2", 1, 556
+      debugline           558
+      findpropstrict      QName(PackageNamespace(""), "ArgumentError")
+      pushstring          "This operation is not supported."
+      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "addedHandler")
+   method
+    name "mx.flash:ContainerMovieClip/protected:addedHandler"
+    refid "mx.flash:ContainerMovieClip/instance/mx.flash:ContainerMovieClip:addedHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events:EventDispatcher"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           580
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 580
+      debug               1, "child", 1, 602
+      debugline           584
+      getlex              QName(ProtectedNamespace("mx.flash:UIMovieClip"), "initialized")
+      iftrue              L11
+
+      debugline           585
+      returnvoid
+
+L11:
+      debugline           589
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         Multiname("parent", [PrivateNamespace("mx.flash:ContainerMovieClip"), PackageNamespace(""), ProtectedNamespace("mx.flash:ContainerMovieClip"), PrivateNamespace("ContainerMovieClip.as$24"), PackageNamespace("mx.flash"), PackageInternalNs("mx.flash"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), StaticProtectedNs("mx.flash:ContainerMovieClip"), StaticProtectedNs("mx.flash:UIMovieClip"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal0
+      ifeq                L19
+
+      debugline           590
+      returnvoid
+
+L19:
+      debugline           594
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("mx.flash"), "FlexContentHolder")
+      istypelate
+      dup
+      iffalse             L30
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_contentHolder")
+      not
+L30:
+      iffalse             L45
+
+      debugline           596
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      initproperty        QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_contentHolder")
+
+      debugline           597
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_content")
+      iffalse             L45
+
+      debugline           598
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_content")
+      initproperty        QName(PackageNamespace(""), "content")
+
+L45:
+      debugline           602
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("mx.core"), "IUIComponent")
+      astypelate
+      coerce              QName(PackageNamespace("mx.core"), "IUIComponent")
+      setlocal2
+
+      debugline           604
+      getlocal2
+      iffalse             L58
+
+      debugline           605
+      getlocal2
+      callpropvoid        QName(Namespace("mx.core:IUIComponent"), "initialize"), 0
+
+L58:
+      debugline           606
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("mx.flash:ContainerMovieClip"), "removedHandler")
+   method
+    name "mx.flash:ContainerMovieClip/protected:removedHandler"
+    refid "mx.flash:ContainerMovieClip/instance/mx.flash:ContainerMovieClip:removedHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.events:EventDispatcher"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/flash-integration/src;mx/flash;ContainerMovieClip.as"
+      debugline           618
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 618
+      debugline           620
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_contentHolder")
+      ifne                L15
+
+      debugline           622
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("mx.flash:ContainerMovieClip"), "_contentHolder")
+
+L15:
+      debugline           624
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.flash:ContainerMovieClip/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

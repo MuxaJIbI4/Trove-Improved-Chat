@@ -1,0 +1,1723 @@
+class
+ refid "mx.core:LayoutElementUIComponentUtils"
+ instance QName(PackageNamespace("mx.core"), "LayoutElementUIComponentUtils")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.core:LayoutElementUIComponentUtils")
+  iinit
+   name "mx.core:LayoutElementUIComponentUtils/LayoutElementUIComponentUtils"
+   refid "mx.core:LayoutElementUIComponentUtils/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           21
+     getlocal0
+     pushscope
+
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           22
+     getlocal0
+     constructsuper      0
+
+     debugline           24
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:LayoutElementUIComponentUtils/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 29
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "DEFAULT_MAX_WIDTH", 1, 33
+    findproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "DEFAULT_MAX_WIDTH")
+    pushshort           10000
+    initproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "DEFAULT_MAX_WIDTH")
+
+    debug               1, "DEFAULT_MAX_HEIGHT", 2, 34
+    findproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "DEFAULT_MAX_HEIGHT")
+    pushshort           10000
+    initproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "DEFAULT_MAX_HEIGHT")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "DEFAULT_MAX_WIDTH") slotid 2 type QName(PackageNamespace(""), "Number") value Integer(10000) end
+ trait const QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "DEFAULT_MAX_HEIGHT") slotid 3 type QName(PackageNamespace(""), "Number") value Integer(10000) end
+ trait method QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsWidth") flag FINAL dispid 3
+  method
+   name "mx.core:LayoutElementUIComponentUtils/private:getPreferredUBoundsWidth"
+   refid "mx.core:LayoutElementUIComponentUtils/class/mx.core:LayoutElementUIComponentUtils/class/getPreferredUBoundsWidth"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           46
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 46
+     debug               1, "result", 1, 50
+     debugline           50
+     getlocal1
+     callproperty        QName(Namespace("mx.core:IUIComponent"), "getExplicitOrMeasuredWidth"), 0
+     convert_d
+     setlocal2
+
+     debugline           51
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L24
+
+     debugline           55
+     getlocal2
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleX")
+     divide
+     convert_d
+     setlocal2
+
+L24:
+     debugline           57
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsHeight") flag FINAL dispid 4
+  method
+   name "mx.core:LayoutElementUIComponentUtils/private:getPreferredUBoundsHeight"
+   refid "mx.core:LayoutElementUIComponentUtils/class/mx.core:LayoutElementUIComponentUtils/class/getPreferredUBoundsHeight"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           70
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 70
+     debug               1, "result", 1, 74
+     debugline           74
+     getlocal1
+     callproperty        QName(Namespace("mx.core:IUIComponent"), "getExplicitOrMeasuredHeight"), 0
+     convert_d
+     setlocal2
+
+     debugline           75
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L24
+
+     debugline           79
+     getlocal2
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleY")
+     divide
+     convert_d
+     setlocal2
+
+L24:
+     debugline           81
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth") flag FINAL dispid 5
+  method
+   name "mx.core:LayoutElementUIComponentUtils/private:getMinUBoundsWidth"
+   refid "mx.core:LayoutElementUIComponentUtils/class/mx.core:LayoutElementUIComponentUtils/class/getMinUBoundsWidth"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           84
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal2
+
+     debug               1, "obj", 0, 84
+     debug               1, "minWidth", 1, 88
+     debugline           89
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "explicitMinWidth")
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     iftrue              L20
+
+     debugline           91
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "explicitMinWidth")
+     convert_d
+     setlocal2
+
+     jump                L48
+
+L20:
+     debugline           95
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "measuredMinWidth")
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     iffalse             L29
+
+     pushbyte            0
+     convert_d
+     jump                L32
+
+L29:
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "measuredMinWidth")
+     convert_d
+L32:
+     convert_d
+     setlocal2
+
+     debugline           96
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "explicitMaxWidth")
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     iftrue              L48
+
+     debugline           97
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal2
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "explicitMaxWidth")
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal2
+
+L48:
+     debugline           100
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L61
+
+     debugline           104
+     getlocal2
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleX")
+     divide
+     convert_d
+     setlocal2
+
+L61:
+     debugline           106
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight") flag FINAL dispid 6
+  method
+   name "mx.core:LayoutElementUIComponentUtils/private:getMinUBoundsHeight"
+   refid "mx.core:LayoutElementUIComponentUtils/class/mx.core:LayoutElementUIComponentUtils/class/getMinUBoundsHeight"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           109
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal2
+
+     debug               1, "obj", 0, 109
+     debug               1, "minHeight", 1, 113
+     debugline           114
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "explicitMinHeight")
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     iftrue              L20
+
+     debugline           116
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "explicitMinHeight")
+     convert_d
+     setlocal2
+
+     jump                L48
+
+L20:
+     debugline           120
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "measuredMinHeight")
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     iffalse             L29
+
+     pushbyte            0
+     convert_d
+     jump                L32
+
+L29:
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "measuredMinHeight")
+     convert_d
+L32:
+     convert_d
+     setlocal2
+
+     debugline           121
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "explicitMaxHeight")
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     iftrue              L48
+
+     debugline           122
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal2
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "explicitMaxHeight")
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal2
+
+L48:
+     debugline           125
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L61
+
+     debugline           129
+     getlocal2
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleY")
+     divide
+     convert_d
+     setlocal2
+
+L61:
+     debugline           131
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsWidth") flag FINAL dispid 7
+  method
+   name "mx.core:LayoutElementUIComponentUtils/private:getMaxUBoundsWidth"
+   refid "mx.core:LayoutElementUIComponentUtils/class/mx.core:LayoutElementUIComponentUtils/class/getMaxUBoundsWidth"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           134
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal2
+
+     debug               1, "obj", 0, 134
+     debug               1, "maxWidth", 1, 137
+     debugline           138
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "explicitMaxWidth")
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     iftrue              L20
+
+     debugline           139
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "explicitMaxWidth")
+     convert_d
+     setlocal2
+
+     jump                L24
+
+L20:
+     debugline           141
+     getlex              QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "DEFAULT_MAX_WIDTH")
+     convert_d
+     setlocal2
+
+L24:
+     debugline           143
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L37
+
+     debugline           147
+     getlocal2
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleX")
+     divide
+     convert_d
+     setlocal2
+
+L37:
+     debugline           149
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsHeight") flag FINAL dispid 8
+  method
+   name "mx.core:LayoutElementUIComponentUtils/private:getMaxUBoundsHeight"
+   refid "mx.core:LayoutElementUIComponentUtils/class/mx.core:LayoutElementUIComponentUtils/class/getMaxUBoundsHeight"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           152
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal2
+
+     debug               1, "obj", 0, 152
+     debug               1, "maxHeight", 1, 155
+     debugline           156
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "explicitMaxHeight")
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     iftrue              L20
+
+     debugline           157
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IUIComponent"), "explicitMaxHeight")
+     convert_d
+     setlocal2
+
+     jump                L24
+
+L20:
+     debugline           159
+     getlex              QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "DEFAULT_MAX_HEIGHT")
+     convert_d
+     setlocal2
+
+L24:
+     debugline           161
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L37
+
+     debugline           165
+     getlocal2
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleY")
+     divide
+     convert_d
+     setlocal2
+
+L37:
+     debugline           167
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getPreferredBoundsWidth") flag FINAL dispid 9
+  method
+   name "mx.core:LayoutElementUIComponentUtils/getPreferredBoundsWidth"
+   refid "mx.core:LayoutElementUIComponentUtils/class/getPreferredBoundsWidth"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   paramname "obj"
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           180
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 180
+     debug               1, "transformMatrix", 1, 180
+     debug               1, "width", 2, 182
+     debugline           182
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsWidth"), 1
+     convert_d
+     setlocal3
+
+     debugline           184
+     getlocal2
+     iffalse             L27
+
+     debugline           186
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     getlocal3
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsHeight"), 1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "x")
+     convert_d
+     setlocal3
+
+L27:
+     debugline           188
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getPreferredBoundsHeight") flag FINAL dispid 10
+  method
+   name "mx.core:LayoutElementUIComponentUtils/getPreferredBoundsHeight"
+   refid "mx.core:LayoutElementUIComponentUtils/class/getPreferredBoundsHeight"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   paramname "obj"
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           191
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 191
+     debug               1, "transformMatrix", 1, 191
+     debug               1, "height", 2, 193
+     debugline           193
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsHeight"), 1
+     convert_d
+     setlocal3
+
+     debugline           195
+     getlocal2
+     iffalse             L27
+
+     debugline           197
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsWidth"), 1
+     getlocal3
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "y")
+     convert_d
+     setlocal3
+
+L27:
+     debugline           199
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getMinBoundsWidth") flag FINAL dispid 11
+  method
+   name "mx.core:LayoutElementUIComponentUtils/getMinBoundsWidth"
+   refid "mx.core:LayoutElementUIComponentUtils/class/getMinBoundsWidth"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   paramname "obj"
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           210
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 210
+     debug               1, "transformMatrix", 1, 210
+     debug               1, "width", 2, 212
+     debugline           212
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth"), 1
+     convert_d
+     setlocal3
+
+     debugline           214
+     getlocal2
+     iffalse             L27
+
+     debugline           216
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     getlocal3
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight"), 1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "x")
+     convert_d
+     setlocal3
+
+L27:
+     debugline           219
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getMinBoundsHeight") flag FINAL dispid 12
+  method
+   name "mx.core:LayoutElementUIComponentUtils/getMinBoundsHeight"
+   refid "mx.core:LayoutElementUIComponentUtils/class/getMinBoundsHeight"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   paramname "obj"
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           222
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 222
+     debug               1, "transformMatrix", 1, 222
+     debug               1, "height", 2, 224
+     debugline           224
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight"), 1
+     convert_d
+     setlocal3
+
+     debugline           226
+     getlocal2
+     iffalse             L27
+
+     debugline           228
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth"), 1
+     getlocal3
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "y")
+     convert_d
+     setlocal3
+
+L27:
+     debugline           231
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getMaxBoundsWidth") flag FINAL dispid 13
+  method
+   name "mx.core:LayoutElementUIComponentUtils/getMaxBoundsWidth"
+   refid "mx.core:LayoutElementUIComponentUtils/class/getMaxBoundsWidth"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   paramname "obj"
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           242
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 242
+     debug               1, "transformMatrix", 1, 242
+     debug               1, "width", 2, 244
+     debugline           244
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsWidth"), 1
+     convert_d
+     setlocal3
+
+     debugline           245
+     getlocal2
+     iffalse             L27
+
+     debugline           247
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     getlocal3
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsHeight"), 1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "x")
+     convert_d
+     setlocal3
+
+L27:
+     debugline           250
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getMaxBoundsHeight") flag FINAL dispid 14
+  method
+   name "mx.core:LayoutElementUIComponentUtils/getMaxBoundsHeight"
+   refid "mx.core:LayoutElementUIComponentUtils/class/getMaxBoundsHeight"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   paramname "obj"
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           253
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 253
+     debug               1, "transformMatrix", 1, 253
+     debug               1, "height", 2, 255
+     debugline           255
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsHeight"), 1
+     convert_d
+     setlocal3
+
+     debugline           256
+     getlocal2
+     iffalse             L27
+
+     debugline           258
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsWidth"), 1
+     getlocal3
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "y")
+     convert_d
+     setlocal3
+
+L27:
+     debugline           261
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getBoundsXAtSize") flag FINAL dispid 15
+  method
+   name "mx.core:LayoutElementUIComponentUtils/getBoundsXAtSize"
+   refid "mx.core:LayoutElementUIComponentUtils/class/getBoundsXAtSize"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   paramname "obj"
+   paramname "obj"
+   paramname "obj"
+   body
+    maxstack 11
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           272
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 272
+     debug               1, "width", 1, 272
+     debug               1, "height", 2, 272
+     debug               1, "transformMatrix", 3, 272
+     debug               1, "fitSize", 4, 277
+     debug               1, "pos", 5, 289
+     debugline           274
+     getlocal            4
+     iftrue              L17
+
+     debugline           275
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "x")
+     returnvalue
+
+L17:
+     debugline           277
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     debugline           277
+     getlocal2
+     getlocal3
+     getlocal            4
+     debugline           278
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsWidth"), 1
+     debugline           279
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsHeight"), 1
+     debugline           280
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth"), 1
+     debugline           281
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight"), 1
+     debugline           282
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsWidth"), 1
+     debugline           283
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsHeight"), 1
+     callproperty        QName(PackageNamespace(""), "fitBounds"), 9
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            5
+
+     debugline           286
+     getlocal            5
+     iftrue              L64
+
+     debugline           287
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth"), 1
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight"), 1
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            5
+
+L64:
+     debugline           289
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 0
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            6
+
+     debugline           290
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     debugline           290
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "y")
+     debugline           291
+     getlocal            4
+     debugline           292
+     getlocal            6
+     callpropvoid        QName(PackageNamespace(""), "transformBounds"), 4
+
+     debugline           293
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "x")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getBoundsYAtSize") flag FINAL dispid 16
+  method
+   name "mx.core:LayoutElementUIComponentUtils/getBoundsYAtSize"
+   refid "mx.core:LayoutElementUIComponentUtils/class/getBoundsYAtSize"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   paramname "obj"
+   paramname "obj"
+   paramname "obj"
+   body
+    maxstack 11
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           304
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 304
+     debug               1, "width", 1, 304
+     debug               1, "height", 2, 304
+     debug               1, "transformMatrix", 3, 304
+     debug               1, "fitSize", 4, 309
+     debug               1, "pos", 5, 321
+     debugline           306
+     getlocal            4
+     iftrue              L17
+
+     debugline           307
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "y")
+     returnvalue
+
+L17:
+     debugline           309
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     debugline           309
+     getlocal2
+     getlocal3
+     getlocal            4
+     debugline           310
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsWidth"), 1
+     debugline           311
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsHeight"), 1
+     debugline           312
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth"), 1
+     debugline           313
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight"), 1
+     debugline           314
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsWidth"), 1
+     debugline           315
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsHeight"), 1
+     callproperty        QName(PackageNamespace(""), "fitBounds"), 9
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            5
+
+     debugline           318
+     getlocal            5
+     iftrue              L64
+
+     debugline           319
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth"), 1
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight"), 1
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            5
+
+L64:
+     debugline           321
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 0
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            6
+
+     debugline           322
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     debugline           322
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "y")
+     debugline           323
+     getlocal            4
+     debugline           324
+     getlocal            6
+     callpropvoid        QName(PackageNamespace(""), "transformBounds"), 4
+
+     debugline           325
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "y")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getLayoutBoundsWidth") flag FINAL dispid 17
+  method
+   name "mx.core:LayoutElementUIComponentUtils/getLayoutBoundsWidth"
+   refid "mx.core:LayoutElementUIComponentUtils/class/getLayoutBoundsWidth"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   paramname "obj"
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           336
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal            4
+
+     debug               1, "obj", 0, 336
+     debug               1, "transformMatrix", 1, 336
+     debug               1, "width", 2, 338
+     debugline           338
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "width")
+     convert_d
+     setlocal3
+
+     debugline           339
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L27
+
+     debugline           343
+     getlocal3
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleX")
+     divide
+     convert_d
+     setlocal3
+
+L27:
+     debugline           346
+     getlocal2
+     iffalse             L63
+
+     debug               1, "height", 3, 348
+     debugline           348
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "height")
+     convert_d
+     setlocal            4
+
+     debugline           349
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L49
+
+     debugline           353
+     getlocal            4
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleY")
+     divide
+     convert_d
+     setlocal            4
+
+L49:
+     debugline           358
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     debugline           358
+     getlocal3
+     getlocal            4
+     debugline           359
+     getlocal2
+     debugline           360
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 0
+     callproperty        QName(PackageNamespace(""), "transformBounds"), 4
+     getproperty         QName(PackageNamespace(""), "x")
+     convert_d
+     setlocal3
+
+L63:
+     debugline           362
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getLayoutBoundsHeight") flag FINAL dispid 18
+  method
+   name "mx.core:LayoutElementUIComponentUtils/getLayoutBoundsHeight"
+   refid "mx.core:LayoutElementUIComponentUtils/class/getLayoutBoundsHeight"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   paramname "obj"
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           365
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal            4
+
+     debug               1, "obj", 0, 365
+     debug               1, "transformMatrix", 1, 365
+     debug               1, "height", 2, 367
+     debugline           367
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "height")
+     convert_d
+     setlocal3
+
+     debugline           368
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L27
+
+     debugline           372
+     getlocal3
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleY")
+     divide
+     convert_d
+     setlocal3
+
+L27:
+     debugline           375
+     getlocal2
+     iffalse             L63
+
+     debug               1, "width", 3, 377
+     debugline           377
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "width")
+     convert_d
+     setlocal            4
+
+     debugline           378
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L49
+
+     debugline           382
+     getlocal            4
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleX")
+     divide
+     convert_d
+     setlocal            4
+
+L49:
+     debugline           387
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     debugline           387
+     getlocal            4
+     getlocal3
+     debugline           388
+     getlocal2
+     debugline           389
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 0
+     callproperty        QName(PackageNamespace(""), "transformBounds"), 4
+     getproperty         QName(PackageNamespace(""), "y")
+     convert_d
+     setlocal3
+
+L63:
+     debugline           391
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getLayoutBoundsX") flag FINAL dispid 19
+  method
+   name "mx.core:LayoutElementUIComponentUtils/getLayoutBoundsX"
+   refid "mx.core:LayoutElementUIComponentUtils/class/getLayoutBoundsX"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   paramname "obj"
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           402
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 402
+     debug               1, "transformMatrix", 1, 402
+     debug               1, "width", 2, 408
+     debug               1, "height", 3, 409
+     debug               1, "pos", 4, 419
+     debugline           404
+     getlocal2
+     pushnull
+     ifne                L17
+
+     debugline           405
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "x")
+     returnvalue
+
+L17:
+     debugline           408
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "width")
+     convert_d
+     setlocal3
+
+     debugline           409
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "height")
+     convert_d
+     setlocal            4
+
+     debugline           411
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L47
+
+     debugline           413
+     getlocal3
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleX")
+     divide
+     convert_d
+     setlocal3
+
+     debugline           414
+     getlocal            4
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleY")
+     divide
+     convert_d
+     setlocal            4
+
+L47:
+     debugline           419
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 0
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            5
+
+     debugline           420
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     debugline           420
+     getlocal3
+     getlocal            4
+     debugline           421
+     getlocal2
+     debugline           422
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "transformBounds"), 4
+
+     debugline           423
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "x")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getLayoutBoundsY") flag FINAL dispid 20
+  method
+   name "mx.core:LayoutElementUIComponentUtils/getLayoutBoundsY"
+   refid "mx.core:LayoutElementUIComponentUtils/class/getLayoutBoundsY"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname "obj"
+   paramname "obj"
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           426
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 426
+     debug               1, "transformMatrix", 1, 426
+     debug               1, "width", 2, 432
+     debug               1, "height", 3, 433
+     debug               1, "pos", 4, 443
+     debugline           428
+     getlocal2
+     pushnull
+     ifne                L17
+
+     debugline           429
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "y")
+     returnvalue
+
+L17:
+     debugline           432
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "width")
+     convert_d
+     setlocal3
+
+     debugline           433
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "height")
+     convert_d
+     setlocal            4
+
+     debugline           435
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L47
+
+     debugline           437
+     getlocal3
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleX")
+     divide
+     convert_d
+     setlocal3
+
+     debugline           438
+     getlocal            4
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleY")
+     divide
+     convert_d
+     setlocal            4
+
+L47:
+     debugline           443
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 0
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            5
+
+     debugline           444
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     debugline           444
+     getlocal3
+     getlocal            4
+     debugline           445
+     getlocal2
+     debugline           446
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "transformBounds"), 4
+
+     debugline           447
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "y")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "setLayoutBoundsPosition") flag FINAL dispid 21
+  method
+   name "mx.core:LayoutElementUIComponentUtils/setLayoutBoundsPosition"
+   refid "mx.core:LayoutElementUIComponentUtils/class/setLayoutBoundsPosition"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_PARAM_NAMES
+   paramname "width"
+   paramname "width"
+   paramname "width"
+   paramname "width"
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           458
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 458
+     debug               1, "x", 1, 458
+     debug               1, "y", 2, 458
+     debug               1, "transformMatrix", 3, 458
+     debugline           460
+     getlocal            4
+     iffalse             L35
+
+     debugline           465
+     getlocal2
+     findpropstrict      QName(PackageNamespace(""), "getLayoutBoundsX")
+     getlocal1
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "getLayoutBoundsX"), 2
+     subtract
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "x")
+     add
+     convert_d
+     setlocal2
+
+     debugline           466
+     getlocal3
+     findpropstrict      QName(PackageNamespace(""), "getLayoutBoundsY")
+     getlocal1
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "getLayoutBoundsY"), 2
+     subtract
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "y")
+     add
+     convert_d
+     setlocal3
+
+L35:
+     debugline           468
+     getlocal1
+     getlocal2
+     getlocal3
+     callpropvoid        QName(Namespace("mx.core:IFlexDisplayObject"), "move"), 2
+
+     debugline           469
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "setLayoutBoundsSize") flag FINAL dispid 22
+  method
+   name "mx.core:LayoutElementUIComponentUtils/setLayoutBoundsSize"
+   refid "mx.core:LayoutElementUIComponentUtils/class/setLayoutBoundsSize"
+   param QName(PackageNamespace("mx.core"), "IUIComponent")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_PARAM_NAMES
+   paramname "width"
+   paramname "width"
+   paramname "width"
+   paramname "width"
+   body
+    maxstack 11
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;LayoutElementUIComponentUtils.as"
+     debugline           479
+     getlocal0
+     pushscope
+
+     debug               1, "obj", 0, 479
+     debug               1, "width", 1, 479
+     debug               1, "height", 2, 479
+     debug               1, "transformMatrix", 3, 479
+     debug               1, "fitSize", 4, 501
+     debugline           483
+     getlocal            4
+     iftrue              L61
+
+     debugline           485
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     iffalse             L23
+
+     debugline           486
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsWidth"), 1
+     convert_d
+     setlocal2
+
+L23:
+     debugline           487
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     iffalse             L34
+
+     debugline           488
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsHeight"), 1
+     convert_d
+     setlocal3
+
+L34:
+     debugline           490
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L54
+
+     debugline           494
+     getlocal2
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleX")
+     multiply
+     convert_d
+     setlocal2
+
+     debugline           495
+     getlocal3
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleY")
+     multiply
+     convert_d
+     setlocal3
+
+L54:
+     debugline           497
+     getlocal1
+     getlocal2
+     getlocal3
+     callpropvoid        QName(Namespace("mx.core:IFlexDisplayObject"), "setActualSize"), 2
+
+     debugline           498
+     returnvoid
+
+L61:
+     debugline           501
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     debugline           501
+     getlocal2
+     getlocal3
+     getlocal            4
+     debugline           502
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsWidth"), 1
+     debugline           503
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getPreferredUBoundsHeight"), 1
+     debugline           504
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth"), 1
+     debugline           505
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight"), 1
+     debugline           506
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsWidth"), 1
+     debugline           507
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMaxUBoundsHeight"), 1
+     callproperty        QName(PackageNamespace(""), "fitBounds"), 9
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            5
+
+     debugline           510
+     getlocal            5
+     iftrue              L108
+
+     debugline           511
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsWidth"), 1
+     findpropstrict      QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight")
+     getlocal1
+     callproperty        QName(PrivateNamespace("mx.core:LayoutElementUIComponentUtils"), "getMinUBoundsHeight"), 1
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            5
+
+L108:
+     debugline           513
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "compatibilityVersion")
+     getlex              QName(PackageNamespace("mx.core"), "FlexVersion")
+     getproperty         QName(PackageNamespace(""), "VERSION_4_0")
+     ifnlt               L128
+
+     debugline           517
+     getlocal1
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleX")
+     multiply
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal1
+     getproperty         QName(Namespace("mx.core:IFlexDisplayObject"), "scaleY")
+     multiply
+     callpropvoid        QName(Namespace("mx.core:IFlexDisplayObject"), "setActualSize"), 2
+
+     jump                L135
+
+L128:
+     debugline           520
+     getlocal1
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "y")
+     callpropvoid        QName(Namespace("mx.core:IFlexDisplayObject"), "setActualSize"), 2
+
+L135:
+     debugline           521
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

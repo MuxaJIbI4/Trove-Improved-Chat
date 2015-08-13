@@ -1,0 +1,34 @@
+script ; 14
+ sinit
+  name ""
+  refid "mx.core:AdvancedLayoutFeatures/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+    debugline           35
+    findpropstrict      Multiname("AdvancedLayoutFeatures", [PackageNamespace("mx.core")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.core:AdvancedLayoutFeatures"
+    popscope
+    initproperty        QName(PackageNamespace("mx.core"), "AdvancedLayoutFeatures")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+    debugline           11
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "AdvancedLayoutFeatures")
+  #include "AdvancedLayoutFeatures.class.asasm"
+ end ; trait
+end ; script

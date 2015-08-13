@@ -1,0 +1,381 @@
+class
+ refid "mx.core:IUIComponent"
+ instance QName(PackageNamespace("mx.core"), "IUIComponent")
+  implements Multiname("IFlexDisplayObject", [PackageNamespace("mx.core")])
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.core:IUIComponent/IUIComponent"
+   refid "mx.core:IUIComponent/instance/init"
+  end ; method
+  trait getter QName(Namespace("mx.core:IUIComponent"), "baselinePosition")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:baselinePosition/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "document")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:document/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:document/getter"
+    returns QName(PackageNamespace(""), "Object")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "document")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:document/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:document/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "enabled")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:enabled/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:enabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "enabled")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:enabled/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "explicitHeight")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:explicitHeight/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:explicitHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "explicitHeight")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:explicitHeight/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:explicitHeight/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "explicitMaxHeight")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:explicitMaxHeight/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:explicitMaxHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "explicitMaxWidth")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:explicitMaxWidth/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:explicitMaxWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "explicitMinHeight")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:explicitMinHeight/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:explicitMinHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "explicitMinWidth")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:explicitMinWidth/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:explicitMinWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "explicitWidth")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:explicitWidth/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:explicitWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "explicitWidth")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:explicitWidth/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:explicitWidth/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "focusPane")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:focusPane/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:focusPane/getter"
+    returns QName(PackageNamespace("flash.display"), "Sprite")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "focusPane")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:focusPane/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:focusPane/setter"
+    param QName(PackageNamespace("flash.display"), "Sprite")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "includeInLayout")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:includeInLayout/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:includeInLayout/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "includeInLayout")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:includeInLayout/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:includeInLayout/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "isPopUp")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:isPopUp/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:isPopUp/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "isPopUp")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:isPopUp/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:isPopUp/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "maxHeight")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:maxHeight/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:maxHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "maxWidth")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:maxWidth/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:maxWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "measuredMinHeight")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:measuredMinHeight/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:measuredMinHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "measuredMinHeight")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:measuredMinHeight/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:measuredMinHeight/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "measuredMinWidth")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:measuredMinWidth/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:measuredMinWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "measuredMinWidth")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:measuredMinWidth/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:measuredMinWidth/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "minHeight")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:minHeight/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:minHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "minWidth")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:minWidth/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:minWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "owner")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:owner/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:owner/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "owner")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:owner/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:owner/setter"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "percentHeight")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:percentHeight/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:percentHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "percentHeight")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:percentHeight/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:percentHeight/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "percentWidth")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:percentWidth/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:percentWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "percentWidth")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:percentWidth/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:percentWidth/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "systemManager")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:systemManager/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:systemManager/getter"
+    returns QName(PackageNamespace("mx.managers"), "ISystemManager")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "systemManager")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:systemManager/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:systemManager/setter"
+    param QName(PackageNamespace("mx.managers"), "ISystemManager")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IUIComponent"), "tweeningProperties")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:tweeningProperties/get"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:tweeningProperties/getter"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IUIComponent"), "tweeningProperties")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:tweeningProperties/set"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:tweeningProperties/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IUIComponent"), "initialize")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:initialize"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:initialize"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IUIComponent"), "parentChanged")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:parentChanged"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:parentChanged"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IUIComponent"), "getExplicitOrMeasuredWidth")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:getExplicitOrMeasuredWidth"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:getExplicitOrMeasuredWidth"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IUIComponent"), "getExplicitOrMeasuredHeight")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:getExplicitOrMeasuredHeight"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:getExplicitOrMeasuredHeight"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IUIComponent"), "setVisible")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:setVisible"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:setVisible"
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional False()
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+    paramname "mx.core:IUIComponent/mx.core:IUIComponent:baselinePosition/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IUIComponent"), "owns")
+   method
+    name "mx.core:IUIComponent/mx.core:IUIComponent:owns"
+    refid "mx.core:IUIComponent/instance/mx.core:IUIComponent:owns"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "Number"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:IUIComponent/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 5
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

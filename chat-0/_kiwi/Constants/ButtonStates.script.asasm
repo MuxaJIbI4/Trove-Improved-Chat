@@ -1,0 +1,34 @@
+script ; 39
+ sinit
+  name ""
+  refid "_kiwi.Constants:ButtonStates/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constants;ButtonStates.as"
+    debugline           7
+    findpropstrict      Multiname("ButtonStates", [PackageNamespace("_kiwi.Constants")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_kiwi.Constants:ButtonStates"
+    popscope
+    initproperty        QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constants;ButtonStates.as"
+    debugline           1
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_kiwi.Constants"), "ButtonStates")
+  #include "ButtonStates.class.asasm"
+ end ; trait
+end ; script

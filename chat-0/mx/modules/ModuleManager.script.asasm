@@ -1,0 +1,102 @@
+script ; 79
+ sinit
+  name ""
+  refid "mx.modules:ModuleManager/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+    debugline           34
+    findpropstrict      Multiname("ModuleManager", [PackageNamespace("mx.modules")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.modules:ModuleManager"
+    popscope
+    initproperty        QName(PackageNamespace("mx.modules"), "ModuleManager")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+    debugline           131
+    findpropstrict      Multiname("ModuleManagerImpl", [PrivateNamespace("ModuleManager.as$140")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "mx.modules:ModuleManager/ModuleManagerImpl"
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("ModuleManager.as$140"), "ModuleManagerImpl")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+    debugline           233
+    findpropstrict      Multiname("ModuleInfo", [PrivateNamespace("ModuleManager.as$140")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "mx.modules:ModuleManager/ModuleInfo"
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfo")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+    debugline           849
+    findpropstrict      Multiname("FactoryInfo", [PrivateNamespace("ModuleManager.as$140")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.modules:ModuleManager/FactoryInfo"
+    popscope
+    initproperty        QName(PrivateNamespace("ModuleManager.as$140"), "FactoryInfo")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+    debugline           916
+    findpropstrict      Multiname("ModuleInfoProxy", [PrivateNamespace("ModuleManager.as$140")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "mx.modules:ModuleManager/ModuleInfoProxy"
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfoProxy")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManager.as"
+    debugline           123
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.modules"), "ModuleManager")
+  #include "ModuleManager.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("ModuleManager.as$140"), "ModuleManagerImpl")
+  #include "ModuleManager/ModuleManagerImpl.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfo")
+  #include "ModuleManager/ModuleInfo.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("ModuleManager.as$140"), "FactoryInfo")
+  #include "ModuleManager/FactoryInfo.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("ModuleManager.as$140"), "ModuleInfoProxy")
+  #include "ModuleManager/ModuleInfoProxy.class.asasm"
+ end ; trait
+end ; script

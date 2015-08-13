@@ -1,0 +1,900 @@
+class
+ refid "mx.utils:StringUtil"
+ instance QName(PackageNamespace("mx.utils"), "StringUtil")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.utils:StringUtil")
+  iinit
+   name "mx.utils:StringUtil/StringUtil"
+   refid "mx.utils:StringUtil/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+     debugline           347
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "mx.utils:StringUtil/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 17
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait method QName(PackageNamespace(""), "trim") flag FINAL dispid 3
+  method
+   name "mx.utils:StringUtil/trim"
+   refid "mx.utils:StringUtil/class/trim"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   flag HAS_PARAM_NAMES
+   paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+     debugline           51
+     getlocal0
+     pushscope
+
+     debug               1, "str", 0, 51
+     debug               1, "startIndex", 1, 55
+     debug               1, "endIndex", 2, 59
+     debugline           53
+     getlocal1
+     pushnull
+     ifne                L13
+
+     pushstring          ""
+     returnvalue
+
+L13:
+     debugline           55
+     pushbyte            0
+     setlocal2
+
+     jump                L20
+
+L17:
+     label
+     debugline           57
+     inclocal_i          2
+L20:
+     debugline           56
+     findpropstrict      QName(PackageNamespace(""), "isWhitespace")
+     getlocal1
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     callproperty        QName(PackageNamespace(""), "isWhitespace"), 1
+     iftrue              L17
+
+     debugline           59
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     convert_i
+     setlocal3
+
+     jump                L39
+
+L34:
+     label
+     debugline           61
+     getlocal3
+     decrement_i
+     setlocal3
+
+L39:
+     debugline           60
+     findpropstrict      QName(PackageNamespace(""), "isWhitespace")
+     getlocal1
+     getlocal3
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     callproperty        QName(PackageNamespace(""), "isWhitespace"), 1
+     iftrue              L34
+
+     debugline           63
+     getlocal3
+     getlocal2
+     ifnge               L58
+
+     debugline           64
+     getlocal1
+     getlocal2
+     getlocal3
+     pushbyte            1
+     add
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     returnvalue
+
+L58:
+     pushstring          ""
+     debugline           66
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "trimArrayElements") flag FINAL dispid 4
+  method
+   name "mx.utils:StringUtil/trimArrayElements"
+   refid "mx.utils:StringUtil/class/trimArrayElements"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   flag HAS_PARAM_NAMES
+   paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+   paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+     debugline           85
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal3
+
+     pushbyte            0
+     setlocal            4
+
+     pushbyte            0
+     setlocal            5
+
+     debug               1, "value", 0, 85
+     debug               1, "delimiter", 1, 85
+     debugline           87
+     getlocal1
+     pushstring          ""
+     equals
+     not
+     dup
+     iffalse             L25
+
+     pop
+     getlocal1
+     pushnull
+     equals
+     not
+L25:
+     iffalse             L69
+
+     debug               1, "items", 2, 89
+     debug               1, "len", 3, 91
+     debug               1, "i", 4, 92
+     debugline           89
+     getlocal1
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal3
+
+     debugline           91
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal            4
+
+     debugline           92
+     pushbyte            0
+     setlocal            5
+
+     jump                L56
+
+L44:
+     label
+     debugline           94
+     getlocal3
+     getlocal            5
+     getlex              QName(PackageNamespace("mx.utils"), "StringUtil")
+     getlocal3
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace("mx.utils:StringUtil"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("StringUtil.as$134"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "trim"), 1
+     setproperty         MultinameL([PrivateNamespace("mx.utils:StringUtil"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("StringUtil.as$134"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil"), StaticProtectedNs("Object")])
+
+     debugline           92
+     inclocal_i          5
+L56:
+     getlocal            5
+     getlocal            4
+     iflt                L44
+
+     debugline           97
+     getlocal            4
+     pushbyte            0
+     ifngt               L69
+
+     debugline           99
+     getlocal3
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+     coerce_s
+     setlocal1
+
+L69:
+     debugline           103
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "isWhitespace") flag FINAL dispid 5
+  method
+   name "mx.utils:StringUtil/isWhitespace"
+   refid "mx.utils:StringUtil/class/isWhitespace"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Boolean")
+   flag HAS_PARAM_NAMES
+   paramname "length"
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+     debugline           120
+     getlocal0
+     pushscope
+
+     debug               1, "character", 0, 120
+     jump                L18
+
+L6:
+     label
+     debugline           129
+     pushtrue
+     returnvalue
+
+L10:
+     label
+     debugline           132
+     pushfalse
+     returnvalue
+
+     ; 0x10
+     ; 0x76
+     ; 0x00
+     ; 0x00
+L18:
+     debugline           122
+     getlocal1
+     setlocal2
+
+     pushstring          " "
+     debugline           124
+     getlocal2
+     ifstrictne          L27
+
+     pushbyte            0
+     jump                L59
+
+L27:
+     pushstring          "\x09"
+     debugline           125
+     getlocal2
+     ifstrictne          L33
+
+     pushbyte            1
+     jump                L59
+
+L33:
+     pushstring          "\r"
+     debugline           126
+     getlocal2
+     ifstrictne          L39
+
+     pushbyte            2
+     jump                L59
+
+L39:
+     pushstring          "\n"
+     debugline           127
+     getlocal2
+     ifstrictne          L45
+
+     pushbyte            3
+     jump                L59
+
+L45:
+     pushstring          "\x0C"
+     debugline           128
+     getlocal2
+     ifstrictne          L51
+
+     pushbyte            4
+     jump                L59
+
+L51:
+     jump                L58
+
+     ; 0x24
+     ; 0x05
+     ; 0x10
+     ; 0x02
+     ; 0x00
+     ; 0x00
+L58:
+     pushbyte            5
+L59:
+     kill                2
+     lookupswitch        L10, [L6, L6, L6, L6, L6, L10]
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "substitute") flag FINAL dispid 6
+  method
+   name "mx.utils:StringUtil/substitute"
+   refid "mx.utils:StringUtil/class/substitute"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   flag NEED_REST
+   flag HAS_PARAM_NAMES
+   paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+     debugline           176
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            4
+
+     debug               1, "str", 0, 176
+     debug               1, "rest", 1, 176
+     debug               1, "len", 2, 181
+     debug               1, "args", 3, 182
+     debug               1, "i", 4, 193
+     debugline           178
+     getlocal1
+     pushnull
+     ifne                L18
+
+     pushstring          ""
+     returnvalue
+
+L18:
+     debugline           181
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_u
+     setlocal3
+
+     debugline           183
+     getlocal3
+     pushbyte            1
+     equals
+     dup
+     iffalse             L35
+
+     pop
+     getlocal2
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("mx.utils:StringUtil"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("StringUtil.as$134"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil"), StaticProtectedNs("Object")])
+     getlex              QName(PackageNamespace(""), "Array")
+     istypelate
+L35:
+     iffalse             L50
+
+     debugline           185
+     getlocal2
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("mx.utils:StringUtil"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("StringUtil.as$134"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil"), StaticProtectedNs("Object")])
+     getlex              QName(PackageNamespace(""), "Array")
+     astypelate
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            4
+
+     debugline           186
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_u
+     setlocal3
+
+     jump                L54
+
+L50:
+     debugline           190
+     getlocal2
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            4
+
+L54:
+     debugline           193
+     pushbyte            0
+     setlocal            5
+
+     jump                L77
+
+L58:
+     label
+     debugline           195
+     getlocal1
+     findpropstrict      QName(PackageNamespace(""), "RegExp")
+     pushstring          "\\{"
+     getlocal            5
+     add
+     pushstring          "\\}"
+     add
+     pushstring          "g"
+     constructprop       QName(PackageNamespace(""), "RegExp"), 2
+     getlocal            4
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace("mx.utils:StringUtil"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("StringUtil.as$134"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil"), StaticProtectedNs("Object")])
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+     coerce_s
+     setlocal1
+
+     debugline           193
+     inclocal_i          5
+L77:
+     getlocal            5
+     getlocal3
+     iflt                L58
+
+     debugline           198
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "repeat") flag FINAL dispid 7
+  method
+   name "mx.utils:StringUtil/repeat"
+   refid "mx.utils:StringUtil/class/repeat"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "String")
+   flag HAS_PARAM_NAMES
+   paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+   paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+   body
+    maxstack 2
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+     debugline           216
+     getlocal0
+     pushscope
+
+     debug               1, "str", 0, 216
+     debug               1, "n", 1, 216
+     debug               1, "s", 2, 221
+     debug               1, "i", 3, 222
+     debugline           218
+     getlocal2
+     pushbyte            0
+     ifne                L15
+
+     pushstring          ""
+     debugline           219
+     returnvalue
+
+L15:
+     debugline           221
+     getlocal1
+     coerce_s
+     setlocal3
+
+     debugline           222
+     pushbyte            1
+     setlocal            4
+
+     jump                L32
+
+L23:
+     label
+     debugline           224
+     getlocal3
+     getlocal1
+     add
+     coerce_s
+     setlocal3
+
+     debugline           222
+     inclocal_i          4
+L32:
+     getlocal            4
+     getlocal2
+     iflt                L23
+
+     debugline           226
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "restrict") flag FINAL dispid 8
+  method
+   name "mx.utils:StringUtil/restrict"
+   refid "mx.utils:StringUtil/class/restrict"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   flag HAS_PARAM_NAMES
+   paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+   paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+   body
+    maxstack 3
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+     debugline           248
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     convert_u
+     setlocal            6
+
+     debug               1, "str", 0, 248
+     debug               1, "restrict", 1, 248
+     debug               1, "charCodes", 2, 260
+     debug               1, "n", 3, 262
+     debug               1, "i", 4, 263
+     debugline           251
+     getlocal2
+     pushnull
+     ifne                L19
+
+     debugline           252
+     getlocal1
+     returnvalue
+
+L19:
+     debugline           255
+     getlocal2
+     pushstring          ""
+     ifne                L26
+
+     pushstring          ""
+     debugline           256
+     returnvalue
+
+L26:
+     debugline           260
+     newarray            0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal3
+
+     debugline           262
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal            4
+
+     debugline           263
+     pushbyte            0
+     setlocal            5
+
+     jump                L59
+
+L39:
+     label
+     debug               1, "charCode", 5, 265
+     debugline           265
+     getlocal1
+     getlocal            5
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+     convert_u
+     setlocal            6
+
+     debugline           266
+     findpropstrict      QName(PrivateNamespace("mx.utils:StringUtil"), "testCharacter")
+     getlocal            6
+     getlocal2
+     callproperty        QName(PrivateNamespace("mx.utils:StringUtil"), "testCharacter"), 2
+     iffalse             L57
+
+     debugline           267
+     getlocal3
+     getlocal            6
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L57:
+     debugline           263
+     inclocal_i          5
+L59:
+     getlocal            5
+     getlocal            4
+     iflt                L39
+
+     debugline           270
+     getlex              QName(PackageNamespace(""), "String")
+     getproperty         QName(Namespace("http://adobe.com/AS3/2006/builtin"), "fromCharCode")
+     pushnull
+     getlocal3
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("mx.utils:StringUtil"), "testCharacter") flag FINAL dispid 9
+  method
+   name "mx.utils:StringUtil/private:testCharacter"
+   refid "mx.utils:StringUtil/class/mx.utils:StringUtil/class/testCharacter"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Boolean")
+   flag HAS_PARAM_NAMES
+   paramname "length"
+   paramname "length"
+   body
+    maxstack 2
+    localcount 12
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;StringUtil.as"
+     debugline           282
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     convert_u
+     setlocal            9
+
+     pushfalse
+     setlocal            11
+
+     debug               1, "charCode", 0, 282
+     debug               1, "restrict", 1, 282
+     debug               1, "allowIt", 2, 285
+     debug               1, "inBackSlash", 3, 287
+     debug               1, "inRange", 4, 288
+     debug               1, "setFlag", 5, 289
+     debug               1, "lastCode", 6, 290
+     debug               1, "n", 7, 292
+     debug               1, "code", 8, 293
+     debug               1, "i", 9, 302
+     debugline           285
+     pushfalse
+     setlocal3
+
+     debugline           287
+     pushfalse
+     setlocal            4
+
+     debugline           288
+     pushfalse
+     setlocal            5
+
+     debugline           289
+     pushtrue
+     setlocal            6
+
+     debugline           290
+     pushbyte            0
+     convert_u
+     setlocal            7
+
+     debugline           292
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal            8
+
+     debugline           295
+     getlocal            8
+     pushbyte            0
+     ifngt               L57
+
+     debugline           297
+     getlocal2
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+     convert_u
+     setlocal            9
+
+     debugline           298
+     getlocal            9
+     pushbyte            94
+     ifne                L57
+
+     debugline           299
+     pushtrue
+     setlocal3
+
+L57:
+     debugline           302
+     pushbyte            0
+     setlocal            10
+
+     jump                L153
+
+L61:
+     label
+     debug               1, "acceptCode", 10, 306
+     debugline           304
+     getlocal2
+     getlocal            10
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+     convert_u
+     setlocal            9
+
+     debugline           306
+     pushfalse
+     setlocal            11
+
+     debugline           307
+     getlocal            4
+     iftrue              L104
+
+     debugline           309
+     getlocal            9
+     pushbyte            45
+     ifne                L83
+
+     debugline           310
+     pushtrue
+     setlocal            5
+
+     jump                L103
+
+L83:
+     debugline           311
+     getlocal            9
+     pushbyte            94
+     ifne                L92
+
+     debugline           312
+     getlocal            6
+     not
+     setlocal            6
+
+     jump                L103
+
+L92:
+     debugline           313
+     getlocal            9
+     pushbyte            92
+     ifne                L100
+
+     debugline           314
+     pushtrue
+     setlocal            4
+
+     jump                L103
+
+L100:
+     debugline           316
+     pushtrue
+     setlocal            11
+
+L103:
+     jump                L110
+
+L104:
+     debugline           320
+     pushtrue
+     setlocal            11
+
+     debugline           321
+     pushfalse
+     setlocal            4
+
+L110:
+     debugline           324
+     getlocal            11
+     iffalse             L151
+
+     debugline           326
+     getlocal            5
+     iffalse             L139
+
+     debugline           328
+     getlocal            7
+     getlocal1
+     lessequals
+     dup
+     iffalse             L126
+
+     pop
+     getlocal1
+     getlocal            9
+     lessequals
+L126:
+     iffalse             L131
+
+     debugline           329
+     getlocal            6
+     convert_b
+     setlocal3
+
+L131:
+     debugline           330
+     pushfalse
+     setlocal            5
+
+     debugline           331
+     pushbyte            0
+     convert_u
+     setlocal            7
+
+     jump                L151
+
+L139:
+     debugline           335
+     getlocal1
+     getlocal            9
+     ifne                L147
+
+     debugline           336
+     getlocal            6
+     convert_b
+     setlocal3
+
+L147:
+     debugline           337
+     getlocal            9
+     convert_u
+     setlocal            7
+
+L151:
+     debugline           302
+     inclocal_i          10
+L153:
+     getlocal            10
+     getlocal            8
+     iflt                L61
+
+     debugline           342
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

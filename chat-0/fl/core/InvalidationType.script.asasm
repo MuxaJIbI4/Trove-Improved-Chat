@@ -1,0 +1,34 @@
+script ; 11
+ sinit
+  name ""
+  refid "fl.core:InvalidationType/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\core;InvalidationType.as"
+    debugline           18
+    findpropstrict      Multiname("InvalidationType", [PackageNamespace("fl.core")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "fl.core:InvalidationType"
+    popscope
+    initproperty        QName(PackageNamespace("fl.core"), "InvalidationType")
+
+    debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\core;InvalidationType.as"
+    debugline           2
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("fl.core"), "InvalidationType")
+  #include "InvalidationType.class.asasm"
+ end ; trait
+end ; script

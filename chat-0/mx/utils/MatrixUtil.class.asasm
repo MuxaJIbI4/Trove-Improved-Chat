@@ -1,0 +1,5286 @@
+class
+ refid "mx.utils:MatrixUtil"
+ instance QName(PackageNamespace("mx.utils"), "MatrixUtil")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag FINAL
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.utils:MatrixUtil")
+  iinit
+   name "mx.utils:MatrixUtil/MatrixUtil"
+   refid "mx.utils:MatrixUtil/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           1401
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "mx.utils:MatrixUtil/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 18
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "RADIANS_PER_DEGREES", 1, 36
+    findproperty        QName(PrivateNamespace("mx.utils:MatrixUtil"), "RADIANS_PER_DEGREES")
+    getlex              QName(PackageNamespace(""), "Math")
+    getproperty         QName(PackageNamespace(""), "PI")
+    pushshort           180
+    divide
+    initproperty        QName(PrivateNamespace("mx.utils:MatrixUtil"), "RADIANS_PER_DEGREES")
+
+    debug               1, "staticPoint", 2, 38
+    findproperty        QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+    constructprop       QName(PackageNamespace("flash.geom"), "Point"), 0
+    setproperty         QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+
+    debug               1, "fakeDollarParent", 3, 41
+    debug               1, "uiComponentClass", 4, 42
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PrivateNamespace("mx.utils:MatrixUtil"), "RADIANS_PER_DEGREES") slotid 2 type QName(PackageNamespace(""), "Number") value Double(0.017453292519943296) end
+ trait slot QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint") slotid 3 type QName(PackageNamespace("flash.geom"), "Point") end
+ trait slot QName(PrivateNamespace("mx.utils:MatrixUtil"), "fakeDollarParent") slotid 4 type QName(PackageNamespace(""), "QName") end
+ trait slot QName(PrivateNamespace("mx.utils:MatrixUtil"), "uiComponentClass") slotid 5 type QName(PackageNamespace(""), "Class") end
+ trait method QName(PackageNamespace(""), "clampRotation") flag FINAL dispid 3
+  method
+   name "mx.utils:MatrixUtil/clampRotation"
+   refid "mx.utils:MatrixUtil/class/clampRotation"
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname ""
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           54
+     getlocal0
+     pushscope
+
+     debug               1, "value", 0, 54
+     debugline           57
+     getlocal1
+     pushshort           180
+     greaterthan
+     dup
+     iftrue              L15
+
+     pop
+     getlocal1
+     pushshort           -180
+     lessthan
+L15:
+     iffalse             L43
+
+     debugline           59
+     getlocal1
+     pushshort           360
+     modulo
+     convert_d
+     setlocal1
+
+     debugline           61
+     getlocal1
+     pushshort           180
+     ifngt               L33
+
+     debugline           62
+     getlocal1
+     pushshort           360
+     subtract
+     convert_d
+     setlocal1
+
+     jump                L43
+
+L33:
+     debugline           63
+     getlocal1
+     pushshort           -180
+     ifnlt               L43
+
+     debugline           64
+     getlocal1
+     pushshort           360
+     add
+     convert_d
+     setlocal1
+
+L43:
+     debugline           66
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "transformPoint") flag FINAL dispid 4
+  method
+   name "mx.utils:MatrixUtil/transformPoint"
+   refid "mx.utils:MatrixUtil/class/transformPoint"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace("flash.geom"), "Point")
+   flag HAS_PARAM_NAMES
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           73
+     getlocal0
+     pushscope
+
+     debug               1, "x", 0, 73
+     debug               1, "y", 1, 73
+     debug               1, "m", 2, 73
+     debugline           75
+     getlocal3
+     iftrue              L21
+
+     debugline           77
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "x")
+
+     debugline           78
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+     getlocal2
+     setproperty         QName(PackageNamespace(""), "y")
+
+     debugline           79
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+     returnvalue
+
+L21:
+     debugline           82
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "a")
+     getlocal1
+     multiply
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "c")
+     getlocal2
+     multiply
+     add
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "tx")
+     add
+     setproperty         QName(PackageNamespace(""), "x")
+
+     debugline           83
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "b")
+     getlocal1
+     multiply
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "d")
+     getlocal2
+     multiply
+     add
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "ty")
+     add
+     setproperty         QName(PackageNamespace(""), "y")
+
+     debugline           84
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "composeMatrix") flag FINAL dispid 5
+  method
+   name "mx.utils:MatrixUtil/composeMatrix"
+   refid "mx.utils:MatrixUtil/class/composeMatrix"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace("flash.geom"), "Matrix")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional Integer(0)
+   optional Integer(0)
+   optional Integer(1)
+   optional Integer(1)
+   optional Integer(0)
+   optional Integer(0)
+   optional Integer(0)
+   paramname "mx.utils:MatrixUtil/clampRotation"
+   paramname "mx.utils:MatrixUtil/clampRotation"
+   paramname "mx.utils:MatrixUtil/clampRotation"
+   paramname "mx.utils:MatrixUtil/clampRotation"
+   paramname "mx.utils:MatrixUtil/clampRotation"
+   paramname "mx.utils:MatrixUtil/clampRotation"
+   paramname "mx.utils:MatrixUtil/clampRotation"
+   body
+    maxstack 4
+    localcount 9
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           87
+     getlocal0
+     pushscope
+
+     debug               1, "x", 0, 87
+     debug               1, "y", 1, 87
+     debug               1, "scaleX", 2, 87
+     debug               1, "scaleY", 3, 87
+     debug               1, "rotation", 4, 87
+     debug               1, "transformX", 5, 87
+     debug               1, "transformY", 6, 87
+     debug               1, "m", 7, 95
+     debugline           95
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+     constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+     coerce              QName(PackageNamespace("flash.geom"), "Matrix")
+     setlocal            8
+
+     debugline           96
+     getlocal            8
+     getlocal            6
+     negate
+     getlocal            7
+     negate
+     callpropvoid        QName(PackageNamespace(""), "translate"), 2
+
+     debugline           97
+     getlocal            8
+     getlocal3
+     getlocal            4
+     callpropvoid        QName(PackageNamespace(""), "scale"), 2
+
+     debugline           98
+     getlocal            5
+     pushbyte            0
+     ifeq                L42
+
+     debugline           99
+     getlocal            8
+     getlocal            5
+     pushshort           180
+     divide
+     getlex              QName(PackageNamespace(""), "Math")
+     getproperty         QName(PackageNamespace(""), "PI")
+     multiply
+     callpropvoid        QName(PackageNamespace(""), "rotate"), 1
+
+L42:
+     debugline           100
+     getlocal            8
+     getlocal            6
+     getlocal1
+     add
+     getlocal            7
+     getlocal2
+     add
+     callpropvoid        QName(PackageNamespace(""), "translate"), 2
+
+     debugline           101
+     getlocal            8
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "decomposeMatrix") flag FINAL dispid 6
+  method
+   name "mx.utils:MatrixUtil/decomposeMatrix"
+   refid "mx.utils:MatrixUtil/class/decomposeMatrix"
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Number")>)
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional Integer(0)
+   optional Integer(0)
+   paramname "b"
+   paramname "b"
+   paramname "b"
+   paramname "b"
+   body
+    maxstack 6
+    localcount 11
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           121
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal            5
+
+     pushnan
+     setlocal            6
+
+     pushnan
+     setlocal            7
+
+     pushnan
+     setlocal            8
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            10
+
+     debug               1, "components", 0, 121
+     debug               1, "matrix", 1, 121
+     debug               1, "transformX", 2, 121
+     debug               1, "transformY", 3, 121
+     debug               1, "Ux", 4, 128
+     debug               1, "Uy", 5, 129
+     debug               1, "Vx", 6, 130
+     debug               1, "Vy", 7, 131
+     debug               1, "determinant", 8, 142
+     debugline           133
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "a")
+     convert_d
+     setlocal            5
+
+     debugline           134
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "b")
+     convert_d
+     setlocal            6
+
+     debugline           135
+     getlocal1
+     pushbyte            3
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            5
+     getlocal            5
+     multiply
+     getlocal            6
+     getlocal            6
+     multiply
+     add
+     callproperty        QName(PackageNamespace(""), "sqrt"), 1
+     setproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+
+     debugline           137
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "c")
+     convert_d
+     setlocal            7
+
+     debugline           138
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "d")
+     convert_d
+     setlocal            8
+
+     debugline           139
+     getlocal1
+     pushbyte            4
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            7
+     getlocal            7
+     multiply
+     getlocal            8
+     getlocal            8
+     multiply
+     add
+     callproperty        QName(PackageNamespace(""), "sqrt"), 1
+     setproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+
+     debugline           142
+     getlocal            5
+     getlocal            8
+     multiply
+     getlocal            6
+     getlocal            7
+     multiply
+     subtract
+     convert_d
+     setlocal            9
+
+     debugline           143
+     getlocal            9
+     pushbyte            0
+     ifnlt               L102
+
+     debugline           145
+     getlocal1
+     pushbyte            4
+     getlocal1
+     pushbyte            4
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     negate
+     setproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+
+     debugline           146
+     getlocal            7
+     negate
+     convert_d
+     setlocal            7
+
+     debugline           147
+     getlocal            8
+     negate
+     convert_d
+     setlocal            8
+
+L102:
+     debugline           150
+     getlocal1
+     pushbyte            2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            6
+     getlocal            5
+     callproperty        QName(PackageNamespace(""), "atan2"), 2
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "RADIANS_PER_DEGREES")
+     divide
+     setproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+
+     debugline           152
+     getlocal3
+     pushbyte            0
+     equals
+     not
+     dup
+     iftrue              L124
+
+     pop
+     getlocal            4
+     pushbyte            0
+     equals
+     not
+L124:
+     iffalse             L152
+
+     debug               1, "postTransformCenter", 9, 154
+     debugline           154
+     getlocal2
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal3
+     getlocal            4
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     callproperty        QName(PackageNamespace(""), "transformPoint"), 1
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            10
+
+     debugline           155
+     getlocal1
+     pushbyte            0
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal3
+     subtract
+     setproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+
+     debugline           156
+     getlocal1
+     pushbyte            1
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            4
+     subtract
+     setproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+
+     jump                L164
+
+L152:
+     debugline           160
+     getlocal1
+     pushbyte            0
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "tx")
+     setproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+
+     debugline           161
+     getlocal1
+     pushbyte            1
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "ty")
+     setproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+
+L164:
+     debugline           163
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "rectUnion") flag FINAL dispid 7
+  method
+   name "mx.utils:MatrixUtil/rectUnion"
+   refid "mx.utils:MatrixUtil/class/rectUnion"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Rectangle")
+   returns QName(PackageNamespace("flash.geom"), "Rectangle")
+   flag HAS_PARAM_NAMES
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   body
+    maxstack 6
+    localcount 10
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           175
+     getlocal0
+     pushscope
+
+     debug               1, "left", 0, 175
+     debug               1, "top", 1, 175
+     debug               1, "right", 2, 175
+     debug               1, "bottom", 3, 175
+     debug               1, "rect", 4, 175
+     debug               1, "minX", 5, 181
+     debug               1, "minY", 6, 182
+     debug               1, "maxX", 7, 183
+     debug               1, "maxY", 8, 184
+     debugline           178
+     getlocal            5
+     iftrue              L28
+
+     debugline           179
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal1
+     subtract
+     getlocal            4
+     getlocal2
+     subtract
+     constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+     returnvalue
+
+L28:
+     debugline           181
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "left")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            6
+
+     debugline           182
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "top")
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            7
+
+     debugline           183
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "right")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            8
+
+     debugline           184
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "bottom")
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            9
+
+     debugline           186
+     getlocal            5
+     getlocal            6
+     setproperty         QName(PackageNamespace(""), "x")
+
+     debugline           187
+     getlocal            5
+     getlocal            7
+     setproperty         QName(PackageNamespace(""), "y")
+
+     debugline           188
+     getlocal            5
+     getlocal            8
+     getlocal            6
+     subtract
+     setproperty         QName(PackageNamespace(""), "width")
+
+     debugline           189
+     getlocal            5
+     getlocal            9
+     getlocal            7
+     subtract
+     setproperty         QName(PackageNamespace(""), "height")
+
+     debugline           190
+     getlocal            5
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getEllipseBoundingBox") flag FINAL dispid 8
+  method
+   name "mx.utils:MatrixUtil/getEllipseBoundingBox"
+   refid "mx.utils:MatrixUtil/class/getEllipseBoundingBox"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   param QName(PackageNamespace("flash.geom"), "Rectangle")
+   returns QName(PackageNamespace("flash.geom"), "Rectangle")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional Null()
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   body
+    maxstack 7
+    localcount 18
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           211
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal            11
+
+     pushnan
+     setlocal            12
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            17
+
+     debug               1, "cx", 0, 211
+     debug               1, "cy", 1, 211
+     debug               1, "rx", 2, 211
+     debug               1, "ry", 3, 211
+     debug               1, "matrix", 4, 211
+     debug               1, "rect", 5, 211
+     debug               1, "a", 6, 216
+     debug               1, "b", 7, 217
+     debug               1, "c", 8, 218
+     debug               1, "d", 9, 219
+     debug               1, "t", 10, 246
+     debug               1, "t1", 11, 247
+     debug               1, "x1", 12, 259
+     debug               1, "x2", 13, 260
+     debug               1, "y1", 14, 264
+     debug               1, "y2", 15, 265
+     debugline           216
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "a")
+     convert_d
+     setlocal            7
+
+     debugline           217
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "b")
+     convert_d
+     setlocal            8
+
+     debugline           218
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "c")
+     convert_d
+     setlocal            9
+
+     debugline           219
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "d")
+     convert_d
+     setlocal            10
+
+     debugline           239
+     getlocal3
+     pushbyte            0
+     equals
+     dup
+     iffalse             L57
+
+     pop
+     getlocal            4
+     pushbyte            0
+     equals
+L57:
+     iffalse             L85
+
+     debug               1, "pt", 16, 241
+     debugline           241
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal1
+     getlocal2
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            17
+
+     debugline           242
+     getlocal            5
+     getlocal            17
+     callproperty        QName(PackageNamespace(""), "transformPoint"), 1
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            17
+
+     debugline           243
+     findpropstrict      QName(PackageNamespace(""), "rectUnion")
+     getlocal            17
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            17
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            17
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            17
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            6
+     callproperty        QName(PackageNamespace(""), "rectUnion"), 5
+     returnvalue
+
+L85:
+     debugline           249
+     getlocal            7
+     getlocal3
+     multiply
+     pushbyte            0
+     ifne                L99
+
+     debugline           250
+     getlex              QName(PackageNamespace(""), "Math")
+     getproperty         QName(PackageNamespace(""), "PI")
+     pushbyte            2
+     divide
+     convert_d
+     setlocal            11
+
+     jump                L111
+
+L99:
+     debugline           252
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            9
+     getlocal            4
+     multiply
+     getlocal            7
+     getlocal3
+     multiply
+     divide
+     callproperty        QName(PackageNamespace(""), "atan"), 1
+     convert_d
+     setlocal            11
+
+L111:
+     debugline           254
+     getlocal            8
+     getlocal3
+     multiply
+     pushbyte            0
+     ifne                L125
+
+     debugline           255
+     getlex              QName(PackageNamespace(""), "Math")
+     getproperty         QName(PackageNamespace(""), "PI")
+     pushbyte            2
+     divide
+     convert_d
+     setlocal            12
+
+     jump                L137
+
+L125:
+     debugline           257
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            10
+     getlocal            4
+     multiply
+     getlocal            8
+     getlocal3
+     multiply
+     divide
+     callproperty        QName(PackageNamespace(""), "atan"), 1
+     convert_d
+     setlocal            12
+
+L137:
+     debugline           259
+     getlocal            7
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            11
+     callproperty        QName(PackageNamespace(""), "cos"), 1
+     multiply
+     getlocal3
+     multiply
+     getlocal            9
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            11
+     callproperty        QName(PackageNamespace(""), "sin"), 1
+     multiply
+     getlocal            4
+     multiply
+     add
+     convert_d
+     setlocal            13
+
+     debugline           260
+     getlocal            13
+     negate
+     convert_d
+     setlocal            14
+
+     debugline           261
+     getlocal            13
+     getlocal            7
+     getlocal1
+     multiply
+     getlocal            9
+     getlocal2
+     multiply
+     add
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "tx")
+     add
+     add
+     convert_d
+     setlocal            13
+
+     debugline           262
+     getlocal            14
+     getlocal            7
+     getlocal1
+     multiply
+     getlocal            9
+     getlocal2
+     multiply
+     add
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "tx")
+     add
+     add
+     convert_d
+     setlocal            14
+
+     debugline           264
+     getlocal            8
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            12
+     callproperty        QName(PackageNamespace(""), "cos"), 1
+     multiply
+     getlocal3
+     multiply
+     getlocal            10
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            12
+     callproperty        QName(PackageNamespace(""), "sin"), 1
+     multiply
+     getlocal            4
+     multiply
+     add
+     convert_d
+     setlocal            15
+
+     debugline           265
+     getlocal            15
+     negate
+     convert_d
+     setlocal            16
+
+     debugline           266
+     getlocal            15
+     getlocal            8
+     getlocal1
+     multiply
+     getlocal            10
+     getlocal2
+     multiply
+     add
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "ty")
+     add
+     add
+     convert_d
+     setlocal            15
+
+     debugline           267
+     getlocal            16
+     getlocal            8
+     getlocal1
+     multiply
+     getlocal            10
+     getlocal2
+     multiply
+     add
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "ty")
+     add
+     add
+     convert_d
+     setlocal            16
+
+     debugline           269
+     findpropstrict      QName(PackageNamespace(""), "rectUnion")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            13
+     getlocal            14
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            15
+     getlocal            16
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            13
+     getlocal            14
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            15
+     getlocal            16
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     getlocal            6
+     callproperty        QName(PackageNamespace(""), "rectUnion"), 5
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getQBezierSegmentBBox") flag FINAL dispid 9
+  method
+   name "mx.utils:MatrixUtil/getQBezierSegmentBBox"
+   refid "mx.utils:MatrixUtil/class/getQBezierSegmentBBox"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   param QName(PackageNamespace("flash.geom"), "Rectangle")
+   returns QName(PackageNamespace("flash.geom"), "Rectangle")
+   flag HAS_PARAM_NAMES
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   body
+    maxstack 6
+    localcount 22
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           292
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            11
+
+     pushnan
+     setlocal            18
+
+     pushnan
+     setlocal            19
+
+     pushnan
+     setlocal            20
+
+     pushnan
+     setlocal            21
+
+     debug               1, "x0", 0, 292
+     debug               1, "y0", 1, 292
+     debug               1, "x1", 2, 292
+     debug               1, "y1", 3, 292
+     debug               1, "x2", 4, 292
+     debug               1, "y2", 5, 292
+     debug               1, "sx", 6, 292
+     debug               1, "sy", 7, 292
+     debug               1, "matrix", 8, 292
+     debug               1, "rect", 9, 292
+     debug               1, "pt", 10, 299
+     debug               1, "minX", 11, 312
+     debug               1, "maxX", 12, 313
+     debug               1, "minY", 13, 315
+     debug               1, "maxY", 14, 316
+     debug               1, "txDiv", 15, 318
+     debug               1, "tyDiv", 16, 330
+     debugline           300
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     getlocal1
+     getlocal            7
+     multiply
+     getlocal2
+     getlocal            8
+     multiply
+     getlocal            9
+     callproperty        QName(PackageNamespace(""), "transformPoint"), 3
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            11
+
+     debugline           301
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "x")
+     convert_d
+     setlocal1
+
+     debugline           302
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "y")
+     convert_d
+     setlocal2
+
+     debugline           304
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     getlocal3
+     getlocal            7
+     multiply
+     getlocal            4
+     getlocal            8
+     multiply
+     getlocal            9
+     callproperty        QName(PackageNamespace(""), "transformPoint"), 3
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            11
+
+     debugline           305
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "x")
+     convert_d
+     setlocal3
+
+     debugline           306
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "y")
+     convert_d
+     setlocal            4
+
+     debugline           308
+     getlex              QName(PackageNamespace("mx.utils"), "MatrixUtil")
+     getlocal            5
+     getlocal            7
+     multiply
+     getlocal            6
+     getlocal            8
+     multiply
+     getlocal            9
+     callproperty        QName(PackageNamespace(""), "transformPoint"), 3
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            11
+
+     debugline           309
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "x")
+     convert_d
+     setlocal            5
+
+     debugline           310
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "y")
+     convert_d
+     setlocal            6
+
+     debugline           312
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal1
+     getlocal            5
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            12
+
+     debugline           313
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal1
+     getlocal            5
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            13
+
+     debugline           315
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal2
+     getlocal            6
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            14
+
+     debugline           316
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal2
+     getlocal            6
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            15
+
+     debugline           318
+     getlocal1
+     pushbyte            2
+     getlocal3
+     multiply
+     subtract
+     getlocal            5
+     add
+     convert_d
+     setlocal            16
+
+     debugline           319
+     getlocal            16
+     pushbyte            0
+     ifeq                L203
+
+     debug               1, "tx", 17, 321
+     debugline           321
+     getlocal1
+     getlocal3
+     subtract
+     getlocal            16
+     divide
+     convert_d
+     setlocal            18
+
+     debugline           322
+     pushbyte            0
+     getlocal            18
+     lessequals
+     dup
+     iffalse             L159
+
+     pop
+     getlocal            18
+     pushbyte            1
+     lessequals
+L159:
+     iffalse             L203
+
+     debug               1, "x", 18, 324
+     debugline           324
+     pushbyte            1
+     getlocal            18
+     subtract
+     pushbyte            1
+     getlocal            18
+     subtract
+     multiply
+     getlocal1
+     multiply
+     pushbyte            2
+     getlocal            18
+     multiply
+     pushbyte            1
+     getlocal            18
+     subtract
+     multiply
+     getlocal3
+     multiply
+     add
+     getlocal            18
+     getlocal            18
+     multiply
+     getlocal            5
+     multiply
+     add
+     convert_d
+     setlocal            19
+
+     debugline           325
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            19
+     getlocal            12
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            12
+
+     debugline           326
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            19
+     getlocal            13
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            13
+
+L203:
+     debugline           330
+     getlocal2
+     pushbyte            2
+     getlocal            4
+     multiply
+     subtract
+     getlocal            6
+     add
+     convert_d
+     setlocal            17
+
+     debugline           331
+     getlocal            17
+     pushbyte            0
+     ifeq                L280
+
+     debug               1, "ty", 19, 333
+     debugline           333
+     getlocal2
+     getlocal            4
+     subtract
+     getlocal            17
+     divide
+     convert_d
+     setlocal            20
+
+     debugline           334
+     pushbyte            0
+     getlocal            20
+     lessequals
+     dup
+     iffalse             L236
+
+     pop
+     getlocal            20
+     pushbyte            1
+     lessequals
+L236:
+     iffalse             L280
+
+     debug               1, "y", 20, 336
+     debugline           336
+     pushbyte            1
+     getlocal            20
+     subtract
+     pushbyte            1
+     getlocal            20
+     subtract
+     multiply
+     getlocal2
+     multiply
+     pushbyte            2
+     getlocal            20
+     multiply
+     pushbyte            1
+     getlocal            20
+     subtract
+     multiply
+     getlocal            4
+     multiply
+     add
+     getlocal            20
+     getlocal            20
+     multiply
+     getlocal            6
+     multiply
+     add
+     convert_d
+     setlocal            21
+
+     debugline           337
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            21
+     getlocal            14
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            14
+
+     debugline           338
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            21
+     getlocal            15
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            15
+
+L280:
+     debugline           342
+     findpropstrict      QName(PackageNamespace(""), "rectUnion")
+     getlocal            12
+     getlocal            14
+     getlocal            13
+     getlocal            15
+     getlocal            10
+     callproperty        QName(PackageNamespace(""), "rectUnion"), 5
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "transformSize") flag FINAL dispid 10
+  method
+   name "mx.utils:MatrixUtil/transformSize"
+   refid "mx.utils:MatrixUtil/class/transformSize"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace("flash.geom"), "Point")
+   flag HAS_PARAM_NAMES
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   body
+    maxstack 5
+    localcount 20
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           366
+     getlocal0
+     pushscope
+
+     debug               1, "width", 0, 366
+     debug               1, "height", 1, 366
+     debug               1, "matrix", 2, 366
+     debug               1, "a", 3, 368
+     debug               1, "b", 4, 369
+     debug               1, "c", 5, 370
+     debug               1, "d", 6, 371
+     debug               1, "x1", 7, 374
+     debug               1, "y1", 8, 375
+     debug               1, "x2", 9, 378
+     debug               1, "y2", 10, 379
+     debug               1, "x3", 11, 382
+     debug               1, "y3", 12, 383
+     debug               1, "x4", 13, 386
+     debug               1, "y4", 14, 387
+     debug               1, "minX", 15, 389
+     debug               1, "maxX", 16, 390
+     debug               1, "minY", 17, 391
+     debug               1, "maxY", 18, 392
+     debugline           368
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "a")
+     convert_d
+     setlocal            4
+
+     debugline           369
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "b")
+     convert_d
+     setlocal            5
+
+     debugline           370
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "c")
+     convert_d
+     setlocal            6
+
+     debugline           371
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "d")
+     convert_d
+     setlocal            7
+
+     debugline           374
+     pushbyte            0
+     convert_d
+     setlocal            8
+
+     debugline           375
+     pushbyte            0
+     convert_d
+     setlocal            9
+
+     debugline           378
+     getlocal1
+     getlocal            4
+     multiply
+     convert_d
+     setlocal            10
+
+     debugline           379
+     getlocal1
+     getlocal            5
+     multiply
+     convert_d
+     setlocal            11
+
+     debugline           382
+     getlocal2
+     getlocal            6
+     multiply
+     convert_d
+     setlocal            12
+
+     debugline           383
+     getlocal2
+     getlocal            7
+     multiply
+     convert_d
+     setlocal            13
+
+     debugline           386
+     getlocal            10
+     getlocal            12
+     add
+     convert_d
+     setlocal            14
+
+     debugline           387
+     getlocal            11
+     getlocal            13
+     add
+     convert_d
+     setlocal            15
+
+     debugline           389
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            8
+     getlocal            10
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            12
+     getlocal            14
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            16
+
+     debugline           390
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            8
+     getlocal            10
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            12
+     getlocal            14
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            17
+
+     debugline           391
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            9
+     getlocal            11
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            13
+     getlocal            15
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            18
+
+     debugline           392
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            9
+     getlocal            11
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            13
+     getlocal            15
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            19
+
+     debugline           394
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+     getlocal            17
+     getlocal            16
+     subtract
+     setproperty         QName(PackageNamespace(""), "x")
+
+     debugline           395
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+     getlocal            19
+     getlocal            18
+     subtract
+     setproperty         QName(PackageNamespace(""), "y")
+
+     debugline           396
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "transformBounds") flag FINAL dispid 11
+  method
+   name "mx.utils:MatrixUtil/transformBounds"
+   refid "mx.utils:MatrixUtil/class/transformBounds"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   param QName(PackageNamespace("flash.geom"), "Point")
+   returns QName(PackageNamespace("flash.geom"), "Point")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional Null()
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   body
+    maxstack 5
+    localcount 25
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           416
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal            21
+
+     pushnan
+     setlocal            22
+
+     pushnan
+     setlocal            23
+
+     pushnan
+     setlocal            24
+
+     debug               1, "width", 0, 416
+     debug               1, "height", 1, 416
+     debug               1, "matrix", 2, 416
+     debug               1, "topLeft", 3, 416
+     debug               1, "a", 4, 418
+     debug               1, "b", 5, 419
+     debug               1, "c", 6, 420
+     debug               1, "d", 7, 421
+     debug               1, "x1", 8, 424
+     debug               1, "y1", 9, 425
+     debug               1, "x2", 10, 428
+     debug               1, "y2", 11, 429
+     debug               1, "x3", 12, 432
+     debug               1, "y3", 13, 433
+     debug               1, "x4", 14, 436
+     debug               1, "y4", 15, 437
+     debug               1, "minX", 16, 439
+     debug               1, "maxX", 17, 440
+     debug               1, "minY", 18, 441
+     debug               1, "maxY", 19, 442
+     debugline           418
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "a")
+     convert_d
+     setlocal            5
+
+     debugline           419
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "b")
+     convert_d
+     setlocal            6
+
+     debugline           420
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "c")
+     convert_d
+     setlocal            7
+
+     debugline           421
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "d")
+     convert_d
+     setlocal            8
+
+     debugline           424
+     pushbyte            0
+     convert_d
+     setlocal            9
+
+     debugline           425
+     pushbyte            0
+     convert_d
+     setlocal            10
+
+     debugline           428
+     getlocal1
+     getlocal            5
+     multiply
+     convert_d
+     setlocal            11
+
+     debugline           429
+     getlocal1
+     getlocal            6
+     multiply
+     convert_d
+     setlocal            12
+
+     debugline           432
+     getlocal2
+     getlocal            7
+     multiply
+     convert_d
+     setlocal            13
+
+     debugline           433
+     getlocal2
+     getlocal            8
+     multiply
+     convert_d
+     setlocal            14
+
+     debugline           436
+     getlocal            11
+     getlocal            13
+     add
+     convert_d
+     setlocal            15
+
+     debugline           437
+     getlocal            12
+     getlocal            14
+     add
+     convert_d
+     setlocal            16
+
+     debugline           439
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            9
+     getlocal            11
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            13
+     getlocal            15
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            17
+
+     debugline           440
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            9
+     getlocal            11
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            13
+     getlocal            15
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            18
+
+     debugline           441
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            10
+     getlocal            12
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            14
+     getlocal            16
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            19
+
+     debugline           442
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            10
+     getlocal            12
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            14
+     getlocal            16
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            20
+
+     debugline           444
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+     getlocal            18
+     getlocal            17
+     subtract
+     setproperty         QName(PackageNamespace(""), "x")
+
+     debugline           445
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+     getlocal            20
+     getlocal            19
+     subtract
+     setproperty         QName(PackageNamespace(""), "y")
+
+     debugline           447
+     getlocal            4
+     iffalse             L215
+
+     debug               1, "tx", 20, 449
+     debug               1, "ty", 21, 450
+     debug               1, "x", 22, 451
+     debug               1, "y", 23, 452
+     debugline           449
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "tx")
+     convert_d
+     setlocal            21
+
+     debugline           450
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "ty")
+     convert_d
+     setlocal            22
+
+     debugline           451
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "x")
+     convert_d
+     setlocal            23
+
+     debugline           452
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "y")
+     convert_d
+     setlocal            24
+
+     debugline           454
+     getlocal            4
+     getlocal            17
+     getlocal            5
+     getlocal            23
+     multiply
+     add
+     getlocal            6
+     getlocal            24
+     multiply
+     add
+     getlocal            21
+     add
+     setproperty         QName(PackageNamespace(""), "x")
+
+     debugline           455
+     getlocal            4
+     getlocal            19
+     getlocal            7
+     getlocal            23
+     multiply
+     add
+     getlocal            8
+     getlocal            24
+     multiply
+     add
+     getlocal            22
+     add
+     setproperty         QName(PackageNamespace(""), "y")
+
+L215:
+     debugline           457
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "staticPoint")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "projectBounds") flag FINAL dispid 12
+  method
+   name "mx.utils:MatrixUtil/projectBounds"
+   refid "mx.utils:MatrixUtil/class/projectBounds"
+   param QName(PackageNamespace("flash.geom"), "Rectangle")
+   param QName(PackageNamespace("flash.geom"), "Matrix3D")
+   param QName(PackageNamespace("flash.geom"), "PerspectiveProjection")
+   returns QName(PackageNamespace("flash.geom"), "Rectangle")
+   flag HAS_PARAM_NAMES
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   paramname "mx.utils:MatrixUtil/transformPoint"
+   body
+    maxstack 5
+    localcount 14
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           476
+     getlocal0
+     pushscope
+
+     debug               1, "bounds", 0, 476
+     debug               1, "matrix", 1, 476
+     debug               1, "projection", 2, 476
+     debug               1, "centerX", 3, 481
+     debug               1, "centerY", 4, 482
+     debug               1, "pt1", 5, 487
+     debug               1, "pt2", 6, 488
+     debug               1, "pt3", 7, 489
+     debug               1, "pt4", 8, 490
+     debug               1, "maxX", 9, 497
+     debug               1, "minX", 10, 498
+     debug               1, "maxY", 11, 499
+     debug               1, "minY", 12, 500
+     debugline           481
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "projectionCenter")
+     getproperty         QName(PackageNamespace(""), "x")
+     convert_d
+     setlocal            4
+
+     debugline           482
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "projectionCenter")
+     getproperty         QName(PackageNamespace(""), "y")
+     convert_d
+     setlocal            5
+
+     debugline           483
+     getlocal2
+     getlocal            4
+     negate
+     getlocal            5
+     negate
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "focalLength")
+     callpropvoid        QName(PackageNamespace(""), "appendTranslation"), 3
+
+     debugline           484
+     getlocal2
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "toMatrix3D"), 0
+     callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+     debugline           487
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "left")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "top")
+     pushbyte            0
+     constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 3
+     coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+     setlocal            6
+
+     debugline           488
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "right")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "top")
+     pushbyte            0
+     constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 3
+     coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+     setlocal            7
+
+     debugline           489
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "left")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "bottom")
+     pushbyte            0
+     constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 3
+     coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+     setlocal            8
+
+     debugline           490
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "right")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "bottom")
+     pushbyte            0
+     constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 3
+     coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+     setlocal            9
+
+     debugline           491
+     getlex              QName(PackageNamespace("flash.geom"), "Utils3D")
+     getlocal2
+     getlocal            6
+     callproperty        QName(PackageNamespace(""), "projectVector"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+     setlocal            6
+
+     debugline           492
+     getlex              QName(PackageNamespace("flash.geom"), "Utils3D")
+     getlocal2
+     getlocal            7
+     callproperty        QName(PackageNamespace(""), "projectVector"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+     setlocal            7
+
+     debugline           493
+     getlex              QName(PackageNamespace("flash.geom"), "Utils3D")
+     getlocal2
+     getlocal            8
+     callproperty        QName(PackageNamespace(""), "projectVector"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+     setlocal            8
+
+     debugline           494
+     getlex              QName(PackageNamespace("flash.geom"), "Utils3D")
+     getlocal2
+     getlocal            9
+     callproperty        QName(PackageNamespace(""), "projectVector"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+     setlocal            9
+
+     debugline           497
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "x")
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "x")
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            10
+
+     debugline           498
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "x")
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "x")
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            11
+
+     debugline           499
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "y")
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "y")
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            12
+
+     debugline           500
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "y")
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "y")
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            13
+
+     debugline           503
+     getlocal1
+     getlocal            11
+     getlocal            4
+     add
+     setproperty         QName(PackageNamespace(""), "x")
+
+     debugline           504
+     getlocal1
+     getlocal            13
+     getlocal            5
+     add
+     setproperty         QName(PackageNamespace(""), "y")
+
+     debugline           505
+     getlocal1
+     getlocal            10
+     getlocal            11
+     subtract
+     setproperty         QName(PackageNamespace(""), "width")
+
+     debugline           506
+     getlocal1
+     getlocal            12
+     getlocal            13
+     subtract
+     setproperty         QName(PackageNamespace(""), "height")
+
+     debugline           507
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "isDeltaIdentity") flag FINAL dispid 13
+  method
+   name "mx.utils:MatrixUtil/isDeltaIdentity"
+   refid "mx.utils:MatrixUtil/class/isDeltaIdentity"
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Boolean")
+   flag HAS_PARAM_NAMES
+   paramname "postTransformCenter"
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           521
+     getlocal0
+     pushscope
+
+     debug               1, "matrix", 0, 521
+     debugline           523
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "a")
+     pushbyte            1
+     equals
+     dup
+     iffalse             L17
+
+     pop
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "d")
+     pushbyte            1
+     equals
+L17:
+     dup
+     iffalse             L25
+
+     pop
+     debugline           524
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "b")
+     pushbyte            0
+     equals
+L25:
+     dup
+     iffalse             L32
+
+     pop
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "c")
+     pushbyte            0
+     equals
+L32:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "fitBounds") flag FINAL dispid 14
+  method
+   name "mx.utils:MatrixUtil/fitBounds"
+   refid "mx.utils:MatrixUtil/class/fitBounds"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace("flash.geom"), "Point")
+   flag HAS_PARAM_NAMES
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   body
+    maxstack 9
+    localcount 11
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           566
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            10
+
+     debug               1, "width", 0, 566
+     debug               1, "height", 1, 566
+     debug               1, "matrix", 2, 566
+     debug               1, "preferredWidth", 3, 566
+     debug               1, "preferredHeight", 4, 566
+     debug               1, "minWidth", 5, 566
+     debug               1, "minHeight", 6, 566
+     debug               1, "maxWidth", 7, 566
+     debug               1, "maxHeight", 8, 566
+     debugline           571
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     convert_b
+     dup
+     iffalse             L28
+
+     pop
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     convert_b
+L28:
+     iffalse             L35
+
+     debugline           572
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal            4
+     getlocal            5
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     returnvalue
+
+L35:
+     debugline           574
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     not
+     dup
+     iffalse             L47
+
+     pop
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     not
+L47:
+     iffalse             L146
+
+     debug               1, "actualSize", 9, 576
+     debugline           576
+     findpropstrict      QName(PackageNamespace(""), "calcUBoundsToFitTBounds")
+     debugline           576
+     getlocal1
+     getlocal2
+     getlocal3
+     debugline           577
+     getlocal            6
+     getlocal            7
+     debugline           578
+     getlocal            8
+     getlocal            9
+     callproperty        QName(PackageNamespace(""), "calcUBoundsToFitTBounds"), 7
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            10
+
+     debugline           582
+     getlocal            10
+     iftrue              L139
+
+     debugline           584
+     findpropstrict      QName(PackageNamespace(""), "calcUBoundsToFitTBoundsWidth")
+     debugline           584
+     getlocal1
+     getlocal3
+     debugline           585
+     getlocal            4
+     getlocal            5
+     debugline           586
+     getlocal            6
+     getlocal            7
+     debugline           587
+     getlocal            8
+     getlocal            9
+     callproperty        QName(PackageNamespace(""), "calcUBoundsToFitTBoundsWidth"), 8
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            10
+
+     debugline           590
+     getlocal            10
+     convert_b
+     dup
+     iffalse             L100
+
+     pop
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal2
+     greaterthan
+L100:
+     iffalse             L139
+
+     debugline           592
+     findpropstrict      QName(PackageNamespace(""), "calcUBoundsToFitTBoundsHeight")
+     debugline           592
+     getlocal2
+     getlocal3
+     debugline           593
+     getlocal            4
+     getlocal            5
+     debugline           594
+     getlocal            6
+     getlocal            7
+     debugline           595
+     getlocal            8
+     getlocal            9
+     callproperty        QName(PackageNamespace(""), "calcUBoundsToFitTBoundsHeight"), 8
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            10
+
+     debugline           598
+     getlocal            10
+     convert_b
+     dup
+     iffalse             L134
+
+     pop
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal1
+     greaterthan
+L134:
+     iffalse             L139
+
+     debugline           599
+     pushnull
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            10
+
+L139:
+     debugline           602
+     getlocal            10
+     returnvalue
+
+     ; 0x10
+     ; 0x54
+     ; 0x00
+     ; 0x00
+L146:
+     debugline           604
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     iftrue              L167
+
+     debugline           606
+     findpropstrict      QName(PackageNamespace(""), "calcUBoundsToFitTBoundsWidth")
+     debugline           606
+     getlocal1
+     getlocal3
+     debugline           607
+     getlocal            4
+     getlocal            5
+     debugline           608
+     getlocal            6
+     getlocal            7
+     debugline           609
+     getlocal            8
+     getlocal            9
+     callproperty        QName(PackageNamespace(""), "calcUBoundsToFitTBoundsWidth"), 8
+     returnvalue
+
+L167:
+     debugline           613
+     findpropstrict      QName(PackageNamespace(""), "calcUBoundsToFitTBoundsHeight")
+     debugline           613
+     getlocal2
+     getlocal3
+     debugline           614
+     getlocal            4
+     getlocal            5
+     debugline           615
+     getlocal            6
+     getlocal            7
+     debugline           616
+     getlocal            8
+     getlocal            9
+     callproperty        QName(PackageNamespace(""), "calcUBoundsToFitTBoundsHeight"), 8
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "calcUBoundsToFitTBoundsHeight") flag FINAL dispid 15
+  method
+   name "mx.utils:MatrixUtil/calcUBoundsToFitTBoundsHeight"
+   refid "mx.utils:MatrixUtil/class/calcUBoundsToFitTBoundsHeight"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace("flash.geom"), "Point")
+   flag HAS_PARAM_NAMES
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   body
+    maxstack 10
+    localcount 20
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           644
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            12
+
+     pushnan
+     setlocal            13
+
+     pushnan
+     setlocal            14
+
+     pushnan
+     setlocal            15
+
+     pushnan
+     setlocal            16
+
+     pushnan
+     setlocal            18
+
+     pushnan
+     setlocal            19
+
+     debug               1, "h", 0, 644
+     debug               1, "matrix", 1, 644
+     debug               1, "preferredX", 2, 644
+     debug               1, "preferredY", 3, 644
+     debug               1, "minX", 4, 644
+     debug               1, "minY", 5, 644
+     debug               1, "maxX", 6, 644
+     debug               1, "maxY", 7, 644
+     debug               1, "b", 8, 696
+     debug               1, "d", 9, 697
+     debug               1, "d1", 10, 711
+     debug               1, "s", 11, 716
+     debug               1, "x", 12, 717
+     debug               1, "y", 13, 718
+     debug               1, "a", 14, 783
+     debug               1, "c", 15, 784
+     debug               1, "c1", 16, 785
+     debugline           654
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            7
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal3
+
+     debugline           655
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            6
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            8
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            4
+
+     debugline           696
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "b")
+     convert_d
+     setlocal            9
+
+     debugline           697
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "d")
+     convert_d
+     setlocal            10
+
+     debugline           700
+     pushdouble          -1.00000000000000006e-09
+     getlocal            9
+     lessthan
+     dup
+     iffalse             L76
+
+     pop
+     getlocal            9
+     pushdouble          1.00000000000000006e-09
+     lessthan
+L76:
+     iffalse             L81
+
+     debugline           701
+     pushbyte            0
+     convert_d
+     setlocal            9
+
+L81:
+     debugline           702
+     pushdouble          -1.00000000000000006e-09
+     getlocal            10
+     lessthan
+     dup
+     iffalse             L91
+
+     pop
+     getlocal            10
+     pushdouble          1.00000000000000006e-09
+     lessthan
+L91:
+     iffalse             L96
+
+     debugline           703
+     pushbyte            0
+     convert_d
+     setlocal            10
+
+L96:
+     debugline           706
+     getlocal            9
+     pushbyte            0
+     ifne                L110
+
+     debugline           707
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal3
+     getlocal1
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            10
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     divide
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     returnvalue
+
+L110:
+     debugline           708
+     getlocal            10
+     pushbyte            0
+     ifne                L124
+
+     debugline           709
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal1
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            9
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     divide
+     getlocal            4
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     returnvalue
+
+L124:
+     debugline           711
+     getlocal            9
+     getlocal            10
+     multiply
+     pushbyte            0
+     ifnge               L133
+
+     getlocal            10
+     convert_d
+     jump                L136
+
+L133:
+     getlocal            10
+     negate
+     convert_d
+L136:
+     convert_d
+     setlocal            11
+
+     debugline           720
+     getlocal            11
+     pushbyte            0
+     ifeq                L258
+
+     debug               1, "invD1", 17, 722
+     debugline           722
+     pushbyte            1
+     getlocal            11
+     divide
+     convert_d
+     setlocal            18
+
+     debugline           723
+     getlocal3
+     convert_d
+     setlocal            13
+
+     debugline           728
+     getlocal1
+     getlocal            9
+     getlocal            13
+     multiply
+     subtract
+     getlocal            18
+     multiply
+     convert_d
+     setlocal            14
+
+     debugline           729
+     getlocal            6
+     getlocal            14
+     lessequals
+     dup
+     iffalse             L173
+
+     pop
+     getlocal            14
+     getlocal            8
+     lessequals
+L173:
+     dup
+     iffalse             L186
+
+     pop
+     debugline           730
+     getlocal            9
+     getlocal            13
+     multiply
+     getlocal            11
+     getlocal            14
+     multiply
+     add
+     pushbyte            0
+     greaterequals
+L186:
+     iffalse             L194
+
+     debugline           732
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal            13
+     getlocal            14
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            12
+
+L194:
+     debugline           738
+     getlocal1
+     negate
+     getlocal            9
+     getlocal            13
+     multiply
+     subtract
+     getlocal            18
+     multiply
+     convert_d
+     setlocal            14
+
+     debugline           739
+     getlocal            6
+     getlocal            14
+     lessequals
+     dup
+     iffalse             L215
+
+     pop
+     getlocal            14
+     getlocal            8
+     lessequals
+L215:
+     dup
+     iffalse             L228
+
+     pop
+     debugline           740
+     getlocal            9
+     getlocal            13
+     multiply
+     getlocal            11
+     getlocal            14
+     multiply
+     add
+     pushbyte            0
+     lessthan
+L228:
+     iffalse             L258
+
+     debugline           743
+     getlocal            12
+     not
+     dup
+     iftrue              L250
+
+     pop
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            12
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            12
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "x")
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            13
+     getlocal            14
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "x")
+     greaterthan
+L250:
+     iffalse             L258
+
+     debugline           744
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal            13
+     getlocal            14
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            12
+
+L258:
+     debugline           748
+     getlocal            9
+     pushbyte            0
+     ifeq                L400
+
+     debug               1, "invB", 18, 750
+     debugline           750
+     pushbyte            1
+     getlocal            9
+     divide
+     convert_d
+     setlocal            19
+
+     debugline           751
+     getlocal            4
+     convert_d
+     setlocal            14
+
+     debugline           756
+     getlocal1
+     getlocal            11
+     getlocal            14
+     multiply
+     subtract
+     getlocal            19
+     multiply
+     convert_d
+     setlocal            13
+
+     debugline           757
+     getlocal            5
+     getlocal            13
+     lessequals
+     dup
+     iffalse             L293
+
+     pop
+     getlocal            13
+     getlocal            7
+     lessequals
+L293:
+     dup
+     iffalse             L306
+
+     pop
+     debugline           758
+     getlocal            9
+     getlocal            13
+     multiply
+     getlocal            11
+     getlocal            14
+     multiply
+     add
+     pushbyte            0
+     greaterequals
+L306:
+     iffalse             L336
+
+     debugline           761
+     getlocal            12
+     not
+     dup
+     iftrue              L328
+
+     pop
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            12
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            12
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "x")
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            13
+     getlocal            14
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "x")
+     greaterthan
+L328:
+     iffalse             L336
+
+     debugline           762
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal            13
+     getlocal            14
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            12
+
+L336:
+     debugline           768
+     getlocal1
+     negate
+     getlocal            11
+     getlocal            14
+     multiply
+     subtract
+     getlocal            19
+     multiply
+     convert_d
+     setlocal            13
+
+     debugline           769
+     getlocal            5
+     getlocal            13
+     lessequals
+     dup
+     iffalse             L357
+
+     pop
+     getlocal            13
+     getlocal            7
+     lessequals
+L357:
+     dup
+     iffalse             L370
+
+     pop
+     debugline           770
+     getlocal            9
+     getlocal            13
+     multiply
+     getlocal            11
+     getlocal            14
+     multiply
+     add
+     pushbyte            0
+     lessthan
+L370:
+     iffalse             L400
+
+     debugline           773
+     getlocal            12
+     not
+     dup
+     iftrue              L392
+
+     pop
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            12
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            12
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "x")
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            13
+     getlocal            14
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "x")
+     greaterthan
+L392:
+     iffalse             L400
+
+     debugline           774
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal            13
+     getlocal            14
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            12
+
+L400:
+     debugline           779
+     getlocal            12
+     iffalse             L406
+
+     debugline           780
+     getlocal            12
+     returnvalue
+
+L406:
+     debugline           783
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "a")
+     convert_d
+     setlocal            15
+
+     debugline           784
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "c")
+     convert_d
+     setlocal            16
+
+     debugline           785
+     getlocal            15
+     getlocal            16
+     multiply
+     pushbyte            0
+     ifnge               L425
+
+     getlocal            16
+     convert_d
+     jump                L428
+
+L425:
+     getlocal            16
+     negate
+     convert_d
+L428:
+     convert_d
+     setlocal            17
+
+     debugline           786
+     findpropstrict      QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveEquation")
+     getlocal            9
+     getlocal            11
+     getlocal1
+     getlocal            5
+     getlocal            6
+     getlocal            7
+     getlocal            8
+     getlocal            15
+     getlocal            17
+     callproperty        QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveEquation"), 9
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "calcUBoundsToFitTBoundsWidth") flag FINAL dispid 16
+  method
+   name "mx.utils:MatrixUtil/calcUBoundsToFitTBoundsWidth"
+   refid "mx.utils:MatrixUtil/class/calcUBoundsToFitTBoundsWidth"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace("flash.geom"), "Point")
+   flag HAS_PARAM_NAMES
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   body
+    maxstack 10
+    localcount 20
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           813
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            12
+
+     pushnan
+     setlocal            13
+
+     pushnan
+     setlocal            14
+
+     pushnan
+     setlocal            15
+
+     pushnan
+     setlocal            16
+
+     pushnan
+     setlocal            18
+
+     pushnan
+     setlocal            19
+
+     debug               1, "w", 0, 813
+     debug               1, "matrix", 1, 813
+     debug               1, "preferredX", 2, 813
+     debug               1, "preferredY", 3, 813
+     debug               1, "minX", 4, 813
+     debug               1, "minY", 5, 813
+     debug               1, "maxX", 6, 813
+     debug               1, "maxY", 7, 813
+     debug               1, "a", 8, 865
+     debug               1, "c", 9, 866
+     debug               1, "c1", 10, 880
+     debug               1, "s", 11, 885
+     debug               1, "x", 12, 886
+     debug               1, "y", 13, 887
+     debug               1, "b", 14, 952
+     debug               1, "d", 15, 953
+     debug               1, "d1", 16, 954
+     debugline           823
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            7
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal3
+
+     debugline           824
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            6
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            8
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            4
+
+     debugline           865
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "a")
+     convert_d
+     setlocal            9
+
+     debugline           866
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "c")
+     convert_d
+     setlocal            10
+
+     debugline           869
+     pushdouble          -1.00000000000000006e-09
+     getlocal            9
+     lessthan
+     dup
+     iffalse             L76
+
+     pop
+     getlocal            9
+     pushdouble          1.00000000000000006e-09
+     lessthan
+L76:
+     iffalse             L81
+
+     debugline           870
+     pushbyte            0
+     convert_d
+     setlocal            9
+
+L81:
+     debugline           871
+     pushdouble          -1.00000000000000006e-09
+     getlocal            10
+     lessthan
+     dup
+     iffalse             L91
+
+     pop
+     getlocal            10
+     pushdouble          1.00000000000000006e-09
+     lessthan
+L91:
+     iffalse             L96
+
+     debugline           872
+     pushbyte            0
+     convert_d
+     setlocal            10
+
+L96:
+     debugline           875
+     getlocal            9
+     pushbyte            0
+     ifne                L110
+
+     debugline           876
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal3
+     getlocal1
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            10
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     divide
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     returnvalue
+
+L110:
+     debugline           877
+     getlocal            10
+     pushbyte            0
+     ifne                L124
+
+     debugline           878
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal1
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            9
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     divide
+     getlocal            4
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     returnvalue
+
+L124:
+     debugline           880
+     getlocal            9
+     getlocal            10
+     multiply
+     pushbyte            0
+     ifnge               L133
+
+     getlocal            10
+     convert_d
+     jump                L136
+
+L133:
+     getlocal            10
+     negate
+     convert_d
+L136:
+     convert_d
+     setlocal            11
+
+     debugline           889
+     getlocal            11
+     pushbyte            0
+     ifeq                L258
+
+     debug               1, "invC1", 17, 891
+     debugline           891
+     pushbyte            1
+     getlocal            11
+     divide
+     convert_d
+     setlocal            18
+
+     debugline           892
+     getlocal3
+     convert_d
+     setlocal            13
+
+     debugline           897
+     getlocal1
+     getlocal            9
+     getlocal            13
+     multiply
+     subtract
+     getlocal            18
+     multiply
+     convert_d
+     setlocal            14
+
+     debugline           898
+     getlocal            6
+     getlocal            14
+     lessequals
+     dup
+     iffalse             L173
+
+     pop
+     getlocal            14
+     getlocal            8
+     lessequals
+L173:
+     dup
+     iffalse             L186
+
+     pop
+     debugline           899
+     getlocal            9
+     getlocal            13
+     multiply
+     getlocal            11
+     getlocal            14
+     multiply
+     add
+     pushbyte            0
+     greaterequals
+L186:
+     iffalse             L194
+
+     debugline           901
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal            13
+     getlocal            14
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            12
+
+L194:
+     debugline           907
+     getlocal1
+     negate
+     getlocal            9
+     getlocal            13
+     multiply
+     subtract
+     getlocal            18
+     multiply
+     convert_d
+     setlocal            14
+
+     debugline           908
+     getlocal            6
+     getlocal            14
+     lessequals
+     dup
+     iffalse             L215
+
+     pop
+     getlocal            14
+     getlocal            8
+     lessequals
+L215:
+     dup
+     iffalse             L228
+
+     pop
+     debugline           909
+     getlocal            9
+     getlocal            13
+     multiply
+     getlocal            11
+     getlocal            14
+     multiply
+     add
+     pushbyte            0
+     lessthan
+L228:
+     iffalse             L258
+
+     debugline           912
+     getlocal            12
+     not
+     dup
+     iftrue              L250
+
+     pop
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            12
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            12
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "y")
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            13
+     getlocal            14
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "y")
+     greaterthan
+L250:
+     iffalse             L258
+
+     debugline           913
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal            13
+     getlocal            14
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            12
+
+L258:
+     debugline           917
+     getlocal            9
+     pushbyte            0
+     ifeq                L400
+
+     debug               1, "invA", 18, 919
+     debugline           919
+     pushbyte            1
+     getlocal            9
+     divide
+     convert_d
+     setlocal            19
+
+     debugline           920
+     getlocal            4
+     convert_d
+     setlocal            14
+
+     debugline           925
+     getlocal1
+     getlocal            11
+     getlocal            14
+     multiply
+     subtract
+     getlocal            19
+     multiply
+     convert_d
+     setlocal            13
+
+     debugline           926
+     getlocal            5
+     getlocal            13
+     lessequals
+     dup
+     iffalse             L293
+
+     pop
+     getlocal            13
+     getlocal            7
+     lessequals
+L293:
+     dup
+     iffalse             L306
+
+     pop
+     debugline           927
+     getlocal            9
+     getlocal            13
+     multiply
+     getlocal            11
+     getlocal            14
+     multiply
+     add
+     pushbyte            0
+     greaterequals
+L306:
+     iffalse             L336
+
+     debugline           930
+     getlocal            12
+     not
+     dup
+     iftrue              L328
+
+     pop
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            12
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            12
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "y")
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            13
+     getlocal            14
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "y")
+     greaterthan
+L328:
+     iffalse             L336
+
+     debugline           931
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal            13
+     getlocal            14
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            12
+
+L336:
+     debugline           937
+     getlocal1
+     negate
+     getlocal            11
+     getlocal            14
+     multiply
+     subtract
+     getlocal            19
+     multiply
+     convert_d
+     setlocal            13
+
+     debugline           938
+     getlocal            5
+     getlocal            13
+     lessequals
+     dup
+     iffalse             L357
+
+     pop
+     getlocal            13
+     getlocal            7
+     lessequals
+L357:
+     dup
+     iffalse             L370
+
+     pop
+     debugline           939
+     getlocal            9
+     getlocal            13
+     multiply
+     getlocal            11
+     getlocal            14
+     multiply
+     add
+     pushbyte            0
+     lessthan
+L370:
+     iffalse             L400
+
+     debugline           942
+     getlocal            12
+     not
+     dup
+     iftrue              L392
+
+     pop
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            12
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            12
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "y")
+     findpropstrict      QName(PackageNamespace(""), "transformSize")
+     getlocal            13
+     getlocal            14
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformSize"), 3
+     getproperty         QName(PackageNamespace(""), "y")
+     greaterthan
+L392:
+     iffalse             L400
+
+     debugline           943
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal            13
+     getlocal            14
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            12
+
+L400:
+     debugline           948
+     getlocal            12
+     iffalse             L406
+
+     debugline           949
+     getlocal            12
+     returnvalue
+
+L406:
+     debugline           952
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "b")
+     convert_d
+     setlocal            15
+
+     debugline           953
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "d")
+     convert_d
+     setlocal            16
+
+     debugline           954
+     getlocal            15
+     getlocal            16
+     multiply
+     pushbyte            0
+     ifnge               L425
+
+     getlocal            16
+     convert_d
+     jump                L428
+
+L425:
+     getlocal            16
+     negate
+     convert_d
+L428:
+     convert_d
+     setlocal            17
+
+     debugline           955
+     findpropstrict      QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveEquation")
+     getlocal            9
+     getlocal            11
+     getlocal1
+     getlocal            5
+     getlocal            6
+     getlocal            7
+     getlocal            8
+     getlocal            15
+     getlocal            17
+     callproperty        QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveEquation"), 9
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveEquation") flag FINAL dispid 17
+  method
+   name "mx.utils:MatrixUtil/private:solveEquation"
+   refid "mx.utils:MatrixUtil/class/mx.utils:MatrixUtil/class/solveEquation"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace("flash.geom"), "Point")
+   flag HAS_PARAM_NAMES
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   body
+    maxstack 5
+    localcount 18
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           973
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal            10
+
+     pushnan
+     setlocal            11
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            12
+
+     debug               1, "a", 0, 973
+     debug               1, "c", 1, 973
+     debug               1, "w", 2, 973
+     debug               1, "minX", 3, 973
+     debug               1, "minY", 4, 973
+     debug               1, "maxX", 5, 973
+     debug               1, "maxY", 6, 973
+     debug               1, "b", 7, 973
+     debug               1, "d", 8, 973
+     debug               1, "x", 9, 988
+     debug               1, "y", 10, 989
+     debug               1, "s", 11, 990
+     debug               1, "A", 12, 1005
+     debug               1, "B", 13, 1006
+     debug               1, "rangeMinY", 14, 1007
+     debug               1, "rangeMaxY", 15, 1008
+     debug               1, "det", 16, 1009
+     debugline           983
+     getlocal1
+     pushbyte            0
+     equals
+     dup
+     iftrue              L38
+
+     pop
+     getlocal2
+     pushbyte            0
+     equals
+L38:
+     iffalse             L42
+
+     debugline           984
+     pushnull
+     returnvalue
+
+L42:
+     debugline           1005
+     getlocal3
+     getlocal            4
+     getlocal1
+     multiply
+     subtract
+     getlocal2
+     divide
+     convert_d
+     setlocal            13
+
+     debugline           1006
+     getlocal3
+     getlocal            6
+     getlocal1
+     multiply
+     subtract
+     getlocal2
+     divide
+     convert_d
+     setlocal            14
+
+     debugline           1007
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            13
+     getlocal            14
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            15
+
+     debugline           1008
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            7
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            13
+     getlocal            14
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            16
+
+     debugline           1009
+     getlocal            8
+     getlocal2
+     multiply
+     getlocal1
+     getlocal            9
+     multiply
+     subtract
+     convert_d
+     setlocal            17
+
+     debugline           1012
+     getlocal            15
+     getlocal            16
+     ifnle               L145
+
+     debugline           1024
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            17
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     pushdouble          1.00000000000000006e-09
+     ifnlt               L111
+
+     debugline           1027
+     getlocal3
+     getlocal1
+     getlocal2
+     add
+     divide
+     convert_d
+     setlocal            11
+
+     jump                L119
+
+L111:
+     debugline           1034
+     getlocal            8
+     getlocal3
+     multiply
+     getlocal            17
+     divide
+     convert_d
+     setlocal            11
+
+L119:
+     debugline           1041
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            15
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            11
+     getlocal            16
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            11
+
+     debugline           1043
+     getlocal3
+     getlocal2
+     getlocal            11
+     multiply
+     subtract
+     getlocal1
+     divide
+     convert_d
+     setlocal            10
+
+     debugline           1044
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal            10
+     getlocal            11
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     returnvalue
+
+L145:
+     debugline           1060
+     getlocal            4
+     getlocal1
+     multiply
+     getlocal3
+     add
+     negate
+     getlocal2
+     divide
+     convert_d
+     setlocal            13
+
+     debugline           1061
+     getlocal            6
+     getlocal1
+     multiply
+     getlocal3
+     add
+     negate
+     getlocal2
+     divide
+     convert_d
+     setlocal            14
+
+     debugline           1062
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            13
+     getlocal            14
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            15
+
+     debugline           1063
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            7
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            13
+     getlocal            14
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     convert_d
+     setlocal            16
+
+     debugline           1066
+     getlocal            15
+     getlocal            16
+     ifnle               L243
+
+     debugline           1078
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            17
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     pushdouble          1.00000000000000006e-09
+     ifnlt               L207
+
+     debugline           1081
+     getlocal3
+     negate
+     getlocal1
+     getlocal2
+     add
+     divide
+     convert_d
+     setlocal            11
+
+     jump                L216
+
+L207:
+     debugline           1088
+     getlocal            8
+     negate
+     getlocal3
+     multiply
+     getlocal            17
+     divide
+     convert_d
+     setlocal            11
+
+L216:
+     debugline           1095
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            15
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            11
+     getlocal            16
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            11
+
+     debugline           1096
+     getlocal3
+     negate
+     getlocal2
+     getlocal            11
+     multiply
+     subtract
+     getlocal1
+     divide
+     convert_d
+     setlocal            10
+
+     debugline           1097
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal            10
+     getlocal            11
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     returnvalue
+
+L243:
+     debugline           1100
+     pushnull
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "calcUBoundsToFitTBounds") flag FINAL dispid 18
+  method
+   name "mx.utils:MatrixUtil/calcUBoundsToFitTBounds"
+   refid "mx.utils:MatrixUtil/class/calcUBoundsToFitTBounds"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace("flash.geom"), "Point")
+   flag HAS_PARAM_NAMES
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   body
+    maxstack 10
+    localcount 17
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           1123
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            16
+
+     debug               1, "w", 0, 1123
+     debug               1, "h", 1, 1123
+     debug               1, "matrix", 2, 1123
+     debug               1, "minX", 3, 1123
+     debug               1, "minY", 4, 1123
+     debug               1, "maxX", 5, 1123
+     debug               1, "maxY", 6, 1123
+     debug               1, "a", 7, 1169
+     debug               1, "b", 8, 1170
+     debug               1, "c", 9, 1171
+     debug               1, "d", 10, 1172
+     debug               1, "c1", 11, 1210
+     debug               1, "d1", 12, 1211
+     debug               1, "det", 13, 1217
+     debug               1, "invDet", 14, 1237
+     debug               1, "s", 15, 1244
+     debugline           1169
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "a")
+     convert_d
+     setlocal            8
+
+     debugline           1170
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "b")
+     convert_d
+     setlocal            9
+
+     debugline           1171
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "c")
+     convert_d
+     setlocal            10
+
+     debugline           1172
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "d")
+     convert_d
+     setlocal            11
+
+     debugline           1175
+     pushdouble          -1.00000000000000006e-09
+     getlocal            8
+     lessthan
+     dup
+     iffalse             L53
+
+     pop
+     getlocal            8
+     pushdouble          1.00000000000000006e-09
+     lessthan
+L53:
+     iffalse             L58
+
+     debugline           1176
+     pushbyte            0
+     convert_d
+     setlocal            8
+
+L58:
+     debugline           1177
+     pushdouble          -1.00000000000000006e-09
+     getlocal            9
+     lessthan
+     dup
+     iffalse             L68
+
+     pop
+     getlocal            9
+     pushdouble          1.00000000000000006e-09
+     lessthan
+L68:
+     iffalse             L73
+
+     debugline           1178
+     pushbyte            0
+     convert_d
+     setlocal            9
+
+L73:
+     debugline           1179
+     pushdouble          -1.00000000000000006e-09
+     getlocal            10
+     lessthan
+     dup
+     iffalse             L83
+
+     pop
+     getlocal            10
+     pushdouble          1.00000000000000006e-09
+     lessthan
+L83:
+     iffalse             L88
+
+     debugline           1180
+     pushbyte            0
+     convert_d
+     setlocal            10
+
+L88:
+     debugline           1181
+     pushdouble          -1.00000000000000006e-09
+     getlocal            11
+     lessthan
+     dup
+     iffalse             L98
+
+     pop
+     getlocal            11
+     pushdouble          1.00000000000000006e-09
+     lessthan
+L98:
+     iffalse             L103
+
+     debugline           1182
+     pushbyte            0
+     convert_d
+     setlocal            11
+
+L103:
+     debugline           1185
+     getlocal            9
+     pushbyte            0
+     equals
+     dup
+     iffalse             L113
+
+     pop
+     getlocal            10
+     pushbyte            0
+     equals
+L113:
+     iffalse             L142
+
+     debugline           1189
+     getlocal            8
+     pushbyte            0
+     equals
+     dup
+     iftrue              L124
+
+     pop
+     getlocal            11
+     pushbyte            0
+     equals
+L124:
+     iffalse             L128
+
+     debugline           1190
+     pushnull
+     returnvalue
+
+L128:
+     debugline           1194
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal1
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            8
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     divide
+     getlocal2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            11
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     divide
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     returnvalue
+
+L142:
+     debugline           1197
+     getlocal            8
+     pushbyte            0
+     equals
+     dup
+     iffalse             L152
+
+     pop
+     getlocal            11
+     pushbyte            0
+     equals
+L152:
+     iffalse             L181
+
+     debugline           1201
+     getlocal            9
+     pushbyte            0
+     equals
+     dup
+     iftrue              L163
+
+     pop
+     getlocal            10
+     pushbyte            0
+     equals
+L163:
+     iffalse             L167
+
+     debugline           1202
+     pushnull
+     returnvalue
+
+L167:
+     debugline           1206
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     getlocal2
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            9
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     divide
+     getlocal1
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            10
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     divide
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     returnvalue
+
+L181:
+     debugline           1210
+     getlocal            8
+     getlocal            10
+     multiply
+     pushbyte            0
+     ifnge               L190
+
+     getlocal            10
+     convert_d
+     jump                L193
+
+L190:
+     getlocal            10
+     negate
+     convert_d
+L193:
+     convert_d
+     setlocal            12
+
+     debugline           1211
+     getlocal            9
+     getlocal            11
+     multiply
+     pushbyte            0
+     ifnge               L204
+
+     getlocal            11
+     convert_d
+     jump                L207
+
+L204:
+     getlocal            11
+     negate
+     convert_d
+L207:
+     convert_d
+     setlocal            13
+
+     debugline           1217
+     getlocal            8
+     getlocal            13
+     multiply
+     getlocal            9
+     getlocal            12
+     multiply
+     subtract
+     convert_d
+     setlocal            14
+
+     debugline           1218
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            14
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     pushdouble          1.00000000000000006e-09
+     ifnlt               L276
+
+     debugline           1222
+     getlocal            12
+     pushbyte            0
+     equals
+     dup
+     iftrue              L235
+
+     pop
+     getlocal            8
+     pushbyte            0
+     equals
+L235:
+     dup
+     iftrue              L242
+
+     pop
+     getlocal            8
+     getlocal            12
+     negate
+     equals
+L242:
+     iffalse             L246
+
+     debugline           1223
+     pushnull
+     returnvalue
+
+L246:
+     debugline           1225
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            8
+     getlocal2
+     multiply
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            9
+     getlocal1
+     multiply
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     subtract
+     pushdouble          1.00000000000000006e-09
+     ifngt               L263
+
+     debugline           1226
+     pushnull
+     returnvalue
+
+L263:
+     debugline           1233
+     findpropstrict      QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveEquation")
+     getlocal            8
+     getlocal            12
+     getlocal1
+     getlocal            4
+     getlocal            4
+     getlocal            6
+     getlocal            7
+     getlocal            9
+     getlocal            13
+     callproperty        QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveEquation"), 9
+     returnvalue
+
+L276:
+     debugline           1237
+     pushbyte            1
+     getlocal            14
+     divide
+     convert_d
+     setlocal            15
+
+     debugline           1238
+     getlocal1
+     getlocal            15
+     multiply
+     convert_d
+     setlocal1
+
+     debugline           1239
+     getlocal2
+     getlocal            15
+     multiply
+     convert_d
+     setlocal2
+
+     debugline           1245
+     findpropstrict      QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveSystem")
+     getlocal            8
+     getlocal            12
+     getlocal            9
+     getlocal            13
+     getlocal1
+     getlocal2
+     callproperty        QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveSystem"), 6
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            16
+
+     debugline           1246
+     getlocal            16
+     coerce_a
+     dup
+     iffalse             L317
+
+     pop
+     debugline           1247
+     getlocal            4
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     lessequals
+     coerce_a
+L317:
+     coerce_a
+     dup
+     iffalse             L326
+
+     pop
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            6
+     lessequals
+     coerce_a
+L326:
+     coerce_a
+     dup
+     iffalse             L335
+
+     pop
+     getlocal            5
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "y")
+     lessequals
+     coerce_a
+L335:
+     coerce_a
+     dup
+     iffalse             L344
+
+     pop
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            7
+     lessequals
+     coerce_a
+L344:
+     coerce_a
+     convert_b
+     dup
+     iffalse             L363
+
+     pop
+     debugline           1248
+     getlocal            8
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     getlocal            12
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     add
+     pushbyte            0
+     greaterequals
+     coerce_a
+     convert_b
+L363:
+     dup
+     iffalse             L378
+
+     pop
+     debugline           1249
+     getlocal            9
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     getlocal            13
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "y")
+     multiply
+     add
+     pushbyte            0
+     greaterequals
+L378:
+     iffalse             L382
+
+     debugline           1250
+     getlocal            16
+     returnvalue
+
+L382:
+     debugline           1255
+     findpropstrict      QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveSystem")
+     getlocal            8
+     getlocal            12
+     getlocal            9
+     getlocal            13
+     getlocal1
+     getlocal2
+     negate
+     callproperty        QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveSystem"), 6
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            16
+
+     debugline           1256
+     getlocal            16
+     coerce_a
+     dup
+     iffalse             L406
+
+     pop
+     debugline           1257
+     getlocal            4
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     lessequals
+     coerce_a
+L406:
+     coerce_a
+     dup
+     iffalse             L415
+
+     pop
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            6
+     lessequals
+     coerce_a
+L415:
+     coerce_a
+     dup
+     iffalse             L424
+
+     pop
+     getlocal            5
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "y")
+     lessequals
+     coerce_a
+L424:
+     coerce_a
+     dup
+     iffalse             L433
+
+     pop
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            7
+     lessequals
+     coerce_a
+L433:
+     coerce_a
+     convert_b
+     dup
+     iffalse             L452
+
+     pop
+     debugline           1258
+     getlocal            8
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     getlocal            12
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     add
+     pushbyte            0
+     greaterequals
+     coerce_a
+     convert_b
+L452:
+     dup
+     iffalse             L467
+
+     pop
+     debugline           1259
+     getlocal            9
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     getlocal            13
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "y")
+     multiply
+     add
+     pushbyte            0
+     lessthan
+L467:
+     iffalse             L471
+
+     debugline           1260
+     getlocal            16
+     returnvalue
+
+L471:
+     debugline           1265
+     findpropstrict      QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveSystem")
+     getlocal            8
+     getlocal            12
+     getlocal            9
+     getlocal            13
+     getlocal1
+     negate
+     getlocal2
+     callproperty        QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveSystem"), 6
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            16
+
+     debugline           1266
+     getlocal            16
+     coerce_a
+     dup
+     iffalse             L495
+
+     pop
+     debugline           1267
+     getlocal            4
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     lessequals
+     coerce_a
+L495:
+     coerce_a
+     dup
+     iffalse             L504
+
+     pop
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            6
+     lessequals
+     coerce_a
+L504:
+     coerce_a
+     dup
+     iffalse             L513
+
+     pop
+     getlocal            5
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "y")
+     lessequals
+     coerce_a
+L513:
+     coerce_a
+     dup
+     iffalse             L522
+
+     pop
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            7
+     lessequals
+     coerce_a
+L522:
+     coerce_a
+     convert_b
+     dup
+     iffalse             L541
+
+     pop
+     debugline           1268
+     getlocal            8
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     getlocal            12
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     add
+     pushbyte            0
+     lessthan
+     coerce_a
+     convert_b
+L541:
+     dup
+     iffalse             L556
+
+     pop
+     debugline           1269
+     getlocal            9
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     getlocal            13
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "y")
+     multiply
+     add
+     pushbyte            0
+     greaterequals
+L556:
+     iffalse             L560
+
+     debugline           1270
+     getlocal            16
+     returnvalue
+
+L560:
+     debugline           1275
+     findpropstrict      QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveSystem")
+     getlocal            8
+     getlocal            12
+     getlocal            9
+     getlocal            13
+     getlocal1
+     negate
+     getlocal2
+     negate
+     callproperty        QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveSystem"), 6
+     coerce              QName(PackageNamespace("flash.geom"), "Point")
+     setlocal            16
+
+     debugline           1276
+     getlocal            16
+     coerce_a
+     dup
+     iffalse             L585
+
+     pop
+     debugline           1277
+     getlocal            4
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     lessequals
+     coerce_a
+L585:
+     coerce_a
+     dup
+     iffalse             L594
+
+     pop
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            6
+     lessequals
+     coerce_a
+L594:
+     coerce_a
+     dup
+     iffalse             L603
+
+     pop
+     getlocal            5
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "y")
+     lessequals
+     coerce_a
+L603:
+     coerce_a
+     dup
+     iffalse             L612
+
+     pop
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            7
+     lessequals
+     coerce_a
+L612:
+     coerce_a
+     convert_b
+     dup
+     iffalse             L631
+
+     pop
+     debugline           1278
+     getlocal            8
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     getlocal            12
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     add
+     pushbyte            0
+     lessthan
+     coerce_a
+     convert_b
+L631:
+     dup
+     iffalse             L646
+
+     pop
+     debugline           1279
+     getlocal            9
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     getlocal            13
+     getlocal            16
+     getproperty         QName(PackageNamespace(""), "y")
+     multiply
+     add
+     pushbyte            0
+     lessthan
+L646:
+     iffalse             L650
+
+     debugline           1280
+     getlocal            16
+     returnvalue
+
+L650:
+     debugline           1282
+     pushnull
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "isEqual") flag FINAL dispid 19
+  method
+   name "mx.utils:MatrixUtil/isEqual"
+   refid "mx.utils:MatrixUtil/class/isEqual"
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   returns QName(PackageNamespace(""), "Boolean")
+   flag HAS_PARAM_NAMES
+   paramname "postTransformCenter"
+   paramname "postTransformCenter"
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           1295
+     getlocal0
+     pushscope
+
+     debug               1, "m1", 0, 1295
+     debug               1, "m2", 1, 1295
+     debugline           1297
+     getlocal1
+     dup
+     iffalse             L12
+
+     pop
+     getlocal2
+L12:
+     coerce_a
+     dup
+     iffalse             L23
+
+     pop
+     debugline           1298
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "a")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "a")
+     equals
+     coerce_a
+L23:
+     coerce_a
+     dup
+     iffalse             L34
+
+     pop
+     debugline           1299
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "b")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "b")
+     equals
+     coerce_a
+L34:
+     coerce_a
+     dup
+     iffalse             L45
+
+     pop
+     debugline           1300
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "c")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "c")
+     equals
+     coerce_a
+L45:
+     coerce_a
+     dup
+     iffalse             L56
+
+     pop
+     debugline           1301
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "d")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "d")
+     equals
+     coerce_a
+L56:
+     coerce_a
+     dup
+     iffalse             L67
+
+     pop
+     debugline           1302
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "tx")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "tx")
+     equals
+     coerce_a
+L67:
+     convert_b
+     dup
+     iffalse             L77
+
+     pop
+     debugline           1303
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "ty")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "ty")
+     equals
+L77:
+     dup
+     iftrue              L88
+
+     pop
+     debugline           1304
+     getlocal1
+     not
+     dup
+     iffalse             L88
+
+     pop
+     getlocal2
+     not
+L88:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "isEqual3D") flag FINAL dispid 20
+  method
+   name "mx.utils:MatrixUtil/isEqual3D"
+   refid "mx.utils:MatrixUtil/class/isEqual3D"
+   param QName(PackageNamespace("flash.geom"), "Matrix3D")
+   param QName(PackageNamespace("flash.geom"), "Matrix3D")
+   returns QName(PackageNamespace(""), "Boolean")
+   flag HAS_PARAM_NAMES
+   paramname "postTransformCenter"
+   paramname "postTransformCenter"
+   body
+    maxstack 3
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           1317
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Number")>)
+     setlocal3
+
+     pushnull
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Number")>)
+     setlocal            4
+
+     debug               1, "m1", 0, 1317
+     debug               1, "m2", 1, 1317
+     debugline           1319
+     getlocal1
+     convert_b
+     dup
+     iffalse             L20
+
+     pop
+     getlocal2
+     convert_b
+L20:
+     dup
+     iffalse             L30
+
+     pop
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "rawData")
+     getproperty         QName(PackageNamespace(""), "length")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "rawData")
+     getproperty         QName(PackageNamespace(""), "length")
+     equals
+L30:
+     iffalse             L217
+
+     debug               1, "r1", 2, 1321
+     debug               1, "r2", 3, 1322
+     debugline           1321
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "rawData")
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Number")>)
+     setlocal3
+
+     debugline           1322
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "rawData")
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Number")>)
+     setlocal            4
+
+     debugline           1324
+     getlocal3
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+     dup
+     iffalse             L62
+
+     pop
+     debugline           1325
+     getlocal3
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L62:
+     dup
+     iffalse             L73
+
+     pop
+     debugline           1326
+     getlocal3
+     pushbyte            2
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            2
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L73:
+     dup
+     iffalse             L84
+
+     pop
+     debugline           1327
+     getlocal3
+     pushbyte            3
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            3
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L84:
+     dup
+     iffalse             L95
+
+     pop
+     debugline           1328
+     getlocal3
+     pushbyte            4
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            4
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L95:
+     dup
+     iffalse             L106
+
+     pop
+     debugline           1329
+     getlocal3
+     pushbyte            5
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            5
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L106:
+     dup
+     iffalse             L117
+
+     pop
+     debugline           1330
+     getlocal3
+     pushbyte            6
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            6
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L117:
+     dup
+     iffalse             L128
+
+     pop
+     debugline           1331
+     getlocal3
+     pushbyte            7
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            7
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L128:
+     dup
+     iffalse             L139
+
+     pop
+     debugline           1332
+     getlocal3
+     pushbyte            8
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            8
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L139:
+     dup
+     iffalse             L150
+
+     pop
+     debugline           1333
+     getlocal3
+     pushbyte            9
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            9
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L150:
+     dup
+     iffalse             L161
+
+     pop
+     debugline           1334
+     getlocal3
+     pushbyte            10
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            10
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L161:
+     dup
+     iffalse             L172
+
+     pop
+     debugline           1335
+     getlocal3
+     pushbyte            11
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            11
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L172:
+     dup
+     iffalse             L183
+
+     pop
+     debugline           1336
+     getlocal3
+     pushbyte            12
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            12
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L183:
+     dup
+     iffalse             L194
+
+     pop
+     debugline           1337
+     getlocal3
+     pushbyte            13
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            13
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L194:
+     dup
+     iffalse             L205
+
+     pop
+     debugline           1338
+     getlocal3
+     pushbyte            14
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            14
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L205:
+     dup
+     iffalse             L216
+
+     pop
+     debugline           1339
+     getlocal3
+     pushbyte            15
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            15
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     equals
+L216:
+     returnvalue
+
+L217:
+     debugline           1342
+     getlocal1
+     not
+     dup
+     iffalse             L225
+
+     pop
+     getlocal2
+     not
+L225:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("mx.utils:MatrixUtil"), "solveSystem") flag FINAL dispid 21
+  method
+   name "mx.utils:MatrixUtil/private:solveSystem"
+   refid "mx.utils:MatrixUtil/class/mx.utils:MatrixUtil/class/solveSystem"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace("flash.geom"), "Point")
+   flag HAS_PARAM_NAMES
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   paramname "Math"
+   body
+    maxstack 5
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           1361
+     getlocal0
+     pushscope
+
+     debug               1, "a", 0, 1361
+     debug               1, "c", 1, 1361
+     debug               1, "b", 2, 1361
+     debug               1, "d", 3, 1361
+     debug               1, "mOverDet", 4, 1361
+     debug               1, "nOverDet", 5, 1361
+     debugline           1368
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+     debugline           1368
+     getlocal            4
+     getlocal            5
+     multiply
+     getlocal2
+     getlocal            6
+     multiply
+     subtract
+     debugline           1369
+     getlocal1
+     getlocal            6
+     multiply
+     getlocal3
+     getlocal            5
+     multiply
+     subtract
+     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getConcatenatedMatrix") flag FINAL dispid 22
+  method
+   name "mx.utils:MatrixUtil/getConcatenatedMatrix"
+   refid "mx.utils:MatrixUtil/class/getConcatenatedMatrix"
+   param QName(PackageNamespace("flash.display"), "DisplayObject")
+   returns QName(PackageNamespace("flash.geom"), "Matrix")
+   flag HAS_PARAM_NAMES
+   paramname "mx.utils:MatrixUtil/clampRotation"
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/utils;MatrixUtil.as"
+     debugline           1377
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+     setlocal3
+
+     debug               1, "displayObject", 0, 1377
+     debug               1, "m", 1, 1379
+     debugline           1379
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+     constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+     coerce              QName(PackageNamespace("flash.geom"), "Matrix")
+     setlocal2
+
+     debugline           1380
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "uiComponentClass")
+     pushnull
+     ifne                L26
+
+     debugline           1381
+     findproperty        QName(PrivateNamespace("mx.utils:MatrixUtil"), "uiComponentClass")
+     findpropstrict      QName(PackageNamespace(""), "Class")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getDefinitionByName")
+     pushstring          "mx.core.UIComponent"
+     callproperty        QName(PackageNamespace("flash.utils"), "getDefinitionByName"), 1
+     callproperty        QName(PackageNamespace(""), "Class"), 1
+     setproperty         QName(PrivateNamespace("mx.utils:MatrixUtil"), "uiComponentClass")
+
+L26:
+     debugline           1382
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "fakeDollarParent")
+     pushnull
+     ifne                L37
+
+     debugline           1383
+     findproperty        QName(PrivateNamespace("mx.utils:MatrixUtil"), "fakeDollarParent")
+     findpropstrict      QName(PackageNamespace(""), "QName")
+     getlex              QName(PackageNamespace("mx.core"), "mx_internal")
+     pushstring          "$parent"
+     constructprop       QName(PackageNamespace(""), "QName"), 2
+     setproperty         QName(PrivateNamespace("mx.utils:MatrixUtil"), "fakeDollarParent")
+
+L37:
+     jump                L90
+
+L38:
+     label
+     debug               1, "scrollRect", 2, 1387
+     debugline           1387
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "scrollRect")
+     coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+     setlocal3
+
+     debugline           1388
+     getlocal3
+     pushnull
+     ifeq                L58
+
+     debugline           1389
+     getlocal2
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "x")
+     negate
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "y")
+     negate
+     callpropvoid        QName(PackageNamespace(""), "translate"), 2
+
+L58:
+     debugline           1390
+     getlocal2
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "transform")
+     getproperty         QName(PackageNamespace(""), "matrix")
+     callpropvoid        QName(PackageNamespace(""), "concat"), 1
+
+     debugline           1391
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "uiComponentClass")
+     convert_b
+     dup
+     iffalse             L73
+
+     pop
+     getlocal1
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "uiComponentClass")
+     istypelate
+L73:
+     iffalse             L83
+
+     debugline           1392
+     getlocal1
+     getlex              QName(PrivateNamespace("mx.utils:MatrixUtil"), "fakeDollarParent")
+     getproperty         MultinameL([PrivateNamespace("mx.utils:MatrixUtil"), PackageNamespace(""), PrivateNamespace("MatrixUtil.as$51"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.utils:MatrixUtil"), StaticProtectedNs("mx.utils:MatrixUtil"), StaticProtectedNs("Object")])
+     getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+     astypelate
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+     setlocal1
+
+     jump                L90
+
+L83:
+     debugline           1394
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "parent")
+     getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+     astypelate
+     coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+     setlocal1
+
+L90:
+     debugline           1385
+     getlocal1
+     convert_b
+     dup
+     iffalse             L100
+
+     pop
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "transform")
+     getproperty         QName(PackageNamespace(""), "matrix")
+     convert_b
+L100:
+     iftrue              L38
+
+     debugline           1396
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

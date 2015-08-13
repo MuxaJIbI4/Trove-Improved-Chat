@@ -1,0 +1,311 @@
+class
+ refid "mx.core:DragSource"
+ instance QName(PackageNamespace("mx.core"), "DragSource")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.core:DragSource")
+  iinit
+   name "mx.core:DragSource/DragSource"
+   refid "mx.core:DragSource/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DragSource.as"
+     debugline           56
+     getlocal0
+     pushscope
+
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DragSource.as"
+     debugline           70
+     getlocal0
+     newobject           0
+     initproperty        QName(PrivateNamespace("mx.core:DragSource"), "dataHolder")
+
+     debugline           75
+     getlocal0
+     newobject           0
+     initproperty        QName(PrivateNamespace("mx.core:DragSource"), "formatHandlers")
+
+     debugline           91
+     getlocal0
+     newarray            0
+     initproperty        QName(PrivateNamespace("mx.core:DragSource"), "_formats")
+
+     debugline           58
+     getlocal0
+     constructsuper      0
+
+     debugline           59
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("mx.core:DragSource"), "dataHolder") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("mx.core:DragSource"), "formatHandlers") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("mx.core:DragSource"), "_formats") type QName(PackageNamespace(""), "Array") end
+  trait getter QName(PackageNamespace(""), "formats")
+   method
+    name "mx.core:DragSource/formats/get"
+    refid "mx.core:DragSource/instance/formats/getter"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DragSource.as"
+      debugline           105
+      getlocal0
+      pushscope
+
+      debugline           107
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DragSource"), "_formats")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addData")
+   method
+    name "mx.core:DragSource/addData"
+    refid "mx.core:DragSource/instance/addData"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "formatHandlers"
+    paramname "formatHandlers"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DragSource.as"
+      debugline           131
+      getlocal0
+      pushscope
+
+      debug               1, "data", 0, 131
+      debug               1, "format", 1, 131
+      debugline           133
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DragSource"), "_formats")
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      debugline           135
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DragSource"), "dataHolder")
+      getlocal2
+      getlocal1
+      setproperty         MultinameL([PrivateNamespace("mx.core:DragSource"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("DragSource.as$86"), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), ProtectedNamespace("mx.core:DragSource"), StaticProtectedNs("mx.core:DragSource"), StaticProtectedNs("Object")])
+
+      debugline           136
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addHandler")
+   method
+    name "mx.core:DragSource/addHandler"
+    refid "mx.core:DragSource/instance/addHandler"
+    param QName(PackageNamespace(""), "Function")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "formatHandlers"
+    paramname "formatHandlers"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DragSource.as"
+      debugline           156
+      getlocal0
+      pushscope
+
+      debug               1, "handler", 0, 156
+      debug               1, "format", 1, 156
+      debugline           159
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DragSource"), "_formats")
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      debugline           161
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DragSource"), "formatHandlers")
+      getlocal2
+      getlocal1
+      setproperty         MultinameL([PrivateNamespace("mx.core:DragSource"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("DragSource.as$86"), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), ProtectedNamespace("mx.core:DragSource"), StaticProtectedNs("mx.core:DragSource"), StaticProtectedNs("Object")])
+
+      debugline           162
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "dataForFormat")
+   method
+    name "mx.core:DragSource/dataForFormat"
+    refid "mx.core:DragSource/instance/dataForFormat"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    flag HAS_PARAM_NAMES
+    paramname "_formats"
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DragSource.as"
+      debugline           192
+      getlocal0
+      pushscope
+
+      debug               1, "format", 0, 192
+      debug               1, "data", 1, 194
+      debugline           194
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DragSource"), "dataHolder")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("mx.core:DragSource"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("DragSource.as$86"), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), ProtectedNamespace("mx.core:DragSource"), StaticProtectedNs("mx.core:DragSource"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      debugline           195
+      getlocal2
+      iffalse             L19
+
+      debugline           196
+      getlocal2
+      returnvalue
+
+L19:
+      debugline           198
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DragSource"), "formatHandlers")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("mx.core:DragSource"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("DragSource.as$86"), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), ProtectedNamespace("mx.core:DragSource"), StaticProtectedNs("mx.core:DragSource"), StaticProtectedNs("Object")])
+      iffalse             L36
+
+      debugline           199
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DragSource"), "formatHandlers")
+      dup
+      setlocal3
+
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("mx.core:DragSource"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("DragSource.as$86"), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), ProtectedNamespace("mx.core:DragSource"), StaticProtectedNs("mx.core:DragSource"), StaticProtectedNs("Object")])
+      getlocal3
+      call                0
+      kill                3
+      returnvalue
+
+L36:
+      debugline           201
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "hasFormat")
+   method
+    name "mx.core:DragSource/hasFormat"
+    refid "mx.core:DragSource/instance/hasFormat"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "data"
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DragSource.as"
+      debugline           219
+      getlocal0
+      pushscope
+
+      debug               1, "format", 0, 219
+      debug               1, "n", 1, 221
+      debug               1, "i", 2, 222
+      debugline           221
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DragSource"), "_formats")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal2
+
+      debugline           222
+      pushbyte            0
+      setlocal3
+
+      jump                L30
+
+L17:
+      label
+      debugline           224
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:DragSource"), "_formats")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("mx.core:DragSource"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("DragSource.as$86"), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), ProtectedNamespace("mx.core:DragSource"), StaticProtectedNs("mx.core:DragSource"), StaticProtectedNs("Object")])
+      getlocal1
+      ifne                L28
+
+      debugline           225
+      pushtrue
+      returnvalue
+
+L28:
+      debugline           222
+      inclocal_i          3
+L30:
+      getlocal3
+      getlocal2
+      iflt                L17
+
+      debugline           228
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:DragSource/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 17
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+end ; class

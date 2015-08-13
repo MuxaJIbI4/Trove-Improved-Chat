@@ -1,0 +1,52 @@
+class
+ refid "mx.modules:ModuleManagerGlobals"
+ instance QName(PackageNamespace("mx.modules"), "ModuleManagerGlobals")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.modules:ModuleManagerGlobals")
+  iinit
+   name "mx.modules:ModuleManagerGlobals/ModuleManagerGlobals"
+   refid "mx.modules:ModuleManagerGlobals/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/modules;ModuleManagerGlobals.as"
+     debugline           25
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "mx.modules:ModuleManagerGlobals/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "managerSingleton", 0, 20
+    findproperty        QName(PackageNamespace(""), "managerSingleton")
+    pushnull
+    setproperty         QName(PackageNamespace(""), "managerSingleton")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "managerSingleton") slotid 1 type QName(PackageNamespace(""), "Object") value Null() end
+end ; class

@@ -1,0 +1,2273 @@
+class
+ refid "com.kiwi.Core:KiwiComponent"
+ instance QName(PackageNamespace("com.kiwi.Core"), "KiwiComponent")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.kiwi.Core:KiwiComponent")
+  iinit
+   name "com.kiwi.Core:KiwiComponent/KiwiComponent"
+   refid "com.kiwi.Core:KiwiComponent/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+     debugline           36
+     getlocal0
+     pushscope
+
+     debugline           21
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalidTypes")
+
+     debugline           38
+     getlocal0
+     constructsuper      0
+
+     debugline           39
+     getlocal0
+     callpropvoid        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "initialize"), 0
+
+     debugline           40
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "initialized") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalidTypes") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalid") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_width") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_height") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_originalWidth") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_originalHeight") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focusTarget") type QName(PackageNamespace("com.kiwi.Core"), "KiwiComponent") end
+  trait slot QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focusable") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focused") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_displayFocus") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_mouseWheelEnabled") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_labelHash") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PackageNamespace(""), "constraints") type QName(PackageNamespace("com.kiwi.Constraints"), "Constraints") end
+  trait method QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "initialize")
+   method
+    name "com.kiwi.Core:KiwiComponent/protected:initialize"
+    refid "com.kiwi.Core:KiwiComponent/instance/com.kiwi.Core:KiwiComponent:initialize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           42
+      getlocal0
+      pushscope
+
+      debugline           44
+      getlocal0
+      getlex              QName(PackageNamespace("com.kiwi.Core"), "KiwiComponent")
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "generateLabelHash"), 1
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_labelHash")
+
+      debugline           46
+      getlocal0
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "width")
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "scaleX")
+      divide
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_originalWidth")
+
+      debugline           47
+      getlocal0
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "height")
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "scaleY")
+      divide
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_originalHeight")
+
+      debugline           49
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_width")
+      iftrue              L35
+
+      debugline           51
+      getlocal0
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "width")
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_width")
+
+L35:
+      debugline           54
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_height")
+      iftrue              L44
+
+      debugline           56
+      getlocal0
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "height")
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_height")
+
+L44:
+      debugline           59
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 0
+
+      debugline           60
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "x") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/x/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/x/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           80
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "x")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "x") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/x/set"
+    refid "com.kiwi.Core:KiwiComponent/instance/x/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           81
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 81
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "x")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "y") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/y/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/y/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           83
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "y")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "y") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/y/set"
+    refid "com.kiwi.Core:KiwiComponent/instance/y/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           84
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 84
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "width") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/width/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/width/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           86
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_width")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "width") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/width/set"
+    refid "com.kiwi.Core:KiwiComponent/instance/width/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           87
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 87
+      getlocal0
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_height")
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "height") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/height/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/height/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           89
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_height")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "height") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/height/set"
+    refid "com.kiwi.Core:KiwiComponent/instance/height/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           90
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 90
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_width")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "scaleX") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/scaleX/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/scaleX/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           92
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_width")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_originalWidth")
+      divide
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "scaleX") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/scaleX/set"
+    refid "com.kiwi.Core:KiwiComponent/instance/scaleX/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           93
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 93
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "scaleX")
+
+      getlex              QName(PackageNamespace(""), "rotation")
+      pushbyte            0
+      ifne                L15
+
+      getlocal0
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "width")
+      initproperty        QName(PackageNamespace(""), "width")
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "scaleY") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/scaleY/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/scaleY/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           95
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_height")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_originalHeight")
+      divide
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "scaleY") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/scaleY/set"
+    refid "com.kiwi.Core:KiwiComponent/instance/scaleY/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           96
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 96
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "scaleY")
+
+      getlex              QName(PackageNamespace(""), "rotation")
+      pushbyte            0
+      ifne                L15
+
+      getlocal0
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "height")
+      initproperty        QName(PackageNamespace(""), "height")
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/enabled/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/enabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           98
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "enabled")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/enabled/set"
+    refid "com.kiwi.Core:KiwiComponent/instance/enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           99
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 99
+      debugline           101
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "enabled")
+      getlocal1
+      ifeq                L29
+
+      debugline           103
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "enabled")
+
+      debugline           104
+      findproperty        QName(PackageNamespace(""), "tabEnabled")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "enabled")
+      iftrue              L21
+
+      pushfalse
+      jump                L24
+
+L21:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focusable")
+      convert_b
+L24:
+      initproperty        QName(PackageNamespace(""), "tabEnabled")
+
+      debugline           105
+      findproperty        QName(PackageNamespace(""), "mouseEnabled")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "mouseEnabled")
+
+L29:
+      debugline           107
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "visible") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/visible/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/visible/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           109
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "visible")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "visible") flag OVERRIDE
+   method
+    name "com.kiwi.Core:KiwiComponent/visible/set"
+    refid "com.kiwi.Core:KiwiComponent/instance/visible/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           110
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 110
+      debugline           112
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "visible")
+
+      debugline           113
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlocal1
+      iffalse             L16
+
+      pushstring          "show"
+      jump                L17
+
+L16:
+      pushstring          "hide"
+L17:
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           114
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "focusable")
+   method
+    name "com.kiwi.Core:KiwiComponent/focusable/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/focusable/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           116
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focusable")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "focusable")
+   method
+    name "com.kiwi.Core:KiwiComponent/focusable/set"
+    refid "com.kiwi.Core:KiwiComponent/instance/focusable/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           117
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 117
+      debugline           119
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focusable")
+      getlocal1
+      ifeq                L54
+
+      debugline           121
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focusable")
+
+      debugline           123
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focusable")
+      not
+      dup
+      iffalse             L24
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "enabled")
+      convert_b
+L24:
+      iffalse             L36
+
+      debugline           125
+      findproperty        QName(PackageNamespace(""), "tabEnabled")
+      findproperty        QName(PackageNamespace(""), "tabChildren")
+      pushfalse
+      dup
+      setlocal2
+
+      initproperty        QName(PackageNamespace(""), "tabChildren")
+
+      getlocal2
+      kill                2
+      initproperty        QName(PackageNamespace(""), "tabEnabled")
+
+      jump                L51
+
+L36:
+      debugline           127
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focusable")
+      convert_b
+      dup
+      iffalse             L46
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "enabled")
+      convert_b
+L46:
+      iffalse             L51
+
+      debugline           129
+      findproperty        QName(PackageNamespace(""), "tabEnabled")
+      pushtrue
+      initproperty        QName(PackageNamespace(""), "tabEnabled")
+
+L51:
+      debugline           132
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "changeFocus"), 0
+
+L54:
+      debugline           134
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "displayFocus")
+   method
+    name "com.kiwi.Core:KiwiComponent/displayFocus/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/displayFocus/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           136
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_displayFocus")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "displayFocus")
+   method
+    name "com.kiwi.Core:KiwiComponent/displayFocus/set"
+    refid "com.kiwi.Core:KiwiComponent/instance/displayFocus/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           137
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 137
+      debugline           139
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_displayFocus")
+      getlocal1
+      ifeq                L17
+
+      debugline           141
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_displayFocus")
+
+      debugline           142
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "changeFocus"), 0
+
+L17:
+      debugline           144
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "focused")
+   method
+    name "com.kiwi.Core:KiwiComponent/focused/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/focused/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           146
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focused")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "focused")
+   method
+    name "com.kiwi.Core:KiwiComponent/focused/set"
+    refid "com.kiwi.Core:KiwiComponent/instance/focused/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           147
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 147
+      debugline           149
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focused")
+      equals
+      not
+      dup
+      iffalse             L17
+
+      pop
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focusable")
+      convert_b
+L17:
+      iffalse             L41
+
+      debugline           151
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focused")
+
+      debugline           153
+      getlex              QName(PackageNamespace(""), "stage")
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L33
+
+      pop
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focused")
+      convert_b
+L33:
+      iffalse             L38
+
+      debugline           155
+      getlex              QName(PackageNamespace(""), "stage")
+      getlocal0
+      setproperty         QName(PackageNamespace(""), "focus")
+
+L38:
+      debugline           158
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "changeFocus"), 0
+
+L41:
+      debugline           160
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "focusTarget")
+   method
+    name "com.kiwi.Core:KiwiComponent/focusTarget/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/focusTarget/getter"
+    returns QName(PackageNamespace("com.kiwi.Core"), "KiwiComponent")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           162
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focusTarget")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "focusTarget")
+   method
+    name "com.kiwi.Core:KiwiComponent/focusTarget/set"
+    refid "com.kiwi.Core:KiwiComponent/instance/focusTarget/setter"
+    param QName(PackageNamespace("com.kiwi.Core"), "KiwiComponent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           163
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 163
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_focusTarget")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "realWidth") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/realWidth/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/realWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           165
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "width")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "realHeight") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/realHeight/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/realHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           166
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "height")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "realScaleX") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/realScaleX/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/realScaleX/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           167
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "scaleX")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "realScaleY") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/realScaleY/get"
+    refid "com.kiwi.Core:KiwiComponent/instance/realScaleY/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           168
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "scaleY")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setSize")
+   method
+    name "com.kiwi.Core:KiwiComponent/setSize"
+    refid "com.kiwi.Core:KiwiComponent/instance/setSize"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           170
+      getlocal0
+      pushscope
+
+      debug               1, "width", 0, 170
+      debug               1, "height", 1, 170
+      debug               1, "requiresValidation", 2, 172
+      debugline           172
+      pushfalse
+      setlocal3
+
+      debugline           173
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_width")
+      getlocal1
+      ifeq                L22
+
+      debugline           175
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_width")
+
+      debugline           176
+      pushtrue
+      setlocal3
+
+L22:
+      debugline           179
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_height")
+      getlocal2
+      ifeq                L34
+
+      debugline           181
+      getlocal0
+      getlocal2
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_height")
+
+      debugline           182
+      pushtrue
+      setlocal3
+
+L34:
+      debugline           185
+      getlocal3
+      iffalse             L40
+
+      debugline           187
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "invalidateSize"), 0
+
+L40:
+      debugline           189
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setRealSize")
+   method
+    name "com.kiwi.Core:KiwiComponent/setRealSize"
+    refid "com.kiwi.Core:KiwiComponent/instance/setRealSize"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           191
+      getlocal0
+      pushscope
+
+      debug               1, "newWidth", 0, 191
+      debug               1, "newHeight", 1, 191
+      debugline           193
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "width")
+      getlocal1
+      equals
+      not
+      dup
+      iftrue              L20
+
+      pop
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_width")
+      getlocal1
+      equals
+      not
+L20:
+      iffalse             L31
+
+      debugline           195
+      getlocal0
+      getlocal0
+      getlocal1
+      dup
+      setlocal3
+
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_width")
+
+      getlocal3
+      kill                3
+      setsuper            QName(PackageNamespace(""), "width")
+
+L31:
+      debugline           198
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "height")
+      getlocal2
+      equals
+      not
+      dup
+      iftrue              L45
+
+      pop
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_height")
+      getlocal2
+      equals
+      not
+L45:
+      iffalse             L56
+
+      debugline           200
+      getlocal0
+      getlocal0
+      getlocal2
+      dup
+      setlocal3
+
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_height")
+
+      getlocal3
+      kill                3
+      setsuper            QName(PackageNamespace(""), "height")
+
+L56:
+      debugline           202
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setRealScale") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/setRealScale"
+    refid "com.kiwi.Core:KiwiComponent/instance/setRealScale"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           204
+      getlocal0
+      pushscope
+
+      debug               1, "xscale", 0, 204
+      debug               1, "yscale", 1, 204
+      debugline           206
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "scaleX")
+
+      debugline           207
+      getlocal0
+      getlocal2
+      setsuper            QName(PackageNamespace(""), "scaleY")
+
+      debugline           208
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_originalWidth")
+      getlocal1
+      multiply
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_width")
+
+      debugline           209
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_originalHeight")
+      getlocal2
+      multiply
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_height")
+
+      debugline           210
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "invalidateSize"), 0
+
+      debugline           211
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "config")
+   method
+    name "com.kiwi.Core:KiwiComponent/protected:config"
+    refid "com.kiwi.Core:KiwiComponent/instance/com.kiwi.Core:KiwiComponent:config"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           213
+      getlocal0
+      pushscope
+
+      debugline           215
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      pushstring          "_clear_focus"
+      getlocal0
+      getproperty         QName(PrivateNamespace("com.kiwi.Core:KiwiComponent"), "handleClearFocus")
+      callpropvoid        QName(PackageNamespace(""), "addCallback"), 2
+
+      debugline           216
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "FocusEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_FOCUS_CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("com.kiwi.Core:KiwiComponent"), "handleKeyFocusChange")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           217
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("com.kiwi.Core:KiwiComponent"), "handleClearFocus") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/private:handleClearFocus"
+    refid "com.kiwi.Core:KiwiComponent/instance/com.kiwi.Core:KiwiComponent/handleClearFocus"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           219
+      getlocal0
+      pushscope
+
+      debugline           221
+      getlex              QName(PackageNamespace(""), "stage")
+      pushnull
+      setproperty         QName(PackageNamespace(""), "focus")
+
+      debugline           222
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("com.kiwi.Core:KiwiComponent"), "handleKeyFocusChange") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/private:handleKeyFocusChange"
+    refid "com.kiwi.Core:KiwiComponent/instance/com.kiwi.Core:KiwiComponent/handleKeyFocusChange"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           224
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 224
+      debugline           227
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "isDefaultPrevented"), 0
+      iffalse             L13
+
+      debugline           229
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "WARNING: preventDefault on Key focus change will prevent focus clearing"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L13:
+      debugline           231
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "draw")
+   method
+    name "com.kiwi.Core:KiwiComponent/protected:draw"
+    refid "com.kiwi.Core:KiwiComponent/instance/com.kiwi.Core:KiwiComponent:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           233
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "changeFocus")
+   method
+    name "com.kiwi.Core:KiwiComponent/protected:changeFocus"
+    refid "com.kiwi.Core:KiwiComponent/instance/com.kiwi.Core:KiwiComponent:changeFocus"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           235
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "initSize")
+   method
+    name "com.kiwi.Core:KiwiComponent/protected:initSize"
+    refid "com.kiwi.Core:KiwiComponent/instance/com.kiwi.Core:KiwiComponent:initSize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           237
+      getlocal0
+      pushscope
+
+      debug               1, "width", 0, 239
+      debug               1, "height", 1, 240
+      debugline           239
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_width")
+      pushbyte            0
+      ifne                L15
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "realWidth")
+      convert_d
+      jump                L18
+
+L15:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_width")
+      convert_d
+L18:
+      convert_d
+      setlocal1
+
+      debugline           240
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_height")
+      pushbyte            0
+      ifne                L29
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "realHeight")
+      convert_d
+      jump                L32
+
+L29:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_height")
+      convert_d
+L32:
+      convert_d
+      setlocal2
+
+      debugline           242
+      getlocal0
+      getlocal0
+      pushbyte            1
+      dup
+      setlocal3
+
+      setsuper            QName(PackageNamespace(""), "scaleY")
+
+      getlocal3
+      kill                3
+      setsuper            QName(PackageNamespace(""), "scaleX")
+
+      debugline           243
+      getlocal0
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      debugline           244
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidate")
+   method
+    name "com.kiwi.Core:KiwiComponent/invalidate"
+    refid "com.kiwi.Core:KiwiComponent/instance/invalidate"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_REST
+    flag HAS_PARAM_NAMES
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           246
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      debug               1, "arguments", 0, 246
+      debugline           248
+      getlocal1
+      not
+      dup
+      iftrue              L20
+
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      not
+L20:
+      iffalse             L28
+
+      debugline           250
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalidTypes")
+      getlex              QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "ALL")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      jump                L56
+
+L28:
+      debug               1, "length", 1, 254
+      debug               1, "i", 2, 255
+      debugline           254
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_u
+      setlocal2
+
+      debugline           255
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L53
+
+L40:
+      label
+      debugline           257
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalidTypes")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("com.kiwi.Core:KiwiComponent"), PackageNamespace(""), PrivateNamespace("KiwiComponent.as$28"), PackageNamespace("com.kiwi.Core"), PackageInternalNs("com.kiwi.Core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      debugline           255
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L53:
+      getlocal3
+      getlocal2
+      iflt                L40
+
+L56:
+      debugline           261
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalid")
+      iftrue              L102
+
+      debugline           263
+      getlocal0
+      pushtrue
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalid")
+
+      debugline           264
+      getlex              QName(PackageNamespace(""), "stage")
+      iftrue              L78
+
+      debugline           266
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "onStageChange")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      jump                L101
+
+L78:
+      debugline           270
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "handleFrameEnter")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           271
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "RENDER")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "validateNow")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           272
+      getlex              QName(PackageNamespace(""), "stage")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 0
+
+L101:
+      jump                L108
+
+L102:
+      debugline           277
+      getlex              QName(PackageNamespace(""), "stage")
+      iffalse             L108
+
+      debugline           279
+      getlex              QName(PackageNamespace(""), "stage")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 0
+
+L108:
+      debugline           282
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "onStageChange")
+   method
+    name "com.kiwi.Core:KiwiComponent/protected:onStageChange"
+    refid "com.kiwi.Core:KiwiComponent/instance/com.kiwi.Core:KiwiComponent:onStageChange"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           284
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 284
+      debugline           286
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+      ifne                L35
+
+      debugline           288
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "onStageChange")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           289
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "RENDER")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "validateNow")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           291
+      getlex              QName(PackageNamespace(""), "stage")
+      iffalse             L35
+
+      debugline           293
+      getlex              QName(PackageNamespace(""), "stage")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 0
+
+L35:
+      debugline           296
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "validateNow")
+   method
+    name "com.kiwi.Core:KiwiComponent/validateNow"
+    refid "com.kiwi.Core:KiwiComponent/instance/validateNow"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           298
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 298
+      debugline           300
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "initialized")
+      iftrue              L16
+
+      debugline           302
+      getlocal0
+      pushtrue
+      initproperty        QName(PackageNamespace(""), "initialized")
+
+      debugline           303
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "config"), 0
+
+L16:
+      debugline           306
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "handleFrameEnter")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           307
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "RENDER")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "validateNow")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      debugline           309
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalid")
+      iffalse             L47
+
+      debugline           311
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "draw"), 0
+
+      debugline           312
+      getlocal0
+      newarray            0
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalidTypes")
+
+      debugline           313
+      getlocal0
+      pushfalse
+      initproperty        QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalid")
+
+L47:
+      debugline           315
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "isInvalid")
+   method
+    name "com.kiwi.Core:KiwiComponent/protected:isInvalid"
+    refid "com.kiwi.Core:KiwiComponent/instance/com.kiwi.Core:KiwiComponent:isInvalid"
+    returns QName(PackageNamespace(""), "Boolean")
+    flag NEED_REST
+    flag HAS_PARAM_NAMES
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           317
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      debug               1, "arguments", 0, 317
+      debug               1, "result", 1, 319
+      debugline           319
+      pushfalse
+      setlocal2
+
+      debugline           320
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalid")
+      iffalse             L78
+
+      debug               1, "length", 2, 322
+      debugline           322
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_u
+      setlocal3
+
+      debugline           323
+      getlocal3
+      iftrue              L33
+
+      debugline           325
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalid")
+      convert_b
+      setlocal2
+
+L33:
+      debugline           328
+      getlocal2
+      iftrue              L46
+
+      debugline           330
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalidTypes")
+      getlex              QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "ALL")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            255
+      equals
+      not
+      setlocal2
+
+L46:
+      debugline           333
+      getlocal2
+      iftrue              L78
+
+      debug               1, "i", 3, 335
+      debugline           335
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L75
+
+L55:
+      label
+      debugline           337
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "_invalidTypes")
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("com.kiwi.Core:KiwiComponent"), PackageNamespace(""), PrivateNamespace("KiwiComponent.as$28"), PackageNamespace("com.kiwi.Core"), PackageInternalNs("com.kiwi.Core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            255
+      ifeq                L70
+
+      debugline           339
+      pushtrue
+      setlocal2
+
+      debugline           340
+      jump                L78
+
+L70:
+      debugline           335
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L75:
+      getlocal            4
+      getlocal3
+      iflt                L55
+
+L78:
+      debugline           345
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidateSize") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/invalidateSize"
+    refid "com.kiwi.Core:KiwiComponent/instance/invalidateSize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           349
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidateData") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/invalidateData"
+    refid "com.kiwi.Core:KiwiComponent/instance/invalidateData"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           350
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidateState") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/invalidateState"
+    refid "com.kiwi.Core:KiwiComponent/instance/invalidateState"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           351
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidateSettings") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/invalidateSettings"
+    refid "com.kiwi.Core:KiwiComponent/instance/invalidateSettings"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           352
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SETTINGS")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidateRenderers") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/invalidateRenderers"
+    refid "com.kiwi.Core:KiwiComponent/instance/invalidateRenderers"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           353
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "RENDERERS")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidateScrollbar") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/invalidateScrollbar"
+    refid "com.kiwi.Core:KiwiComponent/instance/invalidateScrollbar"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           354
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SCROLL_BAR")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidateSelectedIndex") flag FINAL
+   method
+    name "com.kiwi.Core:KiwiComponent/invalidateSelectedIndex"
+    refid "com.kiwi.Core:KiwiComponent/instance/invalidateSelectedIndex"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           355
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SELECTED_INDEX")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.kiwi.Core:KiwiComponent"), "handleFrameEnter")
+   method
+    name "com.kiwi.Core:KiwiComponent/protected:handleFrameEnter"
+    refid "com.kiwi.Core:KiwiComponent/instance/com.kiwi.Core:KiwiComponent:handleFrameEnter"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           357
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 357
+      debugline           359
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "validateNow"), 0
+
+      debugline           360
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "handleInput")
+   method
+    name "com.kiwi.Core:KiwiComponent/handleInput"
+    refid "com.kiwi.Core:KiwiComponent/instance/handleInput"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    paramname "com.kiwi.Core:KiwiComponent/generateLabelHash"
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+      debugline           362
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 362
+      debugline           365
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "com.kiwi.Core:KiwiComponent/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "generateLabelHash") flag FINAL dispid 3
+  method
+   name "com.kiwi.Core:KiwiComponent/generateLabelHash"
+   refid "com.kiwi.Core:KiwiComponent/class/generateLabelHash"
+   param QName(PackageNamespace("flash.display"), "MovieClip")
+   returns QName(PackageNamespace(""), "Object")
+   flag HAS_PARAM_NAMES
+   paramname ""
+   body
+    maxstack 3
+    localcount 6
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Core;KiwiComponent.as"
+     debugline           62
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal3
+
+     pushbyte            0
+     convert_u
+     setlocal            4
+
+     pushbyte            0
+     convert_u
+     setlocal            5
+
+     debug               1, "target", 0, 62
+     debug               1, "hash", 1, 64
+     debugline           64
+     newobject           0
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal2
+
+     debugline           66
+     getlocal1
+     iffalse             L57
+
+     debug               1, "labels", 2, 68
+     debug               1, "length", 3, 69
+     debug               1, "i", 4, 71
+     debugline           68
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "currentLabels")
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal3
+
+     debugline           69
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_u
+     setlocal            4
+
+     debugline           71
+     pushbyte            0
+     convert_u
+     setlocal            5
+
+     jump                L54
+
+L40:
+     label
+     debugline           73
+     getlocal2
+     getlocal3
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace("com.kiwi.Core:KiwiComponent"), PackageNamespace(""), PrivateNamespace("KiwiComponent.as$28"), PackageNamespace("com.kiwi.Core"), PackageInternalNs("com.kiwi.Core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("name", [PrivateNamespace("com.kiwi.Core:KiwiComponent"), PackageNamespace(""), PrivateNamespace("KiwiComponent.as$28"), PackageNamespace("com.kiwi.Core"), PackageInternalNs("com.kiwi.Core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushtrue
+     setproperty         MultinameL([PrivateNamespace("com.kiwi.Core:KiwiComponent"), PackageNamespace(""), PrivateNamespace("KiwiComponent.as$28"), PackageNamespace("com.kiwi.Core"), PackageInternalNs("com.kiwi.Core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("com.kiwi.Core:KiwiComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     debugline           71
+     getlocal            5
+     increment
+     convert_u
+     setlocal            5
+
+L54:
+     getlocal            5
+     getlocal            4
+     iflt                L40
+
+L57:
+     debugline           77
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

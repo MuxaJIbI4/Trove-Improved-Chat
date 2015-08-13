@@ -1,0 +1,38 @@
+script ; 73
+ sinit
+  name ""
+  refid "mx.geom:TransformOffsets/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+    debugline           32
+    findpropstrict      Multiname("TransformOffsets", [PackageNamespace("mx.geom")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "mx.geom:TransformOffsets"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("mx.geom"), "TransformOffsets")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+    debugline           11
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.geom"), "TransformOffsets")
+  #include "TransformOffsets.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,185 @@
+class
+ refid "com.kiwi.Interfaces:IKiwiComponent"
+ instance QName(PackageNamespace("com.kiwi.Interfaces"), "IKiwiComponent")
+  implements Multiname("IEventDispatcher", [PackageNamespace("flash.events")])
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "com.kiwi.Interfaces:IKiwiComponent/IKiwiComponent"
+   refid "com.kiwi.Interfaces:IKiwiComponent/instance/init"
+  end ; method
+  trait getter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "x")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:x/get"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:x/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "x")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:x/set"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:x/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IKiwiComponent.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "y")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:y/get"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:y/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "y")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:y/set"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:y/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IKiwiComponent.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "width")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:width/get"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:width/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "width")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:width/set"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:width/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IKiwiComponent.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "height")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:height/get"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:height/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "height")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:height/set"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:height/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IKiwiComponent.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "enabled")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:enabled/get"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:enabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "enabled")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:enabled/set"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IKiwiComponent.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "tabEnabled")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:tabEnabled/get"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:tabEnabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "tabEnabled")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:tabEnabled/set"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:tabEnabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IKiwiComponent.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "alpha")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:alpha/get"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:alpha/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "alpha")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:alpha/set"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:alpha/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IKiwiComponent.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "focusTarget")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:focusTarget/get"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:focusTarget/getter"
+    returns QName(PackageNamespace("com.kiwi.Core"), "KiwiComponent")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "focusTarget")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:focusTarget/set"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:focusTarget/setter"
+    param QName(PackageNamespace("com.kiwi.Core"), "KiwiComponent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IKiwiComponent.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "validateNow")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:validateNow"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:validateNow"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IKiwiComponent.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.kiwi.Interfaces:IKiwiComponent"), "handleInput")
+   method
+    name "com.kiwi.Interfaces:IKiwiComponent/com.kiwi.Interfaces:IKiwiComponent:handleInput"
+    refid "com.kiwi.Interfaces:IKiwiComponent/instance/com.kiwi.Interfaces:IKiwiComponent:handleInput"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Interfaces;IKiwiComponent.as"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "com.kiwi.Interfaces:IKiwiComponent/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 4
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

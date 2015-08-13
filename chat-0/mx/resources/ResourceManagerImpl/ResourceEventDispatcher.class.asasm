@@ -1,0 +1,248 @@
+class
+ refid "mx.resources:ResourceManagerImpl/ResourceEventDispatcher"
+ instance QName(PrivateNamespace("ResourceManagerImpl.as$130"), "ResourceEventDispatcher")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("ResourceManagerImpl.as$130:ResourceEventDispatcher")
+  iinit
+   name "ResourceManagerImpl.as$130:ResourceEventDispatcher/ResourceEventDispatcher"
+   refid "mx.resources:ResourceManagerImpl/ResourceEventDispatcher/instance/init"
+   param QName(PackageNamespace("mx.modules"), "IModuleInfo")
+   flag HAS_PARAM_NAMES
+   paramname null
+   body
+    maxstack 6
+    localcount 2
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+     debugline           1099
+     getlocal0
+     pushscope
+
+     debug               1, "moduleInfo", 0, 1099
+     debugline           1101
+     getlocal0
+     constructsuper      0
+
+     debugline           1103
+     getlocal1
+     debugline           1104
+     getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+     getproperty         QName(PackageNamespace(""), "ERROR")
+     getlocal0
+     getproperty         QName(PrivateNamespace("ResourceManagerImpl.as$130:ResourceEventDispatcher"), "moduleInfo_errorHandler")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 5
+
+     debugline           1106
+     getlocal1
+     debugline           1107
+     getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+     getproperty         QName(PackageNamespace(""), "PROGRESS")
+     getlocal0
+     getproperty         QName(PrivateNamespace("ResourceManagerImpl.as$130:ResourceEventDispatcher"), "moduleInfo_progressHandler")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 5
+
+     debugline           1109
+     getlocal1
+     debugline           1110
+     getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+     getproperty         QName(PackageNamespace(""), "READY")
+     getlocal0
+     getproperty         QName(PrivateNamespace("ResourceManagerImpl.as$130:ResourceEventDispatcher"), "moduleInfo_readyHandler")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 5
+
+     debugline           1111
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PrivateNamespace("ResourceManagerImpl.as$130:ResourceEventDispatcher"), "moduleInfo_errorHandler")
+   method
+    name "ResourceManagerImpl.as$130:ResourceEventDispatcher/private:moduleInfo_errorHandler"
+    refid "mx.resources:ResourceManagerImpl/ResourceEventDispatcher/instance/mx.resources:ResourceManagerImpl/ResourceEventDispatcher/instance/init/moduleInfo_errorHandler"
+    param QName(PackageNamespace("mx.events"), "ModuleEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           1122
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 1122
+      debug               1, "resourceEvent", 1, 1124
+      debugline           1124
+      findpropstrict      QName(PackageNamespace("mx.events"), "ResourceEvent")
+      debugline           1125
+      getlex              QName(PackageNamespace("mx.events"), "ResourceEvent")
+      getproperty         QName(PackageNamespace(""), "ERROR")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bubbles")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "cancelable")
+      constructprop       QName(PackageNamespace("mx.events"), "ResourceEvent"), 3
+      coerce              QName(PackageNamespace("mx.events"), "ResourceEvent")
+      setlocal2
+
+      debugline           1126
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bytesLoaded")
+      setproperty         QName(PackageNamespace(""), "bytesLoaded")
+
+      debugline           1127
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bytesTotal")
+      setproperty         QName(PackageNamespace(""), "bytesTotal")
+
+      debugline           1128
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "errorText")
+      setproperty         QName(PackageNamespace(""), "errorText")
+
+      debugline           1129
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           1130
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("ResourceManagerImpl.as$130:ResourceEventDispatcher"), "moduleInfo_progressHandler")
+   method
+    name "ResourceManagerImpl.as$130:ResourceEventDispatcher/private:moduleInfo_progressHandler"
+    refid "mx.resources:ResourceManagerImpl/ResourceEventDispatcher/instance/mx.resources:ResourceManagerImpl/ResourceEventDispatcher/instance/init/moduleInfo_progressHandler"
+    param QName(PackageNamespace("mx.events"), "ModuleEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           1135
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 1135
+      debug               1, "resourceEvent", 1, 1137
+      debugline           1137
+      findpropstrict      QName(PackageNamespace("mx.events"), "ResourceEvent")
+      debugline           1138
+      getlex              QName(PackageNamespace("mx.events"), "ResourceEvent")
+      getproperty         QName(PackageNamespace(""), "PROGRESS")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bubbles")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "cancelable")
+      constructprop       QName(PackageNamespace("mx.events"), "ResourceEvent"), 3
+      coerce              QName(PackageNamespace("mx.events"), "ResourceEvent")
+      setlocal2
+
+      debugline           1139
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bytesLoaded")
+      setproperty         QName(PackageNamespace(""), "bytesLoaded")
+
+      debugline           1140
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bytesTotal")
+      setproperty         QName(PackageNamespace(""), "bytesTotal")
+
+      debugline           1141
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           1142
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("ResourceManagerImpl.as$130:ResourceEventDispatcher"), "moduleInfo_readyHandler")
+   method
+    name "ResourceManagerImpl.as$130:ResourceEventDispatcher/private:moduleInfo_readyHandler"
+    refid "mx.resources:ResourceManagerImpl/ResourceEventDispatcher/instance/mx.resources:ResourceManagerImpl/ResourceEventDispatcher/instance/init/moduleInfo_readyHandler"
+    param QName(PackageNamespace("mx.events"), "ModuleEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "ResourceManagerImpl.as$130:ResourceEventDispatcher"
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManagerImpl.as"
+      debugline           1147
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 1147
+      debug               1, "resourceEvent", 1, 1149
+      debugline           1150
+      findpropstrict      QName(PackageNamespace("mx.events"), "ResourceEvent")
+      getlex              QName(PackageNamespace("mx.events"), "ResourceEvent")
+      getproperty         QName(PackageNamespace(""), "COMPLETE")
+      constructprop       QName(PackageNamespace("mx.events"), "ResourceEvent"), 1
+      coerce              QName(PackageNamespace("mx.events"), "ResourceEvent")
+      setlocal2
+
+      debugline           1151
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           1152
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.resources:ResourceManagerImpl/ResourceEventDispatcher/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

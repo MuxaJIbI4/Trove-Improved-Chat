@@ -1,0 +1,463 @@
+class
+ refid "mx.core:ILayoutElement"
+ instance QName(PackageNamespace("mx.core"), "ILayoutElement")
+  implements Multiname("IEventDispatcher", [PackageNamespace("flash.events")])
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.core:ILayoutElement/ILayoutElement"
+   refid "mx.core:ILayoutElement/instance/init"
+  end ; method
+  trait getter QName(Namespace("mx.core:ILayoutElement"), "left")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:left/getter"
+    returns QName(PackageNamespace(""), "Object")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:ILayoutElement"), "left")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:left/set"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:left/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:ILayoutElement"), "right")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:right/get"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:right/getter"
+    returns QName(PackageNamespace(""), "Object")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:ILayoutElement"), "right")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:right/set"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:right/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:ILayoutElement"), "top")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:top/get"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:top/getter"
+    returns QName(PackageNamespace(""), "Object")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:ILayoutElement"), "top")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:top/set"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:top/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:ILayoutElement"), "bottom")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:bottom/get"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:bottom/getter"
+    returns QName(PackageNamespace(""), "Object")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:ILayoutElement"), "bottom")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:bottom/set"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:bottom/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:ILayoutElement"), "horizontalCenter")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:horizontalCenter/get"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:horizontalCenter/getter"
+    returns QName(PackageNamespace(""), "Object")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:ILayoutElement"), "horizontalCenter")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:horizontalCenter/set"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:horizontalCenter/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:ILayoutElement"), "verticalCenter")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:verticalCenter/get"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:verticalCenter/getter"
+    returns QName(PackageNamespace(""), "Object")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:ILayoutElement"), "verticalCenter")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:verticalCenter/set"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:verticalCenter/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:ILayoutElement"), "baseline")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:baseline/get"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:baseline/getter"
+    returns QName(PackageNamespace(""), "Object")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:ILayoutElement"), "baseline")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:baseline/set"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:baseline/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:ILayoutElement"), "baselinePosition")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:baselinePosition/get"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:baselinePosition/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:ILayoutElement"), "percentWidth")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:percentWidth/get"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:percentWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:ILayoutElement"), "percentWidth")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:percentWidth/set"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:percentWidth/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:ILayoutElement"), "percentHeight")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:percentHeight/get"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:percentHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:ILayoutElement"), "percentHeight")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:percentHeight/set"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:percentHeight/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:ILayoutElement"), "includeInLayout")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:includeInLayout/get"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:includeInLayout/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:ILayoutElement"), "includeInLayout")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:includeInLayout/set"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:includeInLayout/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getPreferredBoundsWidth")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getPreferredBoundsWidth"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getPreferredBoundsWidth"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getPreferredBoundsHeight")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getPreferredBoundsHeight"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getPreferredBoundsHeight"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getMinBoundsWidth")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getMinBoundsWidth"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getMinBoundsWidth"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getMinBoundsHeight")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getMinBoundsHeight"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getMinBoundsHeight"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getMaxBoundsWidth")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getMaxBoundsWidth"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getMaxBoundsWidth"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getMaxBoundsHeight")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getMaxBoundsHeight"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getMaxBoundsHeight"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getBoundsXAtSize")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getBoundsXAtSize"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getBoundsXAtSize"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getBoundsYAtSize")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getBoundsYAtSize"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getBoundsYAtSize"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getLayoutBoundsWidth")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getLayoutBoundsWidth"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getLayoutBoundsWidth"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getLayoutBoundsHeight")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getLayoutBoundsHeight"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getLayoutBoundsHeight"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getLayoutBoundsX")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getLayoutBoundsX"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getLayoutBoundsX"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getLayoutBoundsY")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getLayoutBoundsY"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getLayoutBoundsY"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "mx.core:ILayoutElement/mx.core:ILayoutElement:left/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "setLayoutBoundsPosition")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:setLayoutBoundsPosition"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:setLayoutBoundsPosition"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "setLayoutBoundsSize")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:setLayoutBoundsSize"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:setLayoutBoundsSize"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getLayoutMatrix")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getLayoutMatrix"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getLayoutMatrix"
+    returns QName(PackageNamespace("flash.geom"), "Matrix")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "setLayoutMatrix")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:setLayoutMatrix"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:setLayoutMatrix"
+    param QName(PackageNamespace("flash.geom"), "Matrix")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:ILayoutElement"), "hasLayoutMatrix3D")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:hasLayoutMatrix3D/get"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:hasLayoutMatrix3D/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "getLayoutMatrix3D")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:getLayoutMatrix3D"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:getLayoutMatrix3D"
+    returns QName(PackageNamespace("flash.geom"), "Matrix3D")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "setLayoutMatrix3D")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:setLayoutMatrix3D"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:setLayoutMatrix3D"
+    param QName(PackageNamespace("flash.geom"), "Matrix3D")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:ILayoutElement"), "transformAround")
+   method
+    name "mx.core:ILayoutElement/mx.core:ILayoutElement:transformAround"
+    refid "mx.core:ILayoutElement/instance/mx.core:ILayoutElement:transformAround"
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    optional Null()
+    optional Null()
+    optional Null()
+    optional Null()
+    optional Null()
+    optional True()
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ILayoutElement.as"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:ILayoutElement/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 4
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

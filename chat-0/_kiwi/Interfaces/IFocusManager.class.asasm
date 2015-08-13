@@ -1,0 +1,166 @@
+class
+ refid "_kiwi.Interfaces:IFocusManager"
+ instance QName(PackageNamespace("_kiwi.Interfaces"), "IFocusManager")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "_kiwi.Interfaces:IFocusManager/IFocusManager"
+   refid "_kiwi.Interfaces:IFocusManager/instance/init"
+  end ; method
+  trait getter QName(Namespace("_kiwi.Interfaces:IFocusManager"), "defaultButton")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:defaultButton/get"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:defaultButton/getter"
+    returns QName(PackageNamespace("_kiwi.Controls"), "BaseButton")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("_kiwi.Interfaces:IFocusManager"), "defaultButton")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:defaultButton/set"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:defaultButton/setter"
+    param QName(PackageNamespace("_kiwi.Controls"), "BaseButton")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Interfaces;IFocusManager.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("_kiwi.Interfaces:IFocusManager"), "defaultButtonEnabled")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:defaultButtonEnabled/get"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:defaultButtonEnabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("_kiwi.Interfaces:IFocusManager"), "defaultButtonEnabled")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:defaultButtonEnabled/set"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:defaultButtonEnabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Interfaces;IFocusManager.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("_kiwi.Interfaces:IFocusManager"), "nextTabIndex")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:nextTabIndex/get"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:nextTabIndex/getter"
+    returns QName(PackageNamespace(""), "int")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("_kiwi.Interfaces:IFocusManager"), "showFocusIndicator")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:showFocusIndicator/get"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:showFocusIndicator/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("_kiwi.Interfaces:IFocusManager"), "showFocusIndicator")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:showFocusIndicator/set"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:showFocusIndicator/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Interfaces;IFocusManager.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("_kiwi.Interfaces:IFocusManager"), "getFocus")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:getFocus"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:getFocus"
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("_kiwi.Interfaces:IFocusManager"), "setFocus")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:setFocus"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:setFocus"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Interfaces;IFocusManager.as"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("_kiwi.Interfaces:IFocusManager"), "showFocus")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:showFocus"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:showFocus"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("_kiwi.Interfaces:IFocusManager"), "hideFocus")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:hideFocus"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:hideFocus"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("_kiwi.Interfaces:IFocusManager"), "activate")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:activate"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:activate"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("_kiwi.Interfaces:IFocusManager"), "deactivate")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:deactivate"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:deactivate"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("_kiwi.Interfaces:IFocusManager"), "findFocusManagerComponent")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:findFocusManagerComponent"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:findFocusManagerComponent"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+    flag HAS_PARAM_NAMES
+    paramname "BaseButton"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("_kiwi.Interfaces:IFocusManager"), "getNextFocusManagerComponent")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:getNextFocusManagerComponent"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:getNextFocusManagerComponent"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional False()
+    paramname "BaseButton"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("_kiwi.Interfaces:IFocusManager"), "form")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:form/get"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:form/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("_kiwi.Interfaces:IFocusManager"), "form")
+   method
+    name "_kiwi.Interfaces:IFocusManager/_kiwi.Interfaces:IFocusManager:form/set"
+    refid "_kiwi.Interfaces:IFocusManager/instance/_kiwi.Interfaces:IFocusManager:form/setter"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Interfaces;IFocusManager.as"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "_kiwi.Interfaces:IFocusManager/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

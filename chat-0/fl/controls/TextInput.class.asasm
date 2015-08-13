@@ -1,0 +1,2000 @@
+class
+ refid "fl.controls:TextInput"
+ instance QName(PackageNamespace("fl.controls"), "TextInput")
+  extends QName(PackageNamespace("fl.core"), "UIComponent")
+  implements Multiname("IFocusManagerComponent", [PackageNamespace("fl.managers")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls:TextInput")
+  iinit
+   name "fl.controls:TextInput/TextInput"
+   refid "fl.controls:TextInput/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+     debugline           259
+     getlocal0
+     pushscope
+
+     debugline           259
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "textField") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(ProtectedNamespace("fl.controls:TextInput"), "_editable") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(ProtectedNamespace("fl.controls:TextInput"), "background") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait slot QName(ProtectedNamespace("fl.controls:TextInput"), "_html") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("fl.controls:TextInput"), "_savedHTML") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "text")
+   method
+    name "fl.controls:TextInput/text/get"
+    refid "fl.controls:TextInput/instance/text/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           279
+      getlocal0
+      pushscope
+
+      debugline           280
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "text")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "text")
+   method
+    name "fl.controls:TextInput/text/set"
+    refid "fl.controls:TextInput/instance/text/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           288
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 288
+      debugline           289
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "text")
+
+      debugline           290
+      getlocal0
+      pushfalse
+      initproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_html")
+
+      debugline           291
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      debugline           292
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      debugline           293
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    name "fl.controls:TextInput/enabled/get"
+    refid "fl.controls:TextInput/instance/enabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           306
+      getlocal0
+      pushscope
+
+      debugline           307
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "enabled")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    name "fl.controls:TextInput/enabled/set"
+    refid "fl.controls:TextInput/instance/enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           315
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 315
+      debugline           316
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "enabled")
+
+      debugline           317
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "updateTextFieldType"), 0
+
+      debugline           318
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "imeMode")
+   method
+    name "fl.controls:TextInput/imeMode/get"
+    refid "fl.controls:TextInput/instance/imeMode/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           330
+      getlocal0
+      pushscope
+
+      debugline           331
+      getlex              QName(ProtectedNamespace("fl.core:UIComponent"), "_imeMode")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "imeMode")
+   method
+    name "fl.controls:TextInput/imeMode/set"
+    refid "fl.controls:TextInput/instance/imeMode/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           336
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 336
+      debugline           337
+      findproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "_imeMode")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "_imeMode")
+
+      debugline           338
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "alwaysShowSelection")
+   method
+    name "fl.controls:TextInput/alwaysShowSelection/get"
+    refid "fl.controls:TextInput/instance/alwaysShowSelection/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           360
+      getlocal0
+      pushscope
+
+      debugline           361
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "alwaysShowSelection")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "alwaysShowSelection")
+   method
+    name "fl.controls:TextInput/alwaysShowSelection/set"
+    refid "fl.controls:TextInput/instance/alwaysShowSelection/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           366
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 366
+      debugline           367
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "alwaysShowSelection")
+
+      debugline           368
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "drawFocus") flag OVERRIDE
+   method
+    name "fl.controls:TextInput/drawFocus"
+    refid "fl.controls:TextInput/instance/drawFocus"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           380
+      getlocal0
+      pushscope
+
+      debug               1, "draw", 0, 380
+      debugline           381
+      getlex              QName(PackageNamespace(""), "focusTarget")
+      pushnull
+      ifeq                L15
+
+      debugline           382
+      getlex              QName(PackageNamespace(""), "focusTarget")
+      getlocal1
+      callpropvoid        QName(Namespace("fl.managers:IFocusManagerComponent"), "drawFocus"), 1
+
+      debugline           383
+      returnvoid
+
+L15:
+      debugline           385
+      getlocal0
+      getlocal1
+      callsupervoid       QName(PackageNamespace(""), "drawFocus"), 1
+      debugline           386
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "editable")
+   method
+    name "fl.controls:TextInput/editable/get"
+    refid "fl.controls:TextInput/instance/editable/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           404
+      getlocal0
+      pushscope
+
+      debugline           405
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:TextInput"), "_editable")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "editable")
+   method
+    name "fl.controls:TextInput/editable/set"
+    refid "fl.controls:TextInput/instance/editable/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           413
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 413
+      debugline           414
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_editable")
+
+      debugline           415
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "updateTextFieldType"), 0
+
+      debugline           416
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "horizontalScrollPosition")
+   method
+    name "fl.controls:TextInput/horizontalScrollPosition/get"
+    refid "fl.controls:TextInput/instance/horizontalScrollPosition/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           434
+      getlocal0
+      pushscope
+
+      debugline           435
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "scrollH")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "horizontalScrollPosition")
+   method
+    name "fl.controls:TextInput/horizontalScrollPosition/set"
+    refid "fl.controls:TextInput/instance/horizontalScrollPosition/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           443
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 443
+      debugline           444
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "scrollH")
+
+      debugline           445
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "maxHorizontalScrollPosition")
+   method
+    name "fl.controls:TextInput/maxHorizontalScrollPosition/get"
+    refid "fl.controls:TextInput/instance/maxHorizontalScrollPosition/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           462
+      getlocal0
+      pushscope
+
+      debugline           463
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "maxScrollH")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "length")
+   method
+    name "fl.controls:TextInput/length/get"
+    refid "fl.controls:TextInput/instance/length/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           482
+      getlocal0
+      pushscope
+
+      debugline           483
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "maxChars")
+   method
+    name "fl.controls:TextInput/maxChars/get"
+    refid "fl.controls:TextInput/instance/maxChars/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           504
+      getlocal0
+      pushscope
+
+      debugline           505
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "maxChars")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "maxChars")
+   method
+    name "fl.controls:TextInput/maxChars/set"
+    refid "fl.controls:TextInput/instance/maxChars/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           513
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 513
+      debugline           514
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "maxChars")
+
+      debugline           515
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "displayAsPassword")
+   method
+    name "fl.controls:TextInput/displayAsPassword/get"
+    refid "fl.controls:TextInput/instance/displayAsPassword/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           544
+      getlocal0
+      pushscope
+
+      debugline           545
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "displayAsPassword")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "displayAsPassword")
+   method
+    name "fl.controls:TextInput/displayAsPassword/set"
+    refid "fl.controls:TextInput/instance/displayAsPassword/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           553
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 553
+      debugline           554
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "displayAsPassword")
+
+      debugline           555
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "restrict")
+   method
+    name "fl.controls:TextInput/restrict/get"
+    refid "fl.controls:TextInput/instance/restrict/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           586
+      getlocal0
+      pushscope
+
+      debugline           587
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "restrict")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "restrict")
+   method
+    name "fl.controls:TextInput/restrict/set"
+    refid "fl.controls:TextInput/instance/restrict/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           595
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 595
+      debugline           596
+      getlex              QName(PackageNamespace(""), "componentInspectorSetting")
+      convert_b
+      dup
+      iffalse             L14
+
+      pop
+      getlocal1
+      pushstring          ""
+      equals
+L14:
+      iffalse             L18
+
+      pushnull
+      coerce_s
+      setlocal1
+
+L18:
+      debugline           597
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "restrict")
+
+      debugline           598
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selectionBeginIndex")
+   method
+    name "fl.controls:TextInput/selectionBeginIndex/get"
+    refid "fl.controls:TextInput/instance/selectionBeginIndex/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           622
+      getlocal0
+      pushscope
+
+      debugline           623
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "selectionBeginIndex")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selectionEndIndex")
+   method
+    name "fl.controls:TextInput/selectionEndIndex/get"
+    refid "fl.controls:TextInput/instance/selectionEndIndex/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           646
+      getlocal0
+      pushscope
+
+      debugline           647
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "selectionEndIndex")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "condenseWhite")
+   method
+    name "fl.controls:TextInput/condenseWhite/get"
+    refid "fl.controls:TextInput/instance/condenseWhite/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           678
+      getlocal0
+      pushscope
+
+      debugline           679
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "condenseWhite")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "condenseWhite")
+   method
+    name "fl.controls:TextInput/condenseWhite/set"
+    refid "fl.controls:TextInput/instance/condenseWhite/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           688
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 688
+      debugline           689
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "condenseWhite")
+
+      debugline           690
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "htmlText")
+   method
+    name "fl.controls:TextInput/htmlText/get"
+    refid "fl.controls:TextInput/instance/htmlText/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           709
+      getlocal0
+      pushscope
+
+      debugline           710
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "htmlText")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "htmlText")
+   method
+    name "fl.controls:TextInput/htmlText/set"
+    refid "fl.controls:TextInput/instance/htmlText/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           715
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 715
+      debugline           716
+      getlocal1
+      pushstring          ""
+      ifne                L15
+
+      debugline           717
+      getlocal0
+      pushstring          ""
+      initproperty        QName(PackageNamespace(""), "text")
+
+      debugline           718
+      returnvoid
+
+L15:
+      debugline           720
+      getlocal0
+      pushtrue
+      initproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_html")
+
+      debugline           721
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_savedHTML")
+
+      debugline           722
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "htmlText")
+
+      debugline           723
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      debugline           724
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      debugline           725
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "textHeight")
+   method
+    name "fl.controls:TextInput/textHeight/get"
+    refid "fl.controls:TextInput/instance/textHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           744
+      getlocal0
+      pushscope
+
+      debugline           745
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "textHeight")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "textWidth")
+   method
+    name "fl.controls:TextInput/textWidth/get"
+    refid "fl.controls:TextInput/instance/textWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           764
+      getlocal0
+      pushscope
+
+      debugline           765
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "textWidth")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setSelection")
+   method
+    name "fl.controls:TextInput/setSelection"
+    refid "fl.controls:TextInput/instance/setSelection"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    paramname "textPadding"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           799
+      getlocal0
+      pushscope
+
+      debug               1, "beginIndex", 0, 799
+      debug               1, "endIndex", 1, 799
+      debugline           800
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setSelection"), 2
+
+      debugline           801
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getLineMetrics")
+   method
+    name "fl.controls:TextInput/getLineMetrics"
+    refid "fl.controls:TextInput/instance/getLineMetrics"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("flash.text"), "TextLineMetrics")
+    flag HAS_PARAM_NAMES
+    paramname "fl.controls:TextInput/imeMode/get"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           817
+      getlocal0
+      pushscope
+
+      debug               1, "index", 0, 817
+      debugline           818
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getLineMetrics"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "appendText")
+   method
+    name "fl.controls:TextInput/appendText"
+    refid "fl.controls:TextInput/instance/appendText"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           838
+      getlocal0
+      pushscope
+
+      debug               1, "text", 0, 838
+      debugline           839
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "appendText"), 1
+
+      debugline           840
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "updateTextFieldType")
+   method
+    name "fl.controls:TextInput/protected:updateTextFieldType"
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:updateTextFieldType"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           848
+      getlocal0
+      pushscope
+
+      debugline           849
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "enabled")
+      convert_b
+      dup
+      iffalse             L16
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "editable")
+      convert_b
+L16:
+      iffalse             L21
+
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldType")
+      getproperty         QName(PackageNamespace(""), "INPUT")
+      coerce_s
+      jump                L24
+
+L21:
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldType")
+      getproperty         QName(PackageNamespace(""), "DYNAMIC")
+      coerce_s
+L24:
+      setproperty         QName(PackageNamespace(""), "type")
+
+      debugline           850
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "enabled")
+      setproperty         QName(PackageNamespace(""), "selectable")
+
+      debugline           851
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "handleKeyDown")
+   method
+    name "fl.controls:TextInput/protected:handleKeyDown"
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:handleKeyDown"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           859
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 859
+      debugline           860
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "ENTER")
+      ifne                L19
+
+      debugline           861
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getproperty         QName(PackageNamespace(""), "ENTER")
+      pushtrue
+      constructprop       QName(PackageNamespace("fl.events"), "ComponentEvent"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L19:
+      debugline           863
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "handleChange")
+   method
+    name "fl.controls:TextInput/protected:handleChange"
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:handleChange"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           871
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 871
+      debugline           872
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "stopPropagation"), 0
+
+      debugline           873
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      pushtrue
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           874
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "handleTextInput")
+   method
+    name "fl.controls:TextInput/protected:handleTextInput"
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:handleTextInput"
+    param QName(PackageNamespace("flash.events"), "TextEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           882
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 882
+      debugline           883
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "stopPropagation"), 0
+
+      debugline           884
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "TextEvent")
+      getlex              QName(PackageNamespace("flash.events"), "TextEvent")
+      getproperty         QName(PackageNamespace(""), "TEXT_INPUT")
+      pushtrue
+      pushfalse
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "text")
+      constructprop       QName(PackageNamespace("flash.events"), "TextEvent"), 4
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           885
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "setEmbedFont")
+   method
+    name "fl.controls:TextInput/protected:setEmbedFont"
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:setEmbedFont"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           893
+      getlocal0
+      pushscope
+
+      debug               1, "embed", 0, 894
+      debugline           894
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "embedFonts"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      debugline           895
+      getlocal1
+      pushnull
+      ifeq                L20
+
+      debugline           896
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "embedFonts")
+
+L20:
+      debugline           898
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "draw") flag OVERRIDE
+   method
+    name "fl.controls:TextInput/protected:draw"
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           903
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      debugline           904
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid"), 2
+      iffalse             L43
+
+      debug               1, "embed", 0, 908
+      debugline           905
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "drawTextFormat"), 0
+
+      debugline           906
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "drawBackground"), 0
+
+      debugline           908
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "embedFonts"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      debugline           909
+      getlocal1
+      pushnull
+      ifeq                L37
+
+      debugline           910
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "embedFonts")
+
+L37:
+      debugline           913
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 2
+
+L43:
+      debugline           915
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid"), 1
+      iffalse             L52
+
+      debugline           916
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "drawLayout"), 0
+
+L52:
+      debugline           919
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "draw"), 0
+      debugline           920
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "drawBackground")
+   method
+    name "fl.controls:TextInput/protected:drawBackground"
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:drawBackground"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           928
+      getlocal0
+      pushscope
+
+      debug               1, "bg", 0, 929
+      debug               1, "styleName", 1, 931
+      debugline           929
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+      debugline           931
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "enabled")
+      iffalse             L17
+
+      pushstring          "upSkin"
+      jump                L18
+
+L17:
+      pushstring          "disabledSkin"
+L18:
+      coerce_s
+      setlocal2
+
+      debugline           932
+      getlocal0
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      getlocal2
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance"), 1
+      initproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+
+      debugline           933
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      pushnull
+      ifne                L34
+
+      returnvoid
+
+L34:
+      debugline           934
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      debugline           936
+      getlocal1
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L53
+
+      pop
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      equals
+      not
+L53:
+      dup
+      iffalse             L60
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      convert_b
+L60:
+      iffalse             L65
+
+      debugline           937
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L65:
+      debugline           939
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "drawTextFormat")
+   method
+    name "fl.controls:TextInput/protected:drawTextFormat"
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:drawTextFormat"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           947
+      getlocal0
+      pushscope
+
+      debug               1, "uiStyles", 0, 949
+      debug               1, "defaultTF", 1, 950
+      debug               1, "tf", 2, 953
+      debugline           949
+      getlex              QName(PackageNamespace("fl.core"), "UIComponent")
+      callproperty        QName(PackageNamespace(""), "getStyleDefinition"), 0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      debugline           950
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "enabled")
+      iffalse             L22
+
+      getlocal1
+      getproperty         Multiname("defaultTextFormat", [PrivateNamespace("fl.controls:TextInput"), PackageNamespace(""), ProtectedNamespace("fl.controls:TextInput"), PrivateNamespace("TextInput.as$18"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:TextInput"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace("flash.text"), "TextFormat")
+      astypelate
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      jump                L27
+
+L22:
+      getlocal1
+      getproperty         Multiname("defaultDisabledTextFormat", [PrivateNamespace("fl.controls:TextInput"), PackageNamespace(""), ProtectedNamespace("fl.controls:TextInput"), PrivateNamespace("TextInput.as$18"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:TextInput"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace("flash.text"), "TextFormat")
+      astypelate
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+L27:
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal2
+
+      debugline           951
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+      debugline           953
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "enabled")
+      iffalse             L41
+
+      pushstring          "textFormat"
+      jump                L42
+
+L41:
+      pushstring          "disabledTextFormat"
+L42:
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace("flash.text"), "TextFormat")
+      astypelate
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal3
+
+      debugline           954
+      getlocal3
+      pushnull
+      ifeq                L57
+
+      debugline           955
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+      jump                L61
+
+L57:
+      debugline           957
+      getlocal2
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal3
+
+L61:
+      debugline           959
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      debugline           961
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "setEmbedFont"), 0
+
+      debugline           962
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:TextInput"), "_html")
+      iffalse             L78
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:TextInput"), "_savedHTML")
+      setproperty         QName(PackageNamespace(""), "htmlText")
+
+L78:
+      debugline           963
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "drawLayout")
+   method
+    name "fl.controls:TextInput/protected:drawLayout"
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:drawLayout"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           971
+      getlocal0
+      pushscope
+
+      debug               1, "txtPad", 0, 972
+      debugline           972
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "textPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      convert_d
+      setlocal1
+
+      debugline           973
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      pushnull
+      ifeq                L28
+
+      debugline           974
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      getlex              QName(PackageNamespace(""), "width")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      debugline           975
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      getlex              QName(PackageNamespace(""), "height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+L28:
+      debugline           977
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "width")
+      pushbyte            2
+      getlocal1
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "width")
+
+      debugline           978
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "height")
+      pushbyte            2
+      getlocal1
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "height")
+
+      debugline           979
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlocal1
+      dup
+      setlocal2
+
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal2
+      kill                2
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           980
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "configUI") flag OVERRIDE
+   method
+    name "fl.controls:TextInput/protected:configUI"
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:configUI"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           988
+      getlocal0
+      pushscope
+
+      debugline           989
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "configUI"), 0
+      debugline           990
+      findproperty        QName(PackageNamespace(""), "tabChildren")
+      pushtrue
+      initproperty        QName(PackageNamespace(""), "tabChildren")
+
+      debugline           991
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      initproperty        QName(PackageNamespace(""), "textField")
+
+      debugline           992
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      debugline           993
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "updateTextFieldType"), 0
+
+      debugline           994
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace("flash.events"), "TextEvent")
+      getproperty         QName(PackageNamespace(""), "TEXT_INPUT")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:TextInput"), "handleTextInput")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           995
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:TextInput"), "handleChange")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           996
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:TextInput"), "handleKeyDown")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           997
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setFocus") flag OVERRIDE
+   method
+    name "fl.controls:TextInput/setFocus"
+    refid "fl.controls:TextInput/instance/setFocus"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           1005
+      getlocal0
+      pushscope
+
+      debugline           1006
+      getlex              QName(PackageNamespace(""), "stage")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      setproperty         QName(PackageNamespace(""), "focus")
+
+      debugline           1007
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "isOurFocus") flag OVERRIDE
+   method
+    name "fl.controls:TextInput/protected:isOurFocus"
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:isOurFocus"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "createAccessibilityImplementation"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           1015
+      getlocal0
+      pushscope
+
+      debug               1, "target", 0, 1015
+      debugline           1016
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      equals
+      dup
+      iftrue              L17
+
+      pop
+      getlocal0
+      getlocal1
+      callsuper           QName(ProtectedNamespace("fl.core:UIComponent"), "isOurFocus"), 1
+      convert_b
+L17:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "focusInHandler") flag OVERRIDE
+   method
+    name "fl.controls:TextInput/protected:focusInHandler"
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:focusInHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           1025
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 1025
+      debug               1, "fm", 1, 1029
+      debugline           1026
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal0
+      ifne                L16
+
+      debugline           1027
+      getlex              QName(PackageNamespace(""), "stage")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      setproperty         QName(PackageNamespace(""), "focus")
+
+L16:
+      debugline           1029
+      getlex              QName(PackageNamespace(""), "focusManager")
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManager")
+      setlocal2
+
+      debugline           1030
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "editable")
+      convert_b
+      dup
+      iffalse             L29
+
+      pop
+      getlocal2
+      convert_b
+L29:
+      iffalse             L57
+
+      debugline           1031
+      getlocal2
+      pushtrue
+      setproperty         QName(Namespace("fl.managers:IFocusManager"), "showFocusIndicator")
+
+      debugline           1032
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "selectable")
+      convert_b
+      dup
+      iffalse             L49
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "selectionBeginIndex")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "selectionBeginIndex")
+      equals
+L49:
+      iffalse             L57
+
+      debugline           1033
+      getlocal0
+      pushbyte            0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PackageNamespace(""), "setSelection"), 2
+
+L57:
+      debugline           1036
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "focusInHandler"), 1
+      debugline           1038
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "editable")
+      iffalse             L69
+
+      debugline           1039
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "setIMEMode")
+      pushtrue
+      callpropvoid        QName(ProtectedNamespace("fl.core:UIComponent"), "setIMEMode"), 1
+
+L69:
+      debugline           1041
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "focusOutHandler") flag OVERRIDE
+   method
+    name "fl.controls:TextInput/protected:focusOutHandler"
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:focusOutHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "textPadding"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+      debugline           1049
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 1049
+      debugline           1050
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "focusOutHandler"), 1
+      debugline           1052
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "editable")
+      iffalse             L17
+
+      debugline           1053
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "setIMEMode")
+      pushfalse
+      callpropvoid        QName(ProtectedNamespace("fl.core:UIComponent"), "setIMEMode"), 1
+
+L17:
+      debugline           1055
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "fl.controls:TextInput/class/init"
+  body
+   maxstack 17
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "defaultStyles", 0, 210
+    findproperty        QName(PrivateNamespace("fl.controls:TextInput"), "defaultStyles")
+    pushstring          "upSkin"
+    pushstring          "TextInput_upSkin"
+    pushstring          "disabledSkin"
+    pushstring          "TextInput_disabledSkin"
+    pushstring          "focusRectSkin"
+    pushnull
+    pushstring          "focusRectPadding"
+    pushnull
+    pushstring          "textFormat"
+    pushnull
+    pushstring          "disabledTextFormat"
+    pushnull
+    pushstring          "textPadding"
+    pushbyte            0
+    pushstring          "embedFonts"
+    pushfalse
+    newobject           8
+    setproperty         QName(PrivateNamespace("fl.controls:TextInput"), "defaultStyles")
+
+    debug               1, "createAccessibilityImplementation", 1, 247
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("fl.controls:TextInput"), "defaultStyles") slotid 1 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "getStyleDefinition") flag FINAL dispid 3
+  method
+   name "fl.controls:TextInput/getStyleDefinition"
+   refid "fl.controls:TextInput/class/getStyleDefinition"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     debugfile           "C:\\PROGRA~2\\Adobe\\ADOBEF~1.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;TextInput.as"
+     debugline           236
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace("fl.controls:TextInput"), "defaultStyles")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PackageNamespace(""), "createAccessibilityImplementation") slotid 2 type QName(PackageNamespace(""), "Function") end
+end ; class

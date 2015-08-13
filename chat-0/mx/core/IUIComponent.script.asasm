@@ -1,0 +1,29 @@
+script ; 81
+ sinit
+  name ""
+  refid "mx.core:IUIComponent/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IUIComponent.as"
+    debugline           30
+    findpropstrict      Multiname("IUIComponent", [PackageNamespace("mx.core")])
+    pushnull
+    newclass            "mx.core:IUIComponent"
+    initproperty        QName(PackageNamespace("mx.core"), "IUIComponent")
+
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "IUIComponent")
+  #include "IUIComponent.class.asasm"
+ end ; trait
+end ; script

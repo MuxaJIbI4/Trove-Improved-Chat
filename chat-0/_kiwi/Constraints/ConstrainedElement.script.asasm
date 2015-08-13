@@ -1,0 +1,34 @@
+script ; 30
+ sinit
+  name ""
+  refid "_kiwi.Constraints:ConstrainedElement/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;ConstrainedElement.as"
+    debugline           8
+    findpropstrict      Multiname("ConstrainedElement", [PackageNamespace("_kiwi.Constraints")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_kiwi.Constraints:ConstrainedElement"
+    popscope
+    initproperty        QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+
+    debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;ConstrainedElement.as"
+    debugline           1
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+  #include "ConstrainedElement.class.asasm"
+ end ; trait
+end ; script

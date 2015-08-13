@@ -1,0 +1,1293 @@
+class
+ refid "mx.resources:LocaleSorter/LocaleID"
+ instance QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleID")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("LocaleSorter.as$133:LocaleID")
+  iinit
+   name "LocaleSorter.as$133:LocaleID/LocaleID"
+   refid "mx.resources:LocaleSorter/LocaleID/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+     debugline           382
+     getlocal0
+     pushscope
+
+     debugline           411
+     getlocal0
+     newarray            0
+     initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extended_langs")
+
+     debugline           416
+     getlocal0
+     newarray            0
+     initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "variants")
+
+     debugline           421
+     getlocal0
+     newobject           0
+     initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+
+     debugline           426
+     getlocal0
+     newarray            0
+     initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "privates")
+
+     debugline           384
+     getlocal0
+     constructsuper      0
+
+     debugline           385
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "region") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extended_langs") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "variants") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "privates") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "privateLangs") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(PackageNamespace(""), "canonicalize")
+   method
+    name "LocaleSorter.as$133:LocaleID/canonicalize"
+    refid "mx.resources:LocaleSorter/LocaleID/instance/canonicalize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+      debugline           442
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal1
+
+      debug               1, "i", 0, 444
+      debugline           444
+      pushbyte            0
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+      coerce_a
+      setlocal3
+
+      jump                L53
+
+L16:
+      label
+      getlocal3
+      getlocal2
+      nextname
+      coerce_s
+      setlocal1
+
+      debugline           446
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L53
+
+      debugline           449
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")])
+      getproperty         Multiname("length", [PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")])
+      pushbyte            0
+      ifne                L43
+
+      debugline           450
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+      getlocal1
+      deleteproperty      MultinameL([PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")])
+      pop
+      jump                L53
+
+L43:
+      debugline           452
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")])
+      callproperty        Multiname("sort", [PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")]), 0
+      setproperty         MultinameL([PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")])
+
+L53:
+      debugline           444
+      hasnext2            3, 2
+      iftrue              L16
+
+      kill                3
+      kill                2
+      debugline           456
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extended_langs")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 0
+      initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extended_langs")
+
+      debugline           457
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "variants")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 0
+      initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "variants")
+
+      debugline           458
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "privates")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 0
+      initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "privates")
+
+      debugline           460
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+      pushstring          ""
+      ifne                L88
+
+      debugline           461
+      getlocal0
+      getlex              QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleRegistry")
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang")
+      callproperty        QName(PackageNamespace(""), "getScriptByLang"), 1
+      initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+
+L88:
+      debugline           464
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+      pushstring          ""
+      equals
+      dup
+      iffalse             L101
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "region")
+      pushstring          ""
+      equals
+      not
+L101:
+      iffalse             L111
+
+      debugline           465
+      getlocal0
+      getlex              QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleRegistry")
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang")
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "region")
+      callproperty        QName(PackageNamespace(""), "getScriptByLangAndRegion"), 2
+      initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+
+L111:
+      debugline           467
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "region")
+      pushstring          ""
+      equals
+      dup
+      iffalse             L124
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+      pushstring          ""
+      equals
+      not
+L124:
+      iffalse             L135
+
+      debugline           469
+      getlocal0
+      getlex              QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleRegistry")
+      debugline           470
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang")
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+      callproperty        QName(PackageNamespace(""), "getDefaultRegionForLangAndScript"), 2
+      initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "region")
+
+L135:
+      debugline           472
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    name "LocaleSorter.as$133:LocaleID/toString"
+    refid "mx.resources:LocaleSorter/LocaleID/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+      debugline           477
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      debug               1, "stack", 0, 479
+      debug               1, "i", 1, 491
+      debugline           479
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang")
+      newarray            1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      debugline           481
+      findpropstrict      QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "appendElements")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extended_langs")
+      callpropvoid        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "appendElements"), 2
+
+      debugline           483
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+      pushstring          ""
+      ifeq                L31
+
+      debugline           484
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L31:
+      debugline           486
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "region")
+      pushstring          ""
+      ifeq                L41
+
+      debugline           487
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "region")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L41:
+      debugline           489
+      findpropstrict      QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "appendElements")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "variants")
+      callpropvoid        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "appendElements"), 2
+
+      debugline           491
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+      coerce_a
+      setlocal            4
+
+      jump                L79
+
+L55:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_s
+      setlocal2
+
+      debugline           493
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L79
+
+      debugline           495
+      getlocal1
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      debugline           496
+      findpropstrict      QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "appendElements")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")])
+      callpropvoid        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "appendElements"), 2
+
+L79:
+      debugline           491
+      hasnext2            4, 3
+      iftrue              L55
+
+      kill                4
+      kill                3
+      debugline           500
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "privates")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L100
+
+      debugline           502
+      getlocal1
+      pushstring          "x"
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      debugline           503
+      findpropstrict      QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "appendElements")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "privates")
+      callpropvoid        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "appendElements"), 2
+
+L100:
+      debugline           506
+      getlocal1
+      pushstring          "_"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "equals")
+   method
+    name "LocaleSorter.as$133:LocaleID/equals"
+    refid "mx.resources:LocaleSorter/LocaleID/instance/equals"
+    param QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleID")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "systemPreferences"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+      debugline           512
+      getlocal0
+      pushscope
+
+      debug               1, "locale", 0, 512
+      debugline           514
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "toString"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "toString"), 0
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "isSiblingOf")
+   method
+    name "LocaleSorter.as$133:LocaleID/isSiblingOf"
+    refid "mx.resources:LocaleSorter/LocaleID/instance/isSiblingOf"
+    param QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleID")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "systemPreferences"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+      debugline           520
+      getlocal0
+      pushscope
+
+      debug               1, "other", 0, 520
+      debugline           522
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang")
+      getlocal1
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang")
+      equals
+      dup
+      iffalse             L19
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+      getlocal1
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+      equals
+L19:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "transformToParent")
+   method
+    name "LocaleSorter.as$133:LocaleID/transformToParent"
+    refid "mx.resources:LocaleSorter/LocaleID/instance/transformToParent"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+      debugline           528
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      debug               1, "lastExtensionName", 0, 536
+      debug               1, "i", 1, 537
+      debugline           530
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "privates")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L33
+
+      debugline           532
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "privates")
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "privates")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      debugline           533
+      pushtrue
+      returnvalue
+
+L33:
+      debugline           536
+      pushnull
+      coerce_s
+      setlocal1
+
+      debugline           537
+      pushbyte            0
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+      coerce_a
+      setlocal            6
+
+      jump                L61
+
+L45:
+      label
+      getlocal            6
+      getlocal            5
+      nextname
+      coerce_s
+      setlocal2
+
+      debugline           539
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L61
+
+      debugline           540
+      getlocal2
+      coerce_s
+      setlocal1
+
+L61:
+      debugline           537
+      hasnext2            6, 5
+      iftrue              L45
+
+      kill                6
+      kill                5
+      debugline           543
+      getlocal1
+      iffalse             L101
+
+      debug               1, "lastExtension", 2, 545
+      debugline           545
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      debugline           546
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            1
+      ifne                L91
+
+      debugline           548
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+      getlocal1
+      deleteproperty      MultinameL([PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")])
+      pop
+      debugline           549
+      pushtrue
+      returnvalue
+
+L91:
+      debugline           551
+      getlocal3
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      debugline           552
+      pushtrue
+      returnvalue
+
+L101:
+      debugline           555
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "variants")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L119
+
+      debugline           557
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "variants")
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "variants")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      debugline           558
+      pushtrue
+      returnvalue
+
+L119:
+      debugline           561
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+      pushstring          ""
+      ifeq                L169
+
+      debugline           564
+      getlex              QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleRegistry")
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang")
+      callproperty        QName(PackageNamespace(""), "getScriptByLang"), 1
+      pushstring          ""
+      ifeq                L138
+
+      debugline           566
+      getlocal0
+      pushstring          ""
+      initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+
+      debugline           567
+      pushtrue
+      returnvalue
+
+L138:
+      debugline           569
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "region")
+      pushstring          ""
+      ifne                L169
+
+      debug               1, "defaultRegion", 3, 572
+      debugline           573
+      getlex              QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleRegistry")
+      debugline           574
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang")
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+      callproperty        QName(PackageNamespace(""), "getDefaultRegionForLangAndScript"), 2
+      coerce_s
+      setlocal            4
+
+      debugline           575
+      getlocal            4
+      pushstring          ""
+      ifeq                L169
+
+      debugline           577
+      getlocal0
+      getlocal            4
+      initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "region")
+
+      debugline           578
+      getlocal0
+      pushstring          ""
+      initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+
+      debugline           579
+      pushtrue
+      returnvalue
+
+L169:
+      debugline           584
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "region")
+      pushstring          ""
+      ifeq                L196
+
+      debugline           586
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+      pushstring          ""
+      equals
+      dup
+      iffalse             L188
+
+      pop
+      getlex              QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleRegistry")
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang")
+      callproperty        QName(PackageNamespace(""), "getScriptByLang"), 1
+      pushstring          ""
+      equals
+L188:
+      iftrue              L196
+
+      debugline           588
+      getlocal0
+      pushstring          ""
+      initproperty        QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "region")
+
+      debugline           589
+      pushtrue
+      returnvalue
+
+L196:
+      debugline           593
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extended_langs")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L214
+
+      debugline           595
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extended_langs")
+      getlocal0
+      getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extended_langs")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      debugline           596
+      pushtrue
+      returnvalue
+
+L214:
+      debugline           599
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.resources:LocaleSorter/LocaleID/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "STATE_PRIMARY_LANGUAGE", 0, 207
+    findproperty        QName(PackageNamespace(""), "STATE_PRIMARY_LANGUAGE")
+    pushbyte            0
+    initproperty        QName(PackageNamespace(""), "STATE_PRIMARY_LANGUAGE")
+
+    debug               1, "STATE_EXTENDED_LANGUAGES", 1, 212
+    findproperty        QName(PackageNamespace(""), "STATE_EXTENDED_LANGUAGES")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "STATE_EXTENDED_LANGUAGES")
+
+    debug               1, "STATE_SCRIPT", 2, 217
+    findproperty        QName(PackageNamespace(""), "STATE_SCRIPT")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "STATE_SCRIPT")
+
+    debug               1, "STATE_REGION", 3, 222
+    findproperty        QName(PackageNamespace(""), "STATE_REGION")
+    pushbyte            3
+    initproperty        QName(PackageNamespace(""), "STATE_REGION")
+
+    debug               1, "STATE_VARIANTS", 4, 227
+    findproperty        QName(PackageNamespace(""), "STATE_VARIANTS")
+    pushbyte            4
+    initproperty        QName(PackageNamespace(""), "STATE_VARIANTS")
+
+    debug               1, "STATE_EXTENSIONS", 5, 232
+    findproperty        QName(PackageNamespace(""), "STATE_EXTENSIONS")
+    pushbyte            5
+    initproperty        QName(PackageNamespace(""), "STATE_EXTENSIONS")
+
+    debug               1, "STATE_PRIVATES", 6, 237
+    findproperty        QName(PackageNamespace(""), "STATE_PRIVATES")
+    pushbyte            6
+    initproperty        QName(PackageNamespace(""), "STATE_PRIVATES")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "STATE_PRIMARY_LANGUAGE") slotid 1 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait const QName(PackageNamespace(""), "STATE_EXTENDED_LANGUAGES") slotid 2 type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "STATE_SCRIPT") slotid 3 type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait const QName(PackageNamespace(""), "STATE_REGION") slotid 4 type QName(PackageNamespace(""), "int") value Integer(3) end
+ trait const QName(PackageNamespace(""), "STATE_VARIANTS") slotid 5 type QName(PackageNamespace(""), "int") value Integer(4) end
+ trait const QName(PackageNamespace(""), "STATE_EXTENSIONS") slotid 6 type QName(PackageNamespace(""), "int") value Integer(5) end
+ trait const QName(PackageNamespace(""), "STATE_PRIVATES") slotid 7 type QName(PackageNamespace(""), "int") value Integer(6) end
+ trait method QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "appendElements") flag FINAL dispid 3
+  method
+   name "LocaleSorter.as$133:LocaleID/private:appendElements"
+   refid "mx.resources:LocaleSorter/LocaleID/class/mx.resources:LocaleSorter/LocaleID/appendElements"
+   param QName(PackageNamespace(""), "Array")
+   param QName(PackageNamespace(""), "Array")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_PARAM_NAMES
+   paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+   paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+   body
+    maxstack 3
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+     debugline           248
+     getlocal0
+     pushscope
+
+     debug               1, "dest", 0, 248
+     debug               1, "src", 1, 248
+     debug               1, "i", 2, 250
+     debug               1, "argc", 3, 250
+     debugline           250
+     pushbyte            0
+     convert_u
+     setlocal3
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_u
+     setlocal            4
+
+     jump                L29
+
+L17:
+     label
+     debugline           252
+     getlocal1
+     getlocal2
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")])
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     debugline           250
+     getlocal3
+     increment
+     convert_u
+     setlocal3
+
+L29:
+     getlocal3
+     getlocal            4
+     iflt                L17
+
+     debugline           254
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "fromString") flag FINAL dispid 4
+  method
+   name "LocaleSorter.as$133:LocaleID/fromString"
+   refid "mx.resources:LocaleSorter/LocaleID/class/fromString"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleID")
+   flag HAS_PARAM_NAMES
+   paramname "http://adobe.com/AS3/2006/builtin"
+   body
+    maxstack 4
+    localcount 11
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+     debugline           259
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            5
+
+     pushnull
+     coerce_s
+     setlocal            8
+
+     pushbyte            0
+     setlocal            9
+
+     pushnull
+     coerce_s
+     setlocal            10
+
+     debug               1, "str", 0, 259
+     debug               1, "localeID", 1, 261
+     debug               1, "state", 2, 263
+     debug               1, "subtags", 3, 264
+     debug               1, "last_extension", 4, 266
+     debug               1, "i", 5, 268
+     debug               1, "l", 6, 268
+     debugline           261
+     getlocal0
+     construct           0
+     coerce              QName(PrivateNamespace("LocaleSorter.as$133"), "LocaleID")
+     setlocal2
+
+     debugline           263
+     getlex              QName(PackageNamespace(""), "STATE_PRIMARY_LANGUAGE")
+     convert_i
+     setlocal3
+
+     debugline           264
+     getlocal1
+     getlex              QName(PackageNamespace(""), "RegExp")
+     pushstring          "-"
+     pushstring          "g"
+     construct           2
+     pushstring          "_"
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+     pushstring          "_"
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            4
+
+     debugline           268
+     pushbyte            0
+     setlocal            6
+
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal            7
+
+     jump                L308
+
+L51:
+     label
+     debug               1, "subtag", 7, 270
+     debugline           270
+     getlocal            4
+     getlocal            6
+     getproperty         MultinameL([PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")])
+     callproperty        Multiname("toLowerCase", [PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")]), 0
+     coerce_s
+     setlocal            8
+
+     debugline           272
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_PRIMARY_LANGUAGE")
+     ifne                L97
+
+     debugline           274
+     getlocal            8
+     pushstring          "x"
+     ifne                L73
+
+     debugline           276
+     getlocal2
+     pushtrue
+     setproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "privateLangs")
+
+     jump                L96
+
+L73:
+     debugline           280
+     getlocal            8
+     pushstring          "i"
+     ifne                L85
+
+     debugline           282
+     getlocal2
+     getlocal2
+     getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang")
+     pushstring          "i-"
+     add
+     setproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang")
+
+     jump                L96
+
+L85:
+     debugline           288
+     getlocal2
+     getlocal2
+     getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang")
+     getlocal            8
+     add
+     setproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "lang")
+
+     debugline           289
+     getlex              QName(PackageNamespace(""), "STATE_EXTENDED_LANGUAGES")
+     convert_i
+     setlocal3
+
+L96:
+     jump                L306
+
+L97:
+     debug               1, "subtag_length", 8, 302
+     debug               1, "firstChar", 9, 306
+     debugline           302
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal            9
+
+     debugline           303
+     getlocal            9
+     pushbyte            0
+     ifne                L110
+
+     debugline           304
+     jump                L306
+
+L110:
+     debugline           306
+     getlocal            8
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+     coerce_s
+     setlocal            10
+
+     debugline           308
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_EXTENDED_LANGUAGES")
+     lessequals
+     dup
+     iffalse             L128
+
+     pop
+     debugline           309
+     getlocal            9
+     pushbyte            3
+     equals
+L128:
+     iffalse             L145
+
+     debugline           311
+     getlocal2
+     getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extended_langs")
+     getlocal            8
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     debugline           312
+     getlocal2
+     getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extended_langs")
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            3
+     ifne                L144
+
+     debugline           315
+     getlex              QName(PackageNamespace(""), "STATE_SCRIPT")
+     convert_i
+     setlocal3
+
+L144:
+     jump                L306
+
+L145:
+     debugline           318
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_SCRIPT")
+     lessequals
+     dup
+     iffalse             L156
+
+     pop
+     debugline           319
+     getlocal            9
+     pushbyte            4
+     equals
+L156:
+     iffalse             L166
+
+     debugline           321
+     getlocal2
+     getlocal            8
+     setproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "script")
+
+     debugline           322
+     getlex              QName(PackageNamespace(""), "STATE_REGION")
+     convert_i
+     setlocal3
+
+     jump                L306
+
+L166:
+     debugline           324
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_REGION")
+     lessequals
+     dup
+     iffalse             L183
+
+     pop
+     debugline           325
+     getlocal            9
+     pushbyte            2
+     equals
+     dup
+     iftrue              L183
+
+     pop
+     getlocal            9
+     pushbyte            3
+     equals
+L183:
+     iffalse             L193
+
+     debugline           327
+     getlocal2
+     getlocal            8
+     setproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "region")
+
+     debugline           328
+     getlex              QName(PackageNamespace(""), "STATE_VARIANTS")
+     convert_i
+     setlocal3
+
+     jump                L306
+
+L193:
+     debugline           330
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_VARIANTS")
+     lessequals
+     dup
+     iffalse             L237
+
+     pop
+     debugline           331
+     getlocal            10
+     pushstring          "a"
+     greaterequals
+     dup
+     iffalse             L210
+
+     pop
+     getlocal            10
+     pushstring          "z"
+     lessequals
+L210:
+     dup
+     iffalse             L217
+
+     pop
+     debugline           332
+     getlocal            9
+     pushbyte            5
+     greaterequals
+L217:
+     dup
+     iftrue              L237
+
+     pop
+     debugline           333
+     getlocal            10
+     pushstring          "0"
+     greaterequals
+     dup
+     iffalse             L230
+
+     pop
+     getlocal            10
+     pushstring          "9"
+     lessequals
+L230:
+     dup
+     iffalse             L237
+
+     pop
+     debugline           334
+     getlocal            9
+     pushbyte            4
+     greaterequals
+L237:
+     iffalse             L248
+
+     debugline           337
+     getlocal2
+     getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "variants")
+     getlocal            8
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     debugline           338
+     getlex              QName(PackageNamespace(""), "STATE_VARIANTS")
+     convert_i
+     setlocal3
+
+     jump                L306
+
+L248:
+     debugline           340
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_PRIVATES")
+     lessthan
+     dup
+     iffalse             L259
+
+     pop
+     debugline           341
+     getlocal            9
+     pushbyte            1
+     equals
+L259:
+     iffalse             L298
+
+     debugline           344
+     getlocal            8
+     pushstring          "x"
+     ifne                L274
+
+     debugline           346
+     getlex              QName(PackageNamespace(""), "STATE_PRIVATES")
+     convert_i
+     setlocal3
+
+     debugline           347
+     getlocal2
+     getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "privates")
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            5
+
+     jump                L297
+
+L274:
+     debugline           351
+     getlex              QName(PackageNamespace(""), "STATE_EXTENSIONS")
+     convert_i
+     setlocal3
+
+     debugline           352
+     getlocal2
+     getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+     getlocal            8
+     getproperty         MultinameL([PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")])
+     coerce              QName(PackageNamespace(""), "Array")
+     dup
+     iftrue              L289
+
+     pop
+     newarray            0
+     coerce              QName(PackageNamespace(""), "Array")
+L289:
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            5
+
+     debugline           353
+     getlocal2
+     getproperty         QName(PrivateNamespace("LocaleSorter.as$133:LocaleID"), "extensions")
+     getlocal            8
+     getlocal            5
+     setproperty         MultinameL([PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Object"), PrivateNamespace("LocaleSorter.as$133:LocaleID"), ProtectedNamespace("LocaleSorter.as$133:LocaleID"), StaticProtectedNs("LocaleSorter.as$133:LocaleID")])
+
+L297:
+     jump                L306
+
+L298:
+     debugline           356
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_EXTENSIONS")
+     ifnge               L306
+
+     debugline           358
+     getlocal            5
+     getlocal            8
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L306:
+     debugline           268
+     inclocal_i          6
+L308:
+     getlocal            6
+     getlocal            7
+     iflt                L51
+
+     debugline           363
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "canonicalize"), 0
+
+     debugline           365
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

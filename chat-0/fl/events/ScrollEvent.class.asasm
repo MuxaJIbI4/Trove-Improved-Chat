@@ -1,0 +1,219 @@
+class
+ refid "fl.events:ScrollEvent"
+ instance QName(PackageNamespace("fl.events"), "ScrollEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.events:ScrollEvent")
+  iinit
+   name "fl.events:ScrollEvent/ScrollEvent"
+   refid "fl.events:ScrollEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\events;ScrollEvent.as"
+     debugline           105
+     getlocal0
+     pushscope
+
+     debug               1, "direction", 0, 105
+     debug               1, "delta", 1, 105
+     debug               1, "position", 2, 105
+     debugline           106
+     getlocal0
+     getlex              QName(PackageNamespace("fl.events"), "ScrollEvent")
+     getproperty         QName(PackageNamespace(""), "SCROLL")
+     pushfalse
+     pushfalse
+     constructsuper      3
+
+     debugline           107
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("fl.events:ScrollEvent"), "_direction")
+
+     debugline           108
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("fl.events:ScrollEvent"), "_delta")
+
+     debugline           109
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace("fl.events:ScrollEvent"), "_position")
+
+     debugline           110
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("fl.events:ScrollEvent"), "_direction") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("fl.events:ScrollEvent"), "_delta") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace("fl.events:ScrollEvent"), "_position") type QName(PackageNamespace(""), "Number") end
+  trait getter QName(PackageNamespace(""), "direction")
+   method
+    name "fl.events:ScrollEvent/direction/get"
+    refid "fl.events:ScrollEvent/instance/direction/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\events;ScrollEvent.as"
+      debugline           126
+      getlocal0
+      pushscope
+
+      debugline           127
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.events:ScrollEvent"), "_direction")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "delta")
+   method
+    name "fl.events:ScrollEvent/delta/get"
+    refid "fl.events:ScrollEvent/instance/delta/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\events;ScrollEvent.as"
+      debugline           142
+      getlocal0
+      pushscope
+
+      debugline           143
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.events:ScrollEvent"), "_delta")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "position")
+   method
+    name "fl.events:ScrollEvent/position/get"
+    refid "fl.events:ScrollEvent/instance/position/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\events;ScrollEvent.as"
+      debugline           156
+      getlocal0
+      pushscope
+
+      debugline           157
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.events:ScrollEvent"), "_position")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    name "fl.events:ScrollEvent/toString"
+    refid "fl.events:ScrollEvent/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 8
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\events;ScrollEvent.as"
+      debugline           177
+      getlocal0
+      pushscope
+
+      debugline           178
+      findpropstrict      QName(PackageNamespace(""), "formatToString")
+      pushstring          "ScrollEvent"
+      pushstring          "type"
+      pushstring          "bubbles"
+      pushstring          "cancelable"
+      pushstring          "direction"
+      pushstring          "delta"
+      pushstring          "position"
+      callproperty        QName(PackageNamespace(""), "formatToString"), 7
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    name "fl.events:ScrollEvent/clone"
+    refid "fl.events:ScrollEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\events;ScrollEvent.as"
+      debugline           194
+      getlocal0
+      pushscope
+
+      debugline           195
+      findpropstrict      QName(PackageNamespace("fl.events"), "ScrollEvent")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.events:ScrollEvent"), "_direction")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.events:ScrollEvent"), "_delta")
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.events:ScrollEvent"), "_position")
+      constructprop       QName(PackageNamespace("fl.events"), "ScrollEvent"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "fl.events:ScrollEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "SCROLL", 0, 57
+    findproperty        QName(PackageNamespace(""), "SCROLL")
+    pushstring          "scroll"
+    initproperty        QName(PackageNamespace(""), "SCROLL")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "SCROLL") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("scroll") end
+end ; class

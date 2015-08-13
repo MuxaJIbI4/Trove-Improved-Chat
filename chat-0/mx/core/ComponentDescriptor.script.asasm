@@ -1,0 +1,34 @@
+script ; 28
+ sinit
+  name ""
+  refid "mx.core:ComponentDescriptor/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ComponentDescriptor.as"
+    debugline           59
+    findpropstrict      Multiname("ComponentDescriptor", [PackageNamespace("mx.core")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.core:ComponentDescriptor"
+    popscope
+    initproperty        QName(PackageNamespace("mx.core"), "ComponentDescriptor")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;ComponentDescriptor.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "ComponentDescriptor")
+  #include "ComponentDescriptor.class.asasm"
+ end ; trait
+end ; script

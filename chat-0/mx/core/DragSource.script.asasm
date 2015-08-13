@@ -1,0 +1,34 @@
+script ; 32
+ sinit
+  name ""
+  refid "mx.core:DragSource/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DragSource.as"
+    debugline           38
+    findpropstrict      Multiname("DragSource", [PackageNamespace("mx.core")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.core:DragSource"
+    popscope
+    initproperty        QName(PackageNamespace("mx.core"), "DragSource")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;DragSource.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "DragSource")
+  #include "DragSource.class.asasm"
+ end ; trait
+end ; script

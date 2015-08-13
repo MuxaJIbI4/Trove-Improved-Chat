@@ -1,0 +1,114 @@
+class
+ refid "com.kiwi.Events:ResizeEvent"
+ instance QName(PackageNamespace("com.kiwi.Events"), "ResizeEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.kiwi.Events:ResizeEvent")
+  iinit
+   name "com.kiwi.Events:ResizeEvent/ResizeEvent"
+   refid "com.kiwi.Events:ResizeEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_PARAM_NAMES
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Events;ResizeEvent.as"
+     debugline           17
+     getlocal0
+     pushscope
+
+     debug               1, "type", 0, 17
+     debug               1, "scaleX", 1, 17
+     debug               1, "scaleY", 2, 17
+     debugline           19
+     getlocal0
+     getlocal1
+     pushfalse
+     pushfalse
+     constructsuper      3
+
+     debugline           20
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "scaleX")
+
+     debugline           21
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "scaleY")
+
+     debugline           22
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "scaleX") type QName(PackageNamespace(""), "Number") value Integer(1) end
+  trait slot QName(PackageNamespace(""), "scaleY") type QName(PackageNamespace(""), "Number") value Integer(1) end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    name "com.kiwi.Events:ResizeEvent/clone"
+    refid "com.kiwi.Events:ResizeEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Events;ResizeEvent.as"
+      debugline           24
+      getlocal0
+      pushscope
+
+      debugline           26
+      findpropstrict      QName(PackageNamespace("com.kiwi.Events"), "ResizeEvent")
+      getlex              QName(PackageNamespace(""), "type")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scaleX")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scaleY")
+      constructprop       QName(PackageNamespace("com.kiwi.Events"), "ResizeEvent"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "com.kiwi.Events:ResizeEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "RESIZE", 0, 11
+    findproperty        QName(PackageNamespace(""), "RESIZE")
+    pushstring          "resize"
+    initproperty        QName(PackageNamespace(""), "RESIZE")
+
+    debug               1, "SCOPE_ORIGINALS_UPDATED", 1, 12
+    findproperty        QName(PackageNamespace(""), "SCOPE_ORIGINALS_UPDATED")
+    pushstring          "scope_originals_update"
+    initproperty        QName(PackageNamespace(""), "SCOPE_ORIGINALS_UPDATED")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "RESIZE") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("resize") end
+ trait const QName(PackageNamespace(""), "SCOPE_ORIGINALS_UPDATED") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("scope_originals_update") end
+end ; class

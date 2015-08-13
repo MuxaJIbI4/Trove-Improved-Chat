@@ -1,0 +1,30 @@
+script ; 23
+ sinit
+  name ""
+  refid "fl.transitions.easing:None/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("None", [PackageNamespace("fl.transitions.easing")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "fl.transitions.easing:None"
+    popscope
+    initproperty        QName(PackageNamespace("fl.transitions.easing"), "None")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("fl.transitions.easing"), "None")
+  #include "None.class.asasm"
+ end ; trait
+end ; script

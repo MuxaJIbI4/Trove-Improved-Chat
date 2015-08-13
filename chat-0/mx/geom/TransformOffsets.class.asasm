@@ -1,0 +1,934 @@
+class
+ refid "mx.geom:TransformOffsets"
+ instance QName(PackageNamespace("mx.geom"), "TransformOffsets")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.geom:TransformOffsets")
+  iinit
+   name "mx.geom:TransformOffsets/TransformOffsets"
+   refid "mx.geom:TransformOffsets/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+     debugline           47
+     getlocal0
+     pushscope
+
+     debugline           48
+     getlocal0
+     constructsuper      0
+
+     debugline           49
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationX") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationY") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationZ") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PrivateNamespace("mx.geom:TransformOffsets"), "_scaleX") type QName(PackageNamespace(""), "Number") value Integer(1) end
+  trait slot QName(PrivateNamespace("mx.geom:TransformOffsets"), "_scaleY") type QName(PackageNamespace(""), "Number") value Integer(1) end
+  trait slot QName(PrivateNamespace("mx.geom:TransformOffsets"), "_scaleZ") type QName(PackageNamespace(""), "Number") value Integer(1) end
+  trait slot QName(PrivateNamespace("mx.geom:TransformOffsets"), "_x") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PrivateNamespace("mx.geom:TransformOffsets"), "_y") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PrivateNamespace("mx.geom:TransformOffsets"), "_z") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PrivateNamespace("mx.geom:TransformOffsets"), "_flags") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "owner") type QName(PackageNamespace("mx.core"), "AdvancedLayoutFeatures") end
+  trait setter QName(PackageNamespace(""), "x")
+   method
+    name "mx.geom:TransformOffsets/x/set"
+    refid "mx.geom:TransformOffsets/instance/x/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           95
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 95
+      debugline           97
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_x")
+      ifne                L12
+
+      debugline           98
+      returnvoid
+
+L12:
+      debugline           99
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "_x")
+
+      debugline           100
+      getlocal0
+      pushfalse
+      callpropvoid        QName(PrivateNamespace("mx.geom:TransformOffsets"), "invalidate"), 1
+
+      debugline           101
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "x")
+   method
+    name "mx.geom:TransformOffsets/x/get"
+    refid "mx.geom:TransformOffsets/instance/x/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           105
+      getlocal0
+      pushscope
+
+      debugline           107
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_x")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "y")
+   method
+    name "mx.geom:TransformOffsets/y/set"
+    refid "mx.geom:TransformOffsets/instance/y/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           118
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 118
+      debugline           120
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_y")
+      ifne                L12
+
+      debugline           121
+      returnvoid
+
+L12:
+      debugline           122
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "_y")
+
+      debugline           123
+      getlocal0
+      pushfalse
+      callpropvoid        QName(PrivateNamespace("mx.geom:TransformOffsets"), "invalidate"), 1
+
+      debugline           124
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "y")
+   method
+    name "mx.geom:TransformOffsets/y/get"
+    refid "mx.geom:TransformOffsets/instance/y/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           129
+      getlocal0
+      pushscope
+
+      debugline           131
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_y")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "z")
+   method
+    name "mx.geom:TransformOffsets/z/set"
+    refid "mx.geom:TransformOffsets/instance/z/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           142
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 142
+      debugline           144
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_z")
+      ifne                L12
+
+      debugline           145
+      returnvoid
+
+L12:
+      debugline           146
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "_z")
+
+      debugline           147
+      getlocal0
+      pushtrue
+      callpropvoid        QName(PrivateNamespace("mx.geom:TransformOffsets"), "invalidate"), 1
+
+      debugline           148
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "z")
+   method
+    name "mx.geom:TransformOffsets/z/get"
+    refid "mx.geom:TransformOffsets/instance/z/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           153
+      getlocal0
+      pushscope
+
+      debugline           155
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_z")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "rotationX")
+   method
+    name "mx.geom:TransformOffsets/rotationX/set"
+    refid "mx.geom:TransformOffsets/instance/rotationX/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           169
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 169
+      debugline           171
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationX")
+      ifne                L12
+
+      debugline           172
+      returnvoid
+
+L12:
+      debugline           173
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationX")
+
+      debugline           174
+      getlocal0
+      pushtrue
+      callpropvoid        QName(PrivateNamespace("mx.geom:TransformOffsets"), "invalidate"), 1
+
+      debugline           175
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "rotationX")
+   method
+    name "mx.geom:TransformOffsets/rotationX/get"
+    refid "mx.geom:TransformOffsets/instance/rotationX/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           180
+      getlocal0
+      pushscope
+
+      debugline           182
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationX")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "rotationY")
+   method
+    name "mx.geom:TransformOffsets/rotationY/set"
+    refid "mx.geom:TransformOffsets/instance/rotationY/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           193
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 193
+      debugline           195
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationY")
+      ifne                L12
+
+      debugline           196
+      returnvoid
+
+L12:
+      debugline           197
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationY")
+
+      debugline           198
+      getlocal0
+      pushtrue
+      callpropvoid        QName(PrivateNamespace("mx.geom:TransformOffsets"), "invalidate"), 1
+
+      debugline           199
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "rotationY")
+   method
+    name "mx.geom:TransformOffsets/rotationY/get"
+    refid "mx.geom:TransformOffsets/instance/rotationY/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           204
+      getlocal0
+      pushscope
+
+      debugline           206
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationY")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "rotationZ")
+   method
+    name "mx.geom:TransformOffsets/rotationZ/set"
+    refid "mx.geom:TransformOffsets/instance/rotationZ/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           217
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 217
+      debugline           219
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationZ")
+      ifne                L12
+
+      debugline           220
+      returnvoid
+
+L12:
+      debugline           221
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationZ")
+
+      debugline           222
+      getlocal0
+      pushfalse
+      callpropvoid        QName(PrivateNamespace("mx.geom:TransformOffsets"), "invalidate"), 1
+
+      debugline           223
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "rotationZ")
+   method
+    name "mx.geom:TransformOffsets/rotationZ/get"
+    refid "mx.geom:TransformOffsets/instance/rotationZ/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           228
+      getlocal0
+      pushscope
+
+      debugline           230
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationZ")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "scaleX")
+   method
+    name "mx.geom:TransformOffsets/scaleX/set"
+    refid "mx.geom:TransformOffsets/instance/scaleX/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           244
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 244
+      debugline           246
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_scaleX")
+      ifne                L12
+
+      debugline           247
+      returnvoid
+
+L12:
+      debugline           248
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "_scaleX")
+
+      debugline           249
+      getlocal0
+      pushfalse
+      callpropvoid        QName(PrivateNamespace("mx.geom:TransformOffsets"), "invalidate"), 1
+
+      debugline           250
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "scaleX")
+   method
+    name "mx.geom:TransformOffsets/scaleX/get"
+    refid "mx.geom:TransformOffsets/instance/scaleX/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           255
+      getlocal0
+      pushscope
+
+      debugline           257
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_scaleX")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "scaleY")
+   method
+    name "mx.geom:TransformOffsets/scaleY/set"
+    refid "mx.geom:TransformOffsets/instance/scaleY/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           268
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 268
+      debugline           270
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_scaleY")
+      ifne                L12
+
+      debugline           271
+      returnvoid
+
+L12:
+      debugline           272
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "_scaleY")
+
+      debugline           273
+      getlocal0
+      pushfalse
+      callpropvoid        QName(PrivateNamespace("mx.geom:TransformOffsets"), "invalidate"), 1
+
+      debugline           274
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "scaleY")
+   method
+    name "mx.geom:TransformOffsets/scaleY/get"
+    refid "mx.geom:TransformOffsets/instance/scaleY/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           279
+      getlocal0
+      pushscope
+
+      debugline           281
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_scaleY")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "scaleZ")
+   method
+    name "mx.geom:TransformOffsets/scaleZ/set"
+    refid "mx.geom:TransformOffsets/instance/scaleZ/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           293
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 293
+      debugline           295
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_scaleZ")
+      ifne                L12
+
+      debugline           296
+      returnvoid
+
+L12:
+      debugline           297
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "_scaleZ")
+
+      debugline           298
+      getlocal0
+      pushtrue
+      callpropvoid        QName(PrivateNamespace("mx.geom:TransformOffsets"), "invalidate"), 1
+
+      debugline           299
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "scaleZ")
+   method
+    name "mx.geom:TransformOffsets/scaleZ/get"
+    refid "mx.geom:TransformOffsets/instance/scaleZ/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           304
+      getlocal0
+      pushscope
+
+      debugline           306
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_scaleZ")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "is3D")
+   method
+    name "mx.geom:TransformOffsets/mx_internal:is3D/get"
+    refid "mx.geom:TransformOffsets/instance/http://www.adobe.com/2006/flex/mx/internal:is3D/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           314
+      getlocal0
+      pushscope
+
+      debugline           316
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_flags")
+      getlex              QName(PrivateNamespace("mx.geom:TransformOffsets"), "M3D_FLAGS_VALID")
+      bitand
+      pushbyte            0
+      ifne                L14
+
+      debugline           317
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.geom:TransformOffsets"), "update3DFlags"), 0
+
+L14:
+      debugline           318
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_flags")
+      getlex              QName(PrivateNamespace("mx.geom:TransformOffsets"), "IS_3D")
+      bitand
+      pushbyte            0
+      equals
+      not
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("mx.geom:TransformOffsets"), "invalidate")
+   method
+    name "mx.geom:TransformOffsets/private:invalidate"
+    refid "mx.geom:TransformOffsets/instance/mx.geom:TransformOffsets/invalidate"
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           333
+      getlocal0
+      pushscope
+
+      debug               1, "affects3D", 0, 333
+      debug               1, "dispatchChangeEvent", 1, 333
+      debugline           335
+      getlocal1
+      iffalse             L17
+
+      debugline           336
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_flags")
+      getlex              QName(PrivateNamespace("mx.geom:TransformOffsets"), "M3D_FLAGS_VALID")
+      bitnot
+      bitand
+      initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "_flags")
+
+L17:
+      debugline           338
+      getlocal2
+      iffalse             L27
+
+      debugline           339
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L27:
+      debugline           340
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("mx.geom:TransformOffsets"), "update3DFlags")
+   method
+    name "mx.geom:TransformOffsets/private:update3DFlags"
+    refid "mx.geom:TransformOffsets/instance/mx.geom:TransformOffsets/update3DFlags"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;TransformOffsets.as"
+      debugline           349
+      getlocal0
+      pushscope
+
+      pushfalse
+      setlocal1
+
+      debugline           351
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_flags")
+      getlex              QName(PrivateNamespace("mx.geom:TransformOffsets"), "M3D_FLAGS_VALID")
+      bitand
+      pushbyte            0
+      ifne                L92
+
+      debug               1, "matrixIs3D", 0, 353
+      debugline           354
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_scaleZ")
+      decrement
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      getlex              QName(PrivateNamespace("mx.geom:TransformOffsets"), "EPSILON")
+      greaterthan
+      dup
+      iftrue              L38
+
+      pop
+      debugline           355
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationX")
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      getlex              QName(PrivateNamespace("mx.geom:TransformOffsets"), "EPSILON")
+      add
+      pushshort           360
+      modulo
+      pushbyte            2
+      getlex              QName(PrivateNamespace("mx.geom:TransformOffsets"), "EPSILON")
+      multiply
+      greaterthan
+L38:
+      dup
+      iftrue              L54
+
+      pop
+      debugline           356
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_rotationY")
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      getlex              QName(PrivateNamespace("mx.geom:TransformOffsets"), "EPSILON")
+      add
+      pushshort           360
+      modulo
+      pushbyte            2
+      getlex              QName(PrivateNamespace("mx.geom:TransformOffsets"), "EPSILON")
+      multiply
+      greaterthan
+L54:
+      dup
+      iftrue              L64
+
+      pop
+      debugline           357
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_z")
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      getlex              QName(PrivateNamespace("mx.geom:TransformOffsets"), "EPSILON")
+      greaterthan
+L64:
+      convert_b
+      setlocal1
+
+      debugline           359
+      getlocal1
+      iffalse             L77
+
+      debugline           360
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_flags")
+      getlex              QName(PrivateNamespace("mx.geom:TransformOffsets"), "IS_3D")
+      bitor
+      initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "_flags")
+
+      jump                L85
+
+L77:
+      debugline           362
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_flags")
+      getlex              QName(PrivateNamespace("mx.geom:TransformOffsets"), "IS_3D")
+      bitnot
+      bitand
+      initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "_flags")
+
+L85:
+      debugline           363
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.geom:TransformOffsets"), "_flags")
+      getlex              QName(PrivateNamespace("mx.geom:TransformOffsets"), "M3D_FLAGS_VALID")
+      bitor
+      initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "_flags")
+
+L92:
+      debugline           365
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.geom:TransformOffsets/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "IS_3D", 0, 72
+    findproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "IS_3D")
+    pushshort           512
+    initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "IS_3D")
+
+    debug               1, "M3D_FLAGS_VALID", 1, 73
+    findproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "M3D_FLAGS_VALID")
+    pushshort           1024
+    initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "M3D_FLAGS_VALID")
+
+    debug               1, "EPSILON", 2, 342
+    findproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "EPSILON")
+    pushdouble          0.001
+    initproperty        QName(PrivateNamespace("mx.geom:TransformOffsets"), "EPSILON")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("mx.geom:TransformOffsets"), "IS_3D") slotid 1 type QName(PackageNamespace(""), "uint") value Integer(512) end
+ trait const QName(PrivateNamespace("mx.geom:TransformOffsets"), "M3D_FLAGS_VALID") slotid 2 type QName(PackageNamespace(""), "uint") value Integer(1024) end
+ trait const QName(PrivateNamespace("mx.geom:TransformOffsets"), "EPSILON") slotid 3 type QName(PackageNamespace(""), "Number") value Double(0.001) end
+end ; class

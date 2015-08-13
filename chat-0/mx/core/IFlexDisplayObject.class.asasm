@@ -1,0 +1,495 @@
+class
+ refid "mx.core:IFlexDisplayObject"
+ instance QName(PackageNamespace("mx.core"), "IFlexDisplayObject")
+  implements Multiname("IBitmapDrawable", [PackageNamespace("flash.display")])
+  implements Multiname("IEventDispatcher", [PackageNamespace("flash.events")])
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.core:IFlexDisplayObject/IFlexDisplayObject"
+   refid "mx.core:IFlexDisplayObject/instance/init"
+  end ; method
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "root")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:root/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:root/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "stage")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:stage/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:stage/getter"
+    returns QName(PackageNamespace("flash.display"), "Stage")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "name")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:name/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:name/getter"
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "name")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:name/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:name/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "parent")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:parent/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:parent/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "mask")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:mask/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:mask/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "mask")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:mask/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:mask/setter"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "visible")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:visible/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:visible/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "visible")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:visible/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:visible/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "x")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:x/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:x/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "x")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:x/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:x/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "y")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:y/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:y/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "y")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:y/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:y/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "scaleX")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:scaleX/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:scaleX/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "scaleX")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:scaleX/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:scaleX/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "scaleY")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:scaleY/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:scaleY/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "scaleY")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:scaleY/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:scaleY/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "mouseX")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:mouseX/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:mouseX/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "mouseY")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:mouseY/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:mouseY/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "rotation")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:rotation/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:rotation/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "rotation")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:rotation/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:rotation/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "alpha")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:alpha/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:alpha/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "alpha")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:alpha/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:alpha/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "width")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:width/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:width/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "width")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:width/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:width/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "height")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:height/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:height/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "height")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:height/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:height/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "cacheAsBitmap")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:cacheAsBitmap/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:cacheAsBitmap/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "cacheAsBitmap")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:cacheAsBitmap/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:cacheAsBitmap/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "opaqueBackground")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:opaqueBackground/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:opaqueBackground/getter"
+    returns QName(PackageNamespace(""), "Object")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "opaqueBackground")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:opaqueBackground/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:opaqueBackground/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "scrollRect")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:scrollRect/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:scrollRect/getter"
+    returns QName(PackageNamespace("flash.geom"), "Rectangle")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "scrollRect")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:scrollRect/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:scrollRect/setter"
+    param QName(PackageNamespace("flash.geom"), "Rectangle")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "filters")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:filters/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:filters/getter"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "filters")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:filters/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:filters/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "blendMode")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:blendMode/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:blendMode/getter"
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "blendMode")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:blendMode/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:blendMode/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "transform")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:transform/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:transform/getter"
+    returns QName(PackageNamespace("flash.geom"), "Transform")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "transform")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:transform/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:transform/setter"
+    param QName(PackageNamespace("flash.geom"), "Transform")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "scale9Grid")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:scale9Grid/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:scale9Grid/getter"
+    returns QName(PackageNamespace("flash.geom"), "Rectangle")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "scale9Grid")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:scale9Grid/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:scale9Grid/setter"
+    param QName(PackageNamespace("flash.geom"), "Rectangle")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexDisplayObject"), "globalToLocal")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:globalToLocal"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:globalToLocal"
+    param QName(PackageNamespace("flash.geom"), "Point")
+    returns QName(PackageNamespace("flash.geom"), "Point")
+    flag HAS_PARAM_NAMES
+    paramname "void"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexDisplayObject"), "localToGlobal")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:localToGlobal"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:localToGlobal"
+    param QName(PackageNamespace("flash.geom"), "Point")
+    returns QName(PackageNamespace("flash.geom"), "Point")
+    flag HAS_PARAM_NAMES
+    paramname "void"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexDisplayObject"), "getBounds")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:getBounds"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:getBounds"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("flash.geom"), "Rectangle")
+    flag HAS_PARAM_NAMES
+    paramname "String"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexDisplayObject"), "getRect")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:getRect"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:getRect"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace("flash.geom"), "Rectangle")
+    flag HAS_PARAM_NAMES
+    paramname "String"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "loaderInfo")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:loaderInfo/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:loaderInfo/getter"
+    returns QName(PackageNamespace("flash.display"), "LoaderInfo")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexDisplayObject"), "hitTestObject")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:hitTestObject"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:hitTestObject"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:stage/get"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexDisplayObject"), "hitTestPoint")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:hitTestPoint"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:hitTestPoint"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional False()
+    paramname "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:stage/get"
+    paramname "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:stage/get"
+    paramname "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:stage/get"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "accessibilityProperties")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:accessibilityProperties/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:accessibilityProperties/getter"
+    returns QName(PackageNamespace("flash.accessibility"), "AccessibilityProperties")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IFlexDisplayObject"), "accessibilityProperties")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:accessibilityProperties/set"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:accessibilityProperties/setter"
+    param QName(PackageNamespace("flash.accessibility"), "AccessibilityProperties")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "measuredHeight")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:measuredHeight/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:measuredHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IFlexDisplayObject"), "measuredWidth")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:measuredWidth/get"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:measuredWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexDisplayObject"), "move")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:move"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:move"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+    paramname "flash.display"
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.core:IFlexDisplayObject"), "setActualSize")
+   method
+    name "mx.core:IFlexDisplayObject/mx.core:IFlexDisplayObject:setActualSize"
+    refid "mx.core:IFlexDisplayObject/instance/mx.core:IFlexDisplayObject:setActualSize"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "flash.display"
+    paramname "flash.display"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:IFlexDisplayObject/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 4
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

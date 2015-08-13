@@ -1,0 +1,510 @@
+class
+ refid "Chat"
+ instance QName(PackageNamespace(""), "Chat")
+  extends QName(PackageNamespace("_kiwi.Core"), "UIComponent")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Chat")
+  iinit
+   name "Chat/Chat"
+   refid "Chat/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;Chat.as"
+     debugline           19
+     getlocal0
+     pushscope
+
+     debugline           21
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     callpropvoid        QName(PackageInternalNs(""), "__setProp_scrollbar_Scene1_scrollbar_0"), 0
+
+     debugline           22
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "chatLog") type QName(PackageNamespace(""), "ChatLog") end
+  trait slot QName(PackageNamespace(""), "chatInput") type QName(PackageNamespace(""), "ChatInput") end
+  trait slot QName(PackageNamespace(""), "scrollbar") type QName(PackageNamespace("fl.controls"), "UIScrollBar") end
+  trait slot QName(PackageNamespace(""), "inputBackground") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "chatSize_large") type QName(PackageNamespace(""), "Number") value Integer(370) end
+  trait slot QName(PackageNamespace(""), "chatSize_small") type QName(PackageNamespace(""), "Number") value Integer(218) end
+  trait slot QName(PackageNamespace(""), "raisedPos") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "defaultPos") type QName(PackageNamespace(""), "int") value Integer(180) end
+  trait getter QName(PackageNamespace(""), "x") flag OVERRIDE
+   method
+    name "Chat/x/get"
+    refid "Chat/instance/x/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;Chat.as"
+      debugline           24
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "x")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "x") flag OVERRIDE
+   method
+    name "Chat/x/set"
+    refid "Chat/instance/x/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "__setProp_scrollbar_Scene1_scrollbar_0"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;Chat.as"
+      debugline           25
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 25
+      debugline           27
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "x")
+
+      debugline           28
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "y") flag OVERRIDE
+   method
+    name "Chat/y/get"
+    refid "Chat/instance/y/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;Chat.as"
+      debugline           30
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "x")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "y") flag OVERRIDE
+   method
+    name "Chat/y/set"
+    refid "Chat/instance/y/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "__setProp_scrollbar_Scene1_scrollbar_0"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;Chat.as"
+      debugline           31
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 31
+      debugline           33
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "y")
+
+      debugline           34
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Chat"), "configUI") flag OVERRIDE
+   method
+    name "Chat/protected:configUI"
+    refid "Chat/instance/Chat:configUI"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;Chat.as"
+      debugline           36
+      getlocal0
+      pushscope
+
+      debugline           38
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("_kiwi.Core:UIComponent"), "configUI"), 0
+      debugline           40
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatLog")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scrollbar")
+      callpropvoid        QName(PackageNamespace(""), "setScrollbar"), 1
+
+      debugline           42
+      getlex              QName(PackageNamespace(""), "IggyFunctions")
+      getproperty         QName(PackageNamespace(""), "inIggy")
+      iffalse             L35
+
+      debugline           44
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      pushstring          "onSetActive"
+      getlocal0
+      getproperty         QName(PrivateNamespace("Chat"), "onSetActive")
+      callpropvoid        QName(PackageNamespace(""), "addCallback"), 2
+
+      debugline           45
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      pushstring          "addMessage"
+      getlocal0
+      getproperty         QName(PrivateNamespace("Chat"), "addMessage")
+      callpropvoid        QName(PackageNamespace(""), "addCallback"), 2
+
+      debugline           46
+      getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+      pushstring          "onAdjustScrollPos"
+      getlocal0
+      getproperty         QName(PrivateNamespace("Chat"), "onAdjustScrollPos")
+      callpropvoid        QName(PackageNamespace(""), "addCallback"), 2
+
+L35:
+      debugline           49
+      getlocal0
+      pushfalse
+      callpropvoid        QName(PrivateNamespace("Chat"), "onSetActive"), 1
+
+      debugline           50
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("Chat"), "onSetActive")
+   method
+    name "Chat/private:onSetActive"
+    refid "Chat/instance/Chat/instance/onSetActive"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "__setProp_scrollbar_Scene1_scrollbar_0"
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;Chat.as"
+      debugline           52
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      pushnan
+      setlocal3
+
+      pushnan
+      setlocal            4
+
+      debug               1, "state", 0, 52
+      debug               1, "newHeight", 1, 54
+      debug               1, "newPos", 2, 55
+      debug               1, "setPos", 3, 56
+      debugline           58
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "inputBackground")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      debugline           59
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatInput")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "onSetActive"), 1
+
+      debugline           60
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatLog")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "inputToggled"), 1
+
+      debugline           61
+      getlocal1
+      iffalse             L42
+
+      debugline           63
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatLog")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatSize_large")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "raisedPos")
+      callpropvoid        QName(PackageNamespace(""), "setupLayout"), 3
+
+      jump                L51
+
+L42:
+      debugline           67
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatLog")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatSize_small")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "defaultPos")
+      callpropvoid        QName(PackageNamespace(""), "setupLayout"), 3
+
+L51:
+      debugline           69
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("Chat"), "addMessage")
+   method
+    name "Chat/private:addMessage"
+    refid "Chat/instance/Chat/instance/addMessage"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional True()
+    paramname "__setProp_scrollbar_Scene1_scrollbar_0"
+    paramname "__setProp_scrollbar_Scene1_scrollbar_0"
+    paramname "__setProp_scrollbar_Scene1_scrollbar_0"
+    paramname "__setProp_scrollbar_Scene1_scrollbar_0"
+    paramname "__setProp_scrollbar_Scene1_scrollbar_0"
+    paramname "__setProp_scrollbar_Scene1_scrollbar_0"
+    body
+     maxstack 8
+     localcount 7
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;Chat.as"
+      debugline           71
+      getlocal0
+      pushscope
+
+      debug               1, "channel", 0, 71
+      debug               1, "author", 1, 71
+      debug               1, "message", 2, 71
+      debug               1, "msgColor", 3, 71
+      debug               1, "authorColor", 4, 71
+      debug               1, "showAuthorPrefix", 5, 71
+      debugline           73
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatLog")
+      pushbyte            0
+      getlocal1
+      getlocal3
+      getlocal2
+      getlocal            5
+      getlocal            4
+      getlocal            6
+      callpropvoid        QName(PackageNamespace(""), "onChatMessage"), 7
+
+      debugline           75
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("Chat"), "onAdjustScrollPos")
+   method
+    name "Chat/private:onAdjustScrollPos"
+    refid "Chat/instance/Chat/instance/onAdjustScrollPos"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "__setProp_scrollbar_Scene1_scrollbar_0"
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src\\Chat;;Chat.as"
+      debugline           77
+      getlocal0
+      pushscope
+
+      debug               1, "delta", 0, 77
+      debugline           79
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatLog")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatLog")
+      getproperty         QName(PackageNamespace(""), "scrollV")
+      getlocal1
+      add
+      setproperty         QName(PackageNamespace(""), "scrollV")
+
+      debugline           80
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "chatLog")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "resetFadeOut"), 1
+
+      debugline           81
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "__setProp_scrollbar_Scene1_scrollbar_0")
+   method
+    name "Chat/__setProp_scrollbar_Scene1_scrollbar_0"
+    refid "Chat/instance/__setProp_scrollbar_Scene1_scrollbar_0"
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 15
+     code
+      getlocal0
+      pushscope
+
+L2:
+      debugfile           "Chat::__setProp_scrollbar_Scene1_scrollbar_0"
+      debugline           4
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scrollbar")
+      pushstring          "componentInspectorSetting"
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace("Chat"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace("Chat.as$0"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Chat"), StaticProtectedNs("Chat"), StaticProtectedNs("_kiwi.Core:UIComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L9:
+      debugline           5
+      jump                L22
+
+L11:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal1
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                1
+L22:
+      debugline           7
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scrollbar")
+      pushstring          "vertical"
+      setproperty         QName(PackageNamespace(""), "direction")
+
+      debugline           8
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scrollbar")
+      pushstring          "chatLog"
+      setproperty         QName(PackageNamespace(""), "scrollTargetName")
+
+      debugline           9
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scrollbar")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L37:
+      debugline           13
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scrollbar")
+      pushstring          "componentInspectorSetting"
+      pushfalse
+      setproperty         MultinameL([PrivateNamespace("Chat"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace("Chat.as$0"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Chat"), StaticProtectedNs("Chat"), StaticProtectedNs("_kiwi.Core:UIComponent"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L43:
+      debugline           14
+      jump                L56
+
+L45:
+      getlocal0
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal1
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                1
+L56:
+      debugline           16
+      returnvoid
+     end ; code
+     try from L2 to L9 target L11 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L37 to L43 target L45 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "Chat/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

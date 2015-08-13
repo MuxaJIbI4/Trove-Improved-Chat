@@ -1,0 +1,3755 @@
+class
+ refid "mx.core:AdvancedLayoutFeatures"
+ instance QName(PackageNamespace("mx.core"), "AdvancedLayoutFeatures")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.core:AdvancedLayoutFeatures")
+  iinit
+   name "mx.core:AdvancedLayoutFeatures/AdvancedLayoutFeatures"
+   refid "mx.core:AdvancedLayoutFeatures/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+     debugline           50
+     getlocal0
+     pushscope
+
+     debugline           51
+     getlocal0
+     constructsuper      0
+
+     debugline           52
+     getlocal0
+     findpropstrict      QName(PackageNamespace("mx.geom"), "CompoundTransform")
+     constructprop       QName(PackageNamespace("mx.geom"), "CompoundTransform"), 0
+     initproperty        QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+
+     debugline           53
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "updatePending") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "depth") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "_computedMatrix") type QName(PackageNamespace("flash.geom"), "Matrix") end
+  trait slot QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "_computedMatrix3D") type QName(PackageNamespace("flash.geom"), "Matrix3D") end
+  trait slot QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout") type QName(PackageNamespace("mx.geom"), "CompoundTransform") end
+  trait slot QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets") type QName(PackageNamespace("mx.geom"), "TransformOffsets") end
+  trait slot QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_flags") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait setter QName(PackageNamespace(""), "layoutX")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutX/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutX/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           203
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 203
+      debugline           205
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           206
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           207
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "layoutX")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutX/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutX/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           212
+      getlocal0
+      pushscope
+
+      debugline           214
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "x")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "layoutY")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutY/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutY/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           225
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 225
+      debugline           227
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           228
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           229
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "layoutY")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutY/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutY/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           234
+      getlocal0
+      pushscope
+
+      debugline           236
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "y")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "layoutZ")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutZ/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutZ/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           248
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 248
+      debugline           250
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "z")
+
+      debugline           251
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           252
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "layoutZ")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutZ/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutZ/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           257
+      getlocal0
+      pushscope
+
+      debugline           259
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "z")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "transformX")
+   method
+    name "mx.core:AdvancedLayoutFeatures/transformX/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/transformX/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           268
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 268
+      debugline           270
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "transformX")
+
+      debugline           271
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           272
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "transformX")
+   method
+    name "mx.core:AdvancedLayoutFeatures/transformX/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/transformX/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           276
+      getlocal0
+      pushscope
+
+      debugline           278
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "transformX")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "transformY")
+   method
+    name "mx.core:AdvancedLayoutFeatures/transformY/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/transformY/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           285
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 285
+      debugline           287
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "transformY")
+
+      debugline           288
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           289
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "transformY")
+   method
+    name "mx.core:AdvancedLayoutFeatures/transformY/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/transformY/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           294
+      getlocal0
+      pushscope
+
+      debugline           296
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "transformY")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "transformZ")
+   method
+    name "mx.core:AdvancedLayoutFeatures/transformZ/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/transformZ/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           303
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 303
+      debugline           305
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "transformZ")
+
+      debugline           306
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           307
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "transformZ")
+   method
+    name "mx.core:AdvancedLayoutFeatures/transformZ/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/transformZ/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           312
+      getlocal0
+      pushscope
+
+      debugline           314
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "transformZ")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "layoutRotationX")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutRotationX/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutRotationX/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           329
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 329
+      debugline           331
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "rotationX")
+
+      debugline           332
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           333
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "layoutRotationX")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutRotationX/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutRotationX/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           338
+      getlocal0
+      pushscope
+
+      debugline           340
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "rotationX")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "layoutRotationY")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutRotationY/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutRotationY/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           352
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 352
+      debugline           354
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "rotationY")
+
+      debugline           355
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           356
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "layoutRotationY")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutRotationY/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutRotationY/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           361
+      getlocal0
+      pushscope
+
+      debugline           363
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "rotationY")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "layoutRotationZ")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutRotationZ/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutRotationZ/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           375
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 375
+      debugline           377
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "rotationZ")
+
+      debugline           378
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           379
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "layoutRotationZ")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutRotationZ/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutRotationZ/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           384
+      getlocal0
+      pushscope
+
+      debugline           386
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "rotationZ")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "layoutScaleX")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutScaleX/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutScaleX/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           401
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 401
+      debugline           403
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+      debugline           404
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           405
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "layoutScaleX")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutScaleX/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutScaleX/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           410
+      getlocal0
+      pushscope
+
+      debugline           412
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "scaleX")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "layoutScaleY")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutScaleY/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutScaleY/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           424
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 424
+      debugline           426
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "scaleY")
+
+      debugline           427
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           428
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "layoutScaleY")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutScaleY/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutScaleY/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           433
+      getlocal0
+      pushscope
+
+      debugline           435
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "scaleY")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "layoutScaleZ")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutScaleZ/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutScaleZ/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           448
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 448
+      debugline           450
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "scaleZ")
+
+      debugline           451
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           452
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "layoutScaleZ")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutScaleZ/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutScaleZ/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           457
+      getlocal0
+      pushscope
+
+      debugline           459
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "scaleZ")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "layoutMatrix")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutMatrix/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutMatrix/setter"
+    param QName(PackageNamespace("flash.geom"), "Matrix")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           470
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 470
+      debugline           472
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "matrix")
+
+      debugline           473
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           474
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "layoutMatrix")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutMatrix/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutMatrix/getter"
+    returns QName(PackageNamespace("flash.geom"), "Matrix")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           480
+      getlocal0
+      pushscope
+
+      debugline           482
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "matrix")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "layoutMatrix3D")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutMatrix3D/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutMatrix3D/setter"
+    param QName(PackageNamespace("flash.geom"), "Matrix3D")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           496
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 496
+      debugline           498
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "matrix3D")
+
+      debugline           499
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           500
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "layoutMatrix3D")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutMatrix3D/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutMatrix3D/getter"
+    returns QName(PackageNamespace("flash.geom"), "Matrix3D")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           505
+      getlocal0
+      pushscope
+
+      debugline           507
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "matrix3D")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "is3D")
+   method
+    name "mx.core:AdvancedLayoutFeatures/is3D/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/is3D/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           518
+      getlocal0
+      pushscope
+
+      debugline           520
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "is3D")
+      convert_b
+      dup
+      iftrue              L24
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L24
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "is3D")
+      convert_b
+L24:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "layoutIs3D")
+   method
+    name "mx.core:AdvancedLayoutFeatures/layoutIs3D/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/layoutIs3D/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           531
+      getlocal0
+      pushscope
+
+      debugline           533
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "is3D")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "postLayoutTransformOffsets")
+   method
+    name "mx.core:AdvancedLayoutFeatures/postLayoutTransformOffsets/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/postLayoutTransformOffsets/setter"
+    param QName(PackageNamespace("mx.geom"), "TransformOffsets")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           547
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 547
+      debugline           549
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      pushnull
+      ifeq                L23
+
+      debugline           551
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "postLayoutTransformOffsetsChangedHandler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      debugline           552
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      pushnull
+      setproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "owner")
+
+L23:
+      debugline           554
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+
+      debugline           555
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      pushnull
+      ifeq                L45
+
+      debugline           557
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "postLayoutTransformOffsetsChangedHandler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      debugline           558
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlocal0
+      setproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "owner")
+
+L45:
+      debugline           560
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           561
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "postLayoutTransformOffsets")
+   method
+    name "mx.core:AdvancedLayoutFeatures/postLayoutTransformOffsets/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/postLayoutTransformOffsets/getter"
+    returns QName(PackageNamespace("mx.geom"), "TransformOffsets")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           563
+      getlocal0
+      pushscope
+
+      debugline           565
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "postLayoutTransformOffsetsChangedHandler")
+   method
+    name "mx.core:AdvancedLayoutFeatures/private:postLayoutTransformOffsetsChangedHandler"
+    refid "mx.core:AdvancedLayoutFeatures/instance/mx.core:AdvancedLayoutFeatures/postLayoutTransformOffsetsChangedHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           568
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 568
+      debugline           570
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           571
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_stretchX") type QName(PackageNamespace(""), "Number") value Integer(1) end
+  trait getter QName(PackageNamespace(""), "stretchX")
+   method
+    name "mx.core:AdvancedLayoutFeatures/stretchX/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/stretchX/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           584
+      getlocal0
+      pushscope
+
+      debugline           586
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_stretchX")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "stretchX")
+   method
+    name "mx.core:AdvancedLayoutFeatures/stretchX/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/stretchX/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           592
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 592
+      debugline           594
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_stretchX")
+      ifne                L12
+
+      debugline           595
+      returnvoid
+
+L12:
+      debugline           596
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_stretchX")
+
+      debugline           597
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           598
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_stretchY") type QName(PackageNamespace(""), "Number") value Integer(1) end
+  trait getter QName(PackageNamespace(""), "stretchY")
+   method
+    name "mx.core:AdvancedLayoutFeatures/stretchY/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/stretchY/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           611
+      getlocal0
+      pushscope
+
+      debugline           613
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_stretchY")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "stretchY")
+   method
+    name "mx.core:AdvancedLayoutFeatures/stretchY/set"
+    refid "mx.core:AdvancedLayoutFeatures/instance/stretchY/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           619
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 619
+      debugline           621
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_stretchY")
+      ifne                L12
+
+      debugline           622
+      returnvoid
+
+L12:
+      debugline           623
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_stretchY")
+
+      debugline           624
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           625
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate")
+   method
+    name "mx.core:AdvancedLayoutFeatures/private:invalidate"
+    refid "mx.core:AdvancedLayoutFeatures/instance/mx.core:AdvancedLayoutFeatures/invalidate"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           638
+      getlocal0
+      pushscope
+
+      debugline           640
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_flags")
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "COMPUTED_MATRIX_VALID")
+      bitnot
+      bitand
+      initproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_flags")
+
+      debugline           641
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_flags")
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "COMPUTED_MATRIX3D_VALID")
+      bitnot
+      bitand
+      initproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_flags")
+
+      debugline           642
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "computedMatrix")
+   method
+    name "mx.core:AdvancedLayoutFeatures/computedMatrix/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/computedMatrix/getter"
+    returns QName(PackageNamespace("flash.geom"), "Matrix")
+    body
+     maxstack 9
+     localcount 10
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           653
+      getlocal0
+      pushscope
+
+      debug               1, "m", 0, 663
+      debug               1, "tx", 1, 669
+      debug               1, "ty", 2, 670
+      debug               1, "sx", 3, 671
+      debug               1, "sy", 4, 672
+      debug               1, "rz", 5, 673
+      debug               1, "x", 6, 674
+      debug               1, "y", 7, 675
+      debugline           655
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_flags")
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "COMPUTED_MATRIX_VALID")
+      bitand
+      iffalse             L22
+
+      debugline           656
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "_computedMatrix")
+      returnvalue
+
+L22:
+      debugline           658
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      not
+      dup
+      iffalse             L33
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchX")
+      pushbyte            1
+      equals
+L33:
+      dup
+      iffalse             L40
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchY")
+      pushbyte            1
+      equals
+L40:
+      iffalse             L46
+
+      debugline           660
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "matrix")
+      returnvalue
+
+L46:
+      debugline           663
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "_computedMatrix")
+      coerce              QName(PackageNamespace("flash.geom"), "Matrix")
+      setlocal1
+
+      debugline           664
+      getlocal1
+      pushnull
+      ifne                L67
+
+      debugline           665
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+      constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+      dup
+      setlocal            9
+
+      initproperty        QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "_computedMatrix")
+
+      getlocal            9
+      kill                9
+      coerce              QName(PackageNamespace("flash.geom"), "Matrix")
+      setlocal1
+
+      jump                L70
+
+L67:
+      debugline           667
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "identity"), 0
+
+L70:
+      debugline           669
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "transformX")
+      convert_d
+      setlocal2
+
+      debugline           670
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "transformY")
+      convert_d
+      setlocal3
+
+      debugline           671
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "scaleX")
+      convert_d
+      setlocal            4
+
+      debugline           672
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "scaleY")
+      convert_d
+      setlocal            5
+
+      debugline           673
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "rotationZ")
+      convert_d
+      setlocal            6
+
+      debugline           674
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      setlocal            7
+
+      debugline           675
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      setlocal            8
+
+      debugline           677
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      iffalse             L156
+
+      debugline           679
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "scaleX")
+      multiply
+      convert_d
+      setlocal            4
+
+      debugline           680
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "scaleY")
+      multiply
+      convert_d
+      setlocal            5
+
+      debugline           681
+      getlocal            6
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "rotationZ")
+      add
+      convert_d
+      setlocal            6
+
+      debugline           682
+      getlocal            7
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "x")
+      add
+      convert_d
+      setlocal            7
+
+      debugline           683
+      getlocal            8
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "y")
+      add
+      convert_d
+      setlocal            8
+
+L156:
+      debugline           686
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchX")
+      pushbyte            1
+      equals
+      not
+      dup
+      iftrue              L170
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchY")
+      pushbyte            1
+      equals
+      not
+L170:
+      iffalse             L178
+
+      debugline           687
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchX")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchY")
+      callpropvoid        QName(PackageNamespace(""), "scale"), 2
+
+L178:
+      debugline           688
+      findpropstrict      QName(PackageNamespace(""), "build2DMatrix")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlocal            5
+      getlocal            6
+      getlocal            7
+      getlocal            8
+      callpropvoid        QName(PackageNamespace(""), "build2DMatrix"), 8
+
+      debugline           690
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_flags")
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "COMPUTED_MATRIX_VALID")
+      bitor
+      initproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_flags")
+
+      debugline           691
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "computedMatrix3D")
+   method
+    name "mx.core:AdvancedLayoutFeatures/computedMatrix3D/get"
+    refid "mx.core:AdvancedLayoutFeatures/instance/computedMatrix3D/getter"
+    returns QName(PackageNamespace("flash.geom"), "Matrix3D")
+    body
+     maxstack 14
+     localcount 15
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           702
+      getlocal0
+      pushscope
+
+      debug               1, "m", 0, 713
+      debug               1, "tx", 1, 719
+      debug               1, "ty", 2, 720
+      debug               1, "tz", 3, 721
+      debug               1, "sx", 4, 722
+      debug               1, "sy", 5, 723
+      debug               1, "sz", 6, 724
+      debug               1, "rx", 7, 725
+      debug               1, "ry", 8, 726
+      debug               1, "rz", 9, 727
+      debug               1, "x", 10, 728
+      debug               1, "y", 11, 729
+      debug               1, "z", 12, 730
+      debugline           704
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_flags")
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "COMPUTED_MATRIX3D_VALID")
+      bitand
+      iffalse             L27
+
+      debugline           705
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "_computedMatrix3D")
+      returnvalue
+
+L27:
+      debugline           708
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      not
+      dup
+      iffalse             L38
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchX")
+      pushbyte            1
+      equals
+L38:
+      dup
+      iffalse             L45
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchY")
+      pushbyte            1
+      equals
+L45:
+      iffalse             L51
+
+      debugline           710
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "matrix3D")
+      returnvalue
+
+L51:
+      debugline           713
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "_computedMatrix3D")
+      coerce              QName(PackageNamespace("flash.geom"), "Matrix3D")
+      setlocal1
+
+      debugline           714
+      getlocal1
+      pushnull
+      ifne                L72
+
+      debugline           715
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix3D")
+      constructprop       QName(PackageNamespace("flash.geom"), "Matrix3D"), 0
+      dup
+      setlocal            14
+
+      initproperty        QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "_computedMatrix3D")
+
+      getlocal            14
+      kill                14
+      coerce              QName(PackageNamespace("flash.geom"), "Matrix3D")
+      setlocal1
+
+      jump                L75
+
+L72:
+      debugline           717
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "identity"), 0
+
+L75:
+      debugline           719
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "transformX")
+      convert_d
+      setlocal2
+
+      debugline           720
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "transformY")
+      convert_d
+      setlocal3
+
+      debugline           721
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "transformZ")
+      convert_d
+      setlocal            4
+
+      debugline           722
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "scaleX")
+      convert_d
+      setlocal            5
+
+      debugline           723
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "scaleY")
+      convert_d
+      setlocal            6
+
+      debugline           724
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "scaleZ")
+      convert_d
+      setlocal            7
+
+      debugline           725
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "rotationX")
+      convert_d
+      setlocal            8
+
+      debugline           726
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "rotationY")
+      convert_d
+      setlocal            9
+
+      debugline           727
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "rotationZ")
+      convert_d
+      setlocal            10
+
+      debugline           728
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      setlocal            11
+
+      debugline           729
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      setlocal            12
+
+      debugline           730
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "z")
+      convert_d
+      setlocal            13
+
+      debugline           732
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      iffalse             L223
+
+      debugline           734
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "scaleX")
+      multiply
+      convert_d
+      setlocal            5
+
+      debugline           735
+      getlocal            6
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "scaleY")
+      multiply
+      convert_d
+      setlocal            6
+
+      debugline           736
+      getlocal            7
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "scaleZ")
+      multiply
+      convert_d
+      setlocal            7
+
+      debugline           737
+      getlocal            8
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "rotationX")
+      add
+      convert_d
+      setlocal            8
+
+      debugline           738
+      getlocal            9
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "rotationY")
+      add
+      convert_d
+      setlocal            9
+
+      debugline           739
+      getlocal            10
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "rotationZ")
+      add
+      convert_d
+      setlocal            10
+
+      debugline           740
+      getlocal            11
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "x")
+      add
+      convert_d
+      setlocal            11
+
+      debugline           741
+      getlocal            12
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "y")
+      add
+      convert_d
+      setlocal            12
+
+      debugline           742
+      getlocal            13
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "z")
+      add
+      convert_d
+      setlocal            13
+
+L223:
+      debugline           745
+      findpropstrict      QName(PackageNamespace(""), "build3DMatrix")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlocal            5
+      getlocal            6
+      getlocal            7
+      getlocal            8
+      getlocal            9
+      getlocal            10
+      getlocal            11
+      getlocal            12
+      getlocal            13
+      callpropvoid        QName(PackageNamespace(""), "build3DMatrix"), 13
+
+      debugline           747
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchX")
+      pushbyte            1
+      equals
+      not
+      dup
+      iftrue              L253
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchY")
+      pushbyte            1
+      equals
+      not
+L253:
+      iffalse             L262
+
+      debugline           748
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchX")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchY")
+      pushbyte            1
+      callpropvoid        QName(PackageNamespace(""), "prependScale"), 3
+
+L262:
+      debugline           750
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_flags")
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "COMPUTED_MATRIX3D_VALID")
+      bitor
+      initproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_flags")
+
+      debugline           751
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "transformPointToParent")
+   method
+    name "mx.core:AdvancedLayoutFeatures/transformPointToParent"
+    refid "mx.core:AdvancedLayoutFeatures/instance/transformPointToParent"
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 3
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           819
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            7
+
+      debug               1, "propertyIs3D", 0, 819
+      debug               1, "localPosition", 1, 819
+      debug               1, "position", 2, 819
+      debug               1, "postLayoutPosition", 3, 819
+      debug               1, "transformedV", 4, 823
+      debug               1, "transformedP", 5, 824
+      debugline           825
+      findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "tempLocalPosition")
+      debugline           826
+      getlocal2
+      iffalse             L29
+
+      debugline           827
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "clone"), 0
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      jump                L33
+
+L29:
+      debugline           828
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+      constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 0
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+L33:
+      setproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "tempLocalPosition")
+
+      debugline           830
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "is3D")
+      convert_b
+      dup
+      iftrue              L43
+
+      pop
+      getlocal1
+      convert_b
+L43:
+      iffalse             L115
+
+      debugline           832
+      getlocal3
+      pushnull
+      ifeq                L71
+
+      debugline           834
+      findpropstrict      QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "layoutMatrix3D")
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "tempLocalPosition")
+      callproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector"), 2
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      setlocal            5
+
+      debugline           835
+      getlocal3
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "x")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           836
+      getlocal3
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "y")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           837
+      getlocal3
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "z")
+      setproperty         QName(PackageNamespace(""), "z")
+
+L71:
+      debugline           840
+      getlocal            4
+      pushnull
+      ifeq                L114
+
+      debugline           843
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "tempLocalPosition")
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "tempLocalPosition")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchX")
+      divide
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           844
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "tempLocalPosition")
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "tempLocalPosition")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchY")
+      divide
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           845
+      findpropstrict      QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "computedMatrix3D")
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "tempLocalPosition")
+      callproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector"), 2
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      setlocal            5
+
+      debugline           846
+      getlocal            4
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "x")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           847
+      getlocal            4
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "y")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           848
+      getlocal            4
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "z")
+      setproperty         QName(PackageNamespace(""), "z")
+
+L114:
+      jump                L193
+
+L115:
+      debug               1, "localP", 6, 853
+      debugline           853
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+      debugline           853
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "tempLocalPosition")
+      getproperty         QName(PackageNamespace(""), "x")
+      debugline           854
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "tempLocalPosition")
+      getproperty         QName(PackageNamespace(""), "y")
+      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            7
+
+      debugline           855
+      getlocal3
+      pushnull
+      ifeq                L152
+
+      debugline           857
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "layoutMatrix")
+      getlocal            7
+      callproperty        QName(PackageNamespace(""), "transformPoint"), 1
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            6
+
+      debugline           858
+      getlocal3
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "x")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           859
+      getlocal3
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "y")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           860
+      getlocal3
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "z")
+
+L152:
+      debugline           863
+      getlocal            4
+      pushnull
+      ifeq                L193
+
+      debugline           866
+      getlocal            7
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchX")
+      divide
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           867
+      getlocal            7
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchY")
+      divide
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           868
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "computedMatrix")
+      getlocal            7
+      callproperty        QName(PackageNamespace(""), "transformPoint"), 1
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            6
+
+      debugline           869
+      getlocal            4
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "x")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           870
+      getlocal            4
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "y")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           871
+      getlocal            4
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "z")
+
+L193:
+      debugline           874
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "completeTransformCenterAdjustment")
+   method
+    name "mx.core:AdvancedLayoutFeatures/private:completeTransformCenterAdjustment"
+    refid "mx.core:AdvancedLayoutFeatures/instance/mx.core:AdvancedLayoutFeatures/completeTransformCenterAdjustment"
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 5
+     localcount 11
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           881
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            8
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            10
+
+      debug               1, "changeIs3D", 0, 881
+      debug               1, "transformCenter", 1, 881
+      debug               1, "targetPosition", 2, 881
+      debug               1, "targetPostLayoutPosition", 3, 881
+      debugline           886
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "is3D")
+      convert_b
+      dup
+      iftrue              L35
+
+      pop
+      getlocal1
+      convert_b
+L35:
+      iffalse             L180
+
+      debugline           888
+      getlocal3
+      pushnull
+      ifeq                L80
+
+      debug               1, "adjustedLayoutCenterV", 4, 890
+      debugline           890
+      findpropstrict      QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "layoutMatrix3D")
+      getlocal2
+      callproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector"), 2
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      setlocal            5
+
+      debugline           891
+      getlocal            5
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "equals"), 1
+      pushfalse
+      ifne                L80
+
+      debugline           893
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      debugline           893
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      debugline           894
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      debugline           895
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "z")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "z")
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "translateBy"), 3
+
+      debugline           896
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+L80:
+      debugline           899
+      getlocal            4
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L93
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      pushnull
+      equals
+      not
+L93:
+      iffalse             L179
+
+      debug               1, "tmpPos", 5, 902
+      debug               1, "adjustedComputedCenterV", 6, 905
+      debugline           902
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "z")
+      constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 3
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      setlocal            6
+
+      debugline           903
+      getlocal            6
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchX")
+      divide
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           904
+      getlocal            6
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchY")
+      divide
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           905
+      findpropstrict      QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "computedMatrix3D")
+      getlocal            6
+      callproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector"), 2
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      setlocal            7
+
+      debugline           906
+      getlocal            7
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "equals"), 1
+      pushfalse
+      ifne                L179
+
+      debugline           908
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           909
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           910
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "z")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "z")
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "z")
+      subtract
+      add
+      setproperty         QName(PackageNamespace(""), "z")
+
+      debugline           911
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+L179:
+      jump                L325
+
+L180:
+      debug               1, "transformCenterP", 7, 917
+      debugline           917
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "y")
+      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            8
+
+      debugline           918
+      getlocal3
+      pushnull
+      ifeq                L240
+
+      debug               1, "currentPositionP", 8, 920
+      debugline           920
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "layoutMatrix")
+      getlocal            8
+      callproperty        QName(PackageNamespace(""), "transformPoint"), 1
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            9
+
+      debugline           921
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "x")
+      equals
+      not
+      dup
+      iftrue              L219
+
+      pop
+      debugline           922
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "y")
+      equals
+      not
+L219:
+      iffalse             L240
+
+      debugline           924
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      debugline           924
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      debugline           925
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "translateBy"), 3
+
+      debugline           926
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+L240:
+      debugline           930
+      getlocal            4
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L253
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      pushnull
+      equals
+      not
+L253:
+      iffalse             L325
+
+      debug               1, "currentPostLayoutPosition", 9, 935
+      debugline           933
+      getlocal            8
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchX")
+      divide
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           934
+      getlocal            8
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "stretchY")
+      divide
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           936
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "computedMatrix")
+      getlocal            8
+      callproperty        QName(PackageNamespace(""), "transformPoint"), 1
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setlocal            10
+
+      debugline           937
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      equals
+      not
+      dup
+      iftrue              L295
+
+      pop
+      debugline           938
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      equals
+      not
+L295:
+      iffalse             L325
+
+      debugline           940
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           941
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           942
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+L325:
+      debugline           946
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "transformAround")
+   method
+    name "mx.core:AdvancedLayoutFeatures/transformAround"
+    refid "mx.core:AdvancedLayoutFeatures/instance/transformAround"
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    param QName(PackageNamespace("flash.geom"), "Vector3D")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    flag HAS_PARAM_NAMES
+    optional Null()
+    optional Null()
+    optional Null()
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+    body
+     maxstack 5
+     localcount 12
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+      debugline           963
+      getlocal0
+      pushscope
+
+      debug               1, "transformCenter", 0, 963
+      debug               1, "scale", 1, 963
+      debug               1, "rotation", 2, 963
+      debug               1, "transformCenterPosition", 3, 963
+      debug               1, "postLayoutScale", 4, 963
+      debug               1, "postLayoutRotation", 5, 963
+      debug               1, "postLayoutTransformCenterPosition", 6, 963
+      debug               1, "is3D", 7, 971
+      debug               1, "needOffsets", 8, 979
+      debug               1, "targetPosition", 9, 1003
+      debug               1, "postLayoutTargetPosition", 10, 1004
+      debugline           971
+      getlocal2
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L28
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "z")
+      pushbyte            1
+      equals
+      not
+L28:
+      dup
+      iftrue              L52
+
+      pop
+      debugline           972
+      getlocal3
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L52
+
+      pop
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "x")
+      pushbyte            0
+      equals
+      not
+      dup
+      iftrue              L52
+
+      pop
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "y")
+      pushbyte            0
+      equals
+      not
+L52:
+      dup
+      iftrue              L68
+
+      pop
+      debugline           973
+      getlocal            4
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L68
+
+      pop
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "z")
+      pushbyte            0
+      equals
+      not
+L68:
+      dup
+      iftrue              L84
+
+      pop
+      debugline           974
+      getlocal            5
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L84
+
+      pop
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "z")
+      pushbyte            1
+      equals
+      not
+L84:
+      dup
+      iftrue              L109
+
+      pop
+      debugline           975
+      getlocal            6
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L109
+
+      pop
+      debugline           976
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "x")
+      pushbyte            0
+      equals
+      not
+      dup
+      iftrue              L109
+
+      pop
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "y")
+      pushbyte            0
+      equals
+      not
+L109:
+      dup
+      iftrue              L125
+
+      pop
+      debugline           977
+      getlocal            7
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L125
+
+      pop
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "z")
+      pushbyte            0
+      equals
+      not
+L125:
+      convert_b
+      setlocal            8
+
+      debugline           979
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      pushnull
+      equals
+      dup
+      iffalse             L155
+
+      pop
+      debugline           980
+      getlocal            5
+      pushnull
+      equals
+      not
+      dup
+      iftrue              L147
+
+      pop
+      getlocal            6
+      pushnull
+      equals
+      not
+L147:
+      dup
+      iftrue              L155
+
+      pop
+      debugline           981
+      getlocal            7
+      pushnull
+      equals
+      not
+L155:
+      convert_b
+      setlocal            9
+
+      debugline           982
+      getlocal            9
+      iffalse             L165
+
+      debugline           983
+      getlocal0
+      findpropstrict      QName(PackageNamespace("mx.geom"), "TransformOffsets")
+      constructprop       QName(PackageNamespace("mx.geom"), "TransformOffsets"), 0
+      initproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+
+L165:
+      debugline           987
+      getlocal1
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L183
+
+      pop
+      debugline           988
+      getlocal            4
+      pushnull
+      equals
+      dup
+      iftrue              L183
+
+      pop
+      getlocal            7
+      pushnull
+      equals
+L183:
+      iffalse             L238
+
+      debugline           990
+      getlocal0
+      debugline           990
+      getlocal            8
+      getlocal1
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticTranslation")
+      debugline           991
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticOffsetTranslation")
+      callpropvoid        QName(PackageNamespace(""), "transformPointToParent"), 4
+
+      debugline           992
+      getlocal            7
+      pushnull
+      equals
+      dup
+      iffalse             L204
+
+      pop
+      getlocal            4
+      pushnull
+      equals
+      not
+L204:
+      iffalse             L238
+
+      debugline           994
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticOffsetTranslation")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticOffsetTranslation")
+      getproperty         QName(PackageNamespace(""), "x")
+      add
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticTranslation")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           995
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticOffsetTranslation")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticOffsetTranslation")
+      getproperty         QName(PackageNamespace(""), "y")
+      add
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticTranslation")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           996
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticOffsetTranslation")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "z")
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticOffsetTranslation")
+      getproperty         QName(PackageNamespace(""), "z")
+      add
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticTranslation")
+      getproperty         QName(PackageNamespace(""), "z")
+      subtract
+      setproperty         QName(PackageNamespace(""), "z")
+
+L238:
+      debugline           1003
+      getlocal            4
+      pushnull
+      ifne                L245
+
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticTranslation")
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      jump                L247
+
+L245:
+      getlocal            4
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+L247:
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      setlocal            10
+
+      debugline           1004
+      getlocal            7
+      pushnull
+      ifne                L256
+
+      getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticOffsetTranslation")
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      jump                L258
+
+L256:
+      getlocal            7
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+L258:
+      coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+      setlocal            11
+
+      debugline           1007
+      getlocal3
+      pushnull
+      ifeq                L300
+
+      debugline           1009
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "x")
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      iftrue              L276
+
+      debugline           1010
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "x")
+      setproperty         QName(PackageNamespace(""), "rotationX")
+
+L276:
+      debugline           1011
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "y")
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      iftrue              L288
+
+      debugline           1012
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "y")
+      setproperty         QName(PackageNamespace(""), "rotationY")
+
+L288:
+      debugline           1013
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "z")
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      iftrue              L300
+
+      debugline           1014
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "z")
+      setproperty         QName(PackageNamespace(""), "rotationZ")
+
+L300:
+      debugline           1016
+      getlocal2
+      pushnull
+      ifeq                L340
+
+      debugline           1018
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "x")
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      iftrue              L316
+
+      debugline           1019
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "x")
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+L316:
+      debugline           1020
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "y")
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      iftrue              L328
+
+      debugline           1021
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "y")
+      setproperty         QName(PackageNamespace(""), "scaleY")
+
+L328:
+      debugline           1022
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "z")
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      iftrue              L340
+
+      debugline           1023
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "z")
+      setproperty         QName(PackageNamespace(""), "scaleZ")
+
+L340:
+      debugline           1026
+      getlocal            6
+      pushnull
+      ifeq                L362
+
+      debugline           1028
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "x")
+      setproperty         QName(PackageNamespace(""), "rotationX")
+
+      debugline           1029
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "y")
+      setproperty         QName(PackageNamespace(""), "rotationY")
+
+      debugline           1030
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "z")
+      setproperty         QName(PackageNamespace(""), "rotationZ")
+
+L362:
+      debugline           1032
+      getlocal            5
+      pushnull
+      ifeq                L384
+
+      debugline           1034
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "x")
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+      debugline           1035
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "y")
+      setproperty         QName(PackageNamespace(""), "scaleY")
+
+      debugline           1036
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "z")
+      setproperty         QName(PackageNamespace(""), "scaleZ")
+
+L384:
+      debugline           1043
+      getlocal1
+      pushnull
+      ifne                L444
+
+      debugline           1045
+      getlocal            4
+      pushnull
+      ifeq                L410
+
+      debugline           1047
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           1048
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           1049
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "z")
+      setproperty         QName(PackageNamespace(""), "z")
+
+L410:
+      debugline           1051
+      getlocal            7
+      pushnull
+      ifeq                L444
+
+      debugline           1053
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           1054
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           1055
+      getlocal0
+      getproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "_postLayoutTransformOffsets")
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "z")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), "layout")
+      getproperty         QName(PackageNamespace(""), "z")
+      subtract
+      setproperty         QName(PackageNamespace(""), "z")
+
+L444:
+      debugline           1058
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "invalidate"), 0
+
+      debugline           1061
+      getlocal1
+      pushnull
+      ifeq                L460
+
+      debugline           1062
+      getlocal0
+      debugline           1062
+      getlocal            8
+      getlocal1
+      debugline           1063
+      getlocal            10
+      getlocal            11
+      callpropvoid        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "completeTransformCenterAdjustment"), 4
+
+L460:
+      debugline           1066
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:AdvancedLayoutFeatures/class/init"
+  body
+   maxstack 5
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "COMPUTED_MATRIX_VALID", 0, 105
+    findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "COMPUTED_MATRIX_VALID")
+    pushbyte            1
+    initproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "COMPUTED_MATRIX_VALID")
+
+    debug               1, "COMPUTED_MATRIX3D_VALID", 1, 106
+    findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "COMPUTED_MATRIX3D_VALID")
+    pushbyte            2
+    initproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "COMPUTED_MATRIX3D_VALID")
+
+    debug               1, "reVT", 2, 118
+    findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVT")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+    pushbyte            0
+    dup
+    dup
+    constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 3
+    setproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVT")
+
+    debug               1, "reVR", 3, 119
+    findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVR")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+    pushbyte            0
+    dup
+    dup
+    constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 3
+    setproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVR")
+
+    debug               1, "reVS", 4, 120
+    findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVS")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+    pushbyte            1
+    dup
+    dup
+    constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 3
+    setproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVS")
+
+    debug               1, "reV", 5, 122
+    findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reV")
+    getlex              Multiname("Vector", [PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object"), PackageNamespace("__AS3__.vec")])
+    getlex              QName(PackageNamespace("flash.geom"), "Vector3D")
+    applytype           1
+    construct           0
+    setproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reV")
+
+    debug               1, "RADIANS_PER_DEGREES", 6, 128
+    findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "RADIANS_PER_DEGREES")
+    getlex              QName(PackageNamespace(""), "Math")
+    getproperty         QName(PackageNamespace(""), "PI")
+    pushshort           180
+    divide
+    initproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "RADIANS_PER_DEGREES")
+
+    debug               1, "ZERO_REPLACEMENT_IN_3D", 7, 130
+    findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "ZERO_REPLACEMENT_IN_3D")
+    pushdouble          9.99999999999999999e-15
+    initproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "ZERO_REPLACEMENT_IN_3D")
+
+    debug               1, "tempLocalPosition", 8, 132
+    debug               1, "transformVector", 9, 139
+    findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector")
+    getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "initTransformVectorFunction")
+    setproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector")
+
+    debug               1, "staticTranslation", 10, 948
+    findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticTranslation")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+    constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 0
+    setproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticTranslation")
+
+    debug               1, "staticOffsetTranslation", 11, 949
+    findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticOffsetTranslation")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+    constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 0
+    setproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticOffsetTranslation")
+
+    getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reV")
+    getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVT")
+    callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+    getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reV")
+    getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVR")
+    callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+    getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reV")
+    getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVS")
+    callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "COMPUTED_MATRIX_VALID") slotid 1 type QName(PackageNamespace(""), "uint") value Integer(1) end
+ trait const QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "COMPUTED_MATRIX3D_VALID") slotid 2 type QName(PackageNamespace(""), "uint") value Integer(2) end
+ trait slot QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVT") slotid 3 type QName(PackageNamespace("flash.geom"), "Vector3D") end
+ trait slot QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVR") slotid 4 type QName(PackageNamespace("flash.geom"), "Vector3D") end
+ trait slot QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVS") slotid 5 type QName(PackageNamespace("flash.geom"), "Vector3D") end
+ trait slot QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reV") slotid 6 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.geom"), "Vector3D")>) end
+ trait const QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "RADIANS_PER_DEGREES") slotid 7 type QName(PackageNamespace(""), "Number") end
+ trait const QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "ZERO_REPLACEMENT_IN_3D") slotid 8 type QName(PackageNamespace(""), "Number") value Double(9.99999999999999999e-15) end
+ trait slot QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "tempLocalPosition") slotid 9 type QName(PackageNamespace("flash.geom"), "Vector3D") end
+ trait slot QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector") slotid 10 type QName(PackageNamespace(""), "Function") end
+ trait method QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "pre10_0_22_87_transformVector") flag FINAL dispid 3
+  method
+   name "mx.core:AdvancedLayoutFeatures/private:pre10_0_22_87_transformVector"
+   refid "mx.core:AdvancedLayoutFeatures/class/mx.core:AdvancedLayoutFeatures/pre10_0_22_87_transformVector"
+   param QName(PackageNamespace("flash.geom"), "Matrix3D")
+   param QName(PackageNamespace("flash.geom"), "Vector3D")
+   returns QName(PackageNamespace("flash.geom"), "Vector3D")
+   flag HAS_PARAM_NAMES
+   paramname "reVT"
+   paramname "reVT"
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+     debugline           146
+     getlocal0
+     pushscope
+
+     debug               1, "m", 0, 146
+     debug               1, "v", 1, 146
+     debug               1, "r", 2, 148
+     debugline           148
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "rawData")
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Number")>)
+     setlocal3
+
+     debugline           149
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+     debugline           150
+     getlocal3
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     getlocal3
+     pushbyte            4
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "y")
+     multiply
+     add
+     getlocal3
+     pushbyte            8
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "z")
+     multiply
+     add
+     getlocal3
+     pushbyte            12
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     add
+     debugline           151
+     getlocal3
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     getlocal3
+     pushbyte            5
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "y")
+     multiply
+     add
+     getlocal3
+     pushbyte            9
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "z")
+     multiply
+     add
+     getlocal3
+     pushbyte            13
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     add
+     debugline           152
+     getlocal3
+     pushbyte            2
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "x")
+     multiply
+     getlocal3
+     pushbyte            6
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "y")
+     multiply
+     add
+     getlocal3
+     pushbyte            10
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "z")
+     multiply
+     add
+     getlocal3
+     pushbyte            14
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     add
+     debugline           153
+     pushbyte            1
+     constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 4
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "nativeTransformVector") flag FINAL dispid 4
+  method
+   name "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   refid "mx.core:AdvancedLayoutFeatures/class/mx.core:AdvancedLayoutFeatures/nativeTransformVector"
+   param QName(PackageNamespace("flash.geom"), "Matrix3D")
+   param QName(PackageNamespace("flash.geom"), "Vector3D")
+   returns QName(PackageNamespace("flash.geom"), "Vector3D")
+   flag HAS_PARAM_NAMES
+   paramname "reVT"
+   paramname "reVT"
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+     debugline           161
+     getlocal0
+     pushscope
+
+     debug               1, "m", 0, 161
+     debug               1, "v", 1, 161
+     debugline           163
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "transformVector"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "initTransformVectorFunction") flag FINAL dispid 5
+  method
+   name "mx.core:AdvancedLayoutFeatures/private:initTransformVectorFunction"
+   refid "mx.core:AdvancedLayoutFeatures/class/mx.core:AdvancedLayoutFeatures/initTransformVectorFunction"
+   param QName(PackageNamespace("flash.geom"), "Matrix3D")
+   param QName(PackageNamespace("flash.geom"), "Vector3D")
+   returns QName(PackageNamespace("flash.geom"), "Vector3D")
+   flag HAS_PARAM_NAMES
+   paramname "reVT"
+   paramname "reVT"
+   body
+    maxstack 3
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+     debugline           171
+     getlocal0
+     pushscope
+
+     debug               1, "m", 0, 171
+     debug               1, "v", 1, 171
+     debug               1, "canUseNative", 2, 173
+     debug               1, "version", 3, 174
+     debugline           173
+     pushfalse
+     setlocal3
+
+     debugline           174
+     getlex              QName(PackageNamespace("flash.system"), "Capabilities")
+     getproperty         QName(PackageNamespace(""), "version")
+     pushstring          " "
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     pushstring          ","
+     callproperty        Multiname("split", [PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")]), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            4
+
+     debugline           175
+     findpropstrict      QName(PackageNamespace(""), "parseFloat")
+     getlocal            4
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "parseFloat"), 1
+     pushbyte            10
+     ifngt               L34
+
+     debugline           176
+     pushtrue
+     setlocal3
+
+     jump                L69
+
+L34:
+     debugline           177
+     findpropstrict      QName(PackageNamespace(""), "parseFloat")
+     getlocal            4
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "parseFloat"), 1
+     pushbyte            0
+     ifngt               L46
+
+     debugline           178
+     pushtrue
+     setlocal3
+
+     jump                L69
+
+L46:
+     debugline           179
+     findpropstrict      QName(PackageNamespace(""), "parseFloat")
+     getlocal            4
+     pushbyte            2
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "parseFloat"), 1
+     pushbyte            22
+     ifngt               L58
+
+     debugline           180
+     pushtrue
+     setlocal3
+
+     jump                L69
+
+L58:
+     debugline           181
+     findpropstrict      QName(PackageNamespace(""), "parseFloat")
+     getlocal            4
+     pushbyte            3
+     getproperty         MultinameL([PrivateNamespace("mx.core:AdvancedLayoutFeatures"), PrivateNamespace("AdvancedLayoutFeatures.as$46"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), ProtectedNamespace("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("mx.core:AdvancedLayoutFeatures"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "parseFloat"), 1
+     pushbyte            87
+     ifnge               L69
+
+     debugline           182
+     pushtrue
+     setlocal3
+
+L69:
+     debugline           183
+     getlocal3
+     iffalse             L77
+
+     debugline           184
+     findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector")
+     getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "nativeTransformVector")
+     setproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector")
+
+     jump                L81
+
+L77:
+     debugline           186
+     findproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector")
+     getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "pre10_0_22_87_transformVector")
+     setproperty         QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector")
+
+L81:
+     debugline           188
+     findpropstrict      QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector")
+     getlocal1
+     getlocal2
+     callproperty        QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "transformVector"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "build2DMatrix") flag FINAL dispid 6
+  method
+   name "mx.core:AdvancedLayoutFeatures/build2DMatrix"
+   refid "mx.core:AdvancedLayoutFeatures/class/build2DMatrix"
+   param QName(PackageNamespace("flash.geom"), "Matrix")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_PARAM_NAMES
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   body
+    maxstack 4
+    localcount 9
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+     debugline           759
+     getlocal0
+     pushscope
+
+     debug               1, "m", 0, 759
+     debug               1, "tx", 1, 759
+     debug               1, "ty", 2, 759
+     debug               1, "sx", 3, 759
+     debug               1, "sy", 4, 759
+     debug               1, "rz", 5, 759
+     debug               1, "x", 6, 759
+     debug               1, "y", 7, 759
+     debugline           765
+     getlocal1
+     getlocal2
+     negate
+     getlocal3
+     negate
+     callpropvoid        QName(PackageNamespace(""), "translate"), 2
+
+     debugline           766
+     getlocal1
+     getlocal            4
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "scale"), 2
+
+     debugline           767
+     getlocal1
+     getlocal            6
+     getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "RADIANS_PER_DEGREES")
+     multiply
+     callpropvoid        QName(PackageNamespace(""), "rotate"), 1
+
+     debugline           768
+     getlocal1
+     getlocal            7
+     getlocal2
+     add
+     getlocal            8
+     getlocal3
+     add
+     callpropvoid        QName(PackageNamespace(""), "translate"), 2
+
+     debugline           769
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "build3DMatrix") flag FINAL dispid 7
+  method
+   name "mx.core:AdvancedLayoutFeatures/build3DMatrix"
+   refid "mx.core:AdvancedLayoutFeatures/class/build3DMatrix"
+   param QName(PackageNamespace("flash.geom"), "Matrix3D")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_PARAM_NAMES
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   paramname "mx.core:AdvancedLayoutFeatures/private:nativeTransformVector"
+   body
+    maxstack 5
+    localcount 14
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;AdvancedLayoutFeatures.as"
+     debugline           776
+     getlocal0
+     pushscope
+
+     debug               1, "m", 0, 776
+     debug               1, "tx", 1, 776
+     debug               1, "ty", 2, 776
+     debug               1, "tz", 3, 776
+     debug               1, "sx", 4, 776
+     debug               1, "sy", 5, 776
+     debug               1, "sz", 6, 776
+     debug               1, "rx", 7, 776
+     debug               1, "ry", 8, 776
+     debug               1, "rz", 9, 776
+     debug               1, "x", 10, 776
+     debug               1, "y", 11, 776
+     debug               1, "z", 12, 776
+     debugline           782
+     getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVR")
+     getlocal            8
+     getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "RADIANS_PER_DEGREES")
+     multiply
+     setproperty         QName(PackageNamespace(""), "x")
+
+     debugline           783
+     getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVR")
+     getlocal            9
+     getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "RADIANS_PER_DEGREES")
+     multiply
+     setproperty         QName(PackageNamespace(""), "y")
+
+     debugline           784
+     getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reVR")
+     getlocal            10
+     getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "RADIANS_PER_DEGREES")
+     multiply
+     setproperty         QName(PackageNamespace(""), "z")
+
+     debugline           785
+     getlocal1
+     getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "reV")
+     callpropvoid        QName(PackageNamespace(""), "recompose"), 1
+
+     debugline           786
+     getlocal            5
+     pushbyte            0
+     ifne                L47
+
+     debugline           787
+     getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "ZERO_REPLACEMENT_IN_3D")
+     convert_d
+     setlocal            5
+
+L47:
+     debugline           788
+     getlocal            6
+     pushbyte            0
+     ifne                L55
+
+     debugline           789
+     getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "ZERO_REPLACEMENT_IN_3D")
+     convert_d
+     setlocal            6
+
+L55:
+     debugline           790
+     getlocal            7
+     pushbyte            0
+     ifne                L63
+
+     debugline           791
+     getlex              QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "ZERO_REPLACEMENT_IN_3D")
+     convert_d
+     setlocal            7
+
+L63:
+     debugline           792
+     getlocal1
+     getlocal            5
+     getlocal            6
+     getlocal            7
+     callpropvoid        QName(PackageNamespace(""), "prependScale"), 3
+
+     debugline           793
+     getlocal1
+     getlocal2
+     negate
+     getlocal3
+     negate
+     getlocal            4
+     negate
+     callpropvoid        QName(PackageNamespace(""), "prependTranslation"), 3
+
+     debugline           794
+     getlocal1
+     getlocal2
+     getlocal            11
+     add
+     getlocal3
+     getlocal            12
+     add
+     getlocal            4
+     getlocal            13
+     add
+     callpropvoid        QName(PackageNamespace(""), "appendTranslation"), 3
+
+     debugline           795
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticTranslation") slotid 11 type QName(PackageNamespace("flash.geom"), "Vector3D") end
+ trait slot QName(PrivateNamespace("mx.core:AdvancedLayoutFeatures"), "staticOffsetTranslation") slotid 12 type QName(PackageNamespace("flash.geom"), "Vector3D") end
+end ; class

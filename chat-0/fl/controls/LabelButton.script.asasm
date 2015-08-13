@@ -1,0 +1,62 @@
+script ; 118
+ sinit
+  name ""
+  refid "fl.controls:LabelButton/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;LabelButton.as"
+    debugline           399
+    findpropstrict      Multiname("LabelButton", [PackageNamespace("fl.controls")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    pushscope
+
+    getlex              QName(PackageNamespace("fl.core"), "UIComponent")
+    pushscope
+
+    getlex              QName(PackageNamespace("fl.controls"), "BaseButton")
+    pushscope
+
+    getlex              QName(PackageNamespace("fl.controls"), "BaseButton")
+    newclass            "fl.controls:LabelButton"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("fl.controls"), "LabelButton")
+
+    debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;LabelButton.as"
+    debugline           2
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("fl.controls"), "LabelButton")
+  #include "LabelButton.class.asasm"
+ end ; trait
+end ; script

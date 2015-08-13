@@ -1,0 +1,1445 @@
+class
+ refid "_kiwi.Constraints:Constraints"
+ instance QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_kiwi.Constraints:Constraints")
+  iinit
+   name "_kiwi.Constraints:Constraints/Constraints"
+   refid "_kiwi.Constraints:Constraints/instance/init"
+   param QName(PackageNamespace("flash.display"), "Sprite")
+   param QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional Utf8("counter_scale")
+   paramname null
+   paramname null
+   body
+    maxstack 6
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;Constraints.as"
+     debugline           42
+     getlocal0
+     pushscope
+
+     debug               1, "scope", 0, 42
+     debug               1, "scaleMode", 1, 42
+     debugline           43
+     getlocal0
+     constructsuper      0
+
+     debugline           44
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "scope")
+
+     debugline           45
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "scaleMode")
+
+     debugline           47
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     pushtrue
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+     initproperty        QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements")
+
+     debugline           49
+     getlocal0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "width")
+     initproperty        QName(PackageNamespace(""), "lastWidth")
+
+     debugline           50
+     getlocal0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     initproperty        QName(PackageNamespace(""), "lastHeight")
+
+     debugline           52
+     getlocal1
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "onScopeAdded")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     debugline           53
+     getlocal1
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "onScopeAdded")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     debugline           54
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "scope") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait slot QName(PackageNamespace(""), "scaleMode") type QName(PackageNamespace(""), "String") value Utf8("counter_scale") end
+  trait slot QName(PackageNamespace(""), "parentXAdjust") type QName(PackageNamespace(""), "Number") value Integer(1) end
+  trait slot QName(PackageNamespace(""), "parentYAdjust") type QName(PackageNamespace(""), "Number") value Integer(1) end
+  trait slot QName(PackageNamespace(""), "lastWidth") type QName(PackageNamespace(""), "Number") value Double(nan) end
+  trait slot QName(PackageNamespace(""), "lastHeight") type QName(PackageNamespace(""), "Number") value Double(nan) end
+  trait slot QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "parentConstraints") type QName(PackageNamespace("_kiwi.Constraints"), "Constraints") end
+  trait method QName(PackageNamespace(""), "addElement")
+   method
+    name "_kiwi.Constraints:Constraints/addElement"
+    refid "_kiwi.Constraints:Constraints/instance/addElement"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "name"
+    paramname "name"
+    paramname "name"
+    body
+     maxstack 9
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;Constraints.as"
+      debugline           56
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+      setlocal            6
+
+      debug               1, "name", 0, 56
+      debug               1, "clip", 1, 56
+      debug               1, "edges", 2, 56
+      debugline           58
+      getlocal2
+      pushnull
+      ifeq                L113
+
+      debug               1, "w", 3, 60
+      debug               1, "h", 4, 61
+      debug               1, "element", 5, 69
+      debugline           60
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scope")
+      getproperty         QName(PackageNamespace(""), "width")
+      convert_d
+      setlocal            4
+
+      debugline           61
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scope")
+      getproperty         QName(PackageNamespace(""), "height")
+      convert_d
+      setlocal            5
+
+      debugline           63
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scope")
+      getproperty         QName(PackageNamespace(""), "parent")
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L48
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scope")
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace("flash.display"), "Stage")
+      istypelate
+L48:
+      iffalse             L63
+
+      debugline           65
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scope")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "stageWidth")
+      convert_d
+      setlocal            4
+
+      debugline           66
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scope")
+      getproperty         QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "stageWidth")
+      convert_d
+      setlocal            5
+
+L63:
+      debugline           69
+      findpropstrict      QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+      getlocal2
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scope")
+      getproperty         QName(PackageNamespace(""), "scaleX")
+      divide
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "width")
+      add
+      subtract
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scope")
+      getproperty         QName(PackageNamespace(""), "scaleY")
+      divide
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "height")
+      add
+      subtract
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "scaleX")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "scaleY")
+      constructprop       QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement"), 8
+      coerce              QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+      setlocal            6
+
+      debugline           71
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Constraints:Constraints"), PackageNamespace(""), ProtectedNamespace("_kiwi.Constraints:Constraints"), PackageNamespace("_kiwi.Constraints"), PrivateNamespace("Constraints.as$88"), PackageInternalNs("_kiwi.Constraints"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Constraints:Constraints"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushnull
+      ifne                L113
+
+      debugline           73
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements")
+      getlocal1
+      getlocal            6
+      setproperty         MultinameL([PrivateNamespace("_kiwi.Constraints:Constraints"), PackageNamespace(""), ProtectedNamespace("_kiwi.Constraints:Constraints"), PackageNamespace("_kiwi.Constraints"), PrivateNamespace("Constraints.as$88"), PackageInternalNs("_kiwi.Constraints"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Constraints:Constraints"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L113:
+      debugline           76
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeElement")
+   method
+    name "_kiwi.Constraints:Constraints/removeElement"
+    refid "_kiwi.Constraints:Constraints/instance/removeElement"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "name"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;Constraints.as"
+      debugline           78
+      getlocal0
+      pushscope
+
+      debug               1, "name", 0, 78
+      debugline           80
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Constraints:Constraints"), PackageNamespace(""), ProtectedNamespace("_kiwi.Constraints:Constraints"), PackageNamespace("_kiwi.Constraints"), PrivateNamespace("Constraints.as$88"), PackageInternalNs("_kiwi.Constraints"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Constraints:Constraints"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushnull
+      ifeq                L18
+
+      debugline           82
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements")
+      getlocal1
+      deleteproperty      MultinameL([PrivateNamespace("_kiwi.Constraints:Constraints"), PackageNamespace(""), ProtectedNamespace("_kiwi.Constraints:Constraints"), PackageNamespace("_kiwi.Constraints"), PrivateNamespace("Constraints.as$88"), PackageInternalNs("_kiwi.Constraints"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Constraints:Constraints"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pop
+L18:
+      debugline           84
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeAllElements")
+   method
+    name "_kiwi.Constraints:Constraints/removeAllElements"
+    refid "_kiwi.Constraints:Constraints/instance/removeAllElements"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;Constraints.as"
+      debugline           86
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal1
+
+      debug               1, "name", 0, 88
+      debugline           88
+      pushbyte            0
+      setlocal2
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements")
+      coerce_a
+      setlocal3
+
+      jump                L36
+
+L16:
+      label
+      getlocal3
+      getlocal2
+      nextname
+      coerce_s
+      setlocal1
+
+      debugline           90
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Constraints:Constraints"), PackageNamespace(""), ProtectedNamespace("_kiwi.Constraints:Constraints"), PackageNamespace("_kiwi.Constraints"), PrivateNamespace("Constraints.as$88"), PackageInternalNs("_kiwi.Constraints"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Constraints:Constraints"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+      istypelate
+      iffalse             L36
+
+      debugline           92
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements")
+      getlocal1
+      deleteproperty      MultinameL([PrivateNamespace("_kiwi.Constraints:Constraints"), PackageNamespace(""), ProtectedNamespace("_kiwi.Constraints:Constraints"), PackageNamespace("_kiwi.Constraints"), PrivateNamespace("Constraints.as$88"), PackageInternalNs("_kiwi.Constraints"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Constraints:Constraints"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pop
+L36:
+      debugline           88
+      hasnext2            3, 2
+      iftrue              L16
+
+      kill                3
+      kill                2
+      debugline           95
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getElement")
+   method
+    name "_kiwi.Constraints:Constraints/getElement"
+    refid "_kiwi.Constraints:Constraints/instance/getElement"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+    flag HAS_PARAM_NAMES
+    paramname "onScopeAdded"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;Constraints.as"
+      debugline           97
+      getlocal0
+      pushscope
+
+      debug               1, "name", 0, 97
+      debugline           99
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Constraints:Constraints"), PackageNamespace(""), ProtectedNamespace("_kiwi.Constraints:Constraints"), PackageNamespace("_kiwi.Constraints"), PrivateNamespace("Constraints.as$88"), PackageInternalNs("_kiwi.Constraints"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Constraints:Constraints"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+      astypelate
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "updateElement")
+   method
+    name "_kiwi.Constraints:Constraints/updateElement"
+    refid "_kiwi.Constraints:Constraints/instance/updateElement"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "name"
+    paramname "name"
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;Constraints.as"
+      debugline           102
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+      setlocal3
+
+      debug               1, "name", 0, 102
+      debug               1, "clip", 1, 102
+      debugline           104
+      getlocal2
+      pushnull
+      ifeq                L31
+
+      debug               1, "element", 2, 106
+      debugline           106
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Constraints:Constraints"), PackageNamespace(""), ProtectedNamespace("_kiwi.Constraints:Constraints"), PackageNamespace("_kiwi.Constraints"), PrivateNamespace("Constraints.as$88"), PackageInternalNs("_kiwi.Constraints"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Constraints:Constraints"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+      astypelate
+      coerce              QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+      setlocal3
+
+      debugline           107
+      getlocal3
+      pushnull
+      ifeq                L31
+
+      debugline           109
+      getlocal3
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "clip")
+
+L31:
+      debugline           112
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getXAdjust")
+   method
+    name "_kiwi.Constraints:Constraints/getXAdjust"
+    refid "_kiwi.Constraints:Constraints/instance/getXAdjust"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;Constraints.as"
+      debugline           114
+      getlocal0
+      pushscope
+
+      debugline           116
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scaleMode")
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ConstraintMode")
+      getproperty         QName(PackageNamespace(""), "REFLOW")
+      ifne                L14
+
+      debugline           118
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parentXAdjust")
+      returnvalue
+
+L14:
+      debugline           122
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parentXAdjust")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scope")
+      getproperty         QName(PackageNamespace(""), "scaleX")
+      divide
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getYAdjust")
+   method
+    name "_kiwi.Constraints:Constraints/getYAdjust"
+    refid "_kiwi.Constraints:Constraints/instance/getYAdjust"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;Constraints.as"
+      debugline           126
+      getlocal0
+      pushscope
+
+      debugline           128
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scaleMode")
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ConstraintMode")
+      getproperty         QName(PackageNamespace(""), "REFLOW")
+      ifne                L14
+
+      debugline           130
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parentYAdjust")
+      returnvalue
+
+L14:
+      debugline           134
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parentYAdjust")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scope")
+      getproperty         QName(PackageNamespace(""), "scaleY")
+      divide
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "update")
+   method
+    name "_kiwi.Constraints:Constraints/update"
+    refid "_kiwi.Constraints:Constraints/instance/update"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "name"
+    paramname "name"
+    body
+     maxstack 3
+     localcount 14
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;Constraints.as"
+      debugline           138
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal3
+
+      pushnan
+      setlocal            4
+
+      pushfalse
+      setlocal            5
+
+      pushnull
+      coerce_s
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+      setlocal            7
+
+      pushbyte            0
+      convert_u
+      setlocal            8
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            9
+
+      pushnan
+      setlocal            10
+
+      pushnan
+      setlocal            11
+
+      debug               1, "width", 0, 138
+      debug               1, "height", 1, 138
+      debugline           140
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "lastWidth")
+
+      debugline           141
+      getlocal0
+      getlocal2
+      initproperty        QName(PackageNamespace(""), "lastHeight")
+
+      debugline           143
+      getlocal0
+      callproperty        QName(PrivateNamespace("_kiwi.Constraints:Constraints"), "NumElements"), 0
+      pushbyte            0
+      ifeq                L397
+
+      debug               1, "xAdjust", 2, 145
+      debug               1, "yAdjust", 3, 146
+      debug               1, "counterScale", 4, 148
+      debug               1, "n", 5, 150
+      debugline           145
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "getXAdjust"), 0
+      convert_d
+      setlocal3
+
+      debugline           146
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "getYAdjust"), 0
+      convert_d
+      setlocal            4
+
+      debugline           148
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scaleMode")
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ConstraintMode")
+      getproperty         QName(PackageNamespace(""), "COUNTER_SCALE")
+      equals
+      setlocal            5
+
+      debugline           150
+      pushbyte            0
+      setlocal            12
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements")
+      coerce_a
+      setlocal            13
+
+      jump                L392
+
+L70:
+      label
+      getlocal            13
+      getlocal            12
+      nextname
+      coerce_s
+      setlocal            6
+
+      debug               1, "element", 6, 152
+      debug               1, "edges", 7, 153
+      debug               1, "clip", 8, 154
+      debugline           152
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements")
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Constraints:Constraints"), PackageNamespace(""), ProtectedNamespace("_kiwi.Constraints:Constraints"), PackageNamespace("_kiwi.Constraints"), PrivateNamespace("Constraints.as$88"), PackageInternalNs("_kiwi.Constraints"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Constraints:Constraints"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+      astypelate
+      coerce              QName(PackageNamespace("_kiwi.Constraints"), "ConstrainedElement")
+      setlocal            7
+
+      debugline           153
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "edges")
+      convert_u
+      setlocal            8
+
+      debugline           154
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "clip")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            9
+
+      debugline           156
+      getlocal            5
+      iffalse             L264
+
+      debugline           158
+      getlocal            9
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "scaleX")
+      getlocal3
+      multiply
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+      debugline           159
+      getlocal            9
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "scaleY")
+      getlocal            4
+      multiply
+      setproperty         QName(PackageNamespace(""), "scaleY")
+
+      debugline           161
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "CENTER_H")
+      bitand
+      pushbyte            0
+      ifne                L189
+
+      debugline           163
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "LEFT")
+      bitand
+      pushbyte            0
+      ifngt               L170
+
+      debugline           165
+      getlocal            9
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "left")
+      getlocal3
+      multiply
+      setproperty         QName(PackageNamespace(""), "x")
+
+      debugline           166
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "RIGHT")
+      bitand
+      pushbyte            0
+      ifngt               L169
+
+      debug               1, "nw", 9, 168
+      debugline           168
+      getlocal1
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "left")
+      subtract
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "right")
+      subtract
+      convert_d
+      setlocal            10
+
+      debugline           169
+      getlocal            9
+      getlex              QName(PackageNamespace("flash.text"), "TextField")
+      istypelate
+      iftrue              L165
+
+      debugline           171
+      getlocal            10
+      getlocal3
+      multiply
+      convert_d
+      setlocal            10
+
+L165:
+      debugline           174
+      getlocal            9
+      getlocal            10
+      setproperty         QName(PackageNamespace(""), "width")
+
+L169:
+      jump                L189
+
+L170:
+      debugline           177
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "RIGHT")
+      bitand
+      pushbyte            0
+      ifngt               L189
+
+      debugline           179
+      getlocal            9
+      getlocal1
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "right")
+      subtract
+      getlocal3
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+L189:
+      debugline           183
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "CENTER_V")
+      bitand
+      pushbyte            0
+      ifne                L263
+
+      debugline           185
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "TOP")
+      bitand
+      pushbyte            0
+      ifngt               L244
+
+      debugline           187
+      getlocal            9
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "top")
+      getlocal            4
+      multiply
+      setproperty         QName(PackageNamespace(""), "y")
+
+      debugline           188
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "BOTTOM")
+      bitand
+      pushbyte            0
+      ifngt               L243
+
+      debug               1, "nh", 10, 190
+      debugline           190
+      getlocal2
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "top")
+      subtract
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "bottom")
+      subtract
+      convert_d
+      setlocal            11
+
+      debugline           191
+      getlocal            9
+      getlex              QName(PackageNamespace("flash.text"), "TextField")
+      istypelate
+      iftrue              L239
+
+      debugline           193
+      getlocal            11
+      getlocal            4
+      multiply
+      convert_d
+      setlocal            11
+
+L239:
+      debugline           196
+      getlocal            9
+      getlocal            11
+      setproperty         QName(PackageNamespace(""), "height")
+
+L243:
+      jump                L263
+
+L244:
+      debugline           199
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "BOTTOM")
+      bitand
+      pushbyte            0
+      ifngt               L263
+
+      debugline           201
+      getlocal            9
+      getlocal2
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "bottom")
+      subtract
+      getlocal            4
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+L263:
+      jump                L364
+
+L264:
+      debugline           207
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "CENTER_H")
+      bitand
+      pushbyte            0
+      equals
+      dup
+      iffalse             L280
+
+      pop
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "RIGHT")
+      bitand
+      pushbyte            0
+      greaterthan
+L280:
+      iffalse             L309
+
+      debugline           209
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "LEFT")
+      bitand
+      pushbyte            0
+      ifngt               L299
+
+      debugline           211
+      getlocal            9
+      getlocal1
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "left")
+      subtract
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "right")
+      subtract
+      setproperty         QName(PackageNamespace(""), "width")
+
+      jump                L309
+
+L299:
+      debugline           215
+      getlocal            9
+      getlocal1
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "right")
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+L309:
+      debugline           219
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "CENTER_V")
+      bitand
+      pushbyte            0
+      equals
+      dup
+      iffalse             L325
+
+      pop
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "BOTTOM")
+      bitand
+      pushbyte            0
+      greaterthan
+L325:
+      iffalse             L354
+
+      debugline           221
+      getlocal            8
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      getproperty         QName(PackageNamespace(""), "TOP")
+      bitand
+      pushbyte            0
+      ifngt               L344
+
+      debugline           223
+      getlocal            9
+      getlocal2
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "top")
+      subtract
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "bottom")
+      subtract
+      setproperty         QName(PackageNamespace(""), "height")
+
+      jump                L354
+
+L344:
+      debugline           227
+      getlocal            9
+      getlocal2
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "bottom")
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+L354:
+      debugline           231
+      getlocal            9
+      getlex              QName(PackageNamespace("_kiwi.Core"), "UIComponent")
+      istypelate
+      iffalse             L364
+
+      debugline           233
+      getlocal            9
+      getlex              QName(PackageNamespace("_kiwi.Core"), "UIComponent")
+      astypelate
+      callpropvoid        QName(PackageNamespace(""), "validateNow"), 0
+
+L364:
+      debugline           237
+      getlocal            5
+      iftrue              L379
+
+      debugline           239
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scope")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parentXAdjust")
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+      debugline           240
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scope")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parentYAdjust")
+      setproperty         QName(PackageNamespace(""), "scaleY")
+
+L379:
+      debugline           243
+      findpropstrict      QName(PackageNamespace(""), "hasEventListener")
+      getlex              QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getproperty         QName(PackageNamespace(""), "RESIZE")
+      callproperty        QName(PackageNamespace(""), "hasEventListener"), 1
+      iffalse             L392
+
+      debugline           245
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getproperty         QName(PackageNamespace(""), "RESIZE")
+      constructprop       QName(PackageNamespace("fl.events"), "ComponentEvent"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L392:
+      debugline           150
+      hasnext2            13, 12
+      iftrue              L70
+
+      kill                13
+      kill                12
+L397:
+      debugline           249
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("_kiwi.Constraints:Constraints"), "NumElements")
+   method
+    name "_kiwi.Constraints:Constraints/private:NumElements"
+    refid "_kiwi.Constraints:Constraints/instance/_kiwi.Constraints:Constraints/instance/NumElements"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;Constraints.as"
+      debugline           251
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      debug               1, "result", 0, 253
+      debug               1, "k", 1, 254
+      debugline           253
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      debugline           254
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "elements")
+      coerce_a
+      setlocal            4
+
+      jump                L32
+
+L21:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_a
+      setlocal2
+
+      debugline           256
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L32:
+      debugline           254
+      hasnext2            4, 3
+      iftrue              L21
+
+      kill                4
+      kill                3
+      debugline           259
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "onScopeAdded")
+   method
+    name "_kiwi.Constraints:Constraints/protected:onScopeAdded"
+    refid "_kiwi.Constraints:Constraints/instance/_kiwi.Constraints:Constraints:onScopeAdded"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "name"
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;Constraints.as"
+      debugline           262
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 262
+      debugline           264
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "addToParentConstraints"), 0
+
+      debugline           265
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "addToParentConstraints")
+   method
+    name "_kiwi.Constraints:Constraints/protected:addToParentConstraints"
+    refid "_kiwi.Constraints:Constraints/instance/_kiwi.Constraints:Constraints:addToParentConstraints"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;Constraints.as"
+      debugline           267
+      getlocal0
+      pushscope
+
+      debug               1, "p", 0, 276
+      debugline           269
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "parentConstraints")
+      pushnull
+      ifeq                L18
+
+      debugline           271
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "parentConstraints")
+      getlex              QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getproperty         QName(PackageNamespace(""), "RESIZE")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "onParentResize")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+L18:
+      debugline           274
+      getlocal0
+      pushnull
+      initproperty        QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "parentConstraints")
+
+      debugline           276
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scope")
+      getproperty         QName(PackageNamespace(""), "parent")
+      coerce_a
+      setlocal1
+
+      debugline           278
+      getlocal1
+      pushnull
+      ifeq                L126
+
+      jump                L105
+
+L33:
+      label
+      debugline           282
+      getlocal1
+      pushstring          "constraints"
+      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("_kiwi.Constraints:Constraints"), PackageNamespace(""), ProtectedNamespace("_kiwi.Constraints:Constraints"), PackageNamespace("_kiwi.Constraints"), PrivateNamespace("Constraints.as$88"), PackageInternalNs("_kiwi.Constraints"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Constraints:Constraints"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      iffalse             L100
+
+      debugline           284
+      getlocal0
+      getlocal1
+      pushstring          "constraints"
+      getproperty         MultinameL([PrivateNamespace("_kiwi.Constraints:Constraints"), PackageNamespace(""), ProtectedNamespace("_kiwi.Constraints:Constraints"), PackageNamespace("_kiwi.Constraints"), PrivateNamespace("Constraints.as$88"), PackageInternalNs("_kiwi.Constraints"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Constraints:Constraints"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace("_kiwi.Constraints"), "Constraints")
+      astypelate
+      initproperty        QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "parentConstraints")
+
+      debugline           285
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "parentConstraints")
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L62
+
+      pop
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "parentConstraints")
+      getproperty         QName(PackageNamespace(""), "scaleMode")
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ConstraintMode")
+      getproperty         QName(PackageNamespace(""), "REFLOW")
+      equals
+L62:
+      iffalse             L65
+
+      debugline           287
+      returnvoid
+
+L65:
+      debugline           289
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "parentConstraints")
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L79
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "scaleMode")
+      getlex              QName(PackageNamespace("_kiwi.Constants"), "ConstraintMode")
+      getproperty         QName(PackageNamespace(""), "REFLOW")
+      equals
+L79:
+      iffalse             L82
+
+      debugline           291
+      returnvoid
+
+L82:
+      debugline           294
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "parentConstraints")
+      pushnull
+      ifeq                L100
+
+      debugline           296
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "parentConstraints")
+      getlex              QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getproperty         QName(PackageNamespace(""), "RESIZE")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "onParentResize")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           297
+      jump                L109
+
+L100:
+      debugline           301
+      getlocal1
+      getproperty         Multiname("parent", [PrivateNamespace("_kiwi.Constraints:Constraints"), PackageNamespace(""), ProtectedNamespace("_kiwi.Constraints:Constraints"), PackageNamespace("_kiwi.Constraints"), PrivateNamespace("Constraints.as$88"), PackageInternalNs("_kiwi.Constraints"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_kiwi.Constraints:Constraints"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_a
+      setlocal1
+
+L105:
+      debugline           280
+      getlocal1
+      pushnull
+      ifne                L33
+
+L109:
+      debugline           304
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "parentConstraints")
+      pushnull
+      ifeq                L126
+
+      debugline           306
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "parentConstraints")
+      callproperty        QName(PackageNamespace(""), "getXAdjust"), 0
+      initproperty        QName(PackageNamespace(""), "parentXAdjust")
+
+      debugline           307
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "parentConstraints")
+      callproperty        QName(PackageNamespace(""), "getYAdjust"), 0
+      initproperty        QName(PackageNamespace(""), "parentYAdjust")
+
+L126:
+      debugline           310
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_kiwi.Constraints:Constraints"), "onParentResize")
+   method
+    name "_kiwi.Constraints:Constraints/protected:onParentResize"
+    refid "_kiwi.Constraints:Constraints/instance/_kiwi.Constraints:Constraints:onParentResize"
+    param QName(PackageNamespace("fl.events"), "ComponentEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "name"
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constraints;Constraints.as"
+      debugline           312
+      getlocal0
+      pushscope
+
+      debug               1, "e", 0, 312
+      debugline           314
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "scaleX")
+      initproperty        QName(PackageNamespace(""), "parentXAdjust")
+
+      debugline           315
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "scaleY")
+      initproperty        QName(PackageNamespace(""), "parentYAdjust")
+
+      debugline           316
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "lastWidth")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "lastHeight")
+      callpropvoid        QName(PackageNamespace(""), "update"), 2
+
+      debugline           317
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "_kiwi.Constraints:Constraints/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "LEFT", 0, 23
+    findproperty        QName(PackageNamespace(""), "LEFT")
+    pushbyte            1
+    pushbyte            0
+    lshift
+    initproperty        QName(PackageNamespace(""), "LEFT")
+
+    debug               1, "RIGHT", 1, 24
+    findproperty        QName(PackageNamespace(""), "RIGHT")
+    pushbyte            1
+    dup
+    lshift
+    initproperty        QName(PackageNamespace(""), "RIGHT")
+
+    debug               1, "TOP", 2, 25
+    findproperty        QName(PackageNamespace(""), "TOP")
+    pushbyte            1
+    pushbyte            2
+    lshift
+    initproperty        QName(PackageNamespace(""), "TOP")
+
+    debug               1, "BOTTOM", 3, 26
+    findproperty        QName(PackageNamespace(""), "BOTTOM")
+    pushbyte            1
+    pushbyte            3
+    lshift
+    initproperty        QName(PackageNamespace(""), "BOTTOM")
+
+    debug               1, "ALL", 4, 27
+    findproperty        QName(PackageNamespace(""), "ALL")
+    getlex              QName(PackageNamespace(""), "LEFT")
+    getlex              QName(PackageNamespace(""), "RIGHT")
+    bitor
+    getlex              QName(PackageNamespace(""), "TOP")
+    bitor
+    getlex              QName(PackageNamespace(""), "BOTTOM")
+    bitor
+    setproperty         QName(PackageNamespace(""), "ALL")
+
+    debug               1, "CENTER_H", 5, 29
+    findproperty        QName(PackageNamespace(""), "CENTER_H")
+    pushbyte            1
+    pushbyte            4
+    lshift
+    initproperty        QName(PackageNamespace(""), "CENTER_H")
+
+    debug               1, "CENTER_V", 6, 30
+    findproperty        QName(PackageNamespace(""), "CENTER_V")
+    pushbyte            1
+    pushbyte            5
+    lshift
+    initproperty        QName(PackageNamespace(""), "CENTER_V")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "LEFT") slotid 1 type QName(PackageNamespace(""), "uint") end
+ trait const QName(PackageNamespace(""), "RIGHT") slotid 2 type QName(PackageNamespace(""), "uint") end
+ trait const QName(PackageNamespace(""), "TOP") slotid 3 type QName(PackageNamespace(""), "uint") end
+ trait const QName(PackageNamespace(""), "BOTTOM") slotid 4 type QName(PackageNamespace(""), "uint") end
+ trait slot QName(PackageNamespace(""), "ALL") slotid 5 type QName(PackageNamespace(""), "uint") end
+ trait const QName(PackageNamespace(""), "CENTER_H") slotid 6 type QName(PackageNamespace(""), "uint") end
+ trait const QName(PackageNamespace(""), "CENTER_V") slotid 7 type QName(PackageNamespace(""), "uint") end
+end ; class

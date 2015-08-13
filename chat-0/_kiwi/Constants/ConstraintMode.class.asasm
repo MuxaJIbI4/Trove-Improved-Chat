@@ -1,0 +1,58 @@
+class
+ refid "_kiwi.Constants:ConstraintMode"
+ instance QName(PackageNamespace("_kiwi.Constants"), "ConstraintMode")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_kiwi.Constants:ConstraintMode")
+  iinit
+   name "_kiwi.Constants:ConstraintMode/ConstraintMode"
+   refid "_kiwi.Constants:ConstraintMode/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;_kiwi\\Constants;ConstraintMode.as"
+     debugline           14
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "_kiwi.Constants:ConstraintMode/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "COUNTER_SCALE", 0, 9
+    findproperty        QName(PackageNamespace(""), "COUNTER_SCALE")
+    pushstring          "counter_scale"
+    initproperty        QName(PackageNamespace(""), "COUNTER_SCALE")
+
+    debug               1, "REFLOW", 1, 10
+    findproperty        QName(PackageNamespace(""), "REFLOW")
+    pushstring          "reflow"
+    initproperty        QName(PackageNamespace(""), "REFLOW")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "COUNTER_SCALE") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("counter_scale") end
+ trait const QName(PackageNamespace(""), "REFLOW") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("reflow") end
+end ; class

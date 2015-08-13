@@ -1,0 +1,41 @@
+class
+ refid "mx.core:IStateClient"
+ instance QName(PackageNamespace("mx.core"), "IStateClient")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.core:IStateClient/IStateClient"
+   refid "mx.core:IStateClient/instance/init"
+  end ; method
+  trait getter QName(Namespace("mx.core:IStateClient"), "currentState")
+   method
+    name "mx.core:IStateClient/mx.core:IStateClient:currentState/get"
+    refid "mx.core:IStateClient/instance/mx.core:IStateClient:currentState/getter"
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IStateClient"), "currentState")
+   method
+    name "mx.core:IStateClient/mx.core:IStateClient:currentState/set"
+    refid "mx.core:IStateClient/instance/mx.core:IStateClient:currentState/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IStateClient.as"
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:IStateClient/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

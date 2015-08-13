@@ -1,0 +1,94 @@
+class
+ refid "com.kiwi.Constants:InvalidationType"
+ instance QName(PackageNamespace("com.kiwi.Constants"), "InvalidationType")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.kiwi.Constants:InvalidationType")
+  iinit
+   name "com.kiwi.Constants:InvalidationType/InvalidationType"
+   refid "com.kiwi.Constants:InvalidationType/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;com\\kiwi\\Constants;InvalidationType.as"
+     debugline           20
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "com.kiwi.Constants:InvalidationType/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "ALL", 0, 9
+    findproperty        QName(PackageNamespace(""), "ALL")
+    pushstring          "all"
+    initproperty        QName(PackageNamespace(""), "ALL")
+
+    debug               1, "SIZE", 1, 10
+    findproperty        QName(PackageNamespace(""), "SIZE")
+    pushstring          "size"
+    initproperty        QName(PackageNamespace(""), "SIZE")
+
+    debug               1, "STATE", 2, 11
+    findproperty        QName(PackageNamespace(""), "STATE")
+    pushstring          "state"
+    initproperty        QName(PackageNamespace(""), "STATE")
+
+    debug               1, "DATA", 3, 12
+    findproperty        QName(PackageNamespace(""), "DATA")
+    pushstring          "data"
+    initproperty        QName(PackageNamespace(""), "DATA")
+
+    debug               1, "SETTINGS", 4, 13
+    findproperty        QName(PackageNamespace(""), "SETTINGS")
+    pushstring          "settings"
+    initproperty        QName(PackageNamespace(""), "SETTINGS")
+
+    debug               1, "RENDERERS", 5, 14
+    findproperty        QName(PackageNamespace(""), "RENDERERS")
+    pushstring          "renderers"
+    initproperty        QName(PackageNamespace(""), "RENDERERS")
+
+    debug               1, "SCROLL_BAR", 6, 15
+    findproperty        QName(PackageNamespace(""), "SCROLL_BAR")
+    pushstring          "scroll_bar"
+    initproperty        QName(PackageNamespace(""), "SCROLL_BAR")
+
+    debug               1, "SELECTED_INDEX", 7, 16
+    findproperty        QName(PackageNamespace(""), "SELECTED_INDEX")
+    pushstring          "selected_index"
+    initproperty        QName(PackageNamespace(""), "SELECTED_INDEX")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "ALL") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("all") end
+ trait const QName(PackageNamespace(""), "SIZE") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("size") end
+ trait const QName(PackageNamespace(""), "STATE") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("state") end
+ trait const QName(PackageNamespace(""), "DATA") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("data") end
+ trait const QName(PackageNamespace(""), "SETTINGS") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("settings") end
+ trait const QName(PackageNamespace(""), "RENDERERS") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("renderers") end
+ trait const QName(PackageNamespace(""), "SCROLL_BAR") slotid 7 type QName(PackageNamespace(""), "String") value Utf8("scroll_bar") end
+ trait const QName(PackageNamespace(""), "SELECTED_INDEX") slotid 8 type QName(PackageNamespace(""), "String") value Utf8("selected_index") end
+end ; class

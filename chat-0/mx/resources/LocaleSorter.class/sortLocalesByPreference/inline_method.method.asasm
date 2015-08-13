@@ -1,0 +1,43 @@
+method
+ name "mx.resources:LocaleSorter/sortLocalesByPreference/mx.resources:promote"
+ refid "mx.resources:LocaleSorter/class/sortLocalesByPreference/inline_method"
+ param QName(PackageNamespace(""), "String")
+ returns QName(PackageNamespace(""), "void")
+ flag HAS_PARAM_NAMES
+ paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+ body
+  maxstack 4
+  localcount 2
+  initscopedepth 4
+  maxscopedepth 4
+  code
+   debug               1, "locale", 0, 76
+   debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;LocaleSorter.as"
+   debugline           78
+   getlex              QName(PackageInternalNs("mx.resources"), "hasLocale")
+   getlocal1
+   getproperty         MultinameL([PrivateNamespace("mx.resources:LocaleSorter"), PackageInternalNs("mx.resources"), PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), PackageNamespace("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:LocaleSorter"), StaticProtectedNs("mx.resources:LocaleSorter"), StaticProtectedNs("Object")])
+   typeof
+   pushstring          "undefined"
+   ifeq                L22
+
+   debugline           80
+   getlex              QName(PackageInternalNs("mx.resources"), "result")
+   getlex              QName(PackageInternalNs("mx.resources"), "appLocales")
+   getlex              QName(PackageInternalNs("mx.resources"), "hasLocale")
+   getlocal1
+   getproperty         MultinameL([PrivateNamespace("mx.resources:LocaleSorter"), PackageInternalNs("mx.resources"), PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), PackageNamespace("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:LocaleSorter"), StaticProtectedNs("mx.resources:LocaleSorter"), StaticProtectedNs("Object")])
+   getproperty         MultinameL([PrivateNamespace("mx.resources:LocaleSorter"), PackageInternalNs("mx.resources"), PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), PackageNamespace("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:LocaleSorter"), StaticProtectedNs("mx.resources:LocaleSorter"), StaticProtectedNs("Object")])
+   callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+   debugline           81
+   getlex              QName(PackageInternalNs("mx.resources"), "hasLocale")
+   getlocal1
+   deleteproperty      MultinameL([PrivateNamespace("mx.resources:LocaleSorter"), PackageInternalNs("mx.resources"), PrivateNamespace("LocaleSorter.as$133"), PackageNamespace(""), PackageNamespace("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:LocaleSorter"), StaticProtectedNs("mx.resources:LocaleSorter"), StaticProtectedNs("Object")])
+   pop
+L22:
+   debugline           83
+   returnvoid
+  end ; code
+ end ; body
+end ; method

@@ -1,0 +1,34 @@
+script ; 29
+ sinit
+  name ""
+  refid "mx.geom:CompoundTransform/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;CompoundTransform.as"
+    debugline           33
+    findpropstrict      Multiname("CompoundTransform", [PackageNamespace("mx.geom")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.geom:CompoundTransform"
+    popscope
+    initproperty        QName(PackageNamespace("mx.geom"), "CompoundTransform")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/geom;CompoundTransform.as"
+    debugline           11
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.geom"), "CompoundTransform")
+  #include "CompoundTransform.class.asasm"
+ end ; trait
+end ; script

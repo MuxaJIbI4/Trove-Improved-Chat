@@ -1,0 +1,947 @@
+class
+ refid "fl.controls:BaseButton"
+ instance QName(PackageNamespace("fl.controls"), "BaseButton")
+  extends QName(PackageNamespace("fl.core"), "UIComponent")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls:BaseButton")
+  iinit
+   name "fl.controls:BaseButton/BaseButton"
+   refid "fl.controls:BaseButton/instance/init"
+   body
+    maxstack 6
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+     debugline           344
+     getlocal0
+     pushscope
+
+     debugline           345
+     getlocal0
+     constructsuper      0
+
+     debugline           347
+     findproperty        QName(PackageNamespace(""), "buttonMode")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "buttonMode")
+
+     debugline           348
+     findproperty        QName(PackageNamespace(""), "mouseChildren")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "mouseChildren")
+
+     debugline           349
+     findproperty        QName(PackageNamespace(""), "useHandCursor")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "useHandCursor")
+
+     debugline           351
+     getlocal0
+     callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "setupMouseEvents"), 0
+
+     debugline           352
+     getlocal0
+     pushstring          "up"
+     callpropvoid        QName(PackageNamespace(""), "setMouseState"), 1
+
+     debugline           354
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+     pushbyte            1
+     pushbyte            0
+     constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
+     initproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+
+     debugline           355
+     getlocal0
+     getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+     getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+     getproperty         QName(PackageNamespace(""), "TIMER")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "buttonDown")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     debugline           356
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("fl.controls:BaseButton"), "background") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait slot QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseState") type QName(PackageNamespace(""), "String") end
+  trait slot QName(ProtectedNamespace("fl.controls:BaseButton"), "_selected") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("fl.controls:BaseButton"), "_autoRepeat") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait slot QName(PrivateNamespace("fl.controls:BaseButton"), "_mouseStateLocked") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("fl.controls:BaseButton"), "unlockedMouseState") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    name "fl.controls:BaseButton/enabled/get"
+    refid "fl.controls:BaseButton/instance/enabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           379
+      getlocal0
+      pushscope
+
+      debugline           380
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "enabled")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    name "fl.controls:BaseButton/enabled/set"
+    refid "fl.controls:BaseButton/instance/enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "selectedOverSkin"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           389
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 389
+      debugline           390
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "enabled")
+
+      debugline           391
+      findproperty        QName(PackageNamespace(""), "mouseEnabled")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "mouseEnabled")
+
+      debugline           392
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selected")
+   method
+    name "fl.controls:BaseButton/selected/get"
+    refid "fl.controls:BaseButton/instance/selected/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           424
+      getlocal0
+      pushscope
+
+      debugline           425
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "_selected")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selected")
+   method
+    name "fl.controls:BaseButton/selected/set"
+    refid "fl.controls:BaseButton/instance/selected/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "selectedOverSkin"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           434
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 434
+      debugline           435
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "_selected")
+      getlocal1
+      ifne                L11
+
+      returnvoid
+
+L11:
+      debugline           436
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "_selected")
+
+      debugline           437
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      debugline           438
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "autoRepeat")
+   method
+    name "fl.controls:BaseButton/autoRepeat/get"
+    refid "fl.controls:BaseButton/instance/autoRepeat/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           466
+      getlocal0
+      pushscope
+
+      debugline           467
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "_autoRepeat")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "autoRepeat")
+   method
+    name "fl.controls:BaseButton/autoRepeat/set"
+    refid "fl.controls:BaseButton/instance/autoRepeat/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "selectedOverSkin"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           476
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 476
+      debugline           477
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "_autoRepeat")
+
+      debugline           478
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "mouseStateLocked")
+   method
+    name "fl.controls:BaseButton/mouseStateLocked/set"
+    refid "fl.controls:BaseButton/instance/mouseStateLocked/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "selectedOverSkin"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           486
+      getlocal0
+      pushscope
+
+      debug               1, "value", 0, 486
+      debugline           487
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("fl.controls:BaseButton"), "_mouseStateLocked")
+
+      debugline           488
+      getlocal1
+      pushfalse
+      ifne                L18
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.controls:BaseButton"), "unlockedMouseState")
+      callpropvoid        QName(PackageNamespace(""), "setMouseState"), 1
+
+      jump                L23
+
+L18:
+      debugline           489
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseState")
+      initproperty        QName(PrivateNamespace("fl.controls:BaseButton"), "unlockedMouseState")
+
+L23:
+      debugline           490
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setMouseState")
+   method
+    name "fl.controls:BaseButton/setMouseState"
+    refid "fl.controls:BaseButton/instance/setMouseState"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "selectedOverSkin"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           507
+      getlocal0
+      pushscope
+
+      debug               1, "state", 0, 507
+      debugline           508
+      getlocal0
+      getproperty         QName(PrivateNamespace("fl.controls:BaseButton"), "_mouseStateLocked")
+      iffalse             L13
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("fl.controls:BaseButton"), "unlockedMouseState")
+
+      returnvoid
+
+L13:
+      debugline           509
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseState")
+      getlocal1
+      ifne                L19
+
+      returnvoid
+
+L19:
+      debugline           510
+      getlocal0
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseState")
+
+      debugline           511
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      debugline           512
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "setupMouseEvents")
+   method
+    name "fl.controls:BaseButton/protected:setupMouseEvents"
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:setupMouseEvents"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           524
+      getlocal0
+      pushscope
+
+      debugline           525
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OVER")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseEventHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           526
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseEventHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           527
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_UP")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseEventHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           528
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OUT")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseEventHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      debugline           529
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseEventHandler")
+   method
+    name "fl.controls:BaseButton/protected:mouseEventHandler"
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:mouseEventHandler"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "selectedOverSkin"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           537
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 537
+      debugline           538
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      ifne                L19
+
+      debugline           539
+      getlocal0
+      pushstring          "down"
+      callpropvoid        QName(PackageNamespace(""), "setMouseState"), 1
+
+      debugline           540
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "startPress"), 0
+
+      jump                L55
+
+L19:
+      debugline           541
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OVER")
+      equals
+      dup
+      iftrue              L33
+
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_UP")
+      equals
+L33:
+      iffalse             L42
+
+      debugline           542
+      getlocal0
+      pushstring          "over"
+      callpropvoid        QName(PackageNamespace(""), "setMouseState"), 1
+
+      debugline           543
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "endPress"), 0
+
+      jump                L55
+
+L42:
+      debugline           544
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OUT")
+      ifne                L55
+
+      debugline           545
+      getlocal0
+      pushstring          "up"
+      callpropvoid        QName(PackageNamespace(""), "setMouseState"), 1
+
+      debugline           546
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "endPress"), 0
+
+L55:
+      debugline           548
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "startPress")
+   method
+    name "fl.controls:BaseButton/protected:startPress"
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:startPress"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           556
+      getlocal0
+      pushscope
+
+      debugline           557
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "_autoRepeat")
+      iffalse             L21
+
+      debugline           558
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "repeatDelay"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      setproperty         QName(PackageNamespace(""), "delay")
+
+      debugline           559
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+L21:
+      debugline           561
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getproperty         QName(PackageNamespace(""), "BUTTON_DOWN")
+      pushtrue
+      constructprop       QName(PackageNamespace("fl.events"), "ComponentEvent"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           562
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "buttonDown")
+   method
+    name "fl.controls:BaseButton/protected:buttonDown"
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:buttonDown"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "selectedOverSkin"
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           570
+      getlocal0
+      pushscope
+
+      debug               1, "event", 0, 570
+      debugline           571
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "_autoRepeat")
+      iftrue              L12
+
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "endPress"), 0
+
+      returnvoid
+
+L12:
+      debugline           572
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+      getproperty         QName(PackageNamespace(""), "currentCount")
+      pushbyte            1
+      ifne                L26
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "repeatInterval"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      setproperty         QName(PackageNamespace(""), "delay")
+
+L26:
+      debugline           573
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getproperty         QName(PackageNamespace(""), "BUTTON_DOWN")
+      pushtrue
+      constructprop       QName(PackageNamespace("fl.events"), "ComponentEvent"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      debugline           574
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "endPress")
+   method
+    name "fl.controls:BaseButton/protected:endPress"
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:endPress"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           582
+      getlocal0
+      pushscope
+
+      debugline           583
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+      callpropvoid        QName(PackageNamespace(""), "reset"), 0
+
+      debugline           584
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "draw") flag OVERRIDE
+   method
+    name "fl.controls:BaseButton/protected:draw"
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           592
+      getlocal0
+      pushscope
+
+      debugline           593
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid"), 2
+      iffalse             L21
+
+      debugline           594
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "drawBackground"), 0
+
+      debugline           595
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 2
+
+L21:
+      debugline           597
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid"), 1
+      iffalse             L30
+
+      debugline           598
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "drawLayout"), 0
+
+L30:
+      debugline           600
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "draw"), 0
+      debugline           601
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "drawBackground")
+   method
+    name "fl.controls:BaseButton/protected:drawBackground"
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:drawBackground"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           609
+      getlocal0
+      pushscope
+
+      debug               1, "styleName", 0, 610
+      debug               1, "bg", 1, 613
+      debugline           610
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "enabled")
+      iffalse             L14
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseState")
+      coerce_s
+      jump                L15
+
+L14:
+      pushstring          "disabled"
+L15:
+      coerce_s
+      setlocal1
+
+      debugline           611
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "selected")
+      iffalse             L34
+
+      pushstring          "selected"
+      getlocal1
+      pushbyte            0
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toUpperCase"), 0
+      add
+      getlocal1
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      add
+      coerce_s
+      setlocal1
+
+L34:
+      debugline           612
+      getlocal1
+      pushstring          "Skin"
+      add
+      setlocal1
+
+      debugline           613
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "background")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      debugline           614
+      getlocal0
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      getlocal1
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance"), 1
+      initproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "background")
+
+      debugline           615
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "background")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      debugline           616
+      getlocal2
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L71
+
+      pop
+      getlocal2
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "background")
+      equals
+      not
+L71:
+      iffalse             L75
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L75:
+      debugline           617
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "drawLayout")
+   method
+    name "fl.controls:BaseButton/protected:drawLayout"
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:drawLayout"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+      debugline           625
+      getlocal0
+      pushscope
+
+      debugline           626
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "background")
+      getlex              QName(PackageNamespace(""), "width")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      debugline           627
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.controls:BaseButton"), "background")
+      getlex              QName(PackageNamespace(""), "height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      debugline           628
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "fl.controls:BaseButton/class/init"
+  body
+   maxstack 25
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "defaultStyles", 0, 307
+    findproperty        QName(PrivateNamespace("fl.controls:BaseButton"), "defaultStyles")
+    pushstring          "upSkin"
+    pushstring          "Button_upSkin"
+    pushstring          "downSkin"
+    pushstring          "Button_downSkin"
+    pushstring          "overSkin"
+    pushstring          "Button_overSkin"
+    pushstring          "disabledSkin"
+    pushstring          "Button_disabledSkin"
+    pushstring          "selectedDisabledSkin"
+    pushstring          "Button_selectedDisabledSkin"
+    pushstring          "selectedUpSkin"
+    pushstring          "Button_selectedUpSkin"
+    pushstring          "selectedDownSkin"
+    pushstring          "Button_selectedDownSkin"
+    pushstring          "selectedOverSkin"
+    pushstring          "Button_selectedOverSkin"
+    pushstring          "focusRectSkin"
+    pushnull
+    pushstring          "focusRectPadding"
+    pushnull
+    pushstring          "repeatDelay"
+    pushshort           500
+    pushstring          "repeatInterval"
+    pushbyte            35
+    newobject           12
+    setproperty         QName(PrivateNamespace("fl.controls:BaseButton"), "defaultStyles")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("fl.controls:BaseButton"), "defaultStyles") slotid 1 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "getStyleDefinition") flag FINAL dispid 3
+  method
+   name "fl.controls:BaseButton/getStyleDefinition"
+   refid "fl.controls:BaseButton/class/getStyleDefinition"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     debugfile           "C:\\Program Files (x86)\\Adobe\\Adobe Flash CS5.5\\Common\\Configuration\\Component Source\\ActionScript 3.0\\User Interface;fl\\controls;BaseButton.as"
+     debugline           329
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace("fl.controls:BaseButton"), "defaultStyles")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

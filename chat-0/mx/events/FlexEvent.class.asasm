@@ -1,0 +1,344 @@
+class
+ refid "mx.events:FlexEvent"
+ instance QName(PackageNamespace("mx.events"), "FlexEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.events:FlexEvent")
+  iinit
+   name "mx.events:FlexEvent/FlexEvent"
+   refid "mx.events:FlexEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   flag HAS_PARAM_NAMES
+   optional False()
+   optional False()
+   paramname null
+   paramname null
+   paramname null
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;FlexEvent.as"
+     debugline           1178
+     getlocal0
+     pushscope
+
+     debug               1, "type", 0, 1178
+     debug               1, "bubbles", 1, 1178
+     debug               1, "cancelable", 2, 1178
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;FlexEvent.as"
+     debugline           1181
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     debugline           1182
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    name "mx.events:FlexEvent/clone"
+    refid "mx.events:FlexEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/events;FlexEvent.as"
+      debugline           1193
+      getlocal0
+      pushscope
+
+      debugline           1195
+      findpropstrict      QName(PackageNamespace("mx.events"), "FlexEvent")
+      getlex              QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace(""), "bubbles")
+      getlex              QName(PackageNamespace(""), "cancelable")
+      constructprop       QName(PackageNamespace("mx.events"), "FlexEvent"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.events:FlexEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 18
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "ADD", 1, 65
+    findproperty        QName(PackageNamespace(""), "ADD")
+    pushstring          "add"
+    initproperty        QName(PackageNamespace(""), "ADD")
+
+    debug               1, "ADD_FOCUS_MANAGER", 2, 95
+    findproperty        QName(PackageNamespace(""), "ADD_FOCUS_MANAGER")
+    pushstring          "addFocusManager"
+    initproperty        QName(PackageNamespace(""), "ADD_FOCUS_MANAGER")
+
+    debug               1, "APPLICATION_COMPLETE", 3, 123
+    findproperty        QName(PackageNamespace(""), "APPLICATION_COMPLETE")
+    pushstring          "applicationComplete"
+    initproperty        QName(PackageNamespace(""), "APPLICATION_COMPLETE")
+
+    debug               1, "BUTTON_DOWN", 4, 151
+    findproperty        QName(PackageNamespace(""), "BUTTON_DOWN")
+    pushstring          "buttonDown"
+    initproperty        QName(PackageNamespace(""), "BUTTON_DOWN")
+
+    debug               1, "CHANGE_END", 5, 179
+    findproperty        QName(PackageNamespace(""), "CHANGE_END")
+    pushstring          "changeEnd"
+    initproperty        QName(PackageNamespace(""), "CHANGE_END")
+
+    debug               1, "CHANGE_START", 6, 207
+    findproperty        QName(PackageNamespace(""), "CHANGE_START")
+    pushstring          "changeStart"
+    initproperty        QName(PackageNamespace(""), "CHANGE_START")
+
+    debug               1, "CHANGING", 7, 235
+    findproperty        QName(PackageNamespace(""), "CHANGING")
+    pushstring          "changing"
+    initproperty        QName(PackageNamespace(""), "CHANGING")
+
+    debug               1, "CREATION_COMPLETE", 8, 263
+    findproperty        QName(PackageNamespace(""), "CREATION_COMPLETE")
+    pushstring          "creationComplete"
+    initproperty        QName(PackageNamespace(""), "CREATION_COMPLETE")
+
+    debug               1, "CONTENT_CREATION_COMPLETE", 9, 291
+    findproperty        QName(PackageNamespace(""), "CONTENT_CREATION_COMPLETE")
+    pushstring          "contentCreationComplete"
+    initproperty        QName(PackageNamespace(""), "CONTENT_CREATION_COMPLETE")
+
+    debug               1, "CURSOR_UPDATE", 10, 320
+    findproperty        QName(PackageNamespace(""), "CURSOR_UPDATE")
+    pushstring          "cursorUpdate"
+    initproperty        QName(PackageNamespace(""), "CURSOR_UPDATE")
+
+    debug               1, "DATA_CHANGE", 11, 348
+    findproperty        QName(PackageNamespace(""), "DATA_CHANGE")
+    pushstring          "dataChange"
+    initproperty        QName(PackageNamespace(""), "DATA_CHANGE")
+
+    debug               1, "ENTER", 12, 376
+    findproperty        QName(PackageNamespace(""), "ENTER")
+    pushstring          "enter"
+    initproperty        QName(PackageNamespace(""), "ENTER")
+
+    debug               1, "ENTER_FRAME", 13, 394
+    findproperty        QName(PackageNamespace(""), "ENTER_FRAME")
+    pushstring          "flexEventEnterFrame"
+    initproperty        QName(PackageNamespace(""), "ENTER_FRAME")
+
+    debug               1, "ENTER_STATE", 14, 425
+    findproperty        QName(PackageNamespace(""), "ENTER_STATE")
+    pushstring          "enterState"
+    initproperty        QName(PackageNamespace(""), "ENTER_STATE")
+
+    debug               1, "EXIT_STATE", 15, 456
+    findproperty        QName(PackageNamespace(""), "EXIT_STATE")
+    pushstring          "exitState"
+    initproperty        QName(PackageNamespace(""), "EXIT_STATE")
+
+    debug               1, "FLEX_WINDOW_ACTIVATE", 16, 490
+    findproperty        QName(PackageNamespace(""), "FLEX_WINDOW_ACTIVATE")
+    pushstring          "flexWindowActivate"
+    initproperty        QName(PackageNamespace(""), "FLEX_WINDOW_ACTIVATE")
+
+    debug               1, "FLEX_WINDOW_DEACTIVATE", 17, 524
+    findproperty        QName(PackageNamespace(""), "FLEX_WINDOW_DEACTIVATE")
+    pushstring          "flexWindowDeactivate"
+    initproperty        QName(PackageNamespace(""), "FLEX_WINDOW_DEACTIVATE")
+
+    debug               1, "HIDE", 18, 552
+    findproperty        QName(PackageNamespace(""), "HIDE")
+    pushstring          "hide"
+    initproperty        QName(PackageNamespace(""), "HIDE")
+
+    debug               1, "IDLE", 19, 580
+    findproperty        QName(PackageNamespace(""), "IDLE")
+    pushstring          "idle"
+    initproperty        QName(PackageNamespace(""), "IDLE")
+
+    debug               1, "INIT_COMPLETE", 20, 628
+    findproperty        QName(PackageNamespace(""), "INIT_COMPLETE")
+    pushstring          "initComplete"
+    initproperty        QName(PackageNamespace(""), "INIT_COMPLETE")
+
+    debug               1, "INIT_PROGRESS", 21, 663
+    findproperty        QName(PackageNamespace(""), "INIT_PROGRESS")
+    pushstring          "initProgress"
+    initproperty        QName(PackageNamespace(""), "INIT_PROGRESS")
+
+    debug               1, "INITIALIZE", 22, 691
+    findproperty        QName(PackageNamespace(""), "INITIALIZE")
+    pushstring          "initialize"
+    initproperty        QName(PackageNamespace(""), "INITIALIZE")
+
+    debug               1, "INVALID", 23, 719
+    findproperty        QName(PackageNamespace(""), "INVALID")
+    pushstring          "invalid"
+    initproperty        QName(PackageNamespace(""), "INVALID")
+
+    debug               1, "LOADING", 24, 748
+    findproperty        QName(PackageNamespace(""), "LOADING")
+    pushstring          "loading"
+    initproperty        QName(PackageNamespace(""), "LOADING")
+
+    debug               1, "MUTED_CHANGE", 25, 776
+    findproperty        QName(PackageNamespace(""), "MUTED_CHANGE")
+    pushstring          "mutedChange"
+    initproperty        QName(PackageNamespace(""), "MUTED_CHANGE")
+
+    debug               1, "NEW_CHILD_APPLICATION", 26, 781
+    findproperty        QName(PackageNamespace(""), "NEW_CHILD_APPLICATION")
+    pushstring          "newChildApplication"
+    initproperty        QName(PackageNamespace(""), "NEW_CHILD_APPLICATION")
+
+    debug               1, "PREINITIALIZE", 27, 809
+    findproperty        QName(PackageNamespace(""), "PREINITIALIZE")
+    pushstring          "preinitialize"
+    initproperty        QName(PackageNamespace(""), "PREINITIALIZE")
+
+    debug               1, "PRELOADER_DONE", 28, 814
+    findproperty        QName(PackageNamespace(""), "PRELOADER_DONE")
+    pushstring          "preloaderDone"
+    initproperty        QName(PackageNamespace(""), "PRELOADER_DONE")
+
+    debug               1, "PRELOADER_DOC_FRAME_READY", 29, 819
+    findproperty        QName(PackageNamespace(""), "PRELOADER_DOC_FRAME_READY")
+    pushstring          "preloaderDocFrameReady"
+    initproperty        QName(PackageNamespace(""), "PRELOADER_DOC_FRAME_READY")
+
+    debug               1, "RENDER", 30, 837
+    findproperty        QName(PackageNamespace(""), "RENDER")
+    pushstring          "flexEventRender"
+    initproperty        QName(PackageNamespace(""), "RENDER")
+
+    debug               1, "REMOVE", 31, 868
+    findproperty        QName(PackageNamespace(""), "REMOVE")
+    pushstring          "remove"
+    initproperty        QName(PackageNamespace(""), "REMOVE")
+
+    debug               1, "REPEAT", 32, 896
+    findproperty        QName(PackageNamespace(""), "REPEAT")
+    pushstring          "repeat"
+    initproperty        QName(PackageNamespace(""), "REPEAT")
+
+    debug               1, "REPEAT_END", 33, 924
+    findproperty        QName(PackageNamespace(""), "REPEAT_END")
+    pushstring          "repeatEnd"
+    initproperty        QName(PackageNamespace(""), "REPEAT_END")
+
+    debug               1, "REPEAT_START", 34, 952
+    findproperty        QName(PackageNamespace(""), "REPEAT_START")
+    pushstring          "repeatStart"
+    initproperty        QName(PackageNamespace(""), "REPEAT_START")
+
+    debug               1, "SELECTION_CHANGE", 35, 980
+    findproperty        QName(PackageNamespace(""), "SELECTION_CHANGE")
+    pushstring          "selectionChange"
+    initproperty        QName(PackageNamespace(""), "SELECTION_CHANGE")
+
+    debug               1, "SHOW", 36, 1008
+    findproperty        QName(PackageNamespace(""), "SHOW")
+    pushstring          "show"
+    initproperty        QName(PackageNamespace(""), "SHOW")
+
+    debug               1, "TRANSFORM_CHANGE", 37, 1036
+    findproperty        QName(PackageNamespace(""), "TRANSFORM_CHANGE")
+    pushstring          "transformChange"
+    initproperty        QName(PackageNamespace(""), "TRANSFORM_CHANGE")
+
+    debug               1, "UPDATE_COMPLETE", 38, 1067
+    findproperty        QName(PackageNamespace(""), "UPDATE_COMPLETE")
+    pushstring          "updateComplete"
+    initproperty        QName(PackageNamespace(""), "UPDATE_COMPLETE")
+
+    debug               1, "URL_CHANGED", 39, 1096
+    findproperty        QName(PackageNamespace(""), "URL_CHANGED")
+    pushstring          "urlChanged"
+    initproperty        QName(PackageNamespace(""), "URL_CHANGED")
+
+    debug               1, "VALID", 40, 1124
+    findproperty        QName(PackageNamespace(""), "VALID")
+    pushstring          "valid"
+    initproperty        QName(PackageNamespace(""), "VALID")
+
+    debug               1, "VALUE_COMMIT", 41, 1153
+    findproperty        QName(PackageNamespace(""), "VALUE_COMMIT")
+    pushstring          "valueCommit"
+    initproperty        QName(PackageNamespace(""), "VALUE_COMMIT")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait const QName(PackageNamespace(""), "ADD") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("add") end
+ trait const QName(PackageNamespace(""), "ADD_FOCUS_MANAGER") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("addFocusManager") end
+ trait const QName(PackageNamespace(""), "APPLICATION_COMPLETE") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("applicationComplete") end
+ trait const QName(PackageNamespace(""), "BUTTON_DOWN") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("buttonDown") end
+ trait const QName(PackageNamespace(""), "CHANGE_END") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("changeEnd") end
+ trait const QName(PackageNamespace(""), "CHANGE_START") slotid 7 type QName(PackageNamespace(""), "String") value Utf8("changeStart") end
+ trait const QName(PackageNamespace(""), "CHANGING") slotid 8 type QName(PackageNamespace(""), "String") value Utf8("changing") end
+ trait const QName(PackageNamespace(""), "CREATION_COMPLETE") slotid 9 type QName(PackageNamespace(""), "String") value Utf8("creationComplete") end
+ trait const QName(PackageNamespace(""), "CONTENT_CREATION_COMPLETE") slotid 10 type QName(PackageNamespace(""), "String") value Utf8("contentCreationComplete") end
+ trait const QName(PackageNamespace(""), "CURSOR_UPDATE") slotid 11 type QName(PackageNamespace(""), "String") value Utf8("cursorUpdate") end
+ trait const QName(PackageNamespace(""), "DATA_CHANGE") slotid 12 type QName(PackageNamespace(""), "String") value Utf8("dataChange") end
+ trait const QName(PackageNamespace(""), "ENTER") slotid 13 type QName(PackageNamespace(""), "String") value Utf8("enter") end
+ trait const QName(PackageNamespace(""), "ENTER_FRAME") slotid 14 type QName(PackageNamespace(""), "String") value Utf8("flexEventEnterFrame") end
+ trait const QName(PackageNamespace(""), "ENTER_STATE") slotid 15 type QName(PackageNamespace(""), "String") value Utf8("enterState") end
+ trait const QName(PackageNamespace(""), "EXIT_STATE") slotid 16 type QName(PackageNamespace(""), "String") value Utf8("exitState") end
+ trait const QName(PackageNamespace(""), "FLEX_WINDOW_ACTIVATE") slotid 17 type QName(PackageNamespace(""), "String") value Utf8("flexWindowActivate") end
+ trait const QName(PackageNamespace(""), "FLEX_WINDOW_DEACTIVATE") slotid 18 type QName(PackageNamespace(""), "String") value Utf8("flexWindowDeactivate") end
+ trait const QName(PackageNamespace(""), "HIDE") slotid 19 type QName(PackageNamespace(""), "String") value Utf8("hide") end
+ trait const QName(PackageNamespace(""), "IDLE") slotid 20 type QName(PackageNamespace(""), "String") value Utf8("idle") end
+ trait const QName(PackageNamespace(""), "INIT_COMPLETE") slotid 21 type QName(PackageNamespace(""), "String") value Utf8("initComplete") end
+ trait const QName(PackageNamespace(""), "INIT_PROGRESS") slotid 22 type QName(PackageNamespace(""), "String") value Utf8("initProgress") end
+ trait const QName(PackageNamespace(""), "INITIALIZE") slotid 23 type QName(PackageNamespace(""), "String") value Utf8("initialize") end
+ trait const QName(PackageNamespace(""), "INVALID") slotid 24 type QName(PackageNamespace(""), "String") value Utf8("invalid") end
+ trait const QName(PackageNamespace(""), "LOADING") slotid 25 type QName(PackageNamespace(""), "String") value Utf8("loading") end
+ trait const QName(PackageNamespace(""), "MUTED_CHANGE") slotid 26 type QName(PackageNamespace(""), "String") value Utf8("mutedChange") end
+ trait const QName(PackageNamespace(""), "NEW_CHILD_APPLICATION") slotid 27 type QName(PackageNamespace(""), "String") value Utf8("newChildApplication") end
+ trait const QName(PackageNamespace(""), "PREINITIALIZE") slotid 28 type QName(PackageNamespace(""), "String") value Utf8("preinitialize") end
+ trait const QName(PackageNamespace(""), "PRELOADER_DONE") slotid 29 type QName(PackageNamespace(""), "String") value Utf8("preloaderDone") end
+ trait const QName(PackageNamespace(""), "PRELOADER_DOC_FRAME_READY") slotid 30 type QName(PackageNamespace(""), "String") value Utf8("preloaderDocFrameReady") end
+ trait const QName(PackageNamespace(""), "RENDER") slotid 31 type QName(PackageNamespace(""), "String") value Utf8("flexEventRender") end
+ trait const QName(PackageNamespace(""), "REMOVE") slotid 32 type QName(PackageNamespace(""), "String") value Utf8("remove") end
+ trait const QName(PackageNamespace(""), "REPEAT") slotid 33 type QName(PackageNamespace(""), "String") value Utf8("repeat") end
+ trait const QName(PackageNamespace(""), "REPEAT_END") slotid 34 type QName(PackageNamespace(""), "String") value Utf8("repeatEnd") end
+ trait const QName(PackageNamespace(""), "REPEAT_START") slotid 35 type QName(PackageNamespace(""), "String") value Utf8("repeatStart") end
+ trait const QName(PackageNamespace(""), "SELECTION_CHANGE") slotid 36 type QName(PackageNamespace(""), "String") value Utf8("selectionChange") end
+ trait const QName(PackageNamespace(""), "SHOW") slotid 37 type QName(PackageNamespace(""), "String") value Utf8("show") end
+ trait const QName(PackageNamespace(""), "TRANSFORM_CHANGE") slotid 38 type QName(PackageNamespace(""), "String") value Utf8("transformChange") end
+ trait const QName(PackageNamespace(""), "UPDATE_COMPLETE") slotid 39 type QName(PackageNamespace(""), "String") value Utf8("updateComplete") end
+ trait const QName(PackageNamespace(""), "URL_CHANGED") slotid 40 type QName(PackageNamespace(""), "String") value Utf8("urlChanged") end
+ trait const QName(PackageNamespace(""), "VALID") slotid 41 type QName(PackageNamespace(""), "String") value Utf8("valid") end
+ trait const QName(PackageNamespace(""), "VALUE_COMMIT") slotid 42 type QName(PackageNamespace(""), "String") value Utf8("valueCommit") end
+end ; class

@@ -1,0 +1,31 @@
+class
+ refid "mx.resources:IResourceModule"
+ instance QName(PackageNamespace("mx.resources"), "IResourceModule")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.resources:IResourceModule/IResourceModule"
+   refid "mx.resources:IResourceModule/instance/init"
+  end ; method
+  trait getter QName(Namespace("mx.resources:IResourceModule"), "resourceBundles")
+   method
+    name "mx.resources:IResourceModule/mx.resources:IResourceModule:resourceBundles/get"
+    refid "mx.resources:IResourceModule/instance/mx.resources:IResourceModule:resourceBundles/getter"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.resources:IResourceModule/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

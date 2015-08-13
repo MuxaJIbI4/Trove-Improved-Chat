@@ -1,0 +1,209 @@
+class
+ refid "mx.core:IVisualElement"
+ instance QName(PackageNamespace("mx.core"), "IVisualElement")
+  implements Multiname("ILayoutElement", [PackageNamespace("mx.core")])
+  flag SEALED
+  flag INTERFACE
+  iinit
+   name "mx.core:IVisualElement/IVisualElement"
+   refid "mx.core:IVisualElement/instance/init"
+  end ; method
+  trait getter QName(Namespace("mx.core:IVisualElement"), "owner")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:owner/get"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:owner/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IVisualElement"), "owner")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:owner/set"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:owner/setter"
+    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IVisualElement"), "parent")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:parent/get"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:parent/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IVisualElement"), "depth")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:depth/get"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:depth/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IVisualElement"), "depth")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:depth/set"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:depth/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IVisualElement"), "visible")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:visible/get"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:visible/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IVisualElement"), "visible")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:visible/set"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:visible/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IVisualElement"), "alpha")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:alpha/get"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:alpha/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IVisualElement"), "alpha")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:alpha/set"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:alpha/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IVisualElement"), "width")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:width/get"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:width/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IVisualElement"), "width")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:width/set"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:width/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IVisualElement"), "height")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:height/get"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:height/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IVisualElement"), "height")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:height/set"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:height/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IVisualElement"), "x")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:x/get"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:x/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IVisualElement"), "x")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:x/set"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:x/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IVisualElement"), "y")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:y/get"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:y/getter"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IVisualElement"), "y")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:y/set"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:y/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IVisualElement"), "designLayer")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:designLayer/get"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:designLayer/getter"
+    returns QName(PackageNamespace("mx.core"), "DesignLayer")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IVisualElement"), "designLayer")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:designLayer/set"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:designLayer/setter"
+    param QName(PackageNamespace("mx.core"), "DesignLayer")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IVisualElement"), "postLayoutTransformOffsets")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:postLayoutTransformOffsets/get"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:postLayoutTransformOffsets/getter"
+    returns QName(PackageNamespace("mx.geom"), "TransformOffsets")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.core:IVisualElement"), "postLayoutTransformOffsets")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:postLayoutTransformOffsets/set"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:postLayoutTransformOffsets/setter"
+    param QName(PackageNamespace("mx.geom"), "TransformOffsets")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_PARAM_NAMES
+    paramname "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IVisualElement.as"
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.core:IVisualElement"), "is3D")
+   method
+    name "mx.core:IVisualElement/mx.core:IVisualElement:is3D/get"
+    refid "mx.core:IVisualElement/instance/mx.core:IVisualElement:is3D/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "mx.core:IVisualElement/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 5
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

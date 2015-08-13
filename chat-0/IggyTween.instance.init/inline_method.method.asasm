@@ -1,0 +1,35 @@
+method
+ name ""
+ refid "IggyTween/instance/init/inline_method"
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ flag HAS_PARAM_NAMES
+ paramname null
+ paramname null
+ paramname null
+ paramname null
+ body
+  maxstack 4
+  localcount 5
+  initscopedepth 6
+  maxscopedepth 6
+  code
+   debug               1, "t", 0, 310
+   debug               1, "b", 1, 310
+   debug               1, "c", 2, 310
+   debug               1, "d", 3, 310
+   debugfile           "Z:\\p4\\kiwi\\ui_src\\fla\\src;;IggyTween.as"
+   debugline           310
+   getlocal2
+   getlocal3
+   getlocal1
+   getlocal            4
+   divide
+   multiply
+   add
+   returnvalue
+  end ; code
+ end ; body
+end ; method

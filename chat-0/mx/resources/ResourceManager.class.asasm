@@ -1,0 +1,153 @@
+class
+ refid "mx.resources:ResourceManager"
+ instance QName(PackageNamespace("mx.resources"), "ResourceManager")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.resources:ResourceManager")
+  iinit
+   name "mx.resources:ResourceManager/ResourceManager"
+   refid "mx.resources:ResourceManager/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManager.as"
+     debugline           132
+     getlocal0
+     pushscope
+
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManager.as"
+     debugline           134
+     getlocal0
+     constructsuper      0
+
+     debugline           135
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  name ""
+  refid "mx.resources:ResourceManager/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    debug               1, "VERSION", 0, 17
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.0.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    debug               1, "implClassDependency", 1, 63
+    debug               1, "instance", 2, 69
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.0.0.0") end
+ trait slot QName(PrivateNamespace("mx.resources:ResourceManager"), "implClassDependency") slotid 2 type QName(PackageNamespace("mx.resources"), "ResourceManagerImpl") end
+ trait slot QName(PrivateNamespace("mx.resources:ResourceManager"), "instance") slotid 3 type QName(PackageNamespace("mx.resources"), "IResourceManager") end
+ trait method QName(PackageNamespace(""), "getInstance") flag FINAL dispid 3
+  method
+   name "mx.resources:ResourceManager/getInstance"
+   refid "mx.resources:ResourceManager/class/getInstance"
+   returns QName(PackageNamespace("mx.resources"), "IResourceManager")
+   flag NEED_ACTIVATION
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 9
+    code
+     debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/resources;ResourceManager.as"
+     debugline           88
+     getlocal0
+     pushscope
+
+     newactivation
+     dup
+     setlocal1
+
+     pushscope
+
+     debug               1, "getInstance$0", 0, 88
+     debugline           90
+     getlex              QName(PrivateNamespace("mx.resources:ResourceManager"), "instance")
+     iftrue              L56
+
+     debugline           92
+     getlex              QName(PackageNamespace("mx.core"), "Singleton")
+     pushstring          "mx.resources::IResourceManager"
+     callproperty        QName(PackageNamespace(""), "getClass"), 1
+     iftrue              L27
+
+     debugline           94
+     getlex              QName(PackageNamespace("mx.core"), "Singleton")
+     pushstring          "mx.resources::IResourceManager"
+     debugline           95
+     findpropstrict      QName(PackageNamespace(""), "Class")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getDefinitionByName")
+     pushstring          "mx.resources::ResourceManagerImpl"
+     callproperty        QName(PackageNamespace("flash.utils"), "getDefinitionByName"), 1
+     callproperty        QName(PackageNamespace(""), "Class"), 1
+     callpropvoid        QName(PackageNamespace(""), "registerClass"), 2
+
+L27:
+     debugline           100
+     findproperty        QName(PrivateNamespace("mx.resources:ResourceManager"), "instance")
+     findpropstrict      QName(PackageNamespace("mx.resources"), "IResourceManager")
+     debugline           101
+     getlex              QName(PackageNamespace("mx.core"), "Singleton")
+     pushstring          "mx.resources::IResourceManager"
+     callproperty        QName(PackageNamespace(""), "getInstance"), 1
+     callproperty        QName(PackageNamespace("mx.resources"), "IResourceManager"), 1
+     setproperty         QName(PrivateNamespace("mx.resources:ResourceManager"), "instance")
+
+L36:
+     debugline           103
+     jump                L56
+
+L38:
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushscope
+
+     newcatch            0
+     dup
+     setlocal2
+
+     dup
+     pushscope
+
+     swap
+     setslot             1
+
+     debugline           111
+     findproperty        QName(PrivateNamespace("mx.resources:ResourceManager"), "instance")
+     findpropstrict      QName(PackageNamespace("mx.resources"), "ResourceManagerImpl")
+     constructprop       QName(PackageNamespace("mx.resources"), "ResourceManagerImpl"), 0
+     setproperty         QName(PrivateNamespace("mx.resources:ResourceManager"), "instance")
+
+     popscope
+     kill                2
+L56:
+     debugline           115
+     getlex              QName(PrivateNamespace("mx.resources:ResourceManager"), "instance")
+     returnvalue
+    end ; code
+    try from L27 to L36 target L38 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+   end ; body
+  end ; method
+ end ; trait
+end ; class

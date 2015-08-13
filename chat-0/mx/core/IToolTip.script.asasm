@@ -1,0 +1,29 @@
+script ; 87
+ sinit
+  name ""
+  refid "mx.core:IToolTip/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;IToolTip.as"
+    debugline           30
+    findpropstrict      Multiname("IToolTip", [PackageNamespace("mx.core")])
+    pushnull
+    newclass            "mx.core:IToolTip"
+    initproperty        QName(PackageNamespace("mx.core"), "IToolTip")
+
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "IToolTip")
+  #include "IToolTip.class.asasm"
+ end ; trait
+end ; script

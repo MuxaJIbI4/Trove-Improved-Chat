@@ -1,0 +1,34 @@
+script ; 40
+ sinit
+  name ""
+  refid "mx.core:Singleton/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;Singleton.as"
+    debugline           42
+    findpropstrict      Multiname("Singleton", [PackageNamespace("mx.core")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.core:Singleton"
+    popscope
+    initproperty        QName(PackageNamespace("mx.core"), "Singleton")
+
+    debugfile           "/Users/rfrishbe/opensource/flex/sdk/trunk/frameworks/projects/framework/src;mx/core;Singleton.as"
+    debugline           12
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "Singleton")
+  #include "Singleton.class.asasm"
+ end ; trait
+end ; script
