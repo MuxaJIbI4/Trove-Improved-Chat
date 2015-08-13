@@ -27,7 +27,9 @@
 - Raised top chat border on 200 px
 - Lowered bottom chat border and chat input to bottom window border (~100px)
 - moved scrollbar to the right of the chat log
-Known bugs:
+
+  Known bugs:
+
 - Right click on message doesn't register outside default chat window dimensions
 
 ### How to install mod
