@@ -1,4 +1,4 @@
-#Improved chat mod for Trove source
+#Improved chat mod for Trove
 
 ###Features
 
@@ -30,8 +30,18 @@
 Known bugs:
 - Right click on message doesn't register outside default chat window dimensions
 
-### How to install
-TODO
+### How to install mod
+1) go to Releases and download latest binary zip
+
+2) Binaries contain:
+
+    chat.swf - original
+
+    chat_v1.swf - modified chat (Parts 1-3 in Features)
+
+    chat_v1_extra.swf - modified chat (Parts 1-4 in Features)
+    
+3) Copy need file to Trove_Install_Folder/ui/override/chat.swf
 
 ### Development
 
@@ -45,12 +55,3 @@ make sure abcexport, rabcdasm, rabcasm and abcreplace can be called from command
 4) disassemble.bat creates "chat-0" folder with scripts for editing
 
 5) assemble.bat creates modified chat.swf in release/ folder. That chat.swf you can use for testing. Copy it to Trove_Install_Folder/ui/override/chat.swf
-
-
-
-
-
-
-
-
-
